@@ -3,7 +3,10 @@
  */
 package drugbank;
 
+import goa.GoAnnotation;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * @author Samuel Croset
@@ -11,13 +14,11 @@ import java.io.Serializable;
  */
 public class Partner implements Serializable {
 
-    /**
-     * 
-     */
     private static final long serialVersionUID = -5913113416467404250L;
     private String uniprotIdentifer;
     private int id;
     private String name;
+    private ArrayList<GoAnnotation> annotations;
 
 
     public String getUniprotIdentifer() {
@@ -37,6 +38,12 @@ public class Partner implements Serializable {
     }
     public void setName(String name) {
 	this.name = name;
+    }
+    public void setAnnotations(ArrayList<GoAnnotation> annotations) {
+	this.annotations = annotations;
+    }
+    public ArrayList<GoAnnotation> getAnnotations() {
+	return annotations;
     }    
 
 }
