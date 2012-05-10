@@ -56,32 +56,37 @@ public class GoaConnector {
 
     public void fillPartnersWithGoTerms() throws IOException {
 	//From code provided by http://www.ebi.ac.uk/QuickGO/clients/DownloadAnnotation.java
-	//	for (Partner partner : this.getDrugbank().getPartners()) {
-	Partner partner = this.getDrugbank().getPartner(54);
-	String uniprotId = partner.getUniprotIdentifer();
-	URL u=new URL("http://www.ebi.ac.uk/QuickGO/GAnnotation?protein=" + uniprotId +"&format=tsv");
-	HttpURLConnection urlConnection = (HttpURLConnection) u.openConnection();
-	BufferedReader rd =new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+	
+	int counter = 0;
+	int total = this.getDrugbank().getPartners().size();
+	
+	for (Partner partner : this.getDrugbank().getPartners()) {
+	    String uniprotId = partner.getUniprotIdentifer();
+	    System.out.println("calling for " + uniprotId + " --> " + counter + "/" + total);
+	    counter++;
+	    URL u=new URL("http://www.ebi.ac.uk/QuickGO/GAnnotation?protein=" + uniprotId +"&format=tsv");
+	    HttpURLConnection urlConnection = (HttpURLConnection) u.openConnection();
+	    BufferedReader rd =new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
 
-	String line = rd.readLine();
-	ArrayList<GoAnnotation> annotations = new ArrayList<GoAnnotation>();
+	    String line = rd.readLine();
+	    ArrayList<GoAnnotation> annotations = new ArrayList<GoAnnotation>();
 
-	while ((line=rd.readLine())!=null) {
-	    String[] splittedLine = line.split("\t");
-	    GoAnnotation goa = new GoAnnotation();
-	    goa.setDatabase(splittedLine[0]);
-	    goa.setDate(splittedLine[12]);
-	    goa.setEvidence(splittedLine[9]);
-	    goa.setEvidenceProvider(splittedLine[10]);
-	    goa.setGoId(splittedLine[6]);
-	    goa.setQualifier(splittedLine[5]);
-	    goa.setReference(splittedLine[8]);
-	    goa.setSource(splittedLine[13]);
-	    goa.setTaxon(splittedLine[4]);
-	    annotations.add(goa);
+	    while ((line=rd.readLine())!=null) {
+		String[] splittedLine = line.split("\t");
+		GoAnnotation goa = new GoAnnotation();
+		goa.setDatabase(splittedLine[0]);
+		goa.setDate(splittedLine[12]);
+		goa.setEvidence(splittedLine[9]);
+		goa.setEvidenceProvider(splittedLine[10]);
+		goa.setGoId(splittedLine[6]);
+		goa.setQualifier(splittedLine[5]);
+		goa.setReference(splittedLine[8]);
+		goa.setSource(splittedLine[13]);
+		goa.setTaxon(splittedLine[4]);
+		annotations.add(goa);
+	    }
+	    partner.setAnnotations(annotations);
 	}
-	partner.setAnnotations(annotations);
-	//	}
     }
 
     public void save(String path) throws FileNotFoundException, IOException {

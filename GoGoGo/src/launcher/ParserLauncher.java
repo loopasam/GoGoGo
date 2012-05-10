@@ -8,6 +8,9 @@ import gogogo.GoGoGoDataset;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import drugbank.Drug;
+import drugbank.Partner;
+
 import parser.DrugBankParser;
 import parser.GeneOntologyParser;
 import parser.GoaConnector;
@@ -36,15 +39,6 @@ public class ParserLauncher {
 	connector.save("data/dataset.ser");
 	
 	GoGoGoDataset dataset = new GoGoGoDataset("data/dataset.ser");
-	
-	//TODO continue here and test if the stuff is correctly loaded
-	
-	
-	//TODO GOA connector --> webservice completing the drugbank objects with GO object
-	//Then saving everything from that as GOggogodataset object
-	//end of parser launcher
-	// then deal with gogog dataset object
-
 
     }
 
