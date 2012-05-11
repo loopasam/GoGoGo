@@ -3,13 +3,10 @@
  */
 package launcher;
 
-import gogogo.GoGoGoDataset;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import drugbank.Drug;
-import drugbank.Partner;
 
 import parser.DrugBankParser;
 import parser.GeneOntologyParser;
