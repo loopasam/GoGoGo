@@ -5,5 +5,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/sif-manager-1.1.jar"/>
 	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/xml-burger-1.0.jar"/>
+	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/org.semanticweb.HermiT.jar"/>
+	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/owlapi-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
