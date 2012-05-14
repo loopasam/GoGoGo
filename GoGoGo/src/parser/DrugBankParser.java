@@ -96,10 +96,15 @@ public class DrugBankParser extends Parser {
 						ArrayList<String> actions = new ArrayList<String>();
 						while(burger.inTag("actions")){
 						    if(burger.tag("action")){
-							actions.add(burger.getTagText());
+							String action = burger.getTagText();
+							actions.add(action);
 						    }
 						}
+						if(actions.size() == 0){
+						    actions.add("unknown");
+						}
 						targetRelation.setActions(actions);
+
 					    }
 					    if(burger.tag("known-action")){
 						targetRelation.setKnowAction(burger.getTagText());

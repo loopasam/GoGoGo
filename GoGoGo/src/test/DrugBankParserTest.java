@@ -15,6 +15,7 @@ import org.junit.Test;
 import drugbank.Drug;
 import drugbank.DrugBank;
 import drugbank.Partner;
+import drugbank.TargetRelation;
 
 import parser.DrugBankParser;
 
@@ -65,17 +66,27 @@ public class DrugBankParserTest {
     }
 
     @Test
+    public void testUnknownRelation(){
+	Drug drug = this.drugbank.getDrug("DB00002");	
+	assertEquals("Cetuximab", drug.getName());
+	assertEquals(12, drug.getTargetRelations().size());
+	TargetRelation relation = drug.getTargetRelations().get(2);
+	assertEquals(1, relation.getActions().size());
+	assertEquals("unknown", relation.getActions().get(0));
+    }
+
+    @Test
     public void testGetPartners(){
 	ArrayList<Partner> partners = this.drugbank.getPartners("DB00224");
 	assertEquals(1, partners.size());
 	assertEquals("O90777", partners.get(0).getUniprotIdentifer());
     }
-    
+
     @Test
     public void saveTest() throws FileNotFoundException, IOException{
 	this.parser.save();
     }
-    
+
     @Test
     public void serializationLoading() throws FileNotFoundException, IOException, ClassNotFoundException{
 	DrugBank drugBank = new DrugBank("data/drugbankTest.ser");
