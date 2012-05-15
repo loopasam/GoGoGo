@@ -32,7 +32,12 @@
 
     <!-- http://www.gogogo.org/fuctional-skeleton.owl#involved-in -->
 
-    <owl:ObjectProperty rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
+    <owl:ObjectProperty rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#part-of"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
     
 
 
@@ -67,7 +72,15 @@
     <owl:ObjectProperty rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs">
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#part-of"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -95,6 +108,10 @@
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#part-of"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -198,21 +215,12 @@
                     <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Protein"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#blood_coagulation"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#blood_coagulation"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
     </owl:Class>
     
 
