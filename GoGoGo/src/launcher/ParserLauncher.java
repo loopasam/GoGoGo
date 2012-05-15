@@ -26,14 +26,14 @@ public class ParserLauncher {
 	drugBankParser.save();
 
 	System.out.println("start go parsing...");
-	Parser goParser = new GeneOntologyParser("data/gene_ontology_ext.obo", "data/go.ser");
+	Parser goParser = new GeneOntologyParser("data/gene_ontology.1_2.obo", "data/go.ser");
 	goParser.parse();
 	goParser.save();
 	
 	System.out.println("Start connector...");
 	GoaConnector connector = new GoaConnector("data/drugbank.ser", "data/go.ser");
 	connector.fillPartnersWithGoTerms();
-	connector.save("data/dataset.ser");
+	connector.save("data/dataset-filtered.ser");
 	
 //	GoGoGoDataset dataset = new GoGoGoDataset("data/dataset.ser");
 

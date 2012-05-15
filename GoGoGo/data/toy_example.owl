@@ -69,11 +69,8 @@
     <!-- http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#negatively-regulates -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#negatively-regulates">
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#positively-regulates"/>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#regulates"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#involved-in"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#negatively-regulates"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -121,10 +118,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#positively-regulates">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#regulates"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#involved-in"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#positively-regulates"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -160,10 +153,10 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#Anti-blood-coagulation-agent">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#negatively-perturbs"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#positively-perturbs"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#positively-regulates"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#negatively-perturbs"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#blood-coagulation"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
@@ -171,10 +164,10 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#positively-perturbs"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#negatively-perturbs"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#negatively-perturbs"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#positively-regulates"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl#blood-coagulation"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
