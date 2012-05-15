@@ -72,7 +72,7 @@
     <owl:ObjectProperty rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs">
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
-            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#part-of"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
@@ -80,7 +80,7 @@
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
-            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#part-of"/>
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -108,10 +108,6 @@
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#part-of"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
-            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
