@@ -5,7 +5,9 @@ package classification;
 
 import java.io.IOException;
 
-import gogogo.GoGoGoDataset;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+
 
 /**
  * @author Samuel Croset
@@ -13,10 +15,24 @@ import gogogo.GoGoGoDataset;
  */
 public class ClassificationLauncher {
     
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException, OWLOntologyCreationException, OWLOntologyStorageException {
 	
-	GoGoGoDataset data = new GoGoGoDataset("data/dataset.ser");
+	System.out.println("Loading data...");
+	FunctionalClassification classification =new FunctionalClassification("data/dataset-filtered.ser");
 	
+	System.out.println("Converting in owl...");
+	classification.generateOwlOntology();
+	
+	boolean isConsistent = classification.isConsistent();
+	System.out.println("consistent: " + isConsistent);
+	
+	System.out.println("Generating patterns...");
+	classification.generateAgentPatterns();
+	boolean isConsistentAfterPatterns = classification.isConsistent();
+	System.out.println("consistent after patterns: " + isConsistentAfterPatterns);
+
+	System.out.println("Saving...");
+	classification.save("data/ftc.owl");
 	
     }
 
