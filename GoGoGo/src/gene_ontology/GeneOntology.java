@@ -60,4 +60,38 @@ public class GeneOntology implements Serializable {
 	return null;
     }
 
+    public ArrayList<GoTerm> getParentsOfTerm(GoTerm termOfInterest) {
+
+	ArrayList<GoTerm> parents = new ArrayList<GoTerm>();
+	ArrayList<GoTerm> toVisit = new ArrayList<GoTerm>();
+
+	parents.add(termOfInterest);
+	toVisit.add(termOfInterest);
+
+	while(toVisit.size() > 0){
+	    GoTerm currentTerm = toVisit.remove(0);
+	    for (GoRelation relation : currentTerm.getRelations()) {
+		String target = relation.getTarget();
+		parents.add(this.getTerm(target));
+		toVisit.add(this.getTerm(target));
+	    }
+	}
+
+	return parents;
+    }
+
+    /**
+     * @return
+     */
+    public ArrayList<GoTerm> getBioProcesses() {
+
+	ArrayList<GoTerm> goTerms = new ArrayList<GoTerm>();
+	for (GoTerm term : this.getTerms()) {
+	    if(term.getNamespace().equals("biological_process")){
+		goTerms.add(term);
+	    }
+	}
+	return goTerms;
+    }
+
 }

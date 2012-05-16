@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import gene_ontology.GeneOntology;
 import gene_ontology.GoTerm;
@@ -30,6 +31,12 @@ public class GoTest {
 	parser = new GeneOntologyParser("data/gene_ontology_ext.obo", "data/go-test.ser");
 	parser.parse();
 	this.go = parser.getGo();
+    }
+    
+    @Test
+    public void testGetParents(){
+	ArrayList<GoTerm> parents = this.go.getParentsOfTerm(this.go.getTerm("GO:0050817"));
+	assertEquals(3, parents.size());
     }
 
     @Test

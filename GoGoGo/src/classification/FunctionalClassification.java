@@ -10,16 +10,20 @@ import gogogo.GoGoGoDataset;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.semanticweb.HermiT.Reasoner;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddAxiom;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAnnotation;
+import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
@@ -30,6 +34,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerConfiguration;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
+import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
 /**
  * @author Samuel Croset
@@ -156,7 +161,8 @@ public class FunctionalClassification {
 
     public FunctionalClassification(String path) throws OWLOntologyCreationException, IOException, ClassNotFoundException {
 
-	GoGoGoDataset data = new GoGoGoDataset(path);
+	GoGoGoDataset data = new GoGoGoDataset(path);	
+
 	this.setGo(data.getGo());
 
 	this.setManager(OWLManager.createOWLOntologyManager());
@@ -208,12 +214,21 @@ public class FunctionalClassification {
     }
 
     public void generateOwlOntology() {
-	for (GoTerm term : this.getGo().getTerms()) {
+
+	//	GoTerm termOfInterest = this.getGo().getTerm("GO:0030194");
+	//	ArrayList<GoTerm> terms = this.getGo().getParentsOfTerm(termOfInterest);
+	//	System.out.println("size of parents: " + terms.size());
+	//	for (GoTerm term : terms) {
+	for (GoTerm term : this.getGo().getBioProcesses()) {
+
 	    IRI iriNewClass = IRI.create(this.getPrefix() + "#" + term.getId());
 	    OWLClass childTerm = this.factory.getOWLClass(iriNewClass);
+	    this.addLabelToClass(childTerm, term.getName());
+
 	    for (GoRelation relation : term.getRelations()) {
 		IRI iriParentClass = IRI.create(this.getPrefix() + "#" + relation.getTarget());
 		OWLClass owlParentTerm = this.factory.getOWLClass(iriParentClass);
+
 		OWLAxiom axiom = null;
 		if(relation.getType().equals("is_a")){
 		    axiom = this.getFactory().getOWLSubClassOfAxiom(childTerm, owlParentTerm);
@@ -225,6 +240,15 @@ public class FunctionalClassification {
 		this.getManager().applyChange(addAxiom);
 	    }
 	}
+    }
+
+    private void addLabelToClass(OWLClass owlClass, String label) {
+	OWLAnnotationProperty labelproperty = this.getFactory().getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_LABEL.getIRI());
+	OWLLiteral literal = this.getFactory().getOWLLiteral(label);
+	OWLAnnotation labelAnnot = this.getFactory().getOWLAnnotation(labelproperty, literal);
+
+	OWLAxiom ax = this.getFactory().getOWLAnnotationAssertionAxiom(owlClass.getIRI(), labelAnnot);
+	this.getManager().applyChange(new AddAxiom(this.getOntology(), ax));
     }
 
     public void save(String path) throws OWLOntologyStorageException {
@@ -243,32 +267,59 @@ public class FunctionalClassification {
 
     public void generateAgentPatterns() {
 
-	for (GoTerm term : this.getGo().getTerms()) {
+	//	GoTerm termOfInterest = this.getGo().getTerm("GO:0030194");
+	//	ArrayList<GoTerm> terms = this.getGo().getParentsOfTerm(termOfInterest);
+	//	for (GoTerm term : terms) {
 
-	    boolean hasRegulationRelation = false;
+	for (GoTerm term : this.getGo().getBioProcesses()) {
+
 	    for (GoRelation relation : term.getRelations()) {
-		if(relation.getType().equals("negatively_regulates") || relation.getType().equals("positively_regulates")){
-		    hasRegulationRelation = true;
+
+		if(relation.getType().equals("positively_regulates")){
+		    
+		    //TODO clean up the method - code can be re-used
+		    this.addAgentPatternForPositiveRegulation(term, this.getGo().getTerm(relation.getTarget()));
+
 		}
 	    }
 
-	    if(hasRegulationRelation){
-		//TODO anti pro patterns goes there
-
-	    }else{
-
-		//Deal with easy classes first, no anti-pro patterns
-		IRI iriTerm = IRI.create(this.getPrefix() + "#" + term.getId());
-		OWLClass owlTerm = this.factory.getOWLClass(iriTerm);
-		IRI iriAgent = IRI.create(this.getPrefix() + "#" + term.getName() + "_Agent");
-		OWLClass owlAgent = this.factory.getOWLClass(iriAgent);
-		OWLClassExpression pertubsSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getPerturbs(), owlTerm);
-		OWLClassExpression agentDefinition = factory.getOWLObjectIntersectionOf(this.getDrug(), pertubsSome);		
-		OWLAxiom axiom = this.getFactory().getOWLEquivalentClassesAxiom(agentDefinition, owlAgent);
-		AddAxiom addAxiom = new AddAxiom(this.getOntology(), axiom);
-		this.getManager().applyChange(addAxiom);
-	    }
 	}
+    }
+
+    private void addAgentPatternForPositiveRegulation(GoTerm positiveRegulationGoTerm, GoTerm goRegulatedTerm) {
+
+	    IRI iriPositiveRegulationTerm = IRI.create(this.getPrefix() + "#" + positiveRegulationGoTerm.getId());
+	    OWLClass positiveRegulationTerm = this.factory.getOWLClass(iriPositiveRegulationTerm);
+
+	    //Anti-pattern
+	    IRI iriAntiAgent = IRI.create(this.getPrefix() + "#Anti-" + goRegulatedTerm.getId() + "_agent");
+	    OWLClass owAntiAgent = this.factory.getOWLClass(iriAntiAgent);
+	    this.addLabelToClass(owAntiAgent, "Anti-" + goRegulatedTerm.getName() + "-agent");
+	    //(involved-in some term)
+	    OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolved(), positiveRegulationTerm);
+	    //(Protein and (involved-in some term))
+	    OWLClassExpression protAndInvolvedInSome = factory.getOWLObjectIntersectionOf(this.getProtein(), involvedInSome);
+	    //(negatively-perturb some (Protein and (involved-in some term)))
+	    OWLClassExpression negativelyPertubsSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getNegativelyPerturbs(), protAndInvolvedInSome);
+	    //Drug and (negatively-perturb some (Protein and (involved-in some term)))
+	    OWLClassExpression drugAndNegativelyPertubsSome = factory.getOWLObjectIntersectionOf(this.getDrug(), negativelyPertubsSome);
+	    OWLAxiom axiom = this.getFactory().getOWLEquivalentClassesAxiom(drugAndNegativelyPertubsSome, owAntiAgent);
+	    AddAxiom addAxiom = new AddAxiom(this.getOntology(), axiom);
+	    this.getManager().applyChange(addAxiom);
+	    
+	    //Pro-pattern
+	    IRI iriProAgent = IRI.create(this.getPrefix() + "#Pro-" + goRegulatedTerm.getId() + "_agent");
+	    OWLClass owlProAgent = this.factory.getOWLClass(iriProAgent);
+	    this.addLabelToClass(owlProAgent, "Pro-" + goRegulatedTerm.getName() + "-agent");
+
+	    //(positively-perturb some (Protein and (involved-in some term)))
+	    OWLClassExpression positivelyPertubsSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getPositivelyPerturbs(), protAndInvolvedInSome);
+	    //Drug and (negatively-perturbs some (Protein and (involved-in some term)))
+	    OWLClassExpression drugAndPositivelyPertubsSome = factory.getOWLObjectIntersectionOf(this.getDrug(), positivelyPertubsSome);
+	    OWLAxiom proAxiom = this.getFactory().getOWLEquivalentClassesAxiom(drugAndPositivelyPertubsSome, owlProAgent);
+	    AddAxiom addProAxiom = new AddAxiom(this.getOntology(), proAxiom);
+	    this.getManager().applyChange(addProAxiom);
+
     }
 
 }
