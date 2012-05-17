@@ -10,7 +10,6 @@ import gogogo.GoGoGoDataset;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.semanticweb.HermiT.Reasoner;
@@ -215,10 +214,6 @@ public class FunctionalClassification {
 
     public void generateOwlOntology() {
 
-	//	GoTerm termOfInterest = this.getGo().getTerm("GO:0030194");
-	//	ArrayList<GoTerm> terms = this.getGo().getParentsOfTerm(termOfInterest);
-	//	System.out.println("size of parents: " + terms.size());
-	//	for (GoTerm term : terms) {
 	for (GoTerm term : this.getGo().getBioProcesses()) {
 
 	    IRI iriNewClass = IRI.create(this.getPrefix() + "#" + term.getId());
@@ -266,60 +261,91 @@ public class FunctionalClassification {
     }
 
     public void generateAgentPatterns() {
-
-	//	GoTerm termOfInterest = this.getGo().getTerm("GO:0030194");
-	//	ArrayList<GoTerm> terms = this.getGo().getParentsOfTerm(termOfInterest);
-	//	for (GoTerm term : terms) {
-
 	for (GoTerm term : this.getGo().getBioProcesses()) {
-
 	    for (GoRelation relation : term.getRelations()) {
-
+		//TODO negative regulation
 		if(relation.getType().equals("positively_regulates")){
-		    
-		    //TODO clean up the method - code can be re-used
 		    this.addAgentPatternForPositiveRegulation(term, this.getGo().getTerm(relation.getTarget()));
-
+		}else if(relation.getType().equals("negatively_regulates")){
+		    this.addAgentPatternForNegativeRegulation(term, this.getGo().getTerm(relation.getTarget()));
 		}
 	    }
-
 	}
     }
 
+
+    private void addAgentPatternForNegativeRegulation(GoTerm negativeRegulationGoTerm, GoTerm goRegulatedTerm) {
+	//Retrieve the term pointing to a parent via a r-
+	IRI iriNegativeRegulationTerm = IRI.create(this.getPrefix() + "#" + negativeRegulationGoTerm.getId());
+	//Get the corresponding OWL class from the ontology
+	OWLClass negativeRegulationTerm = this.factory.getOWLClass(iriNegativeRegulationTerm);
+	//Anti-pattern
+	this.addAntiAgentPattern(this.getPositivelyPerturbs(), negativeRegulationTerm, goRegulatedTerm);
+	//Pro-pattern
+	this.addProAgentPattern(this.getNegativelyPerturbs(), negativeRegulationTerm, goRegulatedTerm);
+    }
+
     private void addAgentPatternForPositiveRegulation(GoTerm positiveRegulationGoTerm, GoTerm goRegulatedTerm) {
+	//Retrieve the term pointing to a parent via a r+
+	IRI iriPositiveRegulationTerm = IRI.create(this.getPrefix() + "#" + positiveRegulationGoTerm.getId());
+	//Get the corresponding OWL class from the ontology
+	OWLClass positiveRegulationTerm = this.factory.getOWLClass(iriPositiveRegulationTerm);
+	//Anti-pattern
+	this.addAntiAgentPattern(this.getNegativelyPerturbs(), positiveRegulationTerm, goRegulatedTerm);
+	//Pro-pattern
+	this.addProAgentPattern(this.getPositivelyPerturbs(), positiveRegulationTerm, goRegulatedTerm);
+    }
 
-	    IRI iriPositiveRegulationTerm = IRI.create(this.getPrefix() + "#" + positiveRegulationGoTerm.getId());
-	    OWLClass positiveRegulationTerm = this.factory.getOWLClass(iriPositiveRegulationTerm);
 
-	    //Anti-pattern
-	    IRI iriAntiAgent = IRI.create(this.getPrefix() + "#Anti-" + goRegulatedTerm.getId() + "_agent");
-	    OWLClass owAntiAgent = this.factory.getOWLClass(iriAntiAgent);
-	    this.addLabelToClass(owAntiAgent, "Anti-" + goRegulatedTerm.getName() + "-agent");
-	    //(involved-in some term)
-	    OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolved(), positiveRegulationTerm);
-	    //(Protein and (involved-in some term))
-	    OWLClassExpression protAndInvolvedInSome = factory.getOWLObjectIntersectionOf(this.getProtein(), involvedInSome);
-	    //(negatively-perturb some (Protein and (involved-in some term)))
-	    OWLClassExpression negativelyPertubsSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getNegativelyPerturbs(), protAndInvolvedInSome);
-	    //Drug and (negatively-perturb some (Protein and (involved-in some term)))
-	    OWLClassExpression drugAndNegativelyPertubsSome = factory.getOWLObjectIntersectionOf(this.getDrug(), negativelyPertubsSome);
-	    OWLAxiom axiom = this.getFactory().getOWLEquivalentClassesAxiom(drugAndNegativelyPertubsSome, owAntiAgent);
-	    AddAxiom addAxiom = new AddAxiom(this.getOntology(), axiom);
-	    this.getManager().applyChange(addAxiom);
-	    
-	    //Pro-pattern
-	    IRI iriProAgent = IRI.create(this.getPrefix() + "#Pro-" + goRegulatedTerm.getId() + "_agent");
-	    OWLClass owlProAgent = this.factory.getOWLClass(iriProAgent);
-	    this.addLabelToClass(owlProAgent, "Pro-" + goRegulatedTerm.getName() + "-agent");
+    private void addProAgentPattern(OWLObjectProperty perturbation, OWLClass regulatingTerm, GoTerm goRegulatedTerm) {
+	//Create new IRI
+	IRI iriProAgent = IRI.create(this.getPrefix() + "#Pro-" + goRegulatedTerm.getId() + "_agent");
+	//Create OWL class corresponding to the IRI
+	OWLClass owlProAgent = this.factory.getOWLClass(iriProAgent);
+	//Add a label to the OWL class
+	this.addLabelToClass(owlProAgent, "Pro-" + goRegulatedTerm.getName() + "-agent");
+	//Get an 'Agent Restriction' axiom
+	OWLClassExpression drugAndPertubsSome = this.getAgentRestrictionAxiom(perturbation, regulatingTerm);
+	//Assert equivalence between the agent class and the logical expression
+	OWLAxiom proAxiom = this.getFactory().getOWLEquivalentClassesAxiom(drugAndPertubsSome, owlProAgent);
+	//Add the axiom to the ontology
+	AddAxiom addProAxiom = new AddAxiom(this.getOntology(), proAxiom);
+	this.getManager().applyChange(addProAxiom);
+    }
 
-	    //(positively-perturb some (Protein and (involved-in some term)))
-	    OWLClassExpression positivelyPertubsSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getPositivelyPerturbs(), protAndInvolvedInSome);
-	    //Drug and (negatively-perturbs some (Protein and (involved-in some term)))
-	    OWLClassExpression drugAndPositivelyPertubsSome = factory.getOWLObjectIntersectionOf(this.getDrug(), positivelyPertubsSome);
-	    OWLAxiom proAxiom = this.getFactory().getOWLEquivalentClassesAxiom(drugAndPositivelyPertubsSome, owlProAgent);
-	    AddAxiom addProAxiom = new AddAxiom(this.getOntology(), proAxiom);
-	    this.getManager().applyChange(addProAxiom);
+    private void addAntiAgentPattern(OWLObjectProperty perturbation, OWLClass regulatingTerm, GoTerm goRegulatedTerm) {
+	//Create new IRI
+	IRI iriAntiAgent = IRI.create(this.getPrefix() + "#Anti-" + goRegulatedTerm.getId() + "_agent");
+	//Create OWL class corresponding to the IRI
+	OWLClass owAntiAgent = this.factory.getOWLClass(iriAntiAgent);
+	//Add a label to the OWL class
+	this.addLabelToClass(owAntiAgent, "Anti-" + goRegulatedTerm.getName() + "-agent");
+	//Get an 'Agent Restriction' axiom
+	OWLClassExpression drugAndPertubsSome = this.getAgentRestrictionAxiom(perturbation, regulatingTerm);
+	//Assert equivalence between the agent class and the logical expression
+	OWLAxiom antiAxiom = this.getFactory().getOWLEquivalentClassesAxiom(drugAndPertubsSome, owAntiAgent);
+	//Add the axiom to the ontology
+	AddAxiom addAntiAxiom = new AddAxiom(this.getOntology(), antiAxiom);
+	this.getManager().applyChange(addAntiAxiom);
 
+    }
+
+
+    private OWLClassExpression getAgentRestrictionAxiom(OWLObjectProperty perturbation, OWLClass perturbedClass) {
+	//(involved-in some term)
+	OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolved(), perturbedClass);
+	//(Protein and (involved-in some term))
+	OWLClassExpression protAndInvolvedInSome = this.getFactory().getOWLObjectIntersectionOf(this.getProtein(), involvedInSome);
+	//(?perturbs some (Protein and (involved-in some term)))
+	OWLClassExpression pertubsSome = this.getFactory().getOWLObjectSomeValuesFrom(perturbation, protAndInvolvedInSome);
+	//Drug and (?perturb some (Protein and (involved-in some term)))
+	return this.getFactory().getOWLObjectIntersectionOf(this.getDrug(), pertubsSome);
+    }
+
+
+    public void generateProteinAxioms() {
+
+	
     }
 
 }

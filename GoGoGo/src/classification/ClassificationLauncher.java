@@ -30,6 +30,12 @@ public class ClassificationLauncher {
 	classification.generateAgentPatterns();
 	boolean isConsistentAfterPatterns = classification.isConsistent();
 	System.out.println("consistent after patterns: " + isConsistentAfterPatterns);
+	
+	
+	System.out.println("Generating patterns...");
+	classification.generateProteinAxioms();
+	boolean isConsistentAfterProteins = classification.isConsistent();
+	System.out.println("consistent after adding proteins: " + isConsistentAfterProteins);
 
 	System.out.println("Saving...");
 	classification.save("data/ftc.owl");

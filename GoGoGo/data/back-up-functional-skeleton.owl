@@ -76,11 +76,11 @@
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
-            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
-            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -148,6 +148,27 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#positively-perturbs"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Protein"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#negative_regulation_of_blood_regulation"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -204,6 +225,14 @@
 
     <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#coagulation">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gogogo.org/fuctional-skeleton.owl#negative_regulation_of_blood_regulation -->
+
+    <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#negative_regulation_of_blood_regulation">
+        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#regulation_of_blood_coagulation"/>
     </owl:Class>
     
 
