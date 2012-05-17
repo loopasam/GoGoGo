@@ -6,11 +6,19 @@ package classification;
 import gene_ontology.GeneOntology;
 import gene_ontology.GoRelation;
 import gene_ontology.GoTerm;
+import goa.GoAnnotation;
 import gogogo.GoGoGoDataset;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 import org.semanticweb.HermiT.Reasoner;
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -28,12 +36,20 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.model.PrefixManager;
 import org.semanticweb.owlapi.reasoner.ConsoleProgressMonitor;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerConfiguration;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
+import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
+
+import drugbank.Drug;
+import drugbank.DrugBank;
+import drugbank.Partner;
+import drugbank.TargetRelation;
+import exceptions.MappingException;
 
 /**
  * @author Samuel Croset
@@ -56,11 +72,25 @@ public class FunctionalClassification {
     private OWLOntologyManager manager;
     private OWLOntology ontology;
     private OWLDataFactory factory;
+    private PrefixManager prefixManager;
     private GeneOntology go;
+    private DrugBank drugBank;
     private String prefix;
     private HashMap<String, OWLObjectProperty> mapper;
 
 
+    public void setPrefixManager(PrefixManager prefixManager) {
+	this.prefixManager = prefixManager;
+    }
+    public PrefixManager getPrefixManager() {
+	return prefixManager;
+    }
+    public void setDrugBank(DrugBank drugBank) {
+	this.drugBank = drugBank;
+    }
+    public DrugBank getDrugBank() {
+	return drugBank;
+    }
     public OWLObjectProperty getPositivelyRegulates() {
 	return positivelyRegulates;
     }
@@ -164,8 +194,11 @@ public class FunctionalClassification {
 
 	this.setGo(data.getGo());
 
+	this.setDrugBank(data.getDrugbank());
+
 	this.setManager(OWLManager.createOWLOntologyManager());
 	this.setPrefix("http://www.gogogo.org/fuctional-skeleton.owl");
+	this.setPrefixManager(new DefaultPrefixManager(this.getPrefix() + "#"));
 	File file = new File("data/fuctional-skeleton.owl");
 
 	this.setOntology(this.getManager().loadOntologyFromOntologyDocument(file));
@@ -216,13 +249,16 @@ public class FunctionalClassification {
 
 	for (GoTerm term : this.getGo().getBioProcesses()) {
 
-	    IRI iriNewClass = IRI.create(this.getPrefix() + "#" + term.getId());
-	    OWLClass childTerm = this.factory.getOWLClass(iriNewClass);
+//	    IRI iriNewClass = IRI.create(this.getPrefix() + "#" + term.getId());
+//	    OWLClass childTerm = this.factory.getOWLClass(iriNewClass);
+	    OWLClass childTerm = factory.getOWLClass(":" + term.getId(), this.getPrefixManager());
+	    
 	    this.addLabelToClass(childTerm, term.getName());
 
 	    for (GoRelation relation : term.getRelations()) {
-		IRI iriParentClass = IRI.create(this.getPrefix() + "#" + relation.getTarget());
-		OWLClass owlParentTerm = this.factory.getOWLClass(iriParentClass);
+//		IRI iriParentClass = IRI.create(this.getPrefix() + "#" + relation.getTarget());
+//		OWLClass owlParentTerm = this.factory.getOWLClass(iriParentClass);
+		OWLClass owlParentTerm = factory.getOWLClass(":" + relation.getTarget(), this.getPrefixManager());
 
 		OWLAxiom axiom = null;
 		if(relation.getType().equals("is_a")){
@@ -263,7 +299,6 @@ public class FunctionalClassification {
     public void generateAgentPatterns() {
 	for (GoTerm term : this.getGo().getBioProcesses()) {
 	    for (GoRelation relation : term.getRelations()) {
-		//TODO negative regulation
 		if(relation.getType().equals("positively_regulates")){
 		    this.addAgentPatternForPositiveRegulation(term, this.getGo().getTerm(relation.getTarget()));
 		}else if(relation.getType().equals("negatively_regulates")){
@@ -343,9 +378,99 @@ public class FunctionalClassification {
     }
 
 
-    public void generateProteinAxioms() {
+    public void generateProteinandDrugAxioms() throws IOException, MappingException {
 
-	
+	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/relation_mapping.map");
+
+	for (Drug drug : this.getDrugBank().getNonExperimentalDrugs()) {
+
+	    IRI iriDrugClass = IRI.create(this.getPrefix() + "#" + drug.getId());
+	    OWLClass drugClass = this.factory.getOWLClass(iriDrugClass);
+	    this.addLabelToClass(drugClass, drug.getName());
+	    OWLAxiom drugTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, this.getDrug());
+	    AddAxiom addDrugTypeAxiom = new AddAxiom(this.getOntology(), drugTypeAxiom);
+	    this.getManager().applyChange(addDrugTypeAxiom);
+
+	    for (TargetRelation relation : drug.getTargetRelations()) {
+		Partner partner = this.getDrugBank().getPartner(relation.getPartnerId());
+		//TODO add more control within here, to check the pharmacological action of the compound
+		//TODO check whether the drug has any action at all
+		if(partner.getUniprotIdentifer() != null){
+		    //We are dealing with a protein
+		    //TODO: change into URI uniprot
+		    IRI iriProtClass = IRI.create(this.getPrefix() + "#" + partner.getUniprotIdentifer());
+		    OWLClass protClass = this.factory.getOWLClass(iriProtClass);
+		    this.addLabelToClass(protClass, partner.getName());
+		    OWLAxiom protTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, this.getProtein());
+		    AddAxiom addProtTypeAxiom = new AddAxiom(this.getOntology(), protTypeAxiom);
+		    this.getManager().applyChange(addProtTypeAxiom);
+
+		    for (String action : relation.getActions()) {
+			if(relationMapping.get(action) != null){
+			    OWLObjectProperty property = relationMapping.get(action);
+			    OWLClassExpression perturbsSome = this.getFactory().getOWLObjectSomeValuesFrom(property, protClass);
+			    OWLAxiom drugActionAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, perturbsSome);
+			    AddAxiom addDrugActionAxiom = new AddAxiom(this.getOntology(), drugActionAxiom);
+			    this.getManager().applyChange(addDrugActionAxiom);
+			}else{
+			    System.err.println("[INFO] Relation: '" + action + "' ignored as not mapped in the '.map' file.");
+			}
+		    }
+
+		    for (GoAnnotation annotation : partner.getAnnotations()) {
+			//TODO filter on type of evidence for comparison
+			if(!annotation.getEvidence().equals("IEA")){
+			    
+//			    IRI iriTerm = IRI.create(this.getPrefix() + "#" + annotation.getGoId());
+			    
+			    //TODO stuck there
+			    
+			    OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
+			    
+			    OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolved(), goTerm);
+			    OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, involvedInSome);
+			    AddAxiom addAnnotationAxiom = new AddAxiom(this.getOntology(), protAnnotationAxiom);
+			    this.getManager().applyChange(addAnnotationAxiom);
+			}
+		    }
+
+		}
+	    }
+	}
+
     }
 
+    private HashMap<String, OWLObjectProperty> getRelationMapping(String path) throws IOException, MappingException {
+
+	FileInputStream fstream = new FileInputStream(path);
+	DataInputStream in = new DataInputStream(fstream);
+	BufferedReader br = new BufferedReader(new InputStreamReader(in));
+	String line;
+	HashMap<String, OWLObjectProperty> relationMapping = new HashMap<String, OWLObjectProperty>();
+	while ((line = br.readLine()) != null)   {
+
+	    Pattern pattern = Pattern.compile("(.*) : (.*)");
+	    Matcher matcher = pattern.matcher(line);
+	    if (matcher.find()){
+		OWLObjectProperty property = null;
+		String textualRelation = matcher.group(2);
+
+		if(textualRelation.equals("negatively perturbs")){
+		    property = this.getNegativelyPerturbs();
+		}else if(textualRelation.equals("positively perturbs")){
+		    property = this.getPositivelyPerturbs();
+		}else if(textualRelation.equals("perturbs")){
+		    property = this.getPerturbs();
+		}else{
+		    throw new MappingException("The '.map' file contains a corrupted entry: " + line);
+
+		}
+
+		relationMapping.put(matcher.group(1), property);
+	    }
+
+	}
+	return relationMapping;
+
+    }
 }

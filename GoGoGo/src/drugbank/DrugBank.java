@@ -88,10 +88,7 @@ public class DrugBank implements Serializable {
 	return null;
     }
 
-    /**
-     * @param drugId
-     * @return
-     */
+
     public ArrayList<Partner> getPartners(String drugId) {
 
 	ArrayList<Partner> partners = new ArrayList<Partner>();
@@ -101,6 +98,27 @@ public class DrugBank implements Serializable {
 	    partners.add(this.getPartner(partnerId));
 	}
 	return partners;
+    }
+
+    public ArrayList<Drug> getNonExperimentalDrugs() {
+	ArrayList<Drug> nonExperimentalDrugs = new ArrayList<Drug>();
+
+	for (Drug drug : this.getDrugs()) {
+
+	    boolean isExperimental = false;
+
+	    for (String group : drug.getGroups()) {
+		if(group.equals("experimental")){
+		    isExperimental = true;
+		}
+	    }
+	    
+	    if(isExperimental == false){
+		nonExperimentalDrugs.add(drug);
+	    }
+	}
+
+	return nonExperimentalDrugs;
     }
 
 }

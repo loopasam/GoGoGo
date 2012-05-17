@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  */
 public class Drug implements Serializable{
-    
+
     /**
      * 
      */
@@ -20,7 +20,7 @@ public class Drug implements Serializable{
     private String name;
     private ArrayList<String> groups;
     private ArrayList<TargetRelation> targetRelations;
-    
+
     /**
      * 
      */
@@ -28,7 +28,7 @@ public class Drug implements Serializable{
 	this.setGroups(new ArrayList<String>());
 	this.setTargetRelations(new ArrayList<TargetRelation>());
     }
-    
+
     public void setTargetRelations(ArrayList<TargetRelation> targetRelations) {
 	this.targetRelations = targetRelations;
     }
@@ -53,6 +53,6 @@ public class Drug implements Serializable{
     public ArrayList<String> getGroups() {
 	return groups;
     }
-    
+
 
 }
