@@ -233,7 +233,7 @@ public class FunctionalClassification {
 	IRI iriPositivelyPerturbs = IRI.create(this.getPrefix() + "#positively-perturbs");
 	this.setPositivelyPerturbs(factory.getOWLObjectProperty(iriPositivelyPerturbs));
 
-	IRI iriInvolved = IRI.create(this.getPrefix() + "#involved");
+	IRI iriInvolved = IRI.create(this.getPrefix() + "#involved-in");
 	this.setInvolved(factory.getOWLObjectProperty(iriInvolved));
 
 	IRI iriDrug = IRI.create(this.getPrefix() + "#Drug");
@@ -249,15 +249,15 @@ public class FunctionalClassification {
 
 	for (GoTerm term : this.getGo().getBioProcesses()) {
 
-//	    IRI iriNewClass = IRI.create(this.getPrefix() + "#" + term.getId());
-//	    OWLClass childTerm = this.factory.getOWLClass(iriNewClass);
+	    //	    IRI iriNewClass = IRI.create(this.getPrefix() + "#" + term.getId());
+	    //	    OWLClass childTerm = this.factory.getOWLClass(iriNewClass);
 	    OWLClass childTerm = factory.getOWLClass(":" + term.getId(), this.getPrefixManager());
-	    
+
 	    this.addLabelToClass(childTerm, term.getName());
 
 	    for (GoRelation relation : term.getRelations()) {
-//		IRI iriParentClass = IRI.create(this.getPrefix() + "#" + relation.getTarget());
-//		OWLClass owlParentTerm = this.factory.getOWLClass(iriParentClass);
+		//		IRI iriParentClass = IRI.create(this.getPrefix() + "#" + relation.getTarget());
+		//		OWLClass owlParentTerm = this.factory.getOWLClass(iriParentClass);
 		OWLClass owlParentTerm = factory.getOWLClass(":" + relation.getTarget(), this.getPrefixManager());
 
 		OWLAxiom axiom = null;
@@ -271,6 +271,7 @@ public class FunctionalClassification {
 		this.getManager().applyChange(addAxiom);
 	    }
 	}
+
     }
 
     private void addLabelToClass(OWLClass owlClass, String label) {
@@ -384,8 +385,11 @@ public class FunctionalClassification {
 
 	for (Drug drug : this.getDrugBank().getNonExperimentalDrugs()) {
 
-	    IRI iriDrugClass = IRI.create(this.getPrefix() + "#" + drug.getId());
-	    OWLClass drugClass = this.factory.getOWLClass(iriDrugClass);
+	    //	    IRI iriDrugClass = IRI.create(this.getPrefix() + "#" + drug.getId());
+	    //	    OWLClass drugClass = this.factory.getOWLClass(iriDrugClass);
+	    OWLClass drugClass = this.factory.getOWLClass(":" + drug.getId(), this.getPrefixManager());
+
+
 	    this.addLabelToClass(drugClass, drug.getName());
 	    OWLAxiom drugTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, this.getDrug());
 	    AddAxiom addDrugTypeAxiom = new AddAxiom(this.getOntology(), drugTypeAxiom);
@@ -398,8 +402,10 @@ public class FunctionalClassification {
 		if(partner.getUniprotIdentifer() != null){
 		    //We are dealing with a protein
 		    //TODO: change into URI uniprot
-		    IRI iriProtClass = IRI.create(this.getPrefix() + "#" + partner.getUniprotIdentifer());
-		    OWLClass protClass = this.factory.getOWLClass(iriProtClass);
+		    //		    IRI iriProtClass = IRI.create(this.getPrefix() + "#" + partner.getUniprotIdentifer());
+		    //		    OWLClass protClass = this.factory.getOWLClass(iriProtClass);
+		    OWLClass protClass = this.factory.getOWLClass(":" + partner.getUniprotIdentifer(), this.getPrefixManager());
+
 		    this.addLabelToClass(protClass, partner.getName());
 		    OWLAxiom protTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, this.getProtein());
 		    AddAxiom addProtTypeAxiom = new AddAxiom(this.getOntology(), protTypeAxiom);
@@ -419,14 +425,17 @@ public class FunctionalClassification {
 
 		    for (GoAnnotation annotation : partner.getAnnotations()) {
 			//TODO filter on type of evidence for comparison
-			if(!annotation.getEvidence().equals("IEA")){
-			    
-//			    IRI iriTerm = IRI.create(this.getPrefix() + "#" + annotation.getGoId());
-			    
+			if(!annotation.getEvidence().equals("IEA") && this.getGo().getTerm(annotation.getGoId()).getNamespace().equals("biological_process")){
+
+			    //			    IRI iriTerm = IRI.create(this.getPrefix() + "#" + annotation.getGoId());
+
 			    //TODO stuck there
-			    
-			    OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
-			    
+
+
+			    			    OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
+//			    OWLClass goTerm = this.getClassFromSignature(this.getPrefix() + "#" + annotation.getGoId());
+
+
 			    OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolved(), goTerm);
 			    OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, involvedInSome);
 			    AddAxiom addAnnotationAxiom = new AddAxiom(this.getOntology(), protAnnotationAxiom);
@@ -439,7 +448,8 @@ public class FunctionalClassification {
 	}
 
     }
-
+    
+    
     private HashMap<String, OWLObjectProperty> getRelationMapping(String path) throws IOException, MappingException {
 
 	FileInputStream fstream = new FileInputStream(path);

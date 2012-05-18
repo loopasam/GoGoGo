@@ -28,14 +28,15 @@ public class ClassificationLauncher {
 	boolean isConsistent = classification.isConsistent();
 	System.out.println("consistent: " + isConsistent);
 
-//		System.out.println("Generating patterns...");
-//		classification.generateAgentPatterns();
-//		boolean isConsistentAfterPatterns = classification.isConsistent();
-//		System.out.println("consistent after patterns: " + isConsistentAfterPatterns);
+	System.out.println("Generating patterns...");
+	classification.generateAgentPatterns();
+	boolean isConsistentAfterPatterns = classification.isConsistent();
+	System.out.println("consistent after patterns: " + isConsistentAfterPatterns);
 
 
 	System.out.println("Generating prots and drugs axioms...");
 	classification.generateProteinandDrugAxioms();
+	System.out.println("Start reasoning...");
 	boolean isConsistentAfterProteins = classification.isConsistent();
 	System.out.println("consistent after adding proteins: " + isConsistentAfterProteins);
 
