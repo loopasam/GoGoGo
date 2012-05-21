@@ -68,7 +68,9 @@ public class FunctionalClassification {
 
     private OWLClass drug;
     private OWLClass protein;
-
+    private OWLClass drugFromDrugBank;
+    private OWLClass agent;
+    
     private OWLOntologyManager manager;
     private OWLOntology ontology;
     private OWLDataFactory factory;
@@ -79,6 +81,18 @@ public class FunctionalClassification {
     private HashMap<String, OWLObjectProperty> mapper;
 
 
+    public void setDrugFromDrugBank(OWLClass drugFromDrugBank) {
+	this.drugFromDrugBank = drugFromDrugBank;
+    }
+    public OWLClass getDrugFromDrugBank() {
+	return drugFromDrugBank;
+    }
+    public void setAgent(OWLClass agent) {
+	this.agent = agent;
+    }
+    public OWLClass getAgent() {
+	return agent;
+    }
     public void setPrefixManager(PrefixManager prefixManager) {
 	this.prefixManager = prefixManager;
     }
@@ -238,6 +252,12 @@ public class FunctionalClassification {
 
 	IRI iriDrug = IRI.create(this.getPrefix() + "#Drug");
 	this.setDrug(factory.getOWLClass(iriDrug));
+	
+	IRI iriDrugbank = IRI.create(this.getPrefix() + "#Drug-from-DrugBank");
+	this.setDrugFromDrugBank(factory.getOWLClass(iriDrugbank));
+
+	IRI iriAgent = IRI.create(this.getPrefix() + "#Agent");
+	this.setAgent(factory.getOWLClass(iriAgent));
 
 	IRI iriProtein = IRI.create(this.getPrefix() + "#Protein");
 	this.setProtein(factory.getOWLClass(iriProtein));
@@ -342,6 +362,12 @@ public class FunctionalClassification {
 	this.addLabelToClass(owlProAgent, "Pro-" + goRegulatedTerm.getName() + "-agent");
 	//Get an 'Agent Restriction' axiom
 	OWLClassExpression drugAndPertubsSome = this.getAgentRestrictionAxiom(perturbation, regulatingTerm);
+	
+	OWLAxiom agentAxiom = this.getFactory().getOWLSubClassOfAxiom(owlProAgent, this.getAgent());
+	AddAxiom addAgentAxiom = new AddAxiom(this.getOntology(), agentAxiom);
+	this.getManager().applyChange(addAgentAxiom);
+
+	
 	//Assert equivalence between the agent class and the logical expression
 	OWLAxiom proAxiom = this.getFactory().getOWLEquivalentClassesAxiom(drugAndPertubsSome, owlProAgent);
 	//Add the axiom to the ontology
@@ -358,6 +384,12 @@ public class FunctionalClassification {
 	this.addLabelToClass(owAntiAgent, "Anti-" + goRegulatedTerm.getName() + "-agent");
 	//Get an 'Agent Restriction' axiom
 	OWLClassExpression drugAndPertubsSome = this.getAgentRestrictionAxiom(perturbation, regulatingTerm);
+	
+	OWLAxiom agentAxiom = this.getFactory().getOWLSubClassOfAxiom(owAntiAgent, this.getAgent());
+	AddAxiom addAgentAxiom = new AddAxiom(this.getOntology(), agentAxiom);
+	this.getManager().applyChange(addAgentAxiom);
+
+
 	//Assert equivalence between the agent class and the logical expression
 	OWLAxiom antiAxiom = this.getFactory().getOWLEquivalentClassesAxiom(drugAndPertubsSome, owAntiAgent);
 	//Add the axiom to the ontology
@@ -391,7 +423,7 @@ public class FunctionalClassification {
 
 
 	    this.addLabelToClass(drugClass, drug.getName());
-	    OWLAxiom drugTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, this.getDrug());
+	    OWLAxiom drugTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, this.getDrugFromDrugBank());
 	    AddAxiom addDrugTypeAxiom = new AddAxiom(this.getOntology(), drugTypeAxiom);
 	    this.getManager().applyChange(addDrugTypeAxiom);
 

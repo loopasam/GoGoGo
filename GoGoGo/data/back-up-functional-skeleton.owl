@@ -124,30 +124,17 @@
     
 
 
+    <!-- http://www.gogogo.org/fuctional-skeleton.owl#Agent -->
+
+    <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Agent">
+        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.gogogo.org/fuctional-skeleton.owl#Anti-blood-coagulation-agent -->
 
     <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Anti-blood-coagulation-agent">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#negatively-perturbs"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Protein"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#positive_regulation_of_blood_coagulation"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -169,6 +156,28 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#negatively-perturbs"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Protein"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#positive_regulation_of_blood_coagulation"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#Agent"/>
     </owl:Class>
     
 
@@ -179,10 +188,18 @@
     
 
 
+    <!-- http://www.gogogo.org/fuctional-skeleton.owl#DrugFromDB -->
+
+    <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#DrugFromDB">
+        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.gogogo.org/fuctional-skeleton.owl#Lepirudin -->
 
     <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Lepirudin">
-        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
+        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#DrugFromDB"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#negatively-perturbs"/>
@@ -210,6 +227,14 @@
     <!-- http://www.gogogo.org/fuctional-skeleton.owl#Protein -->
 
     <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Protein"/>
+    
+
+
+    <!-- http://www.gogogo.org/fuctional-skeleton.owl#Sildenafil -->
+
+    <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Sildenafil">
+        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#DrugFromDB"/>
+    </owl:Class>
     
 
 
