@@ -30,9 +30,19 @@
     
 
 
+    <!-- http://www.gogogo.org/fuctional-skeleton.owl#has-function -->
+
+    <owl:ObjectProperty rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#has-function"/>
+    
+
+
     <!-- http://www.gogogo.org/fuctional-skeleton.owl#involved-in -->
 
     <owl:ObjectProperty rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#has-function"/>
+            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#part-of"/>
+        </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#part-of"/>
@@ -73,10 +83,6 @@
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#involved-in"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
-            <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#regulates"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#perturbs"/>
@@ -127,28 +133,22 @@
     <!-- http://www.gogogo.org/fuctional-skeleton.owl#Agent -->
 
     <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Agent">
-        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
+        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#Therapeutic-Compound"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gogogo.org/fuctional-skeleton.owl#Drug -->
+    <!-- http://www.gogogo.org/fuctional-skeleton.owl#Gene-Product -->
 
-    <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
-    
-
-
-    <!-- http://www.gogogo.org/fuctional-skeleton.owl#Drug-from-DrugBank -->
-
-    <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Drug-from-DrugBank">
-        <rdfs:subClassOf rdf:resource="http://www.gogogo.org/fuctional-skeleton.owl#Drug"/>
+    <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Gene-Product">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gogogo.org/fuctional-skeleton.owl#Protein -->
+    <!-- http://www.gogogo.org/fuctional-skeleton.owl#Therapeutic-Compound -->
 
-    <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Protein"/>
+    <owl:Class rdf:about="http://www.gogogo.org/fuctional-skeleton.owl#Therapeutic-Compound"/>
 </rdf:RDF>
 
 

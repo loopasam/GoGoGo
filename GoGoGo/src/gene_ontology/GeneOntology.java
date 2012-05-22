@@ -94,4 +94,34 @@ public class GeneOntology implements Serializable {
 	return goTerms;
     }
 
+    /**
+     * @return
+     */
+    public ArrayList<GoTerm> getBioProcessesAndMolecularFunctions() {
+
+	ArrayList<GoTerm> goTerms = new ArrayList<GoTerm>();
+	for (GoTerm term : this.getTerms()) {
+	    if(term.getNamespace().equals("biological_process") || term.getNamespace().equals("molecular_function")){
+		goTerms.add(term);
+	    }
+	}
+	return goTerms;
+    }
+
+    public boolean isTermABioProcess(String goId) {
+	GoTerm termToTest = this.getTerm(goId);
+	if(termToTest.getNamespace().equals("biological_process")){
+	    return true;
+	}
+	return false;
+    }
+
+    public boolean isTermAMolecularFunction(String goId) {
+	GoTerm termToTest = this.getTerm(goId);
+	if(termToTest.getNamespace().equals("molecular_function")){
+	    return true;
+	}
+	return false;
+    }
+
 }
