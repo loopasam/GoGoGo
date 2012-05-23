@@ -15,6 +15,7 @@ import core.XMLBurger;
 import drugbank.Drug;
 import drugbank.DrugBank;
 import drugbank.Partner;
+import drugbank.Species;
 import drugbank.TargetRelation;
 
 /**
@@ -128,7 +129,16 @@ public class DrugBankParser extends Parser {
 				    if(burger.tag("name")){
 					partner.setName(burger.getTagText());
 				    }
-				    if(burger.tag("species")){while(burger.inTag("species")){}}
+
+				    if(burger.tag("species")){
+					Species species = new Species();
+					while(burger.inTag("species")){
+					    if(burger.tag("category")){
+						//TODO finish here the construction of the species object
+					    }
+
+					}
+				    }
 
 				    if(burger.tag("external-identifiers")){
 					String resourceName = null;

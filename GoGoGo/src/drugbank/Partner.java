@@ -19,8 +19,14 @@ public class Partner implements Serializable {
     private int id;
     private String name;
     private ArrayList<GoAnnotation> annotations;
+    private Species species;
 
-
+    public void setSpecies(Species species) {
+	this.species = species;
+    }
+    public Species getSpecies() {
+	return species;
+    }
     public String getUniprotIdentifer() {
 	return uniprotIdentifer;
     }

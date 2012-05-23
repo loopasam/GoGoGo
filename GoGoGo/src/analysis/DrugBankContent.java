@@ -5,10 +5,10 @@ package analysis;
 
 import java.io.IOException;
 
-import drugbank.Drug;
 import drugbank.DrugBank;
 import drugbank.Partner;
 
+import goa.GoAnnotation;
 import gogogo.GoGoGoDataset;
 
 /**
@@ -22,10 +22,6 @@ public class DrugBankContent {
 	GoGoGoDataset data = new GoGoGoDataset("data/dataset-filtered.ser");
 	DrugBank drugBank = data.getDrugbank();
 
-	for (Partner partner : drugBank.getPartners()) {
-
-
-	}
 
     }
 
