@@ -14,6 +14,7 @@ import drugbank.Drug;
 import drugbank.DrugBank;
 import drugbank.Partner;
 import drugbank.Species;
+import drugbank.TargetRelation;
 
 import goa.GoAnnotation;
 import gogogo.GoGoGoDataset;
@@ -42,37 +43,63 @@ public class DrugBankContent {
 
 	DrugBankContent analysis = new DrugBankContent();
 
-	analysis.GroupsDistribution();
-
-	//	analysis.TypesDistributionForNonExperimentalDrugs();
-
+//	analysis.GroupsDistribution();
+//	analysis.TypesDistributionForNonExperimentalDrugs();
+//	analysis.targetTypesDistributionFor("biotech");
+//	analysis.targetTypesDistributionFor("small molecule");
+//	analysis.targetTypesNonProteinDistribution("biotech");
+//	analysis.targetTypesNonProteinDistribution("small molecule");
 
     }
+    
+
+    private void targetTypesNonProteinDistribution(String type) {
+	Distribution<String> distribution = new Distribution<String>();
+	for (Drug drug : this.getDrugBank().getDrugs()) {
+	    if(drug.getType().equals(type) && drug.isExperimental() == false){
+		for (Partner partner : this.getDrugBank().getPartners(drug.getId())) {
+		    if(partner.getUniprotIdentifer() == null){
+			
+			distribution.add(partner.getName());
+			
+		    }
+		}
+	    }
+	}
+	distribution.printReport();
+    }
+
+    private void targetTypesDistributionFor(String type) {
+	Distribution<String> distribution = new Distribution<String>();
+	for (Drug drug : this.getDrugBank().getDrugs()) {
+	    if(drug.getType().equals(type) && drug.isExperimental() == false){
+		for (Partner partner : this.getDrugBank().getPartners(drug.getId())) {
+		    if(partner.getUniprotIdentifer() != null){
+			distribution.add("gene-product");
+		    }else{
+			distribution.add("other");
+		    }
+		}
+	    }
+	}
+	distribution.printReport();
+    }
+
 
     private void TypesDistributionForNonExperimentalDrugs() {
-	HashMap<String, Integer> typesDistribution = new HashMap<String, Integer>();
+	Distribution<String> distribution = new Distribution<String>();
 	for (Drug drug : this.getDrugBank().getDrugs()) {
-
 	    if(drug.isExperimental() == false){
-		if(typesDistribution.get(drug.getType()) == null){
-		    typesDistribution.put(drug.getType(), 1);
-		}else{
-		    typesDistribution.put(drug.getType(), typesDistribution.get(drug.getType()) + 1);
-		}
+			distribution.add(drug.getType());
 	    } 
 	}
-	for (String type : typesDistribution.keySet()) {
-	    System.out.println(type + ": " + typesDistribution.get(type));
-	}
+	distribution.printReport();
     }
 
     private void GroupsDistribution() {
 	Distribution<String> distribution = new Distribution<String>();
 	for (Drug drug : this.getDrugBank().getDrugs()) {
-
-
 	    distribution.add(drug.getGroups().toString());
-
 	}
 	distribution.printReport();
     }
