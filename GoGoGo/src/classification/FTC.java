@@ -302,13 +302,13 @@ public class FTC {
 
 	    for (TargetRelation relation : drug.getTargetRelations()) {
 		Partner partner = this.getDrugBank().getPartner(relation.getPartnerId());
-		if(partner.getUniprotIdentifer() != null){
+		if(partner.getUniprotIdentifer() != null && partner.getNonIEAAnnotations().size() > 0 ){
 		    OWLClass protClass = this.factory.getOWLClass(":" + partner.getUniprotIdentifer(), this.getPrefixManager());
 		    this.addLabelToClass(protClass, partner.getName());
 		    OWLAxiom protTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, this.getGeneProduct());
 		    this.addAxiom(protTypeAxiom);
 
-		    
+
 		    //TODO create a relation.getMeaningfullActions()
 		    for (String action : relation.getActions()) {
 			if(relationMapping.get(action) != null){
@@ -321,34 +321,33 @@ public class FTC {
 			}
 		    }
 
-		    for (GoAnnotation annotation : partner.getAnnotations()) {
-			if(!annotation.getEvidence().equals("IEA")){
+		    for (GoAnnotation annotation : partner.getNonIEAAnnotations()) {
 
-			    if(this.getGo().isTermABioProcess(annotation.getGoId())){
-				OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
-				OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolved(), goTerm);
-				OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, involvedInSome);
-				this.addAxiom(protAnnotationAxiom);
+			if(this.getGo().isTermABioProcess(annotation.getGoId())){
+			    OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
+			    OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolved(), goTerm);
+			    OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, involvedInSome);
+			    this.addAxiom(protAnnotationAxiom);
 
-				GoTerm currentTerm = this.getGo().getTerm(annotation.getGoId());
-				for (GoRelation parentRelation : currentTerm.getRelations()) {
-				    if(parentRelation.getType().equals("positively_regulates")){
-					this.addAgentPatternForPositiveRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
-				    }else if(parentRelation.getType().equals("negatively_regulates")){
-					this.addAgentPatternForNegativeRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
-				    }
-				}		
+			    GoTerm currentTerm = this.getGo().getTerm(annotation.getGoId());
+			    for (GoRelation parentRelation : currentTerm.getRelations()) {
+				if(parentRelation.getType().equals("positively_regulates")){
+				    this.addAgentPatternForPositiveRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
+				}else if(parentRelation.getType().equals("negatively_regulates")){
+				    this.addAgentPatternForNegativeRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
+				}
+			    }		
 
 
-			    }else if(this.getGo().isTermAMolecularFunction(annotation.getGoId())){
-				OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
-				OWLClassExpression hasFunctionSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getHasFunction(), goTerm);
-				OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, hasFunctionSome);
-				this.addAxiom(protAnnotationAxiom);
-				GoTerm currentTerm = this.getGo().getTerm(annotation.getGoId());
-				this.addAgentPatternForFunction(currentTerm);
-			    }
+			}else if(this.getGo().isTermAMolecularFunction(annotation.getGoId())){
+			    OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
+			    OWLClassExpression hasFunctionSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getHasFunction(), goTerm);
+			    OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, hasFunctionSome);
+			    this.addAxiom(protAnnotationAxiom);
+			    GoTerm currentTerm = this.getGo().getTerm(annotation.getGoId());
+			    this.addAgentPatternForFunction(currentTerm);
 			}
+
 		    }
 
 		}
@@ -447,7 +446,7 @@ public class FTC {
 	//Drug and (?perturb some (Protein and (involved-in some term)))
 	return this.getFactory().getOWLObjectIntersectionOf(this.getTherapeuticCompound(), pertubsSome);
     }
-    
+
     private OWLClassExpression getFunctionalAgentRestrictionAxiom(OWLObjectProperty perturbation, OWLClass function) {
 	//(has-function some term)
 	OWLClassExpression hasFunctionSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getHasFunction(), function);

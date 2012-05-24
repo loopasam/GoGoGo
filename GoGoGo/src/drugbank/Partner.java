@@ -54,11 +54,15 @@ public class Partner implements Serializable {
 
     public ArrayList<GoAnnotation> getNonIEAAnnotations() {
 	ArrayList<GoAnnotation> annotations = new ArrayList<GoAnnotation>();
-	for (GoAnnotation goAnnotation : this.getAnnotations()) {
-	    if(!goAnnotation.getEvidence().equals("IEA")){
-		annotations.add(goAnnotation);
-	    }
+	
+	if(this.getAnnotations() != null){
+		for (GoAnnotation goAnnotation : this.getAnnotations()) {
+		    if(!goAnnotation.getEvidence().equals("IEA")){
+			annotations.add(goAnnotation);
+		    }
+		}
 	}
+	
 	return annotations;
     }    
 

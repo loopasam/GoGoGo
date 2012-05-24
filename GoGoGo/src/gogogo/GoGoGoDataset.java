@@ -64,19 +64,17 @@ public class GoGoGoDataset implements Serializable {
     public ArrayList<Drug> getClassifiableDrugs() {
 	ArrayList<Drug> classifiableDrugs = new ArrayList<Drug>();
 	for (Drug drug : this.getDrugbank().getNonExperimentalDrugs()) {
-	    boolean hasAnnotation = false;
 	    //getMeaninfulRelations instead of getTargetRelations()
 	    for (TargetRelation relation : drug.getTargetRelations()) {
 		//TODO check if the relation exists in the map, if not discard
 		//TODO doing it via the new object relation mapping
-		
 		Partner partner = this.getDrugbank().getPartner(relation.getPartnerId());
-		if(partner.getAnnotations() != null && partner.getNonIEAAnnotations().size() > 0){
-		    hasAnnotation = true;
+		if(partner.getNonIEAAnnotations() != null && partner.getNonIEAAnnotations().size() > 0){
+			if(!classifiableDrugs.contains(drug)){
+			    classifiableDrugs.add(drug);
+			}
+
 		}
-	    }
-	    if(hasAnnotation){
-		classifiableDrugs.add(drug);
 	    }
 	}
 	return classifiableDrugs;
