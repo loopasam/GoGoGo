@@ -290,6 +290,7 @@ public class FTC {
 
     public void generateProteinandDrugAxioms() throws IOException, MappingException {
 
+	//TODO create on object instead
 	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/relation_mapping.map");
 
 	for (Drug drug : this.getData().getClassifiableDrugs()) {
@@ -307,6 +308,8 @@ public class FTC {
 		    OWLAxiom protTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, this.getGeneProduct());
 		    this.addAxiom(protTypeAxiom);
 
+		    
+		    //TODO create a relation.getMeaningfullActions()
 		    for (String action : relation.getActions()) {
 			if(relationMapping.get(action) != null){
 			    OWLObjectProperty property = relationMapping.get(action);
