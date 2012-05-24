@@ -81,10 +81,17 @@ public class FTC {
     private PrefixManager prefixManager;
     private GeneOntology go;
     private DrugBank drugBank;
+    private GoGoGoDataset data;
     private String prefix;
     private HashMap<String, OWLObjectProperty> mapper;
 
 
+    public void setData(GoGoGoDataset data) {
+	this.data = data;
+    }
+    public GoGoGoDataset getData() {
+	return data;
+    }
     public OWLObjectProperty getPositivelyRegulates() {
 	return positivelyRegulates;
     }
@@ -207,9 +214,9 @@ public class FTC {
     }
 
     public FTC(String path) throws OWLOntologyCreationException, IOException, ClassNotFoundException {
-	GoGoGoDataset data = new GoGoGoDataset(path);	
-	this.setGo(data.getGo());
-	this.setDrugBank(data.getDrugbank());
+	this.setData(new GoGoGoDataset(path));	
+	this.setGo(this.getData().getGo());
+	this.setDrugBank(this.getData().getDrugbank());
 	this.setManager(OWLManager.createOWLOntologyManager());
 	this.setPrefix("http://www.gogogo.org/fuctional-skeleton.owl");
 	this.setPrefixManager(new DefaultPrefixManager(this.getPrefix() + "#"));
@@ -285,7 +292,7 @@ public class FTC {
 
 	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/relation_mapping.map");
 
-	for (Drug drug : this.getDrugBank().getNonExperimentalDrugs()) {
+	for (Drug drug : this.getData().getClassifiableDrugs()) {
 
 	    OWLClass drugClass = this.factory.getOWLClass(":" + drug.getId(), this.getPrefixManager());
 	    this.addLabelToClass(drugClass, drug.getName());
@@ -312,7 +319,7 @@ public class FTC {
 		    }
 
 		    for (GoAnnotation annotation : partner.getAnnotations()) {
-			if(!annotation.getEvidence().equals("IEA") && annotation.getTaxon().equals("9606")){
+			if(!annotation.getEvidence().equals("IEA")){
 
 			    if(this.getGo().isTermABioProcess(annotation.getGoId())){
 				OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());

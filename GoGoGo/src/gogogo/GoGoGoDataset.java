@@ -8,9 +8,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
+import drugbank.Drug;
 import drugbank.DrugBank;
+import drugbank.Partner;
+import drugbank.TargetRelation;
 import gene_ontology.GeneOntology;
+import goa.GoAnnotation;
 
 /**
  * @author Samuel Croset
@@ -51,6 +56,30 @@ public class GoGoGoDataset implements Serializable {
     }
     public void setDrugbank(DrugBank drugbank) {
 	this.drugbank = drugbank;
+    }
+
+    /**
+     * @return The non-experimental drugs that have a partner annotated with at least one (non-IEA) annotation.
+     */
+    public ArrayList<Drug> getClassifiableDrugs() {
+	ArrayList<Drug> classifiableDrugs = new ArrayList<Drug>();
+	for (Drug drug : this.getDrugbank().getNonExperimentalDrugs()) {
+	    boolean hasAnnotation = false;
+	    for (TargetRelation relation : drug.getTargetRelations()) {
+		Partner partner = this.getDrugbank().getPartner(relation.getPartnerId());
+		if(partner.getAnnotations() != null && partner.getAnnotations().size() > 0){
+		    for (GoAnnotation annotation : partner.getAnnotations()) {
+			if(!annotation.getEvidence().equals("IEA")){
+			    hasAnnotation = true;
+			}
+		    }	
+		}
+	    }
+	    if(hasAnnotation){
+		classifiableDrugs.add(drug);
+	    }
+	}
+	return classifiableDrugs;
     }
 
 

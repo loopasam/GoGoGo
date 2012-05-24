@@ -90,6 +90,7 @@ public class GoaConnector {
 
 	    }else{
 		System.err.println("The partner " + partner.getName() + " has no Uniprot identifer");
+		counter++;
 	    }
 	}
     }

@@ -103,19 +103,24 @@ public class DrugBankParserTest {
 //	assertEquals("Clarithromycin", drug.getName());
 //    }
 //    
-//    @Test
-//    public void speciesTest(){
-//	Partner partner = this.drugbank.getPartner(1);
-//	Species species = partner.getSpecies();
-//	assertEquals("bacterial", species.getCategory());
-//	assertEquals("Haemophilus influenzae", species.getName());
-//	assertEquals(71421, species.getTaxonId());
-//	
-//	Partner partner1 = this.drugbank.getPartner(200);
-//	Species species1 = partner1.getSpecies();
-//	assertEquals("human", species1.getCategory());
-//	assertEquals("Homo sapiens", species1.getName());
-//	assertEquals(9606, species1.getTaxonId());
-//
-//    }
+    @Test
+    public void speciesTest(){
+	Partner partner = this.drugbank.getPartner(1);
+	Species species = partner.getSpecies();
+	assertEquals("bacterial", species.getCategory());
+	assertEquals("Haemophilus influenzae", species.getName());
+	assertEquals(71421, species.getTaxonId());
+	
+	Partner partner1 = this.drugbank.getPartner(200);
+	Species species1 = partner1.getSpecies();
+	assertEquals("human", species1.getCategory());
+	assertEquals("Homo sapiens", species1.getName());
+	assertEquals(9606, species1.getTaxonId());
+	
+	Partner partner2 = this.drugbank.getPartner(54);
+	Species species2 = partner2.getSpecies();
+	assertEquals("human", species2.getCategory());
+
+
+    }
 }
