@@ -60,7 +60,8 @@ public class DrugBankParser extends Parser {
 		    if(burger.tag("drug")){
 
 			Drug drug = new Drug();
-
+			String type = burger.getTagAttribute("type");
+			drug.setType(type);
 			String name = null;
 			while(burger.inTag("drug")){
 			    if(burger.tag("drugbank-id")){
@@ -134,10 +135,17 @@ public class DrugBankParser extends Parser {
 					Species species = new Species();
 					while(burger.inTag("species")){
 					    if(burger.tag("category")){
-						//TODO finish here the construction of the species object
+						species.setCategory(burger.getTagText());
+					    }
+					    if(burger.tag("name")){
+						species.setName(burger.getTagText());
+					    }
+					    if(burger.tag("uniprot-taxon-id")){
+						species.setTaxonId(Integer.parseInt(burger.getTagText()));
 					    }
 
 					}
+					partner.setSpecies(species);
 				    }
 
 				    if(burger.tag("external-identifiers")){

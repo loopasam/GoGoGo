@@ -20,10 +20,9 @@ public class Drug implements Serializable{
     private String name;
     private ArrayList<String> groups;
     private ArrayList<TargetRelation> targetRelations;
+    private String type;
 
-    /**
-     * 
-     */
+
     public Drug() {
 	this.setGroups(new ArrayList<String>());
 	this.setTargetRelations(new ArrayList<TargetRelation>());
@@ -32,6 +31,14 @@ public class Drug implements Serializable{
     public void setTargetRelations(ArrayList<TargetRelation> targetRelations) {
 	this.targetRelations = targetRelations;
     }
+    public void setType(String type) {
+	this.type = type;
+    }
+
+    public String getType() {
+	return type;
+    }
+
     public ArrayList<TargetRelation> getTargetRelations() {
 	return targetRelations;
     }
@@ -52,6 +59,15 @@ public class Drug implements Serializable{
     }
     public ArrayList<String> getGroups() {
 	return groups;
+    }
+
+    public boolean isExperimental() {
+	for (String group : this.getGroups()) {
+	    if(group.equals("experimental")){
+		return true;
+	    }
+	}
+	return false;
     }
 
 

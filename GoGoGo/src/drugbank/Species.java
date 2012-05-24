@@ -3,12 +3,15 @@
  */
 package drugbank;
 
+import java.io.Serializable;
+
 /**
  * @author Samuel Croset
  *
  */
-public class Species {
+public class Species implements Serializable {
     
+    private static final long serialVersionUID = 1L;
     private String category;
     private String name;
     private int taxonId;
