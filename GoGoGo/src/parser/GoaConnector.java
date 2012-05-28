@@ -84,6 +84,15 @@ public class GoaConnector {
 		    goa.setReference(splittedLine[8]);
 		    goa.setSource(splittedLine[13]);
 		    goa.setTaxon(splittedLine[4]);
+		    String normalizedNamespace = null;
+		    if(splittedLine[11].equals("Function")){
+			normalizedNamespace = "molecular_function";
+		    }else if(splittedLine[11].equals("Component")){
+			normalizedNamespace = "cellular_component";
+		    }else if(splittedLine[11].equals("Process")){
+			normalizedNamespace = "biological_process";
+		    }
+		    goa.setAspect(normalizedNamespace);
 		    annotations.add(goa);
 		}
 		partner.setAnnotations(annotations);

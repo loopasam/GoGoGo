@@ -32,8 +32,16 @@ public class GoAnnotation implements Serializable {
     private String date;
     //team that has done the annot
     private String source;
+    //Aspect of the ontology covered
+    private String aspect;
     
     
+    public void setAspect(String aspect) {
+	this.aspect = aspect;
+    }
+    public String getAspect() {
+	return aspect;
+    }
     public String getDatabase() {
         return database;
     }

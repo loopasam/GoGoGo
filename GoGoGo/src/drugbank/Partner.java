@@ -54,16 +54,27 @@ public class Partner implements Serializable {
 
     public ArrayList<GoAnnotation> getNonIEAAnnotations() {
 	ArrayList<GoAnnotation> annotations = new ArrayList<GoAnnotation>();
-	
+
 	if(this.getAnnotations() != null){
-		for (GoAnnotation goAnnotation : this.getAnnotations()) {
-		    if(!goAnnotation.getEvidence().equals("IEA")){
-			annotations.add(goAnnotation);
-		    }
+	    for (GoAnnotation goAnnotation : this.getAnnotations()) {
+		if(!goAnnotation.getEvidence().equals("IEA")){
+		    annotations.add(goAnnotation);
 		}
+	    }
 	}
-	
+
 	return annotations;
+    }
+
+    public ArrayList<GoAnnotation> getNonIEAAnnotationsNonCC() {
+	ArrayList<GoAnnotation> annotations = this.getNonIEAAnnotations();
+	ArrayList<GoAnnotation> nonCCAnnotations = new ArrayList<GoAnnotation>();
+	for (GoAnnotation goAnnotation : annotations) {
+	    if(!goAnnotation.getAspect().equals("cellular_component")){
+		nonCCAnnotations.add(goAnnotation);
+	    }
+	}
+	return nonCCAnnotations;
     }    
 
 }

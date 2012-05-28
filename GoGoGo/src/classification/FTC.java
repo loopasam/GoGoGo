@@ -289,6 +289,9 @@ public class FTC {
     }
 
     public void generateProteinandDrugAxioms() throws IOException, MappingException {
+	
+	//REFAIRE cette partie
+	//pseuido code d'abord
 
 	//TODO create on object instead
 	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/relation_mapping.map");
@@ -302,7 +305,7 @@ public class FTC {
 
 	    for (TargetRelation relation : drug.getTargetRelations()) {
 		Partner partner = this.getDrugBank().getPartner(relation.getPartnerId());
-		if(partner.getUniprotIdentifer() != null && partner.getNonIEAAnnotations().size() > 0 ){
+		if(partner.getUniprotIdentifer() != null && partner.getNonIEAAnnotationsNonCC().size() > 0 ){
 		    OWLClass protClass = this.factory.getOWLClass(":" + partner.getUniprotIdentifer(), this.getPrefixManager());
 		    this.addLabelToClass(protClass, partner.getName());
 		    OWLAxiom protTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, this.getGeneProduct());
@@ -321,7 +324,7 @@ public class FTC {
 			}
 		    }
 
-		    for (GoAnnotation annotation : partner.getNonIEAAnnotations()) {
+		    for (GoAnnotation annotation : partner.getNonIEAAnnotationsNonCC()) {
 
 			if(this.getGo().isTermABioProcess(annotation.getGoId())){
 			    OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());

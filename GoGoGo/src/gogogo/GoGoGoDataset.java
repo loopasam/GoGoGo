@@ -15,6 +15,7 @@ import drugbank.DrugBank;
 import drugbank.Partner;
 import drugbank.TargetRelation;
 import gene_ontology.GeneOntology;
+import gene_ontology.GoTerm;
 import goa.GoAnnotation;
 
 /**
@@ -64,16 +65,12 @@ public class GoGoGoDataset implements Serializable {
     public ArrayList<Drug> getClassifiableDrugs() {
 	ArrayList<Drug> classifiableDrugs = new ArrayList<Drug>();
 	for (Drug drug : this.getDrugbank().getNonExperimentalDrugs()) {
-	    //getMeaninfulRelations instead of getTargetRelations()
 	    for (TargetRelation relation : drug.getTargetRelations()) {
-		//TODO check if the relation exists in the map, if not discard
-		//TODO doing it via the new object relation mapping
 		Partner partner = this.getDrugbank().getPartner(relation.getPartnerId());
-		if(partner.getNonIEAAnnotations() != null && partner.getNonIEAAnnotations().size() > 0){
-			if(!classifiableDrugs.contains(drug)){
-			    classifiableDrugs.add(drug);
-			}
-
+		if(partner.getNonIEAAnnotationsNonCC() != null && partner.getNonIEAAnnotationsNonCC().size() > 0){
+		    if(!classifiableDrugs.contains(drug)){
+			classifiableDrugs.add(drug);
+		    }
 		}
 	    }
 	}
