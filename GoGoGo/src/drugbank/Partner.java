@@ -69,6 +69,7 @@ public class Partner implements Serializable {
     public ArrayList<GoAnnotation> getNonIEAAnnotationsNonCC() {
 	ArrayList<GoAnnotation> annotations = this.getNonIEAAnnotations();
 	ArrayList<GoAnnotation> nonCCAnnotations = new ArrayList<GoAnnotation>();
+	
 	for (GoAnnotation goAnnotation : annotations) {
 	    if(!goAnnotation.getAspect().equals("cellular_component")){
 		nonCCAnnotations.add(goAnnotation);

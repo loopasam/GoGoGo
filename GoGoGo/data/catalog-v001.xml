@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1338199406677" name="duplicate:http://www.gogogo.org/fuctional-skeleton.owl" uri="ftc-2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1338199406677" name="duplicate:http://www.gogogo.org/fuctional-skeleton.owl" uri="fuctional-skeleton.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1338199406677" name="duplicate:http://www.gogogo.org/fuctional-skeleton.owl" uri="ftc.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1338199406677" name="duplicate:http://www.gogogo.org/fuctional-skeleton.owl" uri="back-up-functional-skeleton.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1338199406677" name="duplicate:http://www.gogogo.org/skeleton.owl" uri="go.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1338199406677" name="duplicate:http://www.gogogo.org/skeleton.owl" uri="skeleton.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1338199406677" name="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl" uri="toy_example.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1338213989022" name="duplicate:http://www.gogogo.org/fuctional-skeleton.owl" uri="ftc-2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1338213989022" name="duplicate:http://www.gogogo.org/fuctional-skeleton.owl" uri="fuctional-skeleton.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1338213989022" name="duplicate:http://www.gogogo.org/fuctional-skeleton.owl" uri="ftc.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1338213989022" name="duplicate:http://www.gogogo.org/fuctional-skeleton.owl" uri="back-up-functional-skeleton.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1338213989022" name="duplicate:http://www.gogogo.org/skeleton.owl" uri="go.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1338213989022" name="duplicate:http://www.gogogo.org/skeleton.owl" uri="skeleton.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1338213989022" name="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl" uri="toy_example.owl"/>
     </group>
 </catalog>

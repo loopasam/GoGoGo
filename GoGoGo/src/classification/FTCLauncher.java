@@ -28,8 +28,9 @@ public class FTCLauncher {
 //	System.out.println("consistent: " + isConsistent);
 	
 	System.out.println("Generating prots and drugs axioms...");
+//	classification.generateProteinandDrugAxioms();
+	
 	classification.generateProteinandDrugAxioms();
-
 
 
 	System.out.println("Saving...");

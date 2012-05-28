@@ -62,7 +62,7 @@ public class DrugBankContent {
 	//	analysis.NonExperimentalDrugsWithAnnotatedPartners();
 	//	analysis.goldPartners();
 	//	analysis.distributionOrganisms();
-	analysis.distributionOrganismClasses();
+//	analysis.distributionOrganismClasses();
     }
 
 
