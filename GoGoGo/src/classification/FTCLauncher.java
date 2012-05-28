@@ -20,17 +20,20 @@ public class FTCLauncher {
 	System.out.println("Loading data...");
 	FTC classification =new FTC("data/dataset-filtered.ser");
 
+	System.out.println("Checking profile...");
+	boolean el = classification.checkIfELProfile();
+	System.out.println("is EL: " + el);
 	System.out.println("Converting in owl...");
 	classification.generateOwlOntology();
-	
-//	System.out.println("Checking for consistency...");
-//	boolean isConsistent = classification.isConsistent();
-//	System.out.println("consistent: " + isConsistent);
 	
 	System.out.println("Generating prots and drugs axioms...");
 //	classification.generateProteinandDrugAxioms();
 	
 	classification.generateProteinandDrugAxioms();
+	
+	System.out.println("Checking for consistency...");
+	boolean isConsistent = classification.isConsistent();
+	System.out.println("consistent: " + isConsistent);
 
 
 	System.out.println("Saving...");

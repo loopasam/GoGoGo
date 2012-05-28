@@ -74,14 +74,17 @@ public class GoGoGoDataset implements Serializable {
 	    //Iterates over the partners of the drug
 	    for (TargetRelation relation : drug.getTargetRelations()) {
 		Partner partner = this.getDrugbank().getPartner(relation.getPartnerId());
-		//Check if the partner as some non-IEA annotations and not CC
-		if(partner.getNonIEAAnnotationsNonCC() != null && partner.getNonIEAAnnotationsNonCC().size() > 0){
-		    //Iterates over the actions linking the drug to the partner to see if the action is mapped to an OWL property (meaningfull)
-		    for (String action : relation.getActions()) {
-			if(relationMapping.get(action) != null){
-			    //Check if the drug is already in the listy of classifable list, otherwise add it as it fullfills all the criterias
-			    if(!classifiableDrugs.contains(drug)){
-				classifiableDrugs.add(drug);
+		//Retrieve only the compounds active against human proteins
+		if(partner.getSpecies().getCategory() != null && partner.getSpecies().getCategory().equals("human")){
+		    //Check if the partner as some non-IEA annotations and not CC
+		    if(partner.getNonIEAAnnotationsNonCC() != null && partner.getNonIEAAnnotationsNonCC().size() > 0){
+			//Iterates over the actions linking the drug to the partner to see if the action is mapped to an OWL property (meaningfull)
+			for (String action : relation.getActions()) {
+			    if(relationMapping.get(action) != null){
+				//Check if the drug is already in the listy of classifable list, otherwise add it as it fullfills all the criterias
+				if(!classifiableDrugs.contains(drug)){
+				    classifiableDrugs.add(drug);
+				}
 			    }
 			}
 		    }

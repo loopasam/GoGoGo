@@ -36,6 +36,9 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.model.PrefixManager;
+import org.semanticweb.owlapi.profiles.OWL2ELProfile;
+import org.semanticweb.owlapi.profiles.OWLProfileReport;
+import org.semanticweb.owlapi.profiles.OWLProfileViolation;
 import org.semanticweb.owlapi.reasoner.ConsoleProgressMonitor;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerConfiguration;
@@ -74,6 +77,7 @@ public class FTC {
     private OWLClass therapeuticCompound;
     private OWLClass geneProduct;
     private OWLClass agent;
+    private OWLClass drug;
 
     private OWLOntologyManager manager;
     private OWLOntology ontology;
@@ -86,6 +90,12 @@ public class FTC {
     private HashMap<String, OWLObjectProperty> mapper;
 
 
+    public void setDrug(OWLClass drug) {
+	this.drug = drug;
+    }
+    public OWLClass getDrug() {
+	return drug;
+    }
     public void setData(GoGoGoDataset data) {
 	this.data = data;
     }
@@ -241,6 +251,7 @@ public class FTC {
 	this.setAgent(factory.getOWLClass(":Agent", this.getPrefixManager()));
 	this.setTherapeuticCompound(factory.getOWLClass(":Therapeutic-Compound", this.getPrefixManager()));
 	this.setGeneProduct(factory.getOWLClass(":Gene-Product", this.getPrefixManager()));
+	this.setDrug(factory.getOWLClass(":Drug", this.getPrefixManager()));
     }
 
     public void generateOwlOntology() {
@@ -297,65 +308,66 @@ public class FTC {
 
 	    OWLClass drugClass = this.factory.getOWLClass(":" + drug.getId(), this.getPrefixManager());
 	    this.addLabelToClass(drugClass, drug.getName());
-	    OWLAxiom drugTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, this.getTherapeuticCompound());
+	    OWLAxiom drugTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, this.getDrug());
 	    this.addAxiom(drugTypeAxiom);
 
 	    //Iterates over the targets of the drugs
 	    for (TargetRelation relation : drug.getTargetRelations()) {
 		Partner partner = this.getDrugBank().getPartner(relation.getPartnerId());
-
 		//Check if the partner has some annotations non IEA nor CC
+		//Check if the partner is a human protein
 		//TODO add more flexibility for the type of annotations to include
-		if(partner.getNonIEAAnnotationsNonCC().size() > 0 ){
-		    OWLClass protClass = this.factory.getOWLClass(":" + partner.getUniprotIdentifer(), this.getPrefixManager());
-		    this.addLabelToClass(protClass, partner.getName());
-		    OWLAxiom protTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, this.getGeneProduct());
-		    this.addAxiom(protTypeAxiom);
+		if(partner.getSpecies().getCategory() != null && partner.getSpecies().getCategory().equals("human")){
+		    if(partner.getNonIEAAnnotationsNonCC().size() > 0){
+			OWLClass protClass = this.factory.getOWLClass(":" + partner.getUniprotIdentifer(), this.getPrefixManager());
+			this.addLabelToClass(protClass, partner.getName());
+			OWLAxiom protTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, this.getGeneProduct());
+			this.addAxiom(protTypeAxiom);
 
-		    for (String action : relation.getActions()) {
-			//Check is the relation is meaningful
+			for (String action : relation.getActions()) {
+			    //Check is the relation is meaningful
 
-			if(relationMapping.get(action) != null){
+			    if(relationMapping.get(action) != null){
 
-			    //Add a relation between the drug and the partner. The partner is relevant as it is linked to the drug and has some annotations.
-			    OWLObjectProperty property = relationMapping.get(action);
-			    OWLClassExpression perturbsSome = this.getFactory().getOWLObjectSomeValuesFrom(property, protClass);
-			    OWLAxiom drugActionAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, perturbsSome);
-			    this.addAxiom(drugActionAxiom);
+				//Add a relation between the drug and the partner. The partner is relevant as it is linked to the drug and has some annotations.
+				OWLObjectProperty property = relationMapping.get(action);
+				OWLClassExpression perturbsSome = this.getFactory().getOWLObjectSomeValuesFrom(property, protClass);
+				OWLAxiom drugActionAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, perturbsSome);
+				this.addAxiom(drugActionAxiom);
 
-			    //TODO add more flexibility for the type of annotations to include
-			    for (GoAnnotation annotation : partner.getNonIEAAnnotationsNonCC()) {
+				//TODO add more flexibility for the type of annotations to include
+				for (GoAnnotation annotation : partner.getNonIEAAnnotationsNonCC()) {
 
-				if(this.getGo().isTermABioProcess(annotation.getGoId())){
-				    //If term is a bio-process then create the BP patterns
-				    OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
-				    OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolved(), goTerm);
-				    OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, involvedInSome);
-				    this.addAxiom(protAnnotationAxiom);
+				    if(this.getGo().isTermABioProcess(annotation.getGoId())){
+					//If term is a bio-process then create the BP patterns
+					OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
+					OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolved(), goTerm);
+					OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, involvedInSome);
+					this.addAxiom(protAnnotationAxiom);
 
-				    GoTerm currentTerm = this.getGo().getTerm(annotation.getGoId());
-				    for (GoRelation parentRelation : currentTerm.getRelations()) {
-					if(parentRelation.getType().equals("positively_regulates")){
-					    this.addAgentPatternForPositiveRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
-					}else if(parentRelation.getType().equals("negatively_regulates")){
-					    this.addAgentPatternForNegativeRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
-					}
-				    }		
-				}else if(this.getGo().isTermAMolecularFunction(annotation.getGoId())){
-				    //If term is a MF, then creates the MF patterns
-				    OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
-				    OWLClassExpression hasFunctionSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getHasFunction(), goTerm);
-				    OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, hasFunctionSome);
-				    this.addAxiom(protAnnotationAxiom);
-				    GoTerm currentTerm = this.getGo().getTerm(annotation.getGoId());
-				    this.addAgentPatternForFunction(currentTerm);
+					GoTerm currentTerm = this.getGo().getTerm(annotation.getGoId());
+					for (GoRelation parentRelation : currentTerm.getRelations()) {
+					    if(parentRelation.getType().equals("positively_regulates")){
+						this.addAgentPatternForPositiveRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
+					    }else if(parentRelation.getType().equals("negatively_regulates")){
+						this.addAgentPatternForNegativeRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
+					    }
+					}		
+				    }else if(this.getGo().isTermAMolecularFunction(annotation.getGoId())){
+					//If term is a MF, then creates the MF patterns
+					OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
+					OWLClassExpression hasFunctionSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getHasFunction(), goTerm);
+					OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, hasFunctionSome);
+					this.addAxiom(protAnnotationAxiom);
+					GoTerm currentTerm = this.getGo().getTerm(annotation.getGoId());
+					this.addAgentPatternForFunction(currentTerm);
+				    }
+
 				}
-
 			    }
-			}else{
-			    System.err.println("[INFO] Relation: '" + action + "' ignored as not mapped in the '.map' file.");
 			}
 		    }
+
 		}
 	    }
 	}
@@ -491,6 +503,19 @@ public class FTC {
 	    }
 	}
 	return relationMapping;
+    }
+
+    public boolean checkIfELProfile() {
+	OWL2ELProfile profile = new OWL2ELProfile();
+	OWLProfileReport report = profile.checkOntology(ontology);
+
+	if(report.getViolations().size() > 0){
+	    for (OWLProfileViolation violiation : report.getViolations()) {
+		System.out.println("Violation: " + violiation.getAxiom().getAxiomType().toString());
+	    }
+	    return false;
+	}
+	return true;
     }
 
 
