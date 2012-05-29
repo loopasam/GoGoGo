@@ -15,7 +15,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,6 +47,9 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerConfiguration;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
+import org.semanticweb.owlapi.util.InferredAxiomGenerator;
+import org.semanticweb.owlapi.util.InferredOntologyGenerator;
+import org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
 import drugbank.Drug;
@@ -302,7 +307,7 @@ public class FTC {
     public void generateProteinandDrugAxioms() throws IOException, MappingException {
 
 	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/relation_mapping.map");
-
+	
 	//Iterates over the classifiable drugs and generates axioms
 	for (Drug drug : this.getData().getClassifiableDrugs(relationMapping)) {
 
@@ -516,6 +521,23 @@ public class FTC {
 	    return false;
 	}
 	return true;
+    }
+
+    public void classify() throws OWLOntologyCreationException, OWLOntologyStorageException {
+	OWLReasonerFactory reasonerFactory = new Reasoner.ReasonerFactory();
+	ConsoleProgressMonitor progressMonitor = new ConsoleProgressMonitor();
+	OWLReasonerConfiguration config = new SimpleConfiguration(progressMonitor);
+	OWLReasoner reasoner = reasonerFactory.createReasoner(this.getOntology(), config);
+	reasoner.precomputeInferences();
+	List<InferredAxiomGenerator<? extends OWLAxiom>> gens = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
+	gens.add(new InferredSubClassAxiomGenerator());
+	OWLOntology infOnt = this.getManager().createOntology();
+	InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner, gens);
+	iog.fillOntology(this.getManager(), infOnt);
+	System.out.println("saving infered onto...");
+	File file = new File("data/ftc-full.owl");
+	this.getManager().saveOntology(infOnt, IRI.create(file.toURI()));
+	
     }
 
 
