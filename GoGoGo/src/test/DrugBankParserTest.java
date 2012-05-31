@@ -5,9 +5,6 @@ package test;
 
 import static org.junit.Assert.*;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.ArrayList;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +13,6 @@ import drugbank.Drug;
 import drugbank.DrugBank;
 import drugbank.Partner;
 import drugbank.Species;
-import drugbank.TargetRelation;
 
 import parser.DrugBankParser;
 

@@ -6,7 +6,6 @@ package analysis;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 import gene_ontology.GeneOntology;
 import gene_ontology.GoRelation;

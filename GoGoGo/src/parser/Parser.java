@@ -39,5 +39,6 @@ public abstract class Parser {
     public abstract void parse() throws FileNotFoundException, IOException;
     
     public abstract void save() throws FileNotFoundException, IOException;
+
     
 }

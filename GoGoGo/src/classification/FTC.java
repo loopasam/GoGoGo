@@ -481,8 +481,6 @@ public class FTC {
 	return this.getFactory().getOWLObjectIntersectionOf(this.getTherapeuticCompound(), pertubsSome);
     }
 
-
-
     private HashMap<String, OWLObjectProperty> getRelationMapping(String path) throws IOException, MappingException {
 	FileInputStream fstream = new FileInputStream(path);
 	DataInputStream in = new DataInputStream(fstream);

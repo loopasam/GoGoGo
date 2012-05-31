@@ -60,44 +60,9 @@ public class DrugBankContent {
 	//	analysis.targetTypesNonProteinDistribution("biotech");
 	//	analysis.targetTypesNonProteinDistribution("small molecule");
 	//	analysis.NonExperimentalDrugsWithAnnotatedPartners();
-	//	analysis.goldPartners();
-	//	analysis.distributionOrganisms();
-//	analysis.distributionOrganismClasses();
     }
 
 
-    private void distributionOrganismClasses() {
-	Distribution<String> distribution = new Distribution<String>();
-	for (Drug drug : this.getData().getClassifiableDrugs()) {
-	    for (Partner partner : this.getDrugBank().getPartners(drug.getId())) {
-		if(partner.getSpecies().getCategory() != null){
-		    distribution.add(partner.getSpecies().getCategory());
-		}else{
-		    distribution.add("unknown");
-		}
-	    }
-	}
-	distribution.printReport();
-    }
-
-    private void distributionOrganisms() {
-	Distribution<String> distribution = new Distribution<String>();
-	for (Drug drug : this.getData().getClassifiableDrugs()) {
-	    for (Partner partner : this.getDrugBank().getPartners(drug.getId())) {
-		if(partner.getSpecies().getName() != null){
-		    distribution.add(partner.getSpecies().getName());
-		}else{
-		    distribution.add("unknown");
-		}
-	    }
-	}
-	distribution.printReport();
-    }
-
-    private void goldPartners() {
-	ArrayList<Drug> classifiableDrugs = this.getData().getClassifiableDrugs();
-	System.out.println(classifiableDrugs.size());
-    }
 
     private void NonExperimentalDrugsWithAnnotatedPartners() {
 
