@@ -33,12 +33,20 @@ public class DrugBankParserTest {
     }
     
     @Test
-    public void testType() {
-	Drug drug = this.drugbank.getDrug("DB00001");
-	assertEquals("biotech", drug.getType());
-	Drug drug1 = this.drugbank.getDrug("DB00203");
-	assertEquals("small molecule", drug1.getType());
+    public void testAtc() {
+	Drug drug = this.drugbank.getDrug("DB00498");
+	assertEquals(1, drug.getAtcCodes().size());
+	assertEquals("B01AA02", drug.getAtcCodes().get(0));
     }
+
+    
+//    @Test
+//    public void testType() {
+//	Drug drug = this.drugbank.getDrug("DB00001");
+//	assertEquals("biotech", drug.getType());
+//	Drug drug1 = this.drugbank.getDrug("DB00203");
+//	assertEquals("small molecule", drug1.getType());
+//    }
 
 //    @Test
 //    public void testDrug() {

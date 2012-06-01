@@ -35,8 +35,6 @@ public class ParserLauncher {
 	connector.fillPartnersWithGoTerms();
 	connector.save("data/dataset-filtered.ser");
 	
-//	GoGoGoDataset dataset = new GoGoGoDataset("data/dataset.ser");
-
     }
 
 

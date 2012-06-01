@@ -10,7 +10,6 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
 import parser.ATCParser;
-import parser.Parser;
 
 /**
  * @author Samuel Croset
@@ -18,11 +17,14 @@ import parser.Parser;
  */
 public class ATCParserLauncher {
 
-    public static void main(String[] args) throws FileNotFoundException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
-	Parser atcParser = new ATCParser("data/ASCII_Index_med_DDD.asc", "data/atc.ser");
+    public static void main(String[] args) throws FileNotFoundException, IOException, OWLOntologyCreationException, OWLOntologyStorageException, ClassNotFoundException {
+	ATCParser atcParser = new ATCParser("data/ASCII_Index_med_DDD.asc", "data/atc.ser");
+	System.out.println("Parsing...");
 	atcParser.parse();
-	atcParser.save();
-	((ATCParser) atcParser).convertInOwl("file:/home/samuel/git/GoGoGo/GoGoGo/data/atc.owl");
+	System.out.println("Adding DB info...");
+	atcParser.addDrugBankInfo("data/drugbank.ser");
+	System.out.println("Converting in OWL...");
+	atcParser.convertInOwl("file:/home/samuel/git/GoGoGo/GoGoGo/data/atc.owl");
 
     }
 }

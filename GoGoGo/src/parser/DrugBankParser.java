@@ -86,6 +86,17 @@ public class DrugBankParser extends Parser {
 
 			    if(burger.tag("mixtures")){while(burger.inTag("mixtures")){}}
 			    if(burger.tag("packagers")){while(burger.inTag("packagers")){}}
+
+			    if(burger.tag("atc-codes")){
+				ArrayList<String> atcCodes = new ArrayList<String>();
+				while(burger.inTag("atc-codes")){
+				    if(burger.tag("atc-code")){
+					atcCodes.add(burger.getTagText());
+				    }
+				}
+				drug.setAtcCodes(atcCodes);
+			    }
+
 			    if(burger.tag("drug-interactions")){while(burger.inTag("drug-interactions")){}}
 
 			    if(burger.tag("targets")){

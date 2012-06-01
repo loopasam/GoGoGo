@@ -37,6 +37,8 @@ import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
 import classification.ATC;
 import classification.ATCTerm;
+import drugbank.Drug;
+import drugbank.DrugBank;
 
 /**
  * @author Samuel Croset
@@ -154,6 +156,26 @@ public class ATCParser extends Parser {
 	    OWLAxiom labelAxiom = factory.getOWLAnnotationAssertionAxiom(owlTerm.getIRI(), labelAnnot);
 	    manager.applyChange(new AddAxiom(ontology, labelAxiom));
 
+	    //TODO revise that block
+	    if(term.getDrugBankReferences().size() > 0){
+
+		for (String dbid : term.getDrugBankReferences()) {
+
+		    OWLAnnotationProperty seeAlsoproperty = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_SEE_ALSO.getIRI());
+		    OWLLiteral seeAlsoliteral = factory.getOWLLiteral(dbid);
+		    OWLAnnotation seeAlsoAnnot = factory.getOWLAnnotation(seeAlsoproperty, seeAlsoliteral);
+		    OWLAxiom seeAlsoAxiom = factory.getOWLAnnotationAssertionAxiom(owlTerm.getIRI(), seeAlsoAnnot);
+		    manager.applyChange(new AddAxiom(ontology, seeAlsoAxiom));
+
+		    OWLClass drug = factory.getOWLClass(":Drug", prefixManager);
+		    OWLAxiom axiom = factory.getOWLSubClassOfAxiom(owlTerm, drug);
+		    AddAxiom addAxiom = new AddAxiom(ontology, axiom);
+		    manager.applyChange(addAxiom);
+
+		}
+
+
+	    }
 
 	    if(term.getParentCode() != null){
 		OWLClass owlTermParent = factory.getOWLClass(":" + term.getParentCode(), prefixManager);
@@ -163,6 +185,24 @@ public class ATCParser extends Parser {
 	    }
 	}
 	manager.saveOntology(ontology);
+
+    }
+
+    //TODO to improve
+    public void addDrugBankInfo(String path) throws FileNotFoundException, IOException, ClassNotFoundException {
+	DrugBank drugBank = new DrugBank(path);
+	for (Drug drug : drugBank.getDrugs()) {
+	    if(drug.getAtcCodes().size() > 0){		
+		for (String code : drug.getAtcCodes()) {
+		    ATCTerm term = this.getAtc().getTerm(code);
+		    if(term == null){
+			System.err.println(code);
+		    }else{
+			term.getDrugBankReferences().add(drug.getId());
+		    }
+		}
+	    }
+	}
 
     }
 

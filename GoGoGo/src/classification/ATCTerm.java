@@ -4,6 +4,7 @@
 package classification;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * @author Samuel Croset
@@ -15,8 +16,18 @@ public class ATCTerm implements Serializable {
     private String code;
     private String label;
     private String parentCode;
+    private ArrayList<String> drugBankReferences;
     
+    public ATCTerm() {
+	this.setDrugBankReferences(new ArrayList<String>());
+    }
     
+    public void setDrugBankReferences(ArrayList<String> drugBankReferences) {
+	this.drugBankReferences = drugBankReferences;
+    }
+    public ArrayList<String> getDrugBankReferences() {
+	return drugBankReferences;
+    }
     public void setParentCode(String parentCode) {
 	this.parentCode = parentCode;
     }

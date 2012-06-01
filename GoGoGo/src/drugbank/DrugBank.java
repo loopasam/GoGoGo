@@ -39,9 +39,6 @@ public class DrugBank implements Serializable {
 	in.close();
     }
 
-    /**
-     * 
-     */
     public DrugBank() {
 
     }

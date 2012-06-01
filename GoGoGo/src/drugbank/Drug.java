@@ -21,16 +21,26 @@ public class Drug implements Serializable{
     private ArrayList<String> groups;
     private ArrayList<TargetRelation> targetRelations;
     private String type;
+    private ArrayList<String> atcCodes;
 
 
     public Drug() {
 	this.setGroups(new ArrayList<String>());
 	this.setTargetRelations(new ArrayList<TargetRelation>());
+	this.setAtcCodes(new ArrayList<String>());
     }
 
     public void setTargetRelations(ArrayList<TargetRelation> targetRelations) {
 	this.targetRelations = targetRelations;
     }
+    public void setAtcCodes(ArrayList<String> atcCodes) {
+	this.atcCodes = atcCodes;
+    }
+
+    public ArrayList<String> getAtcCodes() {
+	return atcCodes;
+    }
+
     public void setType(String type) {
 	this.type = type;
     }

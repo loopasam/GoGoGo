@@ -3,8 +3,14 @@
  */
 package classification;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+
 
 /**
  * @author Samuel Croset
@@ -26,6 +32,14 @@ public class ATC implements Serializable {
 	this.setTerms(new ArrayList<ATCTerm>());
     }
 
+    public ATC(String path) throws FileNotFoundException, IOException, ClassNotFoundException {
+	File file = new File(path);
+	ObjectInputStream in = new ObjectInputStream(new FileInputStream(file));
+	ATC atc = (ATC) in.readObject();
+	this.setTerms(atc.getTerms());
+	in.close();
+    }
+    
     public void addTerm(ATCTerm term) {
 	this.getTerms().add(term);
     }
