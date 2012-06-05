@@ -35,8 +35,15 @@ import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
+import com.aliasi.chunk.Chunk;
+import com.aliasi.chunk.Chunking;
+import com.aliasi.dict.ExactDictionaryChunker;
+import com.aliasi.dict.MapDictionary;
+import com.aliasi.tokenizer.IndoEuropeanTokenizerFactory;
+
 import classification.ATC;
 import classification.ATCTerm;
+import dictionaries.DrugBankDictionary;
 import drugbank.Drug;
 import drugbank.DrugBank;
 
@@ -84,11 +91,13 @@ public class ATCParser extends Parser {
 		ATCTerm term = new ATCTerm();
 		term.setCode(matcherCategory.group(1).replaceAll(" ", ""));
 		term.setLabel(matcherCategory.group(2));
+		term.setATherapeutic(false);
 		this.getAtc().addTerm(term);
 	    }else if(matcherTherapeutic.find()){
 		ATCTerm term = new ATCTerm();
 		term.setCode(matcherTherapeutic.group(1).replaceAll(" ", ""));
 		term.setLabel(matcherTherapeutic.group(2));
+		term.setATherapeutic(true);
 		this.getAtc().addTerm(term);
 	    }
 
@@ -188,21 +197,58 @@ public class ATCParser extends Parser {
 
     }
 
-    //TODO to improve
     public void addDrugBankInfo(String path) throws FileNotFoundException, IOException, ClassNotFoundException {
 	DrugBank drugBank = new DrugBank(path);
+	//Check DB and add the term to the curated categories.
 	for (Drug drug : drugBank.getDrugs()) {
-	    if(drug.getAtcCodes().size() > 0){		
+	    if(drug.getAtcCodes().size() > 0){
 		for (String code : drug.getAtcCodes()) {
 		    ATCTerm term = this.getAtc().getTerm(code);
 		    if(term == null){
-			System.err.println(code);
+			System.err.println("Category doesn't exists in the ATC" + code);
 		    }else{
 			term.getDrugBankReferences().add(drug.getId());
 		    }
 		}
 	    }
 	}
+
+	//Some therapeutics present within drugbank are not mapped to an ATC eventhough they should be.
+	//This text-mining part corrects that
+	DrugBankDictionary dico = new DrugBankDictionary();
+	dico.load("/home/samuel/git/BioDicoManager/BioDicoManager/data/drugbank-dico.xml");
+	MapDictionary<String> lingpipedico = dico.getLingPipeDico();
+	ExactDictionaryChunker chunker = new ExactDictionaryChunker(lingpipedico, IndoEuropeanTokenizerFactory.INSTANCE, true, false);
+
+	for (ATCTerm term : this.getAtc().getTerms()) {
+	    if(term.isATherapeutic()){
+		Chunking chunking = chunker.chunk(term.getLabel());
+		for (Chunk chunk : chunking.chunkSet()) {
+		    int start = chunk.start();
+		    int end = chunk.end();
+		    String type = chunk.type();
+		    String uri = dico.getURIForTerm(type).substring(29, 36);
+
+		    boolean coverTheAllTerm = false;
+		    if(term.getLabel().length() == end - start){
+			coverTheAllTerm = true;
+		    }
+
+		    boolean isKnown = false;
+		    if(term.getDrugBankReferences().contains(uri)){
+			isKnown = true;
+		    }
+
+		    if(coverTheAllTerm){
+			if(!isKnown){
+			    term.getDrugBankReferences().add(uri);
+			}
+		    }
+
+		}
+	    }
+	}
+
 
     }
 

@@ -17,7 +17,16 @@ public class ATCTerm implements Serializable {
     private String label;
     private String parentCode;
     private ArrayList<String> drugBankReferences;
+    private boolean isATherapeutic;
     
+    public void setATherapeutic(boolean isATherapeutic) {
+	this.isATherapeutic = isATherapeutic;
+    }
+
+    public boolean isATherapeutic() {
+	return isATherapeutic;
+    }
+
     public ATCTerm() {
 	this.setDrugBankReferences(new ArrayList<String>());
     }

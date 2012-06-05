@@ -325,6 +325,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlortetracycline</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A01AB"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00256</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00759</rdfs:seeAlso>
     </owl:Class>
     
@@ -468,6 +469,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A01AD08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">becaplermin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A01AD"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00102</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -530,6 +533,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnesium oxide</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A02AA"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01377</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01378</rdfs:seeAlso>
     </owl:Class>
     
@@ -682,6 +686,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A02AC"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01373</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06724</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1134,6 +1139,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A02BX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbenoxolone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A02BX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02329</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2599,6 +2606,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chenodeoxycholic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A05AA"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01586</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06777</rdfs:seeAlso>
     </owl:Class>
     
@@ -2620,6 +2628,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A05AA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cholic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A05AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02659</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2838,6 +2848,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A06AB01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxyphenisatine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A06AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04823</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2867,6 +2879,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A06AB04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenolphthalein</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A06AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04824</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3106,6 +3120,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnesium oxide</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A06AD"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01377</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01378</rdfs:seeAlso>
     </owl:Class>
     
@@ -3298,6 +3313,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A06AG04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycerol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A06AG"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04077</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3390,6 +3407,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A06AX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycerol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A06AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04077</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3408,6 +3427,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A06AX03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lubiprostone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A06AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01046</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3592,6 +3613,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A07AB02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phthalylsulfathiazole</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A07AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00913</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3874,6 +3897,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A07DA04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">difenoxin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A07DA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01501</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -4282,6 +4307,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A08AA07">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cathine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A08AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01486</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -4358,6 +4385,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A08AX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rimonabant</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A08AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06155</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -4468,6 +4497,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A09AB04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">citric acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A09AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04272</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -4861,6 +4892,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A10BA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buformin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A10BA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04830</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -5025,6 +5058,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A10BC01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glymidine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A10BC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01382</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -5235,6 +5270,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A10BH01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sitagliptin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A10BH"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01261</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -5366,6 +5403,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A10BX08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mitiglinide</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A10BX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01252</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -5402,6 +5441,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A10XA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tolrestat</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A10XA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02383</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -5810,6 +5851,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A11HA"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00184</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02701</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -6021,6 +6063,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A12AA"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01373</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06724</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -6087,6 +6130,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium glucoheptonate</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A12AA"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00326</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01373</rdfs:seeAlso>
     </owl:Class>
     
@@ -6572,6 +6616,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A14AA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">androstanolone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A14AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02901</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -6628,6 +6674,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A14AA07">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prasterone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A14AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01708</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -6678,6 +6726,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A14AB02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ethylestrenol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A14AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01493</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -6761,6 +6811,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A16AA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glutamine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A16AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00130</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -6832,6 +6884,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A16AB03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agalsidase alfa</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A16AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00103</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -6932,6 +6986,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A16AX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thioctic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A16AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00166</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -6992,6 +7048,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#A16AX07">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sapropterin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#A16AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00360</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -7045,6 +7103,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B01AA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dicoumarol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B01AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00266</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -7200,6 +7260,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B01AB06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nadroparin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B01AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB08813</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -7236,6 +7298,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B01AB10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tinzaparin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B01AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06822</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -7438,6 +7502,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B01AC18">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">triflusal</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B01AC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB08814</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -7478,6 +7544,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B01AC23">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cilostazol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B01AC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01166</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -7696,6 +7764,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B01AE05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ximelagatran</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B01AE"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04898</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -7736,6 +7806,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B01AX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">defibrotide</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B01AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04932</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -7890,6 +7962,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B02BA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phytomenadione</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B02BA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01022</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -7899,6 +7973,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B02BA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">menadione</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B02BA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00170</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -9098,6 +9174,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B05CA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrofural</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B05CA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00336</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -9212,6 +9290,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B05CB04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sodium bicarbonate</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B05CB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01390</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -9345,6 +9425,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B05XA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sodium bicarbonate</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B05XA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01390</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -9751,6 +9833,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#B06AC02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">icatibant</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#B06AC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06196</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -9952,6 +10036,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C01AC01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g-strophanthin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C01AC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01092</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -10293,6 +10379,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C01BG01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">moracizine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C01BG"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00680</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -10580,6 +10668,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C01CA26">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ephedrine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C01CA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01364</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -10772,6 +10862,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C01DA13">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eritrityl tetranitrate</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C01DA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01613</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -10918,6 +11010,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C01DX02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prenylamine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C01DX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04825</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -11062,6 +11156,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C01DX19">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nesiritide</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C01DX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04899</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -11676,6 +11772,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C02CC04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">debrisoquine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C02CC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04840</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -11884,6 +11982,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C02KB01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metirosine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C02KB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00765</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -12872,6 +12972,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C03CA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">piretanide</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C03CA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02925</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -12939,6 +13041,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C03CC02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tienilic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C03CC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04831</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -13238,6 +13342,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C03XA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conivaptan</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C03XA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00872</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -13512,6 +13618,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C04AX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cyclandelate</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C04AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04838</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -13773,6 +13881,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C05AA12">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">triamcinolone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C05AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00620</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -13880,6 +13990,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C05AE01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glyceryl trinitrate</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C05AE"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00727</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -13889,6 +14001,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C05AE02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isosorbide dinitrate</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C05AE"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00883</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -14085,6 +14199,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C05BB05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C05BB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03255</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -14150,6 +14266,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C05CA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rutoside</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C05CA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01698</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -15164,6 +15282,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#C08CA09">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lacidipine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#C08CA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00678</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -16919,6 +17039,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D01AC06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tiabendazole</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D01AC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00730</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -16959,6 +17081,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D01AC10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bifonazole</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D01AC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04794</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -17172,6 +17296,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salicylic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D01AE"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00936</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01398</rdfs:seeAlso>
     </owl:Class>
     
@@ -17647,6 +17772,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D03BA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collagenase</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D03BA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00048</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -17712,6 +17839,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D04AA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thenalidine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D04AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04826</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -17859,6 +17988,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D04AB02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinchocaine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D04AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00527</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -18030,6 +18161,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D05AX02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcipotriol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D05AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02300</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -18097,6 +18230,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D05BA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trioxysalen</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D05BA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04571</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -18214,6 +18349,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlortetracycline</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D06AA"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00256</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00759</rdfs:seeAlso>
     </owl:Class>
     
@@ -18256,6 +18392,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D06AX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fusidic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D06AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02703</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -18360,6 +18498,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D06AX13">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retapamulin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D06AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01256</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -18389,6 +18529,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D06BA"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00359</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB05245</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -18910,6 +19051,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D07AC07">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fludroxycortide</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D07AC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00846</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -19678,6 +19821,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D08AC04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hexamidine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D08AC"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00794</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -19746,6 +19891,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D08AE03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D08AE"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03255</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -19755,6 +19902,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D08AE04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">triclosan</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D08AE"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB08604</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -19791,6 +19940,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D08AF01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrofural</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D08AF"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00336</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -19881,6 +20032,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D08AH30">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clioquinol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D08AH"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04815</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20106,6 +20259,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D08AX02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eosin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D08AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00693</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20225,6 +20380,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D09AA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fusidic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D09AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02703</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20234,6 +20391,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D09AA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrofural</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D09AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00336</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20261,6 +20420,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D09AA06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">triclosan</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D09AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB08604</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20299,6 +20460,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D09AA10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clioquinol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D09AA"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04815</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20445,6 +20608,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D10AB01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bithionol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D10AB"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04813</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20502,6 +20667,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D10AD02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D10AD"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00162</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20719,6 +20886,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D10AX05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dapsone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D10AX"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00250</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20926,6 +21095,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D11AH01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tacrolimus</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D11AH"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00864</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20935,6 +21106,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D11AH02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pimecrolimus</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D11AH"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00337</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20944,6 +21117,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D11AH03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cromoglicic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D11AH"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01003</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20953,6 +21128,8 @@
     <owl:Class rdf:about="http://www.atc.org/atc.owl#D11AH04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alitretinoin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#D11AH"/>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00523</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -21333,7 +21510,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G01AC02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clioquinol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G01AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04815</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -21387,7 +21566,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G01AD01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lactic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G01AD"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04398</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -21407,7 +21588,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G01AD03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ascorbic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G01AD"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00126</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -21834,7 +22017,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G02AB01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylergometrine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G02AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00353</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -21941,7 +22126,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G02AD06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">misoprostol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G02AD"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00929</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -22570,7 +22757,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G03AD01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">levonorgestrel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G03AD"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00367</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -22659,7 +22848,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G03BB02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">androstanolone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G03BB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02901</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -23068,7 +23259,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G03DC02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">norethisterone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G03DC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00717</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -23095,7 +23288,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G03DC06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">etynodiol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G03DC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00823</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -23534,7 +23729,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#G03GA06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">follitropin beta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#G03GA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00066</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -24384,7 +24581,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#H01AC01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">somatropin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#H01AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00052</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -24424,7 +24623,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#H01AC05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mecasermin rinfabate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#H01AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01277</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -24511,7 +24712,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#H01BA04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">terlipressin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#H01BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02638</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -24667,7 +24870,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#H01CB04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vapreotide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#H01CB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04894</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -24741,7 +24946,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#H02AA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aldosterone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#H02AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04630</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -25304,7 +25511,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#H05AA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teriparatide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#H05AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06285</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -25400,7 +25609,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#H05BX02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paricalcitol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#H05BX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00910</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -25477,6 +25688,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlortetracycline</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00256</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00759</rdfs:seeAlso>
     </owl:Class>
     
@@ -25632,7 +25844,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01BA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thiamphenicol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB08621</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -25682,6 +25896,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01CA"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00415</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01604</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -25724,6 +25939,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01CA"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00415</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01602</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -25741,7 +25957,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01CA08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pivmecillinam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01CA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01605</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -25794,7 +26012,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01CA13">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ticarcillin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01CA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01607</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -26035,7 +26255,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01CF03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meticillin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01CF"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01603</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -26086,7 +26308,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01CG02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tazobactam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01CG"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01606</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -26247,7 +26471,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01DB08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cefapirin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01DB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01139</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -26327,7 +26553,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01DC03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cefamandole</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01DC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01326</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -27027,7 +27255,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01ED01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulfadimethoxine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01ED"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06150</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -27038,6 +27268,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulfalene</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01ED"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00664</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06150</rdfs:seeAlso>
     </owl:Class>
     
@@ -27273,7 +27504,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01FA08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">troleandomycin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01FA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01361</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -27544,7 +27777,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01GB10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ribostamycin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01GB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03615</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -27573,7 +27808,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01GB13">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bekanamycin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01GB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01172</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -27975,7 +28212,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01XA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teicoplanin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01XA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06149</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -28051,7 +28290,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01XC01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fusidic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01XC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02703</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -28230,7 +28471,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J01XX10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bacitracin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J01XX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00626</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -28512,7 +28755,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J04AB03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rifamycin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J04AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01045</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -28773,7 +29018,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#J04BA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aldesulfone sodium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J04BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01145</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -28930,6 +29177,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#J05AB"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01004</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01610</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -31009,7 +31257,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L01AC03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carboquone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L01AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00515</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -31069,7 +31319,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L01AD05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fotemustine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L01AD"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04106</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -31371,7 +31623,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L01BC07">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">azacitidine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L01BC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00928</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -31380,7 +31634,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L01BC08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decitabine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L01BC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01262</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -31567,7 +31823,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L01CD04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cabazitaxel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L01CD"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06772</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -32185,7 +32443,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L01XE10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">everolimus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L01XE"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01590</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -32540,7 +32800,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L01XX38">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vorinostat</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L01XX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02546</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -32713,7 +32975,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L02AE01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buserelin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L02AE"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06719</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33024,7 +33288,10 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L03AA10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lenograstim</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L03AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00019</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00099</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33346,7 +33613,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L03AX13">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glatiramer acetate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L03AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB05259</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33557,7 +33826,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L04AA25">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eculizumab</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L04AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01257</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33602,7 +33873,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L04AB01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">etanercept</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L04AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00005</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33631,7 +33904,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L04AB04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adalimumab</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L04AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00051</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33667,7 +33942,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L04AC01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">daclizumab</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L04AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00111</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33676,7 +33953,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L04AC02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basiliximab</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L04AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00074</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33685,7 +33964,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L04AC03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anakinra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L04AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00026</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33768,7 +34049,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L04AD01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ciclosporin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L04AD"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00091</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33777,7 +34060,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#L04AD02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tacrolimus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#L04AD"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00864</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33912,7 +34197,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M01AA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxyphenbutazone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M01AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03585</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33981,7 +34268,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M01AB04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zomepirac</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M01AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04828</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34264,7 +34553,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M01AE06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">benoxaprofen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M01AE"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04812</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34313,7 +34604,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M01AE11">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tiaprofenic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M01AE"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01600</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34456,7 +34749,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M01AG03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flufenamic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M01AG"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02266</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34518,7 +34813,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M01AH04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parecoxib</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M01AH"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB08439</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34569,7 +34866,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M01AX02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">niflumic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M01AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04552</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34578,7 +34877,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M01AX04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">azapropazone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M01AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB07402</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34949,7 +35250,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M02AA04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxyphenbutazone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M02AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03585</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -35076,7 +35379,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M02AA17">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">niflumic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M02AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04552</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -35384,7 +35689,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M03AC05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hexafluronium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M03AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00941</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -35981,7 +36288,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#M04AX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urate oxidase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M04AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00049</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -36039,6 +36348,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clodronic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#M05BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00310</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00720</rdfs:seeAlso>
     </owl:Class>
     
@@ -36895,7 +37205,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N01BB06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinchocaine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N01BB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00527</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -37057,7 +37369,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N01BX03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N01BX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03255</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -37158,6 +37472,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N02AA"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00318</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01551</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -37299,7 +37614,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N02AC01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dextromoramide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N02AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01529</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -37328,7 +37645,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N02AC05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bezitramide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N02AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01459</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -37835,7 +38154,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N02BB02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metamizole sodium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N02BB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04817</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -37966,7 +38287,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N02BE03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenacetin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N02BE"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03783</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -38119,7 +38442,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N02BG09">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methoxyflurane</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N02BG"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01028</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -38730,7 +39055,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N03AG02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valpromide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N03AG"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04165</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -39086,7 +39413,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N04AB01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">etanautine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N04AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01075</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -39790,7 +40119,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05AE02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molindone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05AE"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01618</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -39830,7 +40161,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05AF01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flupentixol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05AF"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00875</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -39839,7 +40172,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05AF02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clopenthixol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05AF"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01624</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -39870,7 +40205,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05AF05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zuclopenthixol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05AF"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01624</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40262,7 +40599,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05BA08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bromazepam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01558</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40335,7 +40674,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05BA15">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">camazepam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01489</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40356,6 +40697,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05BA"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00829</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01567</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40364,7 +40706,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05BA18">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ethyl loflazepate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01545</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40382,7 +40726,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05BA21">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clotiazepam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01559</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40391,7 +40737,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05BA22">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cloxazolam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01553</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40620,7 +40968,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05CA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">butobarbital</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05CA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01353</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40629,7 +40979,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05CA04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">barbital</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05CA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01483</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40814,7 +41166,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05CC01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chloral hydrate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05CC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01563</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -40841,7 +41195,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05CC04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dichloralphenazone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05CC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01495</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -41087,7 +41443,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05CF04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eszopiclone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05CF"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00402</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -41116,7 +41474,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05CH02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ramelteon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05CH"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00980</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -41134,7 +41494,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N05CM01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methaqualone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N05CM"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04833</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -41561,7 +41923,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N06AA19">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amineptine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N06AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04836</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -41599,7 +41963,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N06AB02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zimeldine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N06AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04832</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -41713,7 +42079,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N06AF02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nialamide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N06AF"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04820</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -41835,7 +42203,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N06AX04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nomifensine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N06AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04821</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -41915,7 +42285,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N06AX12">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bupropion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N06AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01156</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -42090,7 +42462,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N06BA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metamfetamine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N06BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01577</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -42121,7 +42495,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N06BA06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fencamfamin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N06BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01463</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -42181,7 +42557,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N06BA12">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lisdexamfetamine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N06BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01255</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -42318,7 +42696,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N06BX11">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aniracetam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N06BX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04599</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -42669,6 +43049,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N07AX"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00122</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04660</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -42677,7 +43058,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N07AX03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cevimeline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N07AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00185</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -42810,7 +43193,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N07BC03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">levacetylmethadol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N07BC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01227</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -42888,7 +43273,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#N07CA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flunarizine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#N07CA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04841</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -43064,7 +43451,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#P01AA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clioquinol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#P01AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04815</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -43304,7 +43693,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#P01AX05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mepacrine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#P01AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01103</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -43353,7 +43744,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#P01AX10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fumagillin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#P01AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02640</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -43362,7 +43755,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#P01AX11">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitazoxanide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#P01AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00507</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -43756,7 +44151,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#P01CC02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrofural</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#P01CC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00336</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -43910,7 +44307,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#P02BX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bithionol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#P02BX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04813</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -43975,7 +44374,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#P02CA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tiabendazole</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#P02CA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00730</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -44174,7 +44575,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#P02DA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">niclosamide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#P02DA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06803</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -44677,7 +45080,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R01AA07">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xylometazoline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R01AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06694</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -44775,7 +45180,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R01AB02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">naphazoline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R01AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06711</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -44804,7 +45211,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R01AB06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xylometazoline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R01AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06694</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -45118,7 +45527,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R01AX02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R01AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00162</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -45158,7 +45569,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R01AX07">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hexamidine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R01AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00794</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -45441,7 +45854,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R02AA18">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hexamidine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R02AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00794</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -45450,7 +45865,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R02AA19">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R02AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03255</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -45592,7 +46009,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R02AX01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flurbiprofen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R02AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00712</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -45648,7 +46067,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R03AB02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isoprenaline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R03AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01064</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -45728,7 +46149,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R03AC07">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isoetarine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R03AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00221</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -46175,7 +46598,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R03CB01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isoprenaline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R03CB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01064</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -46273,7 +46698,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R03CC06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isoetarine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R03CC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00221</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -46789,6 +47216,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R05CA"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01345</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06715</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -46892,6 +47320,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R05CB"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00151</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06151</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -47030,7 +47459,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R05CB16">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mannitol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R05CB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00742</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -47163,6 +47594,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R05DA"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00318</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01538</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -47256,7 +47688,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R05DB10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clofedanol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R05DB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04837</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -47528,7 +47962,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R06AA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bromazine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R06AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01237</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -47820,7 +48256,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R06AC05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methapyrilene</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R06AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04819</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -47942,7 +48380,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R06AD08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxomemazine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R06AD"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01246</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -48129,7 +48569,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R06AX03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thenalidine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R06AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04826</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -48138,7 +48580,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R06AX04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenindamine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R06AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01619</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -48147,7 +48591,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#R06AX05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antazoline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#R06AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB08799</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -48609,6 +49055,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlortetracycline</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00256</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00759</rdfs:seeAlso>
     </owl:Class>
     
@@ -48706,7 +49153,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01AA13">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fusidic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB02703</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -48737,7 +49186,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01AA16">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rifamycin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01045</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -48839,7 +49290,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01AA26">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">azithromycin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00207</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -48877,7 +49330,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01AB02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulfafurazole</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00263</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -49048,7 +49503,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01AX04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrofural</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00336</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -49084,7 +49541,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01AX08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hexamidine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01AX"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00794</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -49477,7 +49936,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01BC02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxyphenbutazone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01BC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03585</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -49541,6 +50002,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salicylic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01BC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00936</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01398</rdfs:seeAlso>
     </owl:Class>
     
@@ -49570,7 +50032,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01BC11">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bromfenac</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01BC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00963</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -49934,7 +50398,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01EB07">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fluostigmine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01EB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00677</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -49955,6 +50421,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01EB"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00122</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB03128</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -50408,7 +50875,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01GA01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">naphazoline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01GA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06711</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -50687,7 +51156,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01HA04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proxymetacaine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01HA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00807</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -50707,7 +51178,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01HA06">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinchocaine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01HA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00527</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -50895,7 +51368,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01LA03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pegaptanib</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01LA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04895</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -50951,7 +51426,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01XA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01XA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00162</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -50972,6 +51449,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01XA"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01345</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06715</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51013,6 +51491,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01XA"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00151</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06151</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51084,7 +51563,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01XA15">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ascorbic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01XA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00126</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51093,7 +51574,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S01XA18">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ciclosporin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S01XA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00091</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51149,7 +51632,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S02AA02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrofural</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S02AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00336</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51178,7 +51663,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S02AA05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clioquinol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S02AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04815</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51251,7 +51738,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S02AA12">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rifamycin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S02AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01045</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51294,7 +51783,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S02AA16">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ofloxacin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S02AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01165</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51374,7 +51865,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S02BA08">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fluocinolone acetonide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S02BA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00591</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51515,7 +52008,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S02DA04">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinchocaine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S02DA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00527</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -51613,7 +52108,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#S03AA05">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hexamidine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#S03AA"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00794</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -52118,6 +52615,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#V03AB"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01345</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06715</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -52140,6 +52638,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#V03AB"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00151</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB06151</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -52253,7 +52752,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#V03AB36">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phentolamine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#V03AB"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00692</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -52291,7 +52792,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#V03AC03">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deferasirox</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#V03AC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01609</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -52311,6 +52814,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polystyrene sulfonate</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#V03AE"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01344</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB01373</rdfs:seeAlso>
     </owl:Class>
     
@@ -52945,7 +53449,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#V04CH30">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aminohippuric acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#V04CH"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00345</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -52992,7 +53498,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#V04CK01">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">secretin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#V04CK"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00021</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -53158,7 +53666,9 @@
 
     <owl:Class rdf:about="http://www.atc.org/atc.owl#V06DC02">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fructose</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#V06DC"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04173</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -53612,6 +54122,7 @@
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.atc.org/atc.owl#V08AC"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB00742</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB04711</rdfs:seeAlso>
     </owl:Class>
     
 

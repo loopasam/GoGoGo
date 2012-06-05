@@ -7,5 +7,7 @@
 	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/xml-burger-1.0.jar"/>
 	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/org.semanticweb.HermiT.jar"/>
 	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/owlapi-bin.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BioDicoManager"/>
+	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/lingpipe-4.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
