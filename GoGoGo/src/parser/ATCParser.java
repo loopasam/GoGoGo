@@ -165,7 +165,6 @@ public class ATCParser extends Parser {
 	    OWLAxiom labelAxiom = factory.getOWLAnnotationAssertionAxiom(owlTerm.getIRI(), labelAnnot);
 	    manager.applyChange(new AddAxiom(ontology, labelAxiom));
 
-	    //TODO revise that block
 	    if(term.getDrugBankReferences().size() > 0){
 
 		for (String dbid : term.getDrugBankReferences()) {
@@ -176,13 +175,17 @@ public class ATCParser extends Parser {
 		    OWLAxiom seeAlsoAxiom = factory.getOWLAnnotationAssertionAxiom(owlTerm.getIRI(), seeAlsoAnnot);
 		    manager.applyChange(new AddAxiom(ontology, seeAlsoAxiom));
 
+		    OWLClass dbdrug = factory.getOWLClass(":" + dbid, prefixManager);
+		    OWLAxiom dbaxiom = factory.getOWLSubClassOfAxiom(dbdrug, owlTerm);
+		    AddAxiom adddbAxiom = new AddAxiom(ontology, dbaxiom);
+		    manager.applyChange(adddbAxiom);
+		    
 		    OWLClass drug = factory.getOWLClass(":Drug", prefixManager);
-		    OWLAxiom axiom = factory.getOWLSubClassOfAxiom(owlTerm, drug);
+		    OWLAxiom axiom = factory.getOWLSubClassOfAxiom(dbdrug, drug);
 		    AddAxiom addAxiom = new AddAxiom(ontology, axiom);
 		    manager.applyChange(addAxiom);
 
 		}
-
 
 	    }
 
@@ -215,39 +218,40 @@ public class ATCParser extends Parser {
 
 	//Some therapeutics present within drugbank are not mapped to an ATC eventhough they should be.
 	//This text-mining part corrects that
-	DrugBankDictionary dico = new DrugBankDictionary();
-	dico.load("/home/samuel/git/BioDicoManager/BioDicoManager/data/drugbank-dico.xml");
-	MapDictionary<String> lingpipedico = dico.getLingPipeDico();
-	ExactDictionaryChunker chunker = new ExactDictionaryChunker(lingpipedico, IndoEuropeanTokenizerFactory.INSTANCE, true, false);
+	//Commented atm, wiating for drugbank people to curate
+	//	DrugBankDictionary dico = new DrugBankDictionary();
+	//	dico.load("/home/samuel/git/BioDicoManager/BioDicoManager/data/drugbank-dico.xml");
+	//	MapDictionary<String> lingpipedico = dico.getLingPipeDico();
+	//	ExactDictionaryChunker chunker = new ExactDictionaryChunker(lingpipedico, IndoEuropeanTokenizerFactory.INSTANCE, true, false);
 
-	for (ATCTerm term : this.getAtc().getTerms()) {
-	    if(term.isATherapeutic()){
-		Chunking chunking = chunker.chunk(term.getLabel());
-		for (Chunk chunk : chunking.chunkSet()) {
-		    int start = chunk.start();
-		    int end = chunk.end();
-		    String type = chunk.type();
-		    String uri = dico.getURIForTerm(type).substring(29, 36);
-
-		    boolean coverTheAllTerm = false;
-		    if(term.getLabel().length() == end - start){
-			coverTheAllTerm = true;
-		    }
-
-		    boolean isKnown = false;
-		    if(term.getDrugBankReferences().contains(uri)){
-			isKnown = true;
-		    }
-
-		    if(coverTheAllTerm){
-			if(!isKnown){
-			    term.getDrugBankReferences().add(uri);
-			}
-		    }
-
-		}
-	    }
-	}
+	//	for (ATCTerm term : this.getAtc().getTerms()) {
+	//	    if(term.isATherapeutic()){
+	//		Chunking chunking = chunker.chunk(term.getLabel());
+	//		for (Chunk chunk : chunking.chunkSet()) {
+	//		    int start = chunk.start();
+	//		    int end = chunk.end();
+	//		    String type = chunk.type();
+	//		    String uri = dico.getURIForTerm(type).substring(29, 36);
+	//
+	//		    boolean coverTheAllTerm = false;
+	//		    if(term.getLabel().length() == end - start){
+	//			coverTheAllTerm = true;
+	//		    }
+	//
+	//		    boolean isKnown = false;
+	//		    if(term.getDrugBankReferences().contains(uri)){
+	//			isKnown = true;
+	//		    }
+	//
+	//		    if(coverTheAllTerm){
+	//			if(!isKnown){
+	//			    term.getDrugBankReferences().add(uri);
+	//			}
+	//		    }
+	//
+	//		}
+	//	    }
+	//	}
 
 
     }
