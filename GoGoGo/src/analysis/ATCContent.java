@@ -7,6 +7,7 @@ import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -76,14 +77,31 @@ public class ATCContent {
 	//(4) Some therapeutics within drugbank are annotated with categories that don't exists, this method fish'em out.
 	data.fishNonExistingCategories();
 
+	data.numberOfForthLevelClasses();
+
 	data.getReport().close();
+
+    }
+
+    private void numberOfForthLevelClasses() {
+
+	ArrayList<String> fourLettersCodes = new ArrayList<String>();
+	for (ATCTerm term : this.getAtc().getTerms()) {
+	    Pattern patternCompound = Pattern.compile("^(\\w\\d\\d\\w\\w)$");
+	    Matcher matcherTerm = patternCompound.matcher(term.getCode());
+	    if (matcherTerm.find()){
+		fourLettersCodes.add(matcherTerm.group(1));
+	    }
+
+	}
+	System.out.println("Number of four letters categories: " + fourLettersCodes.size());
 
     }
 
     private void fishNonExistingCategories() throws IOException {
 	this.getReport().write("\nDrugBank compounds annotated with a non-existing ATC code:\n");
 	int numberOfNonExistingCategories = 0;
-	
+
 	for (Drug drug : drugBank.getDrugs()) {
 	    if(drug.getAtcCodes().size() > 0){
 		for (String code : drug.getAtcCodes()) {

@@ -137,5 +137,22 @@ public class DLQueryPrinter {
 
     }
 
+    public Set<OWLClass> returnSuperClasses(String classExpression) {
+        if (classExpression.length() == 0) {
+            System.out.println("No class expression specified");
+        }
+        else {
+            try {
+                Set<OWLClass> superClasses = dlQueryEngine.getSuperClasses(classExpression, true);
+                return superClasses;
+            }
+            catch (ParserException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+	return null;
+
+    }
+
 
 }

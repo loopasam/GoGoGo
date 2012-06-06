@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -51,6 +53,21 @@ public class ATC implements Serializable {
 	    }
 	}
 	return null;
+    }
+
+    public ArrayList<ATCTerm> getFourLettersTerms() {
+	
+	ArrayList<ATCTerm> fourLettersTerms = new ArrayList<ATCTerm>();
+	
+	for (ATCTerm term : this.getTerms()) {
+	    Pattern patternCompound = Pattern.compile("^(\\w\\d\\d\\w\\w)$");
+	    Matcher matcherTerm = patternCompound.matcher(term.getCode());
+	    if (matcherTerm.find()){
+		fourLettersTerms.add(term);
+	    }
+	}
+	return fourLettersTerms;
+	
     }
     
 
