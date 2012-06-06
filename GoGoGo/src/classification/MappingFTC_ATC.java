@@ -68,7 +68,7 @@ public class MappingFTC_ATC {
 	for (ATCTerm term : atc.getFourLettersTerms()) {
 	    //	    System.out.println("ATC code: " + term.getCode() + " - " + term.getLabel());
 	    writer.append("<div class='entry'>");
-	    writer.append("<div class='atc-category'>" + term.getCode() + " - "  + term.getLabel() + "</div>");
+	    writer.append("<div class='toggler'></div><div class='atc-category'><a href='http://www.whocc.no/atc_ddd_index/?code="+ term.getCode() +"' target=_BLANK>" + term.getCode() + "</a> - "  + term.getLabel() + "</div>");
 	    String classExpression = term.getCode() + " and Drug";
 	    Set<OWLClass> resultsAtc = atcQuerier.returnSubClasses(classExpression);
 
@@ -109,11 +109,13 @@ public class MappingFTC_ATC {
 
 	    writer.append("<table>");
 	    for (String key : distribtionFtc.getDistributionMap().keySet()) {
-		writer.append("<tr class='row'>");
-		writer.append("<td>" + key + "</td>");
-		writer.append("<td class='label'>" + labels.get(key) + "</td>");
-		writer.append("<td>" + distribtionFtc.getDistributionMap().get(key) + "</td>");
-		writer.append("</tr>");
+		if(!key.equals("Drug")){
+		    writer.append("<tr class='row'>");
+		    writer.append("<td>" + key + "</td>");
+		    writer.append("<td class='label'>" + labels.get(key) + "</td>");
+		    writer.append("<td class='frequency'>" + distribtionFtc.getDistributionMap().get(key) + "</td>");
+		    writer.append("</tr>");
+		}
 	    }
 	    writer.append("</table></div>");
 	}
