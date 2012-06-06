@@ -3,10 +3,13 @@
  */
 package classification;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Set;
 
 import org.semanticweb.HermiT.Reasoner;
@@ -25,6 +28,8 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.util.ShortFormProvider;
 import org.semanticweb.owlapi.util.SimpleShortFormProvider;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
+
+import analysis.Distribution;
 
 import querier.DLQueryPrinter;
 
@@ -55,13 +60,29 @@ public class MappingFTC_ATC {
 	ShortFormProvider ftcSF = new SimpleShortFormProvider();
 	DLQueryPrinter ftcQuerier = new DLQueryPrinter(ftcReasoner, ftcSF);
 
+	FileWriter fstream = new FileWriter("data/mapping/mapper.html");
+	BufferedWriter writer = new BufferedWriter(fstream);
+
+	writer.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><html><head><script type=\"text/javascript\"	src=\"http://code.jquery.com/jquery-latest.js\"></script><script type=\"text/javascript\"	src=\"mapper.js\"></script><link type=\"text/css\" href=\"mapping.css\" rel=\"Stylesheet\" /><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title>Mapper</title></head><body>");
 
 	for (ATCTerm term : atc.getFourLettersTerms()) {
-	    System.out.println(term.getCode());
+	    //	    System.out.println("ATC code: " + term.getCode() + " - " + term.getLabel());
+	    writer.append("<div class='entry'>");
+	    writer.append("<div class='atc-category'>" + term.getCode() + " - "  + term.getLabel() + "</div>");
 	    String classExpression = term.getCode() + " and Drug";
 	    Set<OWLClass> resultsAtc = atcQuerier.returnSubClasses(classExpression);
+
+	    Distribution<String> distribtionFtc = new Distribution<String>();
+	    writer.append("<div class='atc-sub-categories'>");
 	    for (OWLClass owlClass : resultsAtc) {
-		System.out.println("\t" + atcSF.getShortForm(owlClass));
+		writer.append(atcSF.getShortForm(owlClass) + ", ");
+	    }
+	    writer.append("</div>");
+
+	    HashMap<String, String> labels = new HashMap<String, String>();
+
+	    for (OWLClass owlClass : resultsAtc) {
+		//		System.out.println("\t" + atcSF.getShortForm(owlClass));
 		String classExpressionFtc = atcSF.getShortForm(owlClass);
 
 		if(!classExpressionFtc.equals("Nothing")){
@@ -69,30 +90,35 @@ public class MappingFTC_ATC {
 
 		    if(resultsFtc != null){
 			for (OWLClass owlClassFtc : resultsFtc) {
-			    System.out.println("\t\t" + ftcSF.getShortForm(owlClassFtc));
-
+			    distribtionFtc.add(ftcSF.getShortForm(owlClassFtc));
 			    OWLClass clsAgent = factory.getOWLClass(IRI.create("http://www.gogogo.org/fuctional-skeleton.owl#" + ftcSF.getShortForm(owlClassFtc)));
-
 			    OWLAnnotationProperty label = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_LABEL.getIRI());
-
 			    for (OWLAnnotation annotation : clsAgent.getAnnotations(owlFtc, label)) {
 				if (annotation.getValue() instanceof OWLLiteral) {
 				    OWLLiteral val = (OWLLiteral) annotation.getValue();
-				    System.out.println("\t\t" + val.getLiteral());
+				    labels.put(ftcSF.getShortForm(owlClassFtc), val.getLiteral());
 				}
 			    }
 
-
 			}
+		    }else{
+			//Deal with the fact that the drug is not in FTC
 		    }
-
 		}
-
 	    }
 
-
+	    writer.append("<table>");
+	    for (String key : distribtionFtc.getDistributionMap().keySet()) {
+		writer.append("<tr class='row'>");
+		writer.append("<td>" + key + "</td>");
+		writer.append("<td class='label'>" + labels.get(key) + "</td>");
+		writer.append("<td>" + distribtionFtc.getDistributionMap().get(key) + "</td>");
+		writer.append("</tr>");
+	    }
+	    writer.append("</table></div>");
 	}
 
+	writer.close();
     }
 
     private static OWLReasoner createReasoner(OWLOntology rootOntology) {
