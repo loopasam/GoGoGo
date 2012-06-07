@@ -69,6 +69,36 @@ public class ATC implements Serializable {
 	return fourLettersTerms;
 	
     }
+
+    public ArrayList<ATCTerm> getThreeLettersTerms() {
+	
+	ArrayList<ATCTerm> threeLettersTerms = new ArrayList<ATCTerm>();
+	
+	for (ATCTerm term : this.getTerms()) {
+	    Pattern patternCompound = Pattern.compile("^(\\w\\d\\d\\w)$");
+	    Matcher matcherTerm = patternCompound.matcher(term.getCode());
+	    if (matcherTerm.find()){
+		threeLettersTerms.add(term);
+	    }
+	}
+	return threeLettersTerms;
+	
+    }
+
+    public ArrayList<ATCTerm> getTwoLettersTerms() {
+	
+	ArrayList<ATCTerm> twoLettersTerms = new ArrayList<ATCTerm>();
+	
+	for (ATCTerm term : this.getTerms()) {
+	    Pattern patternCompound = Pattern.compile("^(\\w\\d\\d)$");
+	    Matcher matcherTerm = patternCompound.matcher(term.getCode());
+	    if (matcherTerm.find()){
+		twoLettersTerms.add(term);
+	    }
+	}
+	return twoLettersTerms;
+	
+    }
     
 
 }
