@@ -63,7 +63,6 @@ import exceptions.MappingException;
  *
  */
 
-//TODO look why some drugs aren't classified
 
 
 public class FTC {

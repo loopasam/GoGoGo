@@ -17,6 +17,8 @@ import exceptions.MappingException;
 public class FTCLauncher {
     
     public static void main(String[] args) throws OWLOntologyCreationException, IOException, ClassNotFoundException, OWLOntologyStorageException, MappingException {
+	
+	//TODO adding a updater here to get the latest results.
 	System.out.println("Loading data...");
 	FTC classification =new FTC("data/dataset-filtered.ser");
 

@@ -60,6 +60,7 @@ public class GeneOntologyParser extends Parser {
 		String id = null;
 		String name= null;
 		String namespace = null;
+		String def = null;
 		ArrayList<GoRelation> relations = new ArrayList<GoRelation>();
 		String isObsolete = "false";
 
@@ -75,6 +76,12 @@ public class GeneOntologyParser extends Parser {
 
 		    if(line.startsWith("namespace:")){
 			namespace = getStringFromPattern("namespace: (.*)", line);
+		    }
+		    
+		    //TODO ici
+		    
+		    if(line.startsWith("def:")){
+			def = getStringFromPattern("def: (.*)", line);
 		    }
 
 		    if(line.startsWith("is_a:")){
@@ -101,6 +108,7 @@ public class GeneOntologyParser extends Parser {
 		    newTerm.setName(name);
 		    newTerm.setNamespace(namespace);
 		    newTerm.setRelations(relations);
+		    newTerm.setDefinition(def);
 		    this.getGo().getTerms().add(newTerm);
 		}
 	    }

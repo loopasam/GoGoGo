@@ -16,9 +16,16 @@ public class GoTerm implements Serializable {
     private String name;
     private String id;
     private String namespace;
+    private String definition;
     private ArrayList<GoRelation> relations;
 
 
+    public void setDefinition(String definition) {
+	this.definition = definition;
+    }
+    public String getDefinition() {
+	return definition;
+    }
     public String getName() {
 	return name;
     }
