@@ -65,9 +65,9 @@ public class MappingFTC_ATC {
 
 	writer.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"><html><head><script type=\"text/javascript\"	src=\"http://code.jquery.com/jquery-latest.js\"></script><script type=\"text/javascript\"	src=\"mapper.js\"></script><link type=\"text/css\" href=\"mapping.css\" rel=\"Stylesheet\" /><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title>Mapper</title></head><body>");
 
-//	for (ATCTerm term : atc.getFourLettersTerms()) {
+	for (ATCTerm term : atc.getFourLettersTerms()) {
 //	for (ATCTerm term : atc.getThreeLettersTerms()) {
-	for (ATCTerm term : atc.getTwoLettersTerms()) {
+//	for (ATCTerm term : atc.getTwoLettersTerms()) {
 	    
 	    //	    System.out.println("ATC code: " + term.getCode() + " - " + term.getLabel());
 	    writer.append("<div class='entry'>");

@@ -57,10 +57,33 @@ import java.util.Set;
 public class DLQueryPrinter {
 
     private OWLReasoner reasoner;
-
     private DLQueryEngine dlQueryEngine;
-
     private ShortFormProvider shortFormProvider;
+    
+
+    public OWLReasoner getReasoner() {
+        return reasoner;
+    }
+
+    public void setReasoner(OWLReasoner reasoner) {
+        this.reasoner = reasoner;
+    }
+
+    public DLQueryEngine getDlQueryEngine() {
+        return dlQueryEngine;
+    }
+
+    public void setDlQueryEngine(DLQueryEngine dlQueryEngine) {
+        this.dlQueryEngine = dlQueryEngine;
+    }
+
+    public ShortFormProvider getShortFormProvider() {
+        return shortFormProvider;
+    }
+
+    public void setShortFormProvider(ShortFormProvider shortFormProvider) {
+        this.shortFormProvider = shortFormProvider;
+    }
 
     public DLQueryPrinter(OWLReasoner reasoner, ShortFormProvider shortFormProvider) {
         this.reasoner = reasoner;
