@@ -54,9 +54,14 @@
 
     <!-- http://www.ebi.ac.uk/ftc/has-function -->
 
-    <owl:ObjectProperty rdf:about="http://www.ebi.ac.uk/ftc/has-function">
-        <rdfs:range rdf:resource="http://www.ebi.ac.uk/ftc/GO:0003674"/>
-        <rdfs:domain rdf:resource="http://www.ebi.ac.uk/ftc/Gene-Product"/>
+    <owl:ObjectProperty rdf:about="http://www.ebi.ac.uk/ftc/has-function"/>
+    
+
+
+    <!-- http://www.ebi.ac.uk/ftc/has-part -->
+
+    <owl:ObjectProperty rdf:about="http://www.ebi.ac.uk/ftc/has-part">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -64,8 +69,6 @@
     <!-- http://www.ebi.ac.uk/ftc/involved-in -->
 
     <owl:ObjectProperty rdf:about="http://www.ebi.ac.uk/ftc/involved-in">
-        <rdfs:range rdf:resource="http://www.ebi.ac.uk/ftc/GO:0008150"/>
-        <rdfs:domain rdf:resource="http://www.ebi.ac.uk/ftc/Gene-Product"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.ebi.ac.uk/ftc/has-function"/>
             <rdf:Description rdf:about="http://www.ebi.ac.uk/ftc/part-of"/>
@@ -107,8 +110,6 @@
     <!-- http://www.ebi.ac.uk/ftc/perturbs -->
 
     <owl:ObjectProperty rdf:about="http://www.ebi.ac.uk/ftc/perturbs">
-        <rdfs:domain rdf:resource="http://www.ebi.ac.uk/ftc/Drug"/>
-        <rdfs:range rdf:resource="http://www.ebi.ac.uk/ftc/Gene-Product"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.ebi.ac.uk/ftc/perturbs"/>
             <rdf:Description rdf:about="http://www.ebi.ac.uk/ftc/part-of"/>

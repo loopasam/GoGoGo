@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.semanticweb.HermiT.Reasoner;
+import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddAxiom;
 import org.semanticweb.owlapi.model.IRI;
@@ -38,14 +38,9 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.model.PrefixManager;
-import org.semanticweb.owlapi.profiles.OWL2ELProfile;
-import org.semanticweb.owlapi.profiles.OWLProfileReport;
-import org.semanticweb.owlapi.profiles.OWLProfileViolation;
-import org.semanticweb.owlapi.reasoner.ConsoleProgressMonitor;
+import org.semanticweb.owlapi.reasoner.InferenceType;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
-import org.semanticweb.owlapi.reasoner.OWLReasonerConfiguration;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
-import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.semanticweb.owlapi.util.InferredAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredOntologyGenerator;
@@ -68,6 +63,7 @@ public class FunctionalTherapeuticClassification {
     private OWLObjectProperty negativelyRegulates;
     private OWLObjectProperty regulates;
     private OWLObjectProperty partOf;
+    private OWLObjectProperty hasPart;
     private OWLObjectProperty perturbs;
     private OWLObjectProperty negativelyPerturbs;
     private OWLObjectProperty positivelyPerturbs;
@@ -90,6 +86,12 @@ public class FunctionalTherapeuticClassification {
     private HashMap<String, OWLObjectProperty> mapper;
 
 
+    public void setHasPart(OWLObjectProperty hasPart) {
+	this.hasPart = hasPart;
+    }
+    public OWLObjectProperty getHasPart() {
+	return hasPart;
+    }
     public void setDrug(OWLClass drug) {
 	this.drug = drug;
     }
@@ -242,6 +244,8 @@ public class FunctionalTherapeuticClassification {
 	mapper.put("regulates", this.getRegulates());
 	this.setPartOf(factory.getOWLObjectProperty(":part-of", this.getPrefixManager()));
 	mapper.put("part_of", this.getPartOf());
+	this.setHasPart(factory.getOWLObjectProperty(":has-part", this.getPrefixManager()));
+	mapper.put("has_part", this.getPartOf());
 	this.setMapper(mapper);
 	this.setPerturbs(factory.getOWLObjectProperty(":perturbs", this.getPrefixManager()));
 	this.setNegativelyPerturbs(factory.getOWLObjectProperty(":negatively-perturbs", this.getPrefixManager()));
@@ -255,21 +259,38 @@ public class FunctionalTherapeuticClassification {
     }
 
     public void generateOwlOntology() {
+	ArrayList<String> notConsideredRelations = new ArrayList<String>();
 	for (GoTerm term : this.getGo().getBioProcessesAndMolecularFunctions()) {
 	    OWLClass childTerm = factory.getOWLClass(":" + term.getId(), this.getPrefixManager());
 	    this.addLabelToClass(childTerm, term.getName());
+	    this.addCommentToClass(childTerm, term.getDefinition().replaceAll("\"", ""));
 	    for (GoRelation relation : term.getRelations()) {
-		OWLClass owlParentTerm = factory.getOWLClass(":" + relation.getTarget(), this.getPrefixManager());
-		OWLAxiom axiom = null;
-		if(relation.getType().equals("is_a")){
-		    axiom = this.getFactory().getOWLSubClassOfAxiom(childTerm, owlParentTerm);
+		if(this.getMapper().get(relation.getType()) != null || relation.getType().equals("is_a")){
+		    OWLClass owlParentTerm = factory.getOWLClass(":" + relation.getTarget(), this.getPrefixManager());
+		    OWLAxiom axiom = null;
+		    if(relation.getType().equals("is_a")){
+			axiom = this.getFactory().getOWLSubClassOfAxiom(childTerm, owlParentTerm);
+		    }else{
+			OWLClassExpression relationSomeClass = this.getFactory().getOWLObjectSomeValuesFrom(this.getMapper().get(relation.getType()), owlParentTerm);
+			axiom = this.getFactory().getOWLSubClassOfAxiom(childTerm, relationSomeClass);
+		    }
+		    this.addAxiom(axiom);
 		}else{
-		    OWLClassExpression relationSomeClass = this.getFactory().getOWLObjectSomeValuesFrom(this.getMapper().get(relation.getType()), owlParentTerm);
-		    axiom = this.getFactory().getOWLSubClassOfAxiom(childTerm, relationSomeClass);
+		    if(!notConsideredRelations.contains(relation.getType())){
+			System.err.println("The relation '" + relation.getType() + "' is not going to be considered");
+			notConsideredRelations.add(relation.getType());
+		    }
 		}
-		this.addAxiom(axiom);
 	    }
 	}
+    }
+
+    private void addCommentToClass(OWLClass owlClass, String comment) {
+	OWLAnnotationProperty labelproperty = this.getFactory().getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_COMMENT.getIRI());
+	OWLLiteral literal = this.getFactory().getOWLLiteral(comment);
+	OWLAnnotation labelAnnot = this.getFactory().getOWLAnnotation(labelproperty, literal);
+	OWLAxiom ax = this.getFactory().getOWLAnnotationAssertionAxiom(owlClass.getIRI(), labelAnnot);
+	this.getManager().applyChange(new AddAxiom(this.getOntology(), ax));
     }
 
     private void addAxiom(OWLAxiom axiom) {
@@ -291,18 +312,16 @@ public class FunctionalTherapeuticClassification {
     }
 
     public boolean isConsistent() {
-	OWLReasonerFactory reasonerFactory = new Reasoner.ReasonerFactory();
-	ConsoleProgressMonitor progressMonitor = new ConsoleProgressMonitor();
-	OWLReasonerConfiguration config = new SimpleConfiguration(progressMonitor);
-	OWLReasoner reasoner = reasonerFactory.createReasoner(this.getOntology(), config);
+	OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
+	OWLReasoner reasoner = reasonerFactory.createReasoner(this.getOntology());
 	reasoner.precomputeInferences();
 	return reasoner.isConsistent();
     }
 
-    public void generateProteinandDrugAxioms() throws IOException, MappingException {
+    public void generateMininumProteinandDrugAxioms() throws IOException, MappingException {
 
 	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/relation_mapping.map");
-	
+
 	//Iterates over the classifiable drugs and generates axioms
 	for (Drug drug : this.getData().getClassifiableDrugs(relationMapping)) {
 
@@ -375,10 +394,12 @@ public class FunctionalTherapeuticClassification {
     }
 
     private void addAgentPatternForFunction(GoTerm currentTerm) {
+	//Prepare the name of the category
+	String antiCategoryName = currentTerm.getId().replaceFirst("GO:", "A");
 	//Get the OWLClass of the function term.
 	OWLClass functionTerm = this.factory.getOWLClass(":" + currentTerm.getId(), this.getPrefixManager());
 	//Anti-pattern
-	OWLClass owAntiAgent = this.factory.getOWLClass(":Anti-" + currentTerm.getId(), this.getPrefixManager());
+	OWLClass owAntiAgent = this.factory.getOWLClass(":" + antiCategoryName, this.getPrefixManager());
 	//Add a label to the OWL class
 	this.addLabelToClass(owAntiAgent, "Anti-" + currentTerm.getName());
 	//Get an 'Agent Restriction' axiom
@@ -390,8 +411,10 @@ public class FunctionalTherapeuticClassification {
 	//Add the axiom to the ontology
 	this.addAxiom(antiAxiom);
 
+	//Prepare the name of the category
+	String proCategoryName = currentTerm.getId().replaceFirst("GO:", "P");
 	//Pro-pattern
-	OWLClass owlProAgent = this.factory.getOWLClass(":Pro-" + currentTerm.getId(), this.getPrefixManager());
+	OWLClass owlProAgent = this.factory.getOWLClass(":" + proCategoryName, this.getPrefixManager());
 	//Add a label to the OWL class
 	this.addLabelToClass(owlProAgent, "Pro-" + currentTerm.getName());
 	//Get an 'Agent Restriction' axiom
@@ -423,8 +446,10 @@ public class FunctionalTherapeuticClassification {
     }
 
     private void addAntiAgentPattern(OWLObjectProperty perturbation, OWLClass regulatingTerm, GoTerm goRegulatedTerm) {
+	//Prepare the name of the category
+	String categoryName = goRegulatedTerm.getId().replaceFirst("GO:", "A");
 	//Create OWL class corresponding to the IRI
-	OWLClass owAntiAgent = this.factory.getOWLClass(":Anti-" + goRegulatedTerm.getId() + "_agent", this.getPrefixManager());
+	OWLClass owAntiAgent = this.factory.getOWLClass(":" + categoryName, this.getPrefixManager());
 	//Add a label to the OWL class
 	this.addLabelToClass(owAntiAgent, "Anti-" + goRegulatedTerm.getName() + "-agent");
 	//Get an 'Agent Restriction' axiom
@@ -438,8 +463,10 @@ public class FunctionalTherapeuticClassification {
     }
 
     private void addProAgentPattern(OWLObjectProperty perturbation, OWLClass regulatingTerm, GoTerm goRegulatedTerm) {
+	//Prepare the name of the category
+	String categoryName = goRegulatedTerm.getId().replaceFirst("GO:", "P");
 	//Create OWL class corresponding to the IRI
-	OWLClass owlProAgent = this.factory.getOWLClass(":Pro-" + goRegulatedTerm.getId() + "_agent", this.getPrefixManager());
+	OWLClass owlProAgent = this.factory.getOWLClass(":" + categoryName, this.getPrefixManager());
 	//Add a label to the OWL class
 	this.addLabelToClass(owlProAgent, "Pro-" + goRegulatedTerm.getName() + "-agent");
 	//Get an 'Agent Restriction' axiom
@@ -453,7 +480,6 @@ public class FunctionalTherapeuticClassification {
     }
 
 
-
     private OWLClassExpression getAgentRestrictionAxiom(OWLObjectProperty perturbation, OWLClass perturbedClass) {
 	//(involved-in some term)
 	OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolvedIn(), perturbedClass);
@@ -462,7 +488,8 @@ public class FunctionalTherapeuticClassification {
 	//(?perturbs some (Protein and (involved-in some term)))
 	OWLClassExpression pertubsSome = this.getFactory().getOWLObjectSomeValuesFrom(perturbation, protAndInvolvedInSome);
 	//Drug and (?perturb some (Protein and (involved-in some term)))
-	return this.getFactory().getOWLObjectIntersectionOf(this.getTherapeuticCompound(), pertubsSome);
+	OWLClassExpression therapeuticAndPerturbsSome = this.getFactory().getOWLObjectIntersectionOf(this.getTherapeuticCompound(), pertubsSome);
+	return therapeuticAndPerturbsSome;
     }
 
     private OWLClassExpression getFunctionalAgentRestrictionAxiom(OWLObjectProperty perturbation, OWLClass function) {
@@ -503,34 +530,106 @@ public class FunctionalTherapeuticClassification {
 	return relationMapping;
     }
 
-    public boolean checkIfELProfile() {
-	OWL2ELProfile profile = new OWL2ELProfile();
-	OWLProfileReport report = profile.checkOntology(ontology);
 
-	if(report.getViolations().size() > 0){
-	    for (OWLProfileViolation violiation : report.getViolations()) {
-		System.out.println("Violation: " + violiation.getAxiom().getAxiomType().toString());
-	    }
-	    return false;
-	}
-	return true;
-    }
+    public void classify(String path) throws OWLOntologyCreationException, OWLOntologyStorageException {
 
-    public void classify() throws OWLOntologyCreationException, OWLOntologyStorageException {
-	OWLReasonerFactory reasonerFactory = new Reasoner.ReasonerFactory();
-	ConsoleProgressMonitor progressMonitor = new ConsoleProgressMonitor();
-	OWLReasonerConfiguration config = new SimpleConfiguration(progressMonitor);
-	OWLReasoner reasoner = reasonerFactory.createReasoner(this.getOntology(), config);
-	reasoner.precomputeInferences();
+	OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
+	OWLReasoner reasoner = reasonerFactory.createReasoner(this.getOntology());
+	reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+
 	List<InferredAxiomGenerator<? extends OWLAxiom>> gens = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
 	gens.add(new InferredSubClassAxiomGenerator());
-	OWLOntology infOnt = this.getManager().createOntology();
 	InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner, gens);
-	iog.fillOntology(this.getManager(), infOnt);
-	System.out.println("saving infered onto...");
-	File file = new File("data/ftc-full.owl");
-	this.getManager().saveOntology(infOnt, IRI.create(file.toURI()));
-	
+	iog.fillOntology(this.getManager(), this.getOntology());
+	File file = new File(path);
+	this.getManager().saveOntology(this.getOntology(), IRI.create(file.toURI()));
+
+    }
+
+    public void generateFullProteinAndDrugAxioms() throws IOException, MappingException {
+
+	System.out.println("generate all classes...");
+	int counter = 0;
+
+	for (GoTerm term : this.getGo().getTerms()) {
+
+	    for (GoRelation parentRelation : term.getRelations()) {
+		System.out.println(counter);
+		if(parentRelation.getType().equals("positively_regulates")){
+		    counter++;
+		    this.addAgentPatternForPositiveRegulation(term, this.getGo().getTerm(parentRelation.getTarget()));
+		}else if(parentRelation.getType().equals("negatively_regulates")){
+		    this.addAgentPatternForNegativeRegulation(term, this.getGo().getTerm(parentRelation.getTarget()));
+		    counter++;
+		} 
+	    }
+	    if(this.getGo().isTermAMolecularFunction(term.getId())){
+		this.addAgentPatternForFunction(term);
+		counter++;
+	    }
+	}
+
+	System.out.println("generate prot axioms...");
+
+	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/relation_mapping.map");
+
+	//Iterates over the classifiable drugs and generates axioms
+	for (Drug drug : this.getData().getClassifiableDrugs(relationMapping)) {
+
+	    OWLClass drugClass = this.factory.getOWLClass(":" + drug.getId(), this.getPrefixManager());
+	    this.addLabelToClass(drugClass, drug.getName());
+	    OWLAxiom drugTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, this.getDrug());
+	    this.addAxiom(drugTypeAxiom);
+
+	    //Iterates over the targets of the drugs
+	    for (TargetRelation relation : drug.getTargetRelations()) {
+		Partner partner = this.getDrugBank().getPartner(relation.getPartnerId());
+		//Check if the partner has some annotations non IEA nor CC
+		//Check if the partner is a human protein
+		//TODO add more flexibility for the type of annotations to include
+		if(partner.getSpecies().getCategory() != null && partner.getSpecies().getCategory().equals("human")){
+		    if(partner.getNonIEAAnnotationsNonCC().size() > 0){
+			OWLClass protClass = this.factory.getOWLClass(":" + partner.getUniprotIdentifer(), this.getPrefixManager());
+			this.addLabelToClass(protClass, partner.getName());
+			OWLAxiom protTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, this.getGeneProduct());
+			this.addAxiom(protTypeAxiom);
+
+			for (String action : relation.getActions()) {
+			    //Check is the relation is meaningful
+			    if(relationMapping.get(action) != null){
+				//Add a relation between the drug and the partner. The partner is relevant as it is linked to the drug and has some annotations.
+				OWLObjectProperty property = relationMapping.get(action);
+				OWLClassExpression perturbsSome = this.getFactory().getOWLObjectSomeValuesFrom(property, protClass);
+				OWLAxiom drugActionAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, perturbsSome);
+				this.addAxiom(drugActionAxiom);
+
+				//TODO add more flexibility for the type of annotations to include
+				for (GoAnnotation annotation : partner.getNonIEAAnnotationsNonCC()) {
+
+				    if(this.getGo().isTermABioProcess(annotation.getGoId())){
+					//If term is a bio-process then create the BP patterns
+					OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
+					OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolvedIn(), goTerm);
+					OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, involvedInSome);
+					this.addAxiom(protAnnotationAxiom);
+
+				    }else if(this.getGo().isTermAMolecularFunction(annotation.getGoId())){
+					//If term is a MF, then creates the MF patterns
+					OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
+					OWLClassExpression hasFunctionSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getHasFunction(), goTerm);
+					OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, hasFunctionSome);
+					this.addAxiom(protAnnotationAxiom);
+				    }
+
+				}
+			    }
+			}
+		    }
+
+		}
+	    }
+	}
+
     }
 
 

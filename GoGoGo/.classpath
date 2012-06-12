@@ -9,5 +9,7 @@
 	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/owlapi-bin.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/BioDicoManager"/>
 	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/lingpipe-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/elk-owlapi.jar"/>
+	<classpathentry kind="lib" path="/home/samuel/git/GoGoGo/GoGoGo/lib/log4j.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

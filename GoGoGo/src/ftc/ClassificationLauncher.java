@@ -21,22 +21,25 @@ public class ClassificationLauncher {
 	//TODO adding a updater here to get the latest results.
 	System.out.println("Loading data...");
 	FunctionalTherapeuticClassification classification =new FunctionalTherapeuticClassification("data/dataset-filtered.ser");
-
+	
 	System.out.println("Converting in owl...");
 	classification.generateOwlOntology();
 	
 //	System.out.println("Generating prots and drugs axioms...");	
-//	classification.generateProteinandDrugAxioms();
-//	
+//	classification.generateMininumProteinandDrugAxioms();
+	
+	System.out.println("Generate full classification...");
+	classification.generateFullProteinAndDrugAxioms();
+	
 	System.out.println("Checking for consistency...");
 	boolean isConsistent = classification.isConsistent();
 	System.out.println("consistent: " + isConsistent);
 
-//	System.out.println("Adding inferred axioms to the ontology...");
-//	classification.classify();
+	System.out.println("Adding inferred axioms to the ontology...");
+	classification.classify("data/ftc-inferred.owl");
 
 	System.out.println("Saving...");
-	classification.save("data/ftc.min.out.owl");
+	classification.save("data/ftc.full.out.owl");
 
     }
 

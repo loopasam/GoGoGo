@@ -77,9 +77,7 @@ public class GeneOntologyParser extends Parser {
 		    if(line.startsWith("namespace:")){
 			namespace = getStringFromPattern("namespace: (.*)", line);
 		    }
-		    
-		    //TODO ici
-		    
+		    		    
 		    if(line.startsWith("def:")){
 			def = getStringFromPattern("def: (.*)", line);
 		    }

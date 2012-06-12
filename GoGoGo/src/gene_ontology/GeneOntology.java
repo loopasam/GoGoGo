@@ -109,19 +109,29 @@ public class GeneOntology implements Serializable {
     }
 
     public boolean isTermABioProcess(String goId) {
-	GoTerm termToTest = this.getTerm(goId);
-	if(termToTest.getNamespace().equals("biological_process")){
-	    return true;
+	if(this.getTerm(goId) != null){
+	    GoTerm termToTest = this.getTerm(goId);
+	    if(termToTest.getNamespace().equals("biological_process")){
+		return true;
+	    }
+	}else{
+	    System.err.println("Term does not exists in the version of GO used: " + goId);
 	}
 	return false;
+
     }
 
     public boolean isTermAMolecularFunction(String goId) {
-	GoTerm termToTest = this.getTerm(goId);
-	if(termToTest.getNamespace().equals("molecular_function")){
-	    return true;
+	if(this.getTerm(goId) != null){
+	    GoTerm termToTest = this.getTerm(goId);
+	    if(termToTest.getNamespace().equals("molecular_function")){
+		return true;
+	    }
+	}else{
+	    System.err.println("Term does not exists in the version of GO used: " + goId);
 	}
 	return false;
+
     }
 
 }

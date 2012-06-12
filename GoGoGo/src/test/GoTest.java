@@ -28,7 +28,7 @@ public class GoTest {
 
     @Before
     public void initGeneOntologyParser() throws IOException {
-	parser = new GeneOntologyParser("data/gene_ontology_ext.obo", "data/go-test.ser");
+	parser = new GeneOntologyParser("data/gene_ontology.1_2.obo", "data/go-test.ser");
 	parser.parse();
 	this.go = parser.getGo();
     }
@@ -41,9 +41,10 @@ public class GoTest {
 
     @Test
     public void testTerms() {
-	GoTerm term = this.go.getTerm("GO:0043255");
-	assertEquals("regulation of carbohydrate biosynthetic process", term.getName());
+	GoTerm term = this.go.getTerm("GO:0050435");
+	assertEquals("beta-amyloid metabolic process", term.getName());
 	assertEquals("biological_process", term.getNamespace());
+	assertEquals("\"The chemical reactions and pathways involving beta-amyloid, a glycoprotein associated with Alzheimer's disease, and its precursor, amyloid precursor protein (APP).\" [GOC:ai]", term.getDefinition());
     }
 
     @Test
@@ -55,17 +56,17 @@ public class GoTest {
 	assertEquals("GO:0006813", term.getRelations().get(2).getTarget());
     }
     
-    @Test
-    public void saveTest() throws FileNotFoundException, IOException{
-	this.parser.save();
-    }
+//    @Test
+//    public void saveTest() throws FileNotFoundException, IOException{
+//	this.parser.save();
+//    }
     
-    @Test
-    public void serializationLoading() throws FileNotFoundException, IOException, ClassNotFoundException{
-	GeneOntology go = new GeneOntology("data/go-test.ser");
-	GoTerm term = go.getTerm("GO:0043300");
-	assertEquals("regulation of leukocyte degranulation", term.getName());
-    }
+//    @Test
+//    public void serializationLoading() throws FileNotFoundException, IOException, ClassNotFoundException{
+//	GeneOntology go = new GeneOntology("data/go-test.ser");
+//	GoTerm term = go.getTerm("GO:0043300");
+//	assertEquals("regulation of leukocyte degranulation", term.getName());
+//    }
 
 
 }

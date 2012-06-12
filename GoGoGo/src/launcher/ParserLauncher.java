@@ -26,7 +26,7 @@ public class ParserLauncher {
 	drugBankParser.save();
 
 	System.out.println("start go parsing...");
-	Parser goParser = new GeneOntologyParser("data/gene_ontology.1_2.obo", "data/go.ser");
+	Parser goParser = new GeneOntologyParser("data/gene_ontology_ext.obo", "data/go.ser");
 	goParser.parse();
 	goParser.save();
 	
