@@ -1,0 +1,18 @@
+Factor XII activation
+guanyl-nucleotide exchange factor activity
+ion channel inhibitor activity
+release of cytoplasmic sequestered NF-kappaB
+positive regulation of plasminogen activation
+negative regulation of plasminogen activation
+positive regulation of protein processing
+negative regulation of protein processing
+channel inhibitor activity
+calcium channel inhibitor activity
+chloride channel inhibitor activity
+potassium channel inhibitor activity
+sodium channel inhibitor activity
+receptor inhibitor activity
+negative regulation of molecular function
+positive regulation of biological process
+negative regulation of biological process
+positive regulation of salivary gland formation by mesenchymal-epithelial signaling
