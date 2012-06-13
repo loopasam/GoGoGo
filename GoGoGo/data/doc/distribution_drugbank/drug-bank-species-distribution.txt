@@ -1,0 +1,48 @@
+fungal: 16
+unknown: 129
+viral: 10
+parasitic: 5
+bacterial: 225
+human: 5108
+
+
+Mycobacterium avium: 1
+Influenzavirus B Influenza B virus: 1
+Lactobacillus helveticus: 1
+Neisseria gonorrhoeae: 1
+Homo sapiens: 5108
+Rubulavirus Human parainfluenza 2 virus: 1
+Shewanella oneidensis: 1
+Escherichia coli: 137
+Pneumovirus Human respiratory syncytial virus B: 1
+Pseudomonas putida: 2
+Shewanella sp: 1
+Influenzavirus A Influenza A virus: 4
+Staphylococcus aureus: 7
+Pseudomonas aeruginosa: 5
+Bacillus subtilis: 2
+Haemophilus influenzae: 25
+Streptomyces sp.: 1
+Candida glabrata: 1
+Clostridium perfringens: 5
+Klebsiella aerogenes: 2
+Bacillus sphaericus: 1
+Plasmodium falciparum: 5
+Candida albicans: 15
+Streptomyces rubiginosus: 1
+unknown: 129
+Salmonella typhimurium: 1
+Brevibacterium sterolicum: 1
+T4-like viruses Enterobacteria phage T4: 2
+Mycobacterium smegmatis: 1
+Bacillus stearothermophilus: 1
+Streptococcus pneumoniae: 9
+Shigella flexneri: 1
+Aquifex aeolicus: 4
+Orthopoxvirus Vaccinia virus: 1
+Bacillus circulans: 1
+Bacillus caldovelox: 1
+Deinococcus radiodurans: 1
+Thermus thermophilus: 1
+Mycobacterium tuberculosis: 10
+

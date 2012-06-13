@@ -1,0 +1,92 @@
+[illicit, approved, withdrawn]: 5
+[]: 3
+[experimental, withdrawn]: 2
+[illicit, experimental, withdrawn]: 1
+[approved]: 1422
+[nutraceutical]: 14
+[illicit, experimental]: 121
+[illicit, approved]: 56
+[experimental]: 4955
+[approved, withdrawn, nutraceutical]: 1
+[withdrawn]: 31
+[approved, withdrawn]: 25
+[illicit, withdrawn]: 5
+[approved, nutraceutical]: 69
+[experimental, nutraceutical]: 1
+
+biotech: 131
+small molecule: 1500
+
+biotech:
+other: 25
+gene-product: 486
+
+small moleucles:
+other: 170
+gene-product: 5117
+
+biotech others:
+D-Ala-D-Ala moiety of NAM/NAG peptide subunits of peptidoglycan: 1
+Dermatan sulfate: 2
+Hyaluronic acid: 1
+Dietary fat: 1
+Mucin, TAG-72, tumor associated glycoprotein 72: 1
+glycogen: 1
+Globotriaosylceramide : 1
+Dietary protein: 1
+Calcium ions: 1
+Dietary starch: 1
+Heparan sulfate: 1
+Iduronic acid: 1
+Asparagine: 2
+Glucosylceramide: 2
+Indium 111: 1
+DNA: 1
+Digoxin: 1
+Gram positive bacteria cell membranes: 1
+Adenosine: 1
+Teichoic acid: 1
+Uric acid: 1
+Phosphatidyl glycerol: 1
+
+small moleucles others:
+bacterial cell wall: 1
+cystine: 1
+Copper: 1
+manganese: 2
+Lead: 2
+Schistosome Calcium (Ca 2+) Channel: 1
+Trivalent metal cations: 1
+tyrosine: 1
+Stanozolol Binding Protein (STBP): 1
+Hydrogen ions: 1
+Bile acids: 3
+Ergosterol, Candida albicans: 5
+Transferrin Receptor Protein: 1
+Cadmium: 2
+bacterial outer membrane: 3
+Ferriprotoporphyrin IX: 6
+membrane-associated glucocorticoid-binding protein LAGS: 1
+C55-isoprenyl pyrophosphate: 1
+D-Ala-D-Ala moiety of NAM/NAG peptide subunits of peptidoglycan: 1
+Pencillin Binding Protein 3, P. aeruginosa: 1
+Arsenic: 2
+23S rRNA: 8
+70S ribosome: 1
+Calcium ions: 1
+Potassium: 1
+Gamma-hydroxybutyrate receptor: 1
+Hydroxyapatite: 9
+N-acetyl-p-benzoquinoneimine: 1
+RNA: 4
+Phosphate: 2
+Aluminum: 1
+DNA: 79
+Mercury: 2
+Magnesium: 1
+16S rRNA: 18
+Iron: 3
+
+Drugs with at least one annonations not IEA (relevant)
+Number of relevant: 1351 Total: 1631 Non-Annotated: 280
+

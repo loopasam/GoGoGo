@@ -1,0 +1,8 @@
+(1) All the drugs inside drugbank are mapped to the 5th level of the ATC
+
+(2) Now there are 1873 5th level categories mapped to a drugbank drug. In total there are 4463 5th level categories.
+
+Number of terms with a DB reference: 1873/4463
+Number of new mappings: 272
+Number of inexsisting categories: 20
+
