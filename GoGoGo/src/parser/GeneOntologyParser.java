@@ -155,5 +155,26 @@ public class GeneOntologyParser extends Parser {
 	out.writeObject(this.getGo());
 	out.close();
     }
+    
+    public void normalize() {
+	//Manual curation on a few relations that are absent from GO but should nonetheless be there.
+	//The new relations are the following:
+
+	//(1) positive regulation of salivary gland formation by mesenchymal-epithelial signaling is_a positive regulation of biological process
+	GoTerm term1 = this.getGo().getTerm("GO:0060639");
+	GoRelation relation1 = new GoRelation("is_a", "GO:0048518");
+	term1.getRelations().add(relation1);
+	
+	//(2) positive regulation of protein processing is_a positive regulation of biological process
+	GoTerm term2 = this.getGo().getTerm("GO:0010954");
+	GoRelation relation2 = new GoRelation("is_a", "GO:0048518");
+	term2.getRelations().add(relation2);
+	
+	//(3) negative regulation of protein processing	is_a negative regulation of biological process
+	GoTerm term3 = this.getGo().getTerm("GO:0010955");
+	GoRelation relation3 = new GoRelation("is_a", "GO:0048519");
+	term3.getRelations().add(relation3);
+	
+    }
 
 }

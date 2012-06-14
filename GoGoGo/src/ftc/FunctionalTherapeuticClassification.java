@@ -232,7 +232,7 @@ public class FunctionalTherapeuticClassification {
 	this.setManager(OWLManager.createOWLOntologyManager());
 	this.setPrefix("http://www.ebi.ac.uk/ftc/");
 	this.setPrefixManager(new DefaultPrefixManager(this.getPrefix()));
-	File file = new File("data/ftc.min.owl");
+	File file = new File("data/ftc/ftc.min.owl");
 	this.setOntology(this.getManager().loadOntologyFromOntologyDocument(file));
 	this.setFactory(this.getManager().getOWLDataFactory());
 	HashMap<String, OWLObjectProperty> mapper = new HashMap<String, OWLObjectProperty>();
@@ -320,7 +320,7 @@ public class FunctionalTherapeuticClassification {
 
     public void generateMininumProteinandDrugAxioms() throws IOException, MappingException {
 
-	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/relation_mapping.map");
+	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/drugbank/relation_mapping.map");
 
 	//Iterates over the classifiable drugs and generates axioms
 	for (Drug drug : this.getData().getClassifiableDrugs(relationMapping)) {
@@ -451,7 +451,7 @@ public class FunctionalTherapeuticClassification {
 	//Create OWL class corresponding to the IRI
 	OWLClass owAntiAgent = this.factory.getOWLClass(":" + categoryName, this.getPrefixManager());
 	//Add a label to the OWL class
-	this.addLabelToClass(owAntiAgent, "Anti-" + goRegulatedTerm.getName() + "-agent");
+	this.addLabelToClass(owAntiAgent, "Anti-" + goRegulatedTerm.getName());
 	//Get an 'Agent Restriction' axiom
 	OWLClassExpression drugAndPertubsSome = this.getAgentRestrictionAxiom(perturbation, regulatingTerm);
 	OWLAxiom agentAxiom = this.getFactory().getOWLSubClassOfAxiom(owAntiAgent, this.getAgent());
@@ -468,7 +468,7 @@ public class FunctionalTherapeuticClassification {
 	//Create OWL class corresponding to the IRI
 	OWLClass owlProAgent = this.factory.getOWLClass(":" + categoryName, this.getPrefixManager());
 	//Add a label to the OWL class
-	this.addLabelToClass(owlProAgent, "Pro-" + goRegulatedTerm.getName() + "-agent");
+	this.addLabelToClass(owlProAgent, "Pro-" + goRegulatedTerm.getName());
 	//Get an 'Agent Restriction' axiom
 	OWLClassExpression drugAndPertubsSome = this.getAgentRestrictionAxiom(perturbation, regulatingTerm);
 	OWLAxiom agentAxiom = this.getFactory().getOWLSubClassOfAxiom(owlProAgent, this.getAgent());
@@ -554,7 +554,7 @@ public class FunctionalTherapeuticClassification {
 	for (GoTerm term : this.getGo().getTerms()) {
 
 	    for (GoRelation parentRelation : term.getRelations()) {
-		System.out.println(counter);
+		System.out.println("Number of classes: " + counter);
 		if(parentRelation.getType().equals("positively_regulates")){
 		    counter++;
 		    this.addAgentPatternForPositiveRegulation(term, this.getGo().getTerm(parentRelation.getTarget()));
@@ -571,7 +571,7 @@ public class FunctionalTherapeuticClassification {
 
 	System.out.println("generate prot axioms...");
 
-	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/relation_mapping.map");
+	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/drugbank/relation_mapping.map");
 
 	//Iterates over the classifiable drugs and generates axioms
 	for (Drug drug : this.getData().getClassifiableDrugs(relationMapping)) {

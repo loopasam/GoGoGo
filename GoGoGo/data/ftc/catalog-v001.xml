@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1339596141878" name="duplicate:http://www.ebi.ac.uk/ftc/" uri="ftc.min.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1339596141878" name="duplicate:http://www.ebi.ac.uk/ftc/" uri="ftc.full.out.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1339596141878" name="duplicate:http://www.ebi.ac.uk/ftc/" uri="ftc-inferred.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1339596141878" name="duplicate:http://www.ebi.ac.uk/ftc/" uri="ftc.min.out.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1339596141878" name="http://www.gogogo.org/fuctional-skeleton.owl" uri="ftc-2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1339596141878" name="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl" uri="toy_example.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1339668541353" name="duplicate:http://www.ebi.ac.uk/ftc/" uri="ftc.min.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1339668541353" name="duplicate:http://www.ebi.ac.uk/ftc/" uri="ftc.full.out.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1339668541353" name="duplicate:http://www.ebi.ac.uk/ftc/" uri="ftc-inferred.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1339668541353" name="duplicate:http://www.ebi.ac.uk/ftc/" uri="ftc.min.out.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1339668541353" name="http://www.gogogo.org/fuctional-skeleton.owl" uri="ftc-2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1339668541353" name="http://www.semanticweb.org/ontologies/2012/4/Ontology1336741333985.owl" uri="toy_example.owl"/>
     </group>
 </catalog>

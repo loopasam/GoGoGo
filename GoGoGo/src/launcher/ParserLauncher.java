@@ -21,19 +21,21 @@ public class ParserLauncher {
 
     public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
 	System.out.println("start drug bank parsing...");
-	Parser drugBankParser = new DrugBankParser("data/drugbank.xml", "data/drugbank.ser");
+	Parser drugBankParser = new DrugBankParser("data/drugbank/drugbank.xml", "data/drugbank/drugbank.ser");
 	drugBankParser.parse();
 	drugBankParser.save();
 
 	System.out.println("start go parsing...");
-	Parser goParser = new GeneOntologyParser("data/gene_ontology_ext.obo", "data/go.ser");
+	GeneOntologyParser goParser = new GeneOntologyParser("data/go/gene_ontology_ext.obo", "data/go/go.ser");
 	goParser.parse();
+	//add a few relations that are missing within GO, manual curation ftw.
+	goParser.normalize();
 	goParser.save();
 	
 	System.out.println("Start connector...");
-	GoaConnector connector = new GoaConnector("data/drugbank.ser", "data/go.ser");
+	GoaConnector connector = new GoaConnector("data/drugbank/drugbank.ser", "data/go/go.ser");
 	connector.fillPartnersWithGoTerms();
-	connector.save("data/dataset-filtered.ser");
+	connector.save("data/integration/dataset-filtered.ser");
 	
     }
 
