@@ -35,8 +35,8 @@ public class ClassificationLauncher {
 	boolean isConsistent = classification.isConsistent();
 	System.out.println("consistent: " + isConsistent);
 
-//	System.out.println("Adding inferred axioms to the ontology...");
-//	classification.classify("data/ftc/ftc-inferred.owl");
+	System.out.println("Adding inferred axioms to the ontology...");
+	classification.classify("data/ftc/ftc-inferred.owl");
 
 	System.out.println("Saving...");
 	classification.save("data/ftc/ftc.min.out.owl");

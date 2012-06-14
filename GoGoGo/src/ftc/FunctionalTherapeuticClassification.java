@@ -540,9 +540,11 @@ public class FunctionalTherapeuticClassification {
 	List<InferredAxiomGenerator<? extends OWLAxiom>> gens = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
 	gens.add(new InferredSubClassAxiomGenerator());
 	InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner, gens);
-	iog.fillOntology(this.getManager(), this.getOntology());
+	
+	OWLOntology infOnt = this.getManager().createOntology();
+	iog.fillOntology(this.getManager(), infOnt);
 	File file = new File(path);
-	this.getManager().saveOntology(this.getOntology(), IRI.create(file.toURI()));
+	this.getManager().saveOntology(infOnt, IRI.create(file.toURI()));
 
     }
 
