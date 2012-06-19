@@ -1104,7 +1104,6 @@
 
     <owl:Class rdf:about="http://www.drugbank.ca/drugs/DB00130">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L-Glutamine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/A16AA03"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/B05XB02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/Drug"/>
     </owl:Class>
@@ -2695,7 +2694,6 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chlorthalidone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/C03BA04"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/Drug"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/M05BA02"/>
     </owl:Class>
     
 
@@ -9290,6 +9288,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethinyl Estradiol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/G03CA01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/L02AA03"/>
     </owl:Class>
     
 
@@ -9929,9 +9928,6 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rifampin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/Drug"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/J04AB02"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/J04AB03"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/S01AA16"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/S02AA12"/>
     </owl:Class>
     
 
@@ -11878,7 +11874,6 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/R06AD01"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/R06AD02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/R06AD05"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/R06AD08"/>
     </owl:Class>
     
 
@@ -13965,7 +13960,6 @@
     <owl:Class rdf:about="http://www.drugbank.ca/drugs/DB01624">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zuclopenthixol</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/Drug"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/N05AF02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/atc/N05AF05"/>
     </owl:Class>
     
