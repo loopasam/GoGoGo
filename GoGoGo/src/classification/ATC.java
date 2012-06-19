@@ -19,17 +19,17 @@ import java.util.regex.Pattern;
  *
  */
 public class ATC implements Serializable {
-    
+
     private static final long serialVersionUID = -7881747449067909230L;
     private ArrayList<ATCTerm> terms;
-    
+
     public void setTerms(ArrayList<ATCTerm> terms) {
 	this.terms = terms;
     }
     public ArrayList<ATCTerm> getTerms() {
 	return terms;
     }
-    
+
     public ATC() {
 	this.setTerms(new ArrayList<ATCTerm>());
     }
@@ -41,7 +41,7 @@ public class ATC implements Serializable {
 	this.setTerms(atc.getTerms());
 	in.close();
     }
-    
+
     public void addTerm(ATCTerm term) {
 	this.getTerms().add(term);
     }
@@ -56,9 +56,9 @@ public class ATC implements Serializable {
     }
 
     public ArrayList<ATCTerm> getFourLettersTerms() {
-	
+
 	ArrayList<ATCTerm> fourLettersTerms = new ArrayList<ATCTerm>();
-	
+
 	for (ATCTerm term : this.getTerms()) {
 	    Pattern patternCompound = Pattern.compile("^(\\w\\d\\d\\w\\w)$");
 	    Matcher matcherTerm = patternCompound.matcher(term.getCode());
@@ -67,13 +67,13 @@ public class ATC implements Serializable {
 	    }
 	}
 	return fourLettersTerms;
-	
+
     }
 
     public ArrayList<ATCTerm> getThreeLettersTerms() {
-	
+
 	ArrayList<ATCTerm> threeLettersTerms = new ArrayList<ATCTerm>();
-	
+
 	for (ATCTerm term : this.getTerms()) {
 	    Pattern patternCompound = Pattern.compile("^(\\w\\d\\d\\w)$");
 	    Matcher matcherTerm = patternCompound.matcher(term.getCode());
@@ -82,13 +82,13 @@ public class ATC implements Serializable {
 	    }
 	}
 	return threeLettersTerms;
-	
+
     }
 
     public ArrayList<ATCTerm> getTwoLettersTerms() {
-	
+
 	ArrayList<ATCTerm> twoLettersTerms = new ArrayList<ATCTerm>();
-	
+
 	for (ATCTerm term : this.getTerms()) {
 	    Pattern patternCompound = Pattern.compile("^(\\w\\d\\d)$");
 	    Matcher matcherTerm = patternCompound.matcher(term.getCode());
@@ -97,8 +97,19 @@ public class ATC implements Serializable {
 	    }
 	}
 	return twoLettersTerms;
-	
+
     }
-    
+
+    public ArrayList<ATCTerm> getTherapeutics() {
+
+	ArrayList<ATCTerm> therapeutics = new ArrayList<ATCTerm>();
+	for (ATCTerm term : this.getTerms()) {
+	    if(term.isATherapeutic()){
+		therapeutics.add(term);
+	    }
+	}
+	return therapeutics;
+    }
+
 
 }

@@ -146,41 +146,43 @@ public class ATCParser extends Parser {
 	out.close();
     }
 
-    public void convertInOwl(String path) throws OWLOntologyCreationException, OWLOntologyStorageException {
+    public void convertInOwl(String path) throws OWLOntologyCreationException, OWLOntologyStorageException, FileNotFoundException, IOException, ClassNotFoundException {
+	DrugBank drugbank = new DrugBank("data/drugbank/drugbank.ser");
 	OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 	IRI ontologyIRI = IRI.create("http://www.atc.org/atc.owl");
 	IRI documentIRI = IRI.create(path);
 	SimpleIRIMapper mapper = new SimpleIRIMapper(ontologyIRI, documentIRI);
 	manager.addIRIMapper(mapper);
 	OWLOntology ontology = manager.createOntology(ontologyIRI);
-	PrefixManager prefixManager = new DefaultPrefixManager("http://www.atc.org/atc.owl#");
+	PrefixManager atcprefixManager = new DefaultPrefixManager("http://www.ebi.ac.uk/atc/");
+	PrefixManager drugbankprefixManager = new DefaultPrefixManager("http://www.drugbank.ca/drugs/");
 	OWLDataFactory factory = manager.getOWLDataFactory();
 
 	for (ATCTerm term : this.getAtc().getTerms()) {
-	    OWLClass owlTerm = factory.getOWLClass(":" + term.getCode(), prefixManager);
 
+	    OWLClass owlTerm = factory.getOWLClass(":" + term.getCode(), atcprefixManager);
+	    
 	    OWLAnnotationProperty labelproperty = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_LABEL.getIRI());
 	    OWLLiteral literal = factory.getOWLLiteral(term.getLabel());
 	    OWLAnnotation labelAnnot = factory.getOWLAnnotation(labelproperty, literal);
 	    OWLAxiom labelAxiom = factory.getOWLAnnotationAssertionAxiom(owlTerm.getIRI(), labelAnnot);
 	    manager.applyChange(new AddAxiom(ontology, labelAxiom));
 
-	    if(term.getDrugBankReferences().size() > 0){
+	    if(term.getAllDrugBankReferences().size() > 0){
 
-		for (String dbid : term.getDrugBankReferences()) {
+		for (String dbid : term.getAllDrugBankReferences()) {
 
-		    OWLAnnotationProperty seeAlsoproperty = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_SEE_ALSO.getIRI());
-		    OWLLiteral seeAlsoliteral = factory.getOWLLiteral(dbid);
-		    OWLAnnotation seeAlsoAnnot = factory.getOWLAnnotation(seeAlsoproperty, seeAlsoliteral);
-		    OWLAxiom seeAlsoAxiom = factory.getOWLAnnotationAssertionAxiom(owlTerm.getIRI(), seeAlsoAnnot);
-		    manager.applyChange(new AddAxiom(ontology, seeAlsoAxiom));
-
-		    OWLClass dbdrug = factory.getOWLClass(":" + dbid, prefixManager);
+		    OWLClass dbdrug = factory.getOWLClass(":" + dbid, drugbankprefixManager);
 		    OWLAxiom dbaxiom = factory.getOWLSubClassOfAxiom(dbdrug, owlTerm);
 		    AddAxiom adddbAxiom = new AddAxiom(ontology, dbaxiom);
 		    manager.applyChange(adddbAxiom);
 		    
-		    OWLClass drug = factory.getOWLClass(":Drug", prefixManager);
+		    OWLLiteral drugliteral = factory.getOWLLiteral(drugbank.getDrug(dbid).getName());
+		    OWLAnnotation druglabelAnnot = factory.getOWLAnnotation(labelproperty, drugliteral);
+		    OWLAxiom druglabelAxiom = factory.getOWLAnnotationAssertionAxiom(dbdrug.getIRI(), druglabelAnnot);
+		    manager.applyChange(new AddAxiom(ontology, druglabelAxiom));
+
+		    OWLClass drug = factory.getOWLClass(":Drug", atcprefixManager);
 		    OWLAxiom axiom = factory.getOWLSubClassOfAxiom(dbdrug, drug);
 		    AddAxiom addAxiom = new AddAxiom(ontology, axiom);
 		    manager.applyChange(addAxiom);
@@ -190,7 +192,7 @@ public class ATCParser extends Parser {
 	    }
 
 	    if(term.getParentCode() != null){
-		OWLClass owlTermParent = factory.getOWLClass(":" + term.getParentCode(), prefixManager);
+		OWLClass owlTermParent = factory.getOWLClass(":" + term.getParentCode(), atcprefixManager);
 		OWLAxiom axiom = factory.getOWLSubClassOfAxiom(owlTerm, owlTermParent);
 		AddAxiom addAxiom = new AddAxiom(ontology, axiom);
 		manager.applyChange(addAxiom);
@@ -200,6 +202,7 @@ public class ATCParser extends Parser {
 
     }
 
+
     public void addDrugBankInfo(String path) throws FileNotFoundException, IOException, ClassNotFoundException {
 	DrugBank drugBank = new DrugBank(path);
 	//Check DB and add the term to the curated categories.
@@ -208,7 +211,7 @@ public class ATCParser extends Parser {
 		for (String code : drug.getAtcCodes()) {
 		    ATCTerm term = this.getAtc().getTerm(code);
 		    if(term == null){
-			System.err.println("Category doesn't exists in the ATC" + code);
+			System.err.println("Category doesn't exists in the ATC: " + code);
 		    }else{
 			term.getDrugBankReferences().add(drug.getId());
 		    }
@@ -218,40 +221,33 @@ public class ATCParser extends Parser {
 
 	//Some therapeutics present within drugbank are not mapped to an ATC eventhough they should be.
 	//This text-mining part corrects that
-	//Commented atm, wiating for drugbank people to curate
-	//	DrugBankDictionary dico = new DrugBankDictionary();
-	//	dico.load("/home/samuel/git/BioDicoManager/BioDicoManager/data/drugbank-dico.xml");
-	//	MapDictionary<String> lingpipedico = dico.getLingPipeDico();
-	//	ExactDictionaryChunker chunker = new ExactDictionaryChunker(lingpipedico, IndoEuropeanTokenizerFactory.INSTANCE, true, false);
+	
+	DrugBankDictionary dico = new DrugBankDictionary();
+	dico.load("/home/samuel/git/BioDicoManager/BioDicoManager/data/drugbank-dico.xml");
+	MapDictionary<String> lingpipedico = dico.getLingPipeDico();
+	ExactDictionaryChunker chunker = new ExactDictionaryChunker(lingpipedico, IndoEuropeanTokenizerFactory.INSTANCE, true, false);
 
-	//	for (ATCTerm term : this.getAtc().getTerms()) {
-	//	    if(term.isATherapeutic()){
-	//		Chunking chunking = chunker.chunk(term.getLabel());
-	//		for (Chunk chunk : chunking.chunkSet()) {
-	//		    int start = chunk.start();
-	//		    int end = chunk.end();
-	//		    String type = chunk.type();
-	//		    String uri = dico.getURIForTerm(type).substring(29, 36);
-	//
-	//		    boolean coverTheAllTerm = false;
-	//		    if(term.getLabel().length() == end - start){
-	//			coverTheAllTerm = true;
-	//		    }
-	//
-	//		    boolean isKnown = false;
-	//		    if(term.getDrugBankReferences().contains(uri)){
-	//			isKnown = true;
-	//		    }
-	//
-	//		    if(coverTheAllTerm){
-	//			if(!isKnown){
-	//			    term.getDrugBankReferences().add(uri);
-	//			}
-	//		    }
-	//
-	//		}
-	//	    }
-	//	}
+	for (ATCTerm term : this.getAtc().getTerms()) {
+	    if(term.isATherapeutic()){
+		Chunking chunking = chunker.chunk(term.getLabel());
+		for (Chunk chunk : chunking.chunkSet()) {
+		    int start = chunk.start();
+		    int end = chunk.end();
+		    String type = chunk.type();
+		    String uri = dico.getURIForTerm(type).substring(29, 36);
+
+		    boolean coverTheAllTerm = false;
+		    if(term.getLabel().length() == end - start){
+			coverTheAllTerm = true;
+		    }
+
+		    if(coverTheAllTerm){
+			term.getTextMinedDrugBankReferences().add(uri);
+		    }
+
+		}
+	    }
+	}
 
 
     }

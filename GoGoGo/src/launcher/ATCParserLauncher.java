@@ -18,14 +18,14 @@ import parser.ATCParser;
 public class ATCParserLauncher {
 
     public static void main(String[] args) throws FileNotFoundException, IOException, OWLOntologyCreationException, OWLOntologyStorageException, ClassNotFoundException {
-	ATCParser atcParser = new ATCParser("data/ASCII_Index_med_DDD.asc", "data/atc.ser");
+	ATCParser atcParser = new ATCParser("data/atc/ASCII_Index_med_DDD.asc", "data/atc/atc.ser");
 	System.out.println("Parsing...");
 	atcParser.parse();
 	System.out.println("Adding DB info...");
-	atcParser.addDrugBankInfo("data/drugbank.ser");
+	atcParser.addDrugBankInfo("data/drugbank/drugbank.ser");
 	atcParser.save();
 	System.out.println("Converting in OWL...");
-	atcParser.convertInOwl("file:/home/samuel/git/GoGoGo/GoGoGo/data/atc.owl");
+	atcParser.convertInOwl("file:/home/samuel/git/GoGoGo/GoGoGo/data/atc/atc.owl");
 
     }
 }

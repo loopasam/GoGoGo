@@ -18,7 +18,17 @@ public class ATCTerm implements Serializable {
     private String parentCode;
     private ArrayList<String> drugBankReferences;
     private boolean isATherapeutic;
-    
+    private ArrayList<String> textMinedDrugBankReferences;
+
+    public void setTextMinedDrugBankReferences(
+	    ArrayList<String> textMinedDrugBankReferences) {
+	this.textMinedDrugBankReferences = textMinedDrugBankReferences;
+    }
+
+    public ArrayList<String> getTextMinedDrugBankReferences() {
+	return textMinedDrugBankReferences;
+    }
+
     public void setATherapeutic(boolean isATherapeutic) {
 	this.isATherapeutic = isATherapeutic;
     }
@@ -29,8 +39,9 @@ public class ATCTerm implements Serializable {
 
     public ATCTerm() {
 	this.setDrugBankReferences(new ArrayList<String>());
+	this.setTextMinedDrugBankReferences(new ArrayList<String>());
     }
-    
+
     public void setDrugBankReferences(ArrayList<String> drugBankReferences) {
 	this.drugBankReferences = drugBankReferences;
     }
@@ -44,17 +55,34 @@ public class ATCTerm implements Serializable {
 	return parentCode;
     }
     public String getCode() {
-        return code;
+	return code;
     }
     public void setCode(String code) {
-        this.code = code;
+	this.code = code;
     }
     public String getLabel() {
-        return label;
+	return label;
     }
     public void setLabel(String label) {
-        this.label = label;
+	this.label = label;
     }
-    
-    
+
+    public ArrayList<String> getAllDrugBankReferences() {
+	ArrayList<String> dbrefs = new ArrayList<String>();
+	for (String dbRef : this.getDrugBankReferences()) {
+	    if(!dbrefs.contains(dbRef)){
+		dbrefs.add(dbRef);
+	    }
+	}
+
+	for (String dbref : this.getTextMinedDrugBankReferences()) {
+	    if(!dbrefs.contains(dbref)){
+		dbrefs.add(dbref);
+	    }
+	}
+
+	return dbrefs;
+    }
+
+
 }
