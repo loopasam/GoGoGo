@@ -26,6 +26,5 @@ public class ATCParserLauncher {
 	atcParser.save();
 	System.out.println("Converting in OWL...");
 	atcParser.convertInOwl("file:/home/samuel/git/GoGoGo/GoGoGo/data/atc/atc.owl");
-
     }
 }
