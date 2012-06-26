@@ -149,12 +149,12 @@ public class ATCParser extends Parser {
     public void convertInOwl(String path) throws OWLOntologyCreationException, OWLOntologyStorageException, FileNotFoundException, IOException, ClassNotFoundException {
 	DrugBank drugbank = new DrugBank("data/drugbank/drugbank.ser");
 	OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-	IRI ontologyIRI = IRI.create("http://www.atc.org/atc.owl");
+	IRI ontologyIRI = IRI.create("http://www.ebi.ac.uk/Rebholz-srv/atc/public/ontologies/atc.owl");
 	IRI documentIRI = IRI.create(path);
 	SimpleIRIMapper mapper = new SimpleIRIMapper(ontologyIRI, documentIRI);
 	manager.addIRIMapper(mapper);
 	OWLOntology ontology = manager.createOntology(ontologyIRI);
-	PrefixManager atcprefixManager = new DefaultPrefixManager("http://www.ebi.ac.uk/atc/");
+	PrefixManager atcprefixManager = new DefaultPrefixManager("http://www.ebi.ac.uk/Rebholz-srv/atc/");
 	PrefixManager drugbankprefixManager = new DefaultPrefixManager("http://www.drugbank.ca/drugs/");
 	OWLDataFactory factory = manager.getOWLDataFactory();
 	
