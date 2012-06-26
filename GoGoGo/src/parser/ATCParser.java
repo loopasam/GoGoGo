@@ -157,11 +157,11 @@ public class ATCParser extends Parser {
 	PrefixManager atcprefixManager = new DefaultPrefixManager("http://www.ebi.ac.uk/atc/");
 	PrefixManager drugbankprefixManager = new DefaultPrefixManager("http://www.drugbank.ca/drugs/");
 	OWLDataFactory factory = manager.getOWLDataFactory();
-
+	
 	for (ATCTerm term : this.getAtc().getTerms()) {
 
 	    OWLClass owlTerm = factory.getOWLClass(":" + term.getCode(), atcprefixManager);
-	    
+
 	    OWLAnnotationProperty labelproperty = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_LABEL.getIRI());
 	    OWLLiteral literal = factory.getOWLLiteral(term.getLabel());
 	    OWLAnnotation labelAnnot = factory.getOWLAnnotation(labelproperty, literal);
@@ -172,20 +172,21 @@ public class ATCParser extends Parser {
 
 		for (String dbid : term.getAllDrugBankReferences()) {
 
-		    OWLClass dbdrug = factory.getOWLClass(":" + dbid, drugbankprefixManager);
-		    OWLAxiom dbaxiom = factory.getOWLSubClassOfAxiom(dbdrug, owlTerm);
-		    AddAxiom adddbAxiom = new AddAxiom(ontology, dbaxiom);
-		    manager.applyChange(adddbAxiom);
-		    
-		    OWLLiteral drugliteral = factory.getOWLLiteral(drugbank.getDrug(dbid).getName());
-		    OWLAnnotation druglabelAnnot = factory.getOWLAnnotation(labelproperty, drugliteral);
-		    OWLAxiom druglabelAxiom = factory.getOWLAnnotationAssertionAxiom(dbdrug.getIRI(), druglabelAnnot);
-		    manager.applyChange(new AddAxiom(ontology, druglabelAxiom));
+		    OWLClass atcdrug = factory.getOWLClass(":" + dbid, atcprefixManager);
+		    OWLAxiom atcdrugaxiom = factory.getOWLSubClassOfAxiom(atcdrug, owlTerm);
+		    AddAxiom addactdrugAxiom = new AddAxiom(ontology, atcdrugaxiom);
+		    manager.applyChange(addactdrugAxiom);
 
-		    OWLClass drug = factory.getOWLClass(":Drug", atcprefixManager);
-		    OWLAxiom axiom = factory.getOWLSubClassOfAxiom(dbdrug, drug);
-		    AddAxiom addAxiom = new AddAxiom(ontology, axiom);
-		    manager.applyChange(addAxiom);
+		    OWLAnnotationProperty seeAlsoproperty = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_SEE_ALSO.getIRI());
+		    OWLLiteral atcdrugseealso = factory.getOWLLiteral(drugbankprefixManager.getDefaultPrefix() + dbid);
+		    OWLAnnotation atcdrugseealsoAnnot = factory.getOWLAnnotation(seeAlsoproperty, atcdrugseealso);
+		    OWLAxiom drugseealsoAxiom = factory.getOWLAnnotationAssertionAxiom(atcdrug.getIRI(), atcdrugseealsoAnnot);
+		    manager.applyChange(new AddAxiom(ontology, drugseealsoAxiom));
+
+		    OWLLiteral atcdruglabel = factory.getOWLLiteral(drugbank.getDrug(dbid).getName());
+		    OWLAnnotation atcdruglabelAnnot = factory.getOWLAnnotation(labelproperty, atcdruglabel);
+		    OWLAxiom drugLabelAxiom = factory.getOWLAnnotationAssertionAxiom(atcdrug.getIRI(), atcdruglabelAnnot);
+		    manager.applyChange(new AddAxiom(ontology, drugLabelAxiom));
 
 		}
 
@@ -193,9 +194,14 @@ public class ATCParser extends Parser {
 
 	    if(term.getParentCode() != null){
 		OWLClass owlTermParent = factory.getOWLClass(":" + term.getParentCode(), atcprefixManager);
-		OWLAxiom axiom = factory.getOWLSubClassOfAxiom(owlTerm, owlTermParent);
-		AddAxiom addAxiom = new AddAxiom(ontology, axiom);
-		manager.applyChange(addAxiom);
+		OWLAxiom parentAxiom = factory.getOWLSubClassOfAxiom(owlTerm, owlTermParent);
+		AddAxiom addparentAxiom = new AddAxiom(ontology, parentAxiom);
+		manager.applyChange(addparentAxiom);
+	    }else{
+		OWLClass owlTermParent = factory.getOWLClass(":Thing", atcprefixManager);
+		OWLAxiom parentAxiom = factory.getOWLSubClassOfAxiom(owlTerm, owlTermParent);
+		AddAxiom addparentAxiom = new AddAxiom(ontology, parentAxiom);
+		manager.applyChange(addparentAxiom);
 	    }
 	}
 	manager.saveOntology(ontology);
@@ -221,7 +227,7 @@ public class ATCParser extends Parser {
 
 	//Some therapeutics present within drugbank are not mapped to an ATC eventhough they should be.
 	//This text-mining part corrects that
-	
+
 	DrugBankDictionary dico = new DrugBankDictionary();
 	dico.load("/home/samuel/git/BioDicoManager/BioDicoManager/data/drugbank-dico.xml");
 	MapDictionary<String> lingpipedico = dico.getLingPipeDico();
