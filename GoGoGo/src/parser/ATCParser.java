@@ -157,7 +157,7 @@ public class ATCParser extends Parser {
 	PrefixManager atcprefixManager = new DefaultPrefixManager("http://www.ebi.ac.uk/Rebholz-srv/atc/");
 	PrefixManager drugbankprefixManager = new DefaultPrefixManager("http://www.drugbank.ca/drugs/");
 	OWLDataFactory factory = manager.getOWLDataFactory();
-	
+
 	for (ATCTerm term : this.getAtc().getTerms()) {
 
 	    OWLClass owlTerm = factory.getOWLClass(":" + term.getCode(), atcprefixManager);
@@ -176,6 +176,12 @@ public class ATCParser extends Parser {
 		    OWLAxiom atcdrugaxiom = factory.getOWLSubClassOfAxiom(atcdrug, owlTerm);
 		    AddAxiom addactdrugAxiom = new AddAxiom(ontology, atcdrugaxiom);
 		    manager.applyChange(addactdrugAxiom);
+
+		    OWLClass drugBankCompound = factory.getOWLClass(":DrugBankCompound", atcprefixManager);
+		    OWLAxiom compoundAxiom = factory.getOWLSubClassOfAxiom(atcdrug, drugBankCompound);
+		    AddAxiom addcompoundAxiom = new AddAxiom(ontology, compoundAxiom);
+		    manager.applyChange(addcompoundAxiom);
+
 
 		    OWLAnnotationProperty seeAlsoproperty = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_SEE_ALSO.getIRI());
 		    OWLLiteral atcdrugseealso = factory.getOWLLiteral(drugbankprefixManager.getDefaultPrefix() + dbid);
@@ -204,6 +210,14 @@ public class ATCParser extends Parser {
 		manager.applyChange(addparentAxiom);
 	    }
 	}
+
+	
+	OWLClass drugBankCompound = factory.getOWLClass(":DrugBankCompound", atcprefixManager);
+	OWLClass owlThing = factory.getOWLClass(":Thing", atcprefixManager);
+	OWLAxiom thingAxiom = factory.getOWLSubClassOfAxiom(drugBankCompound, owlThing);
+	AddAxiom addThingAxiom = new AddAxiom(ontology, thingAxiom);
+	manager.applyChange(addThingAxiom);
+
 	manager.saveOntology(ontology);
 
     }

@@ -17,10 +17,13 @@ import org.semanticweb.HermiT.Reasoner;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddAxiom;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAnnotation;
+import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
@@ -32,6 +35,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerConfiguration;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
+import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
 /**
  * @author Samuel Croset
@@ -125,12 +129,12 @@ public class GoQuery {
 
     public GoQuery(String path) throws IOException, ClassNotFoundException, OWLOntologyCreationException {
 
-	GoGoGoDataset data = new GoGoGoDataset("data/dataset.ser");
+	GoGoGoDataset data = new GoGoGoDataset(path);
 	this.setGo(data.getGo());
 
 	this.setManager(OWLManager.createOWLOntologyManager());
-	this.setPrefix("http://www.gogogo.org/skeleton.owl");
-	File file = new File("data/skeleton.owl");
+	this.setPrefix("http://www.gogogo.org/go-skeleton.owl");
+	File file = new File("data/go/go-skeleton.owl");
 
 	this.setOntology(this.getManager().loadOntologyFromOntologyDocument(file));
 	this.setFactory(this.getManager().getOWLDataFactory());
@@ -164,14 +168,23 @@ public class GoQuery {
     public static void main(String[] args) throws OWLOntologyCreationException, IOException, ClassNotFoundException, OWLOntologyStorageException {
 
 	System.out.println("loading data...");
-	GoQuery querier = new GoQuery("data/dataset.ser");
+	GoQuery querier = new GoQuery("data/integration/dataset.ser");
 
-
-	System.out.println("srating conversion...");
+	System.out.println("starting conversion...");
 	for (GoTerm term : querier.getGo().getTerms()) {
 	    OWLClass owlChildTerm = querier.getFactory().getOWLClass(IRI.create(querier.getPrefix() + "#" + term.getId()));
-	    for (GoRelation relation : term.getRelations()) {
+	    
+	    
+	    OWLAnnotationProperty seeAlsoproperty = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_SEE_ALSO.getIRI());
+	    OWLLiteral atcdrugseealso = factory.getOWLLiteral(drugbankprefixManager.getDefaultPrefix() + dbid);
+	    OWLAnnotation atcdrugseealsoAnnot = factory.getOWLAnnotation(seeAlsoproperty, atcdrugseealso);
+	    OWLAxiom drugseealsoAxiom = factory.getOWLAnnotationAssertionAxiom(atcdrug.getIRI(), atcdrugseealsoAnnot);
+	    manager.applyChange(new AddAxiom(ontology, drugseealsoAxiom));
 
+	    
+	    
+	    
+	    for (GoRelation relation : term.getRelations()) {
 		OWLClass owlParentTerm = querier.getFactory().getOWLClass(IRI.create(querier.getPrefix() + "#" + relation.getTarget()));
 		OWLAxiom axiom = null;
 		if(relation.getType().equals("is_a")){
@@ -194,7 +207,7 @@ public class GoQuery {
 	}
 
 	System.out.println("Saving...");
-	File file = new File("data/go.owl");
+	File file = new File("data/go/go.owl");
 	querier.getManager().saveOntology(querier.getOntology(), IRI.create(file.toURI()));
 
 	OWLReasonerFactory reasonerFactory = new Reasoner.ReasonerFactory();
@@ -209,7 +222,6 @@ public class GoQuery {
 	
 	OWLClassExpression restrictionQuery = querier.getFactory().getOWLObjectSomeValuesFrom(querier.getRegulates(), apoptosis);
 
-	
 	NodeSet<OWLClass> subClses = reasoner.getSubClasses(restrictionQuery, false);
 	Set<OWLClass> clses = subClses.getFlattened();
 	System.out.println("Subclasses of regulates apoptosis: ");
