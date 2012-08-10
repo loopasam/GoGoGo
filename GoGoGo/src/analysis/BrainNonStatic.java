@@ -17,11 +17,14 @@ import org.semanticweb.owlapi.expression.ParserException;
 import org.semanticweb.owlapi.expression.ShortFormEntityChecker;
 import org.semanticweb.owlapi.model.AddAxiom;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAnnotation;
+import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
+import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
@@ -36,6 +39,7 @@ import org.semanticweb.owlapi.util.BidirectionalShortFormProviderAdapter;
 import org.semanticweb.owlapi.util.OWLEntityRemover;
 import org.semanticweb.owlapi.util.ShortFormProvider;
 import org.semanticweb.owlapi.util.SimpleShortFormProvider;
+import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
 import play.modules.elephant.errors.OWLClassQueryException;
 import play.modules.elephant.errors.OWLEntityQueryException;
@@ -197,7 +201,7 @@ public class BrainNonStatic {
      */
     public List<OWLClass> getSubClasses(OWLClass owlClass, boolean direct) {
 	Set<OWLClass> subClasses = this.reasoner.getSubClasses(owlClass, direct).getFlattened();
-	reasoner.flush();
+	//	reasoner.flush();
 	return sortClasses(subClasses);
     }
 
@@ -437,5 +441,20 @@ public class BrainNonStatic {
 	Collections.sort(listClasses, classCompare);
 	return listClasses;
     }
+
+
+    public String getLabel(OWLClass owlClass) {	
+	List<String> annotations = new ArrayList<String>();
+	OWLAnnotationProperty label = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_LABEL.getIRI());
+	for (OWLAnnotation annotation : owlClass.getAnnotations(ontology, label)) {
+	    if (annotation.getValue() instanceof OWLLiteral) {
+		OWLLiteral val = (OWLLiteral) annotation.getValue();
+		annotations.add(val.getLiteral());
+	    }
+	}
+	return annotations.get(0); 
+    }
+
+
 
 }

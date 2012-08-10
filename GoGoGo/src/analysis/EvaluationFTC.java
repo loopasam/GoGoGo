@@ -19,6 +19,7 @@ import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 /**
+ * Standard and final version of the evaluation for TAC meeting
  * @author Samuel Croset
  *
  */
