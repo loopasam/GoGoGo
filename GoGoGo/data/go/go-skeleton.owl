@@ -2,6 +2,8 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY www "http://www.localhost:9000/" >
+    <!ENTITY www2 "http://www.localhost:9000#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -9,13 +11,15 @@
 ]>
 
 
-<rdf:RDF xmlns="http://www.gogogo.org/go-skeleton.owl#"
-     xml:base="http://www.gogogo.org/go-skeleton.owl"
+<rdf:RDF xmlns="http://www.localhost:9000/"
+     xml:base="http://www.localhost:9000/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:www="http://www.localhost:9000/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.gogogo.org/go-skeleton.owl"/>
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www2="http://www.localhost:9000#">
+    <owl:Ontology rdf:about="http://www.localhost:9000/"/>
     
 
 
@@ -30,41 +34,46 @@
     
 
 
-    <!-- http://www.gogogo.org/go-skeleton.owl#has-part -->
+    <!-- http://www.localhost:9000#has-part -->
 
-    <owl:ObjectProperty rdf:about="http://www.gogogo.org/go-skeleton.owl#has-part">
+    <owl:ObjectProperty rdf:about="&www2;has-part">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gogogo.org/go-skeleton.owl#negatively-regulates -->
+    <!-- http://www.localhost:9000#negatively-regulates -->
 
-    <owl:ObjectProperty rdf:about="http://www.gogogo.org/go-skeleton.owl#negatively-regulates">
-        <rdfs:subPropertyOf rdf:resource="http://www.gogogo.org/go-skeleton.owl#regulates"/>
+    <owl:ObjectProperty rdf:about="&www2;negatively-regulates">
+        <rdfs:subPropertyOf rdf:resource="&www2;regulates"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gogogo.org/go-skeleton.owl#part-of -->
+    <!-- http://www.localhost:9000#part-of -->
 
-    <owl:ObjectProperty rdf:about="http://www.gogogo.org/go-skeleton.owl#part-of">
+    <owl:ObjectProperty rdf:about="&www2;part-of">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gogogo.org/go-skeleton.owl#positively-regulates -->
+    <!-- http://www.localhost:9000#positively-regulates -->
 
-    <owl:ObjectProperty rdf:about="http://www.gogogo.org/go-skeleton.owl#positively-regulates">
-        <rdfs:subPropertyOf rdf:resource="http://www.gogogo.org/go-skeleton.owl#regulates"/>
+    <owl:ObjectProperty rdf:about="&www2;positively-regulates">
+        <rdfs:subPropertyOf rdf:resource="&www2;regulates"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gogogo.org/go-skeleton.owl#regulates -->
+    <!-- http://www.localhost:9000#regulates -->
 
-    <owl:ObjectProperty rdf:about="http://www.gogogo.org/go-skeleton.owl#regulates"/>
+    <owl:ObjectProperty rdf:about="&www2;regulates">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&www2;regulates"/>
+            <rdf:Description rdf:about="&www2;part-of"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
 </rdf:RDF>
 
 

@@ -36,11 +36,12 @@ public class ClassificationLauncher {
 	System.out.println("consistent: " + isConsistent);
 
 	System.out.println("Adding inferred axioms to the ontology...");
-	classification.classify("data/ftc/ftc-inferred.owl");
+//	classification.classify("data/ftc/ftc-inferred.owl");
+	classification.classify();
 
 	System.out.println("Saving...");
-	classification.save("data/ftc/ftc.min.out.owl");
-
+	classification.save("data/ftc.min.out.owl");
+	System.out.println("Check if saved and stop manually the prgm --> bug to fix");
     }
 
 }

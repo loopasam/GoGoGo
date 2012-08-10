@@ -162,27 +162,50 @@
     
 
 
-    <!-- http://www.ebi.ac.uk/ftc/Agent -->
+    <!-- http://www.ebi.ac.uk/ftc/FTC:01 -->
 
-    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/Agent">
-        <rdfs:label rdf:datatype="&xsd;string">Therapeutic compound that is logically classified from annotations.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/ftc/Therapeutic-Compound"/>
+    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/FTC:01">
+        <rdfs:label>Therapeutic Compound</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Any man-made, natural, or endogenous (within the cell) molecule which exerts a biochemical and/or physiological effect on the cell, tissue, organ, or organism.</rdfs:comment>
+        <rdfs:seeAlso>definition chebi</rdfs:seeAlso>
     </owl:Class>
     
 
 
-    <!-- http://www.ebi.ac.uk/ftc/Drug -->
+    <!-- http://www.ebi.ac.uk/ftc/FTC:02 -->
 
-    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/Drug">
-        <rdfs:label rdf:datatype="&xsd;string">Therapeutic compound that is referenced by DrugBank as a drug.</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/ftc/Therapeutic-Compound"/>
+    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/FTC:02">
+        <rdfs:label>Agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/ftc/FTC:01"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Therapeutic compound that is logically classified from annotations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/ftc/FTC:03 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/FTC:03">
+        <rdfs:label>Drug</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/ftc/FTC:01"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Therapeutic compound that is referenced by DrugBank as a drug.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/ftc/FTC:04 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/FTC:04">
+        <rdfs:label>Gene-Product</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Protein present within UniprotKB and being the target of a Drug.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.ebi.ac.uk/ftc/GO:0003674 -->
 
-    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/GO:0003674"/>
+    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/GO:0003674">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
     
 
 
@@ -190,22 +213,6 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/GO:0008150">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ebi.ac.uk/ftc/Gene-Product -->
-
-    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/Gene-Product">
-        <rdfs:label rdf:datatype="&xsd;string">Protein present within UniprotKB and being the target of a Drug.</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ebi.ac.uk/ftc/Therapeutic-Compound -->
-
-    <owl:Class rdf:about="http://www.ebi.ac.uk/ftc/Therapeutic-Compound">
-        <rdfs:label rdf:datatype="&xsd;string">Any man-made, natural, or endogenous (within the cell) molecule which exerts a biochemical and/or physiological effect on the cell, tissue, organ, or organism.</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

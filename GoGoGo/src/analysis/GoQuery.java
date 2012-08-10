@@ -133,7 +133,7 @@ public class GoQuery {
 	this.setGo(data.getGo());
 
 	this.setManager(OWLManager.createOWLOntologyManager());
-	this.setPrefix("http://www.gogogo.org/go-skeleton.owl");
+	this.setPrefix("http://www.localhost:9000");
 	File file = new File("data/go/go-skeleton.owl");
 
 	this.setOntology(this.getManager().loadOntologyFromOntologyDocument(file));
@@ -173,17 +173,15 @@ public class GoQuery {
 	System.out.println("starting conversion...");
 	for (GoTerm term : querier.getGo().getTerms()) {
 	    OWLClass owlChildTerm = querier.getFactory().getOWLClass(IRI.create(querier.getPrefix() + "#" + term.getId()));
-	    
-	    
-	    OWLAnnotationProperty seeAlsoproperty = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_SEE_ALSO.getIRI());
-	    OWLLiteral atcdrugseealso = factory.getOWLLiteral(drugbankprefixManager.getDefaultPrefix() + dbid);
-	    OWLAnnotation atcdrugseealsoAnnot = factory.getOWLAnnotation(seeAlsoproperty, atcdrugseealso);
-	    OWLAxiom drugseealsoAxiom = factory.getOWLAnnotationAssertionAxiom(atcdrug.getIRI(), atcdrugseealsoAnnot);
-	    manager.applyChange(new AddAxiom(ontology, drugseealsoAxiom));
 
-	    
-	    
-	    
+	    querier.addAnnotation(OWLRDFVocabulary.RDFS_LABEL, term.getName(), owlChildTerm);
+
+	    if(term.getRelations().size() == 0){
+		OWLAxiom axiom = querier.getFactory().getOWLSubClassOfAxiom(owlChildTerm, querier.getFactory().getOWLThing());
+		AddAxiom addAxiom = new AddAxiom(querier.getOntology(), axiom);
+		querier.getManager().applyChange(addAxiom);
+	    }
+
 	    for (GoRelation relation : term.getRelations()) {
 		OWLClass owlParentTerm = querier.getFactory().getOWLClass(IRI.create(querier.getPrefix() + "#" + relation.getTarget()));
 		OWLAxiom axiom = null;
@@ -217,9 +215,9 @@ public class GoQuery {
 	reasoner.precomputeInferences();
 	boolean consistent = reasoner.isConsistent();
 	System.out.println("Consistent: " + consistent);
-	
+
 	OWLClass apoptosis = querier.getFactory().getOWLClass(IRI.create(querier.getPrefix() + "#GO:0006915"));
-	
+
 	OWLClassExpression restrictionQuery = querier.getFactory().getOWLObjectSomeValuesFrom(querier.getRegulates(), apoptosis);
 
 	NodeSet<OWLClass> subClses = reasoner.getSubClasses(restrictionQuery, false);
@@ -229,6 +227,15 @@ public class GoQuery {
 	    System.out.println("    " + cls);
 	}
 	System.out.println("\n");
+
+    }
+
+    public void addAnnotation(OWLRDFVocabulary vocabulary,  String annotationText, OWLClass owlClassToAnnotate) {
+	OWLAnnotationProperty annotationProperty = this.getFactory().getOWLAnnotationProperty(vocabulary.getIRI());
+	OWLLiteral owlLiteral = factory.getOWLLiteral(annotationText);
+	OWLAnnotation owlAnnot = factory.getOWLAnnotation(annotationProperty, owlLiteral);
+	OWLAxiom axiom = factory.getOWLAnnotationAssertionAxiom(owlClassToAnnotate.getIRI(), owlAnnot);
+	manager.applyChange(new AddAxiom(ontology, axiom));
 
     }
 

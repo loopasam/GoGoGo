@@ -16,8 +16,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,12 +41,14 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.model.PrefixManager;
 import org.semanticweb.owlapi.reasoner.InferenceType;
+import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.semanticweb.owlapi.util.InferredAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredOntologyGenerator;
 import org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator;
+import org.semanticweb.owlapi.util.OWLEntityRemover;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
 import drugbank.Drug;
@@ -226,7 +230,7 @@ public class FunctionalTherapeuticClassification {
     }
 
     public FunctionalTherapeuticClassification(String path) throws OWLOntologyCreationException, IOException, ClassNotFoundException {
-	this.setData(new GoGoGoDataset(path));	
+	this.setData(new GoGoGoDataset(path));
 	this.setGo(this.getData().getGo());
 	this.setDrugBank(this.getData().getDrugbank());
 	this.setManager(OWLManager.createOWLOntologyManager());
@@ -252,10 +256,10 @@ public class FunctionalTherapeuticClassification {
 	this.setPositivelyPerturbs(factory.getOWLObjectProperty(":positively-perturbs", this.getPrefixManager()));
 	this.setInvolvedIn(factory.getOWLObjectProperty(":involved-in", this.getPrefixManager()));
 	this.setHasFunction(factory.getOWLObjectProperty(":has-function", this.getPrefixManager()));
-	this.setAgent(factory.getOWLClass(":Agent", this.getPrefixManager()));
-	this.setTherapeuticCompound(factory.getOWLClass(":Therapeutic-Compound", this.getPrefixManager()));
-	this.setGeneProduct(factory.getOWLClass(":Gene-Product", this.getPrefixManager()));
-	this.setDrug(factory.getOWLClass(":Drug", this.getPrefixManager()));
+	this.setAgent(factory.getOWLClass(":FTC:02", this.getPrefixManager()));
+	this.setTherapeuticCompound(factory.getOWLClass(":FTC:01", this.getPrefixManager()));
+	this.setGeneProduct(factory.getOWLClass(":FTC:04", this.getPrefixManager()));
+	this.setDrug(factory.getOWLClass(":FTC:03", this.getPrefixManager()));
     }
 
     public void generateOwlOntology() {
@@ -315,40 +319,53 @@ public class FunctionalTherapeuticClassification {
 	OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
 	OWLReasoner reasoner = reasonerFactory.createReasoner(this.getOntology());
 	reasoner.precomputeInferences();
+	reasoner.flush();
 	return reasoner.isConsistent();
     }
 
+    //Generate only the FTC classes that are used to classify the compound. In other words, each classes of the resulting FTC should have a compound
+    //attached to it.
     public void generateMininumProteinandDrugAxioms() throws IOException, MappingException {
-
+	//List of the mapping from drugbak drugs actions on targets normalized into +p or -p.
 	HashMap<String, OWLObjectProperty> relationMapping = this.getRelationMapping("data/drugbank/relation_mapping.map");
 
 	//Iterates over the classifiable drugs and generates axioms
+	//Look at getClassifiableDrugs() for more info on the selected drugs.
 	for (Drug drug : this.getData().getClassifiableDrugs(relationMapping)) {
 
+	    //Creates and OWLClass for the drug.
 	    OWLClass drugClass = this.factory.getOWLClass(":" + drug.getId(), this.getPrefixManager());
+	    //Add an rdfs:label with the name of the drug
 	    this.addLabelToClass(drugClass, drug.getName());
+	    //Asserts that the drugBank compound is a "ftc:Drug"
 	    OWLAxiom drugTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, this.getDrug());
 	    this.addAxiom(drugTypeAxiom);
 
-	    //Iterates over the targets of the drugs
+	    //Iterates over the relations linking a target to the drug via the target ID.
 	    for (TargetRelation relation : drug.getTargetRelations()) {
+		//Get the partner object from the list of partners
 		Partner partner = this.getDrugBank().getPartner(relation.getPartnerId());
 		//Check if the partner has some annotations non IEA nor CC
 		//Check if the partner is a human protein
 		//TODO add more flexibility for the type of annotations to include
 		if(partner.getSpecies().getCategory() != null && partner.getSpecies().getCategory().equals("human")){
 		    if(partner.getNonIEAAnnotationsNonCC().size() > 0){
+			//Create an OWL class with Uniprot identifier as id.
 			OWLClass protClass = this.factory.getOWLClass(":" + partner.getUniprotIdentifer(), this.getPrefixManager());
+			//Add as rdfs:label the name of the prot.
 			this.addLabelToClass(protClass, partner.getName());
+			//Asserts that the protein is one.
 			OWLAxiom protTypeAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, this.getGeneProduct());
 			this.addAxiom(protTypeAxiom);
 
+			//get the type of action the drug has on the target
 			for (String action : relation.getActions()) {
 			    //Check is the relation is meaningful
-
 			    if(relationMapping.get(action) != null){
 
-				//Add a relation between the drug and the partner. The partner is relevant as it is linked to the drug and has some annotations.
+				//Add a relation between the drug and the partner. The partner is relevant as it is linked to the drug and has some annotations within
+				//the desired scope (--> human and non IEA nor CC).
+				//Get the normalised action
 				OWLObjectProperty property = relationMapping.get(action);
 				OWLClassExpression perturbsSome = this.getFactory().getOWLObjectSomeValuesFrom(property, protClass);
 				OWLAxiom drugActionAxiom = this.getFactory().getOWLSubClassOfAxiom(drugClass, perturbsSome);
@@ -359,19 +376,25 @@ public class FunctionalTherapeuticClassification {
 
 				    if(this.getGo().isTermABioProcess(annotation.getGoId())){
 					//If term is a bio-process then create the BP patterns
+					//Retrieves the owlClass corresponding to the annotation
 					OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
+					//Generate an involved_in relation (because it is a BP)
 					OWLClassExpression involvedInSome = this.getFactory().getOWLObjectSomeValuesFrom(this.getInvolvedIn(), goTerm);
+					//Add the subclass axiom.
 					OWLAxiom protAnnotationAxiom = this.getFactory().getOWLSubClassOfAxiom(protClass, involvedInSome);
 					this.addAxiom(protAnnotationAxiom);
 
+					//retrieve the GO term object
 					GoTerm currentTerm = this.getGo().getTerm(annotation.getGoId());
+					//For this term, check if there is the some relations interesting for us.
 					for (GoRelation parentRelation : currentTerm.getRelations()) {
 					    if(parentRelation.getType().equals("positively_regulates")){
+						//If there is a positively_regulates relation, we can create an agent pattern
 						this.addAgentPatternForPositiveRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
 					    }else if(parentRelation.getType().equals("negatively_regulates")){
 						this.addAgentPatternForNegativeRegulation(currentTerm, this.getGo().getTerm(parentRelation.getTarget()));
 					    }
-					}		
+					}
 				    }else if(this.getGo().isTermAMolecularFunction(annotation.getGoId())){
 					//If term is a MF, then creates the MF patterns
 					OWLClass goTerm = this.factory.getOWLClass(":" + annotation.getGoId(), this.getPrefixManager());
@@ -391,7 +414,65 @@ public class FunctionalTherapeuticClassification {
 	    }
 	}
 
+	//TODO cleaning of categories with nothing under
+	System.out.println("Removing classes with no drugs inside");
+	removeAgentClassesWithNoDrugs();
     }
+
+
+
+    private void removeAgentClassesWithNoDrugs() {	
+	OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
+	OWLReasoner reasoner = reasonerFactory.createReasoner(this.getOntology());
+	reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+
+	//Retrieves ALL the drugs
+	Set<OWLClass> drugs = reasoner.getSubClasses(this.getDrug(), false).getFlattened();
+	System.out.println("Get all the drugs aka DB compounds: " + drugs.size());
+	OWLClass nothing = this.getFactory().getOWLNothing();
+	drugs.remove(nothing);
+	System.out.println("Removed Nothing: " + drugs.size());
+	
+	//Retrieves ALL the therapeutic compounds
+	Set<OWLClass> therapeuticCompounds = reasoner.getSubClasses(this.getTherapeuticCompound(), false).getFlattened();
+	System.out.println("gets all the therapeutical classes: " + therapeuticCompounds.size());
+	int numberOfTherapeuticCompounds = therapeuticCompounds.size();
+        System.out.println("Number of classes: " + this.getOntology().getClassesInSignature().size());
+	//reasoner.flush();
+	//For each therapeutic compound, check if they have a drug as subclasses
+	int counterToRemove = 0;
+	OWLEntityRemover remover = new OWLEntityRemover(this.getManager(), Collections.singleton(this.getOntology()));
+
+	for (OWLClass therapeuticCompound : therapeuticCompounds) {
+	    Set<OWLClass> subClassesToCheckForDrug = reasoner.getSubClasses(therapeuticCompound, false).getFlattened();
+	    boolean hasdrug = false;
+	    for (OWLClass subClassToCheck : subClassesToCheckForDrug) {
+		if(drugs.contains(subClassToCheck)){
+		    hasdrug = true;
+		}		    
+	    }
+
+	    if(drugs.contains(therapeuticCompound)){
+		hasdrug = true;
+	    }
+
+	    if(hasdrug == false){
+		counterToRemove++;
+		therapeuticCompound.accept(remover);
+		System.out.println("to remove: " + therapeuticCompound.getIRI());
+	    }
+
+	}
+	
+        this.getManager().applyChanges(remover.getChanges());
+        System.out.println("Number of classes: " + this.getOntology().getClassesInSignature().size());
+        // At this point, if we wanted to reuse the entity remover, we would have to reset it
+        remover.reset();
+
+	System.err.println("number of therapeutic compound: " + numberOfTherapeuticCompounds);
+	System.err.println("number of them to remove: " + counterToRemove);
+    }
+
 
     private void addAgentPatternForFunction(GoTerm currentTerm) {
 	//Prepare the name of the category
@@ -539,14 +620,26 @@ public class FunctionalTherapeuticClassification {
 
 	List<InferredAxiomGenerator<? extends OWLAxiom>> gens = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
 	gens.add(new InferredSubClassAxiomGenerator());
-	InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner, gens);
-	
+	InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner, gens);	
 	OWLOntology infOnt = this.getManager().createOntology();
 	iog.fillOntology(this.getManager(), infOnt);
 	File file = new File(path);
 	this.getManager().saveOntology(infOnt, IRI.create(file.toURI()));
-
+	reasoner.flush();
     }
+
+    public void classify() throws OWLOntologyCreationException, OWLOntologyStorageException {
+
+	OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
+	OWLReasoner reasoner = reasonerFactory.createReasoner(this.getOntology());
+	reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+	List<InferredAxiomGenerator<? extends OWLAxiom>> gens = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
+	gens.add(new InferredSubClassAxiomGenerator());
+	InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner, gens);
+	iog.fillOntology(this.getManager(), this.getOntology());
+	reasoner.flush();
+    }
+
 
     public void generateFullProteinAndDrugAxioms() throws IOException, MappingException {
 

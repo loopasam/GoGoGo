@@ -64,7 +64,7 @@ public class EvaluationFTC {
 
     public EvaluationFTC() throws OWLOntologyCreationException, IOException {
 	OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-	File atcFile = new File("data/atc.owl");
+	File atcFile = new File("data/atc/atc.owl");
 	OWLOntology atc = manager.loadOntologyFromOntologyDocument(atcFile);
 	System.out.println("Loaded ontology: " + atc.getOntologyID());
 	OWLReasonerFactory reasonerFactory = new Reasoner.ReasonerFactory();
@@ -72,7 +72,7 @@ public class EvaluationFTC {
 	ShortFormProvider atcShortFormProvider = new SimpleShortFormProvider();
 	this.setAtcQuerier(new DLQueryPrinter(atcReasoner, atcShortFormProvider));
 
-	File ftcFile = new File("data/ftc-2.owl");
+	File ftcFile = new File("data/ftc/ftc-2.owl");
 	OWLOntology ftc = manager.loadOntologyFromOntologyDocument(ftcFile);
 	System.out.println("Loaded ontology: " + ftc.getOntologyID());
 	OWLReasonerFactory ftcReasonerFactory = new Reasoner.ReasonerFactory();
@@ -80,7 +80,7 @@ public class EvaluationFTC {
 	ShortFormProvider ftcShortFormProvider = new SimpleShortFormProvider();
 	this.setFtcQuerier(new DLQueryPrinter(ftcReasoner, ftcShortFormProvider));
 
-	FileInputStream fstream = new FileInputStream("data/mapping/mapping-atc-ftc.txt");
+	FileInputStream fstream = new FileInputStream("data/mapping/ATC_FTC/mapping-atc-ftc.txt");
 	DataInputStream in = new DataInputStream(fstream);
 	BufferedReader br = new BufferedReader(new InputStreamReader(in));
 	String line;
