@@ -211,7 +211,7 @@ public class ATCParser extends Parser {
 	    }
 	}
 
-	
+
 	OWLClass drugBankCompound = factory.getOWLClass(":DrugBankCompound", atcprefixManager);
 	OWLClass owlThing = factory.getOWLClass(":Thing", atcprefixManager);
 	OWLAxiom thingAxiom = factory.getOWLSubClassOfAxiom(drugBankCompound, owlThing);
@@ -223,7 +223,7 @@ public class ATCParser extends Parser {
     }
 
 
-    public void addDrugBankInfo(String path) throws FileNotFoundException, IOException, ClassNotFoundException {
+    public void addDrugBankInfo(String path, boolean doTM) throws FileNotFoundException, IOException, ClassNotFoundException {
 	DrugBank drugBank = new DrugBank(path);
 	//Check DB and add the term to the curated categories.
 	for (Drug drug : drugBank.getDrugs()) {
@@ -239,9 +239,15 @@ public class ATCParser extends Parser {
 	    }
 	}
 
+	if(doTM == true){
+	    doTheTextMiningBit();
+	}
+
+    }
+
+    private void doTheTextMiningBit() {
 	//Some therapeutics present within drugbank are not mapped to an ATC eventhough they should be.
 	//This text-mining part corrects that
-
 	DrugBankDictionary dico = new DrugBankDictionary();
 	dico.load("/home/samuel/git/BioDicoManager/BioDicoManager/data/drugbank-dico.xml");
 	MapDictionary<String> lingpipedico = dico.getLingPipeDico();
@@ -268,8 +274,6 @@ public class ATCParser extends Parser {
 		}
 	    }
 	}
-
-
     }
 
 }
