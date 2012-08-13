@@ -201,7 +201,6 @@ public class BrainNonStatic {
      */
     public List<OWLClass> getSubClasses(OWLClass owlClass, boolean direct) {
 	Set<OWLClass> subClasses = this.reasoner.getSubClasses(owlClass, direct).getFlattened();
-	//	reasoner.flush();
 	return sortClasses(subClasses);
     }
 
@@ -215,7 +214,6 @@ public class BrainNonStatic {
      */
     public List<OWLClass> getSuperClasses(OWLClass owlClass, boolean direct) {
 	Set<OWLClass> superClasses = reasoner.getSuperClasses(owlClass, direct).getFlattened();
-	reasoner.flush();
 	return sortClasses(superClasses);
     }
 
@@ -452,7 +450,10 @@ public class BrainNonStatic {
 		annotations.add(val.getLiteral());
 	    }
 	}
-	return annotations.get(0); 
+	if(annotations.size() > 0){
+	    return annotations.get(0); 
+	}
+	return "no label"; 
     }
 
 
