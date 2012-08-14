@@ -61,8 +61,9 @@ public class FTCforCytoscape {
 
 
     public static void main(String[] args) throws OWLOntologyCreationException, ParserException, OWLEntityQueryException, IOException {
-	FTCforCytoscape converter = new FTCforCytoscape("data/ftc/ftc.min.out.owl", "data/graph", "ftc_test", 0);
-	OWLClass top = converter.brain.getOWLClass("FTC:02");
+	FTCforCytoscape converter = new FTCforCytoscape("data/ftc/ftc.min.out.owl", "data/graph", "ftc_cell-proliferation", 0);
+	//root class
+	OWLClass top = converter.brain.getOWLClass("A0008283");
 	converter.addRelations(top, 0, converter.maxLevel);
 	converter.network.saveAll(converter.pathExport, converter.fileNameTemplate);
 	converter.brain.getReasoner().dispose();
@@ -91,11 +92,11 @@ public class FTCforCytoscape {
 	    }
 
 	    Node nodeParent = new Node();
-	    
+
 	    int numberOfDrugs = brain.getSubClasses("FTC:03 and " + brain.getShortForm(owlClass), false).size() - 1;	    
 	    Attribute numberOfDrugsAttribute = numberOfDrugsFactory.getNewAttribute(numberOfDrugs);
 	    nodeParent.addAttribute(numberOfDrugsAttribute);
-	    
+
 	    Attribute typeParent = nodeTypeFactory.getNewAttribute(parentNodeType);
 	    nodeParent.addAttribute(typeParent);
 
@@ -119,7 +120,7 @@ public class FTCforCytoscape {
 		    }
 		    Attribute typeChild = nodeTypeFactory.getNewAttribute(childNodeType);
 		    nodeChild.addAttribute(typeChild);
-		    
+
 		    int numberOfDrugsChild = brain.getSubClasses("FTC:03 and " + brain.getShortForm(subClass), false).size() - 1;
 		    Attribute numberOfDrugsAttributeChild = numberOfDrugsFactory.getNewAttribute(numberOfDrugsChild);
 		    nodeChild.addAttribute(numberOfDrugsAttributeChild);
