@@ -308,7 +308,7 @@ public class BrainNonStatic {
 	anonymousClass.accept(remover);
 	manager.applyChanges(remover.getChanges());
 	remover.reset();
-	reasoner.flush();
+//	reasoner.flush();
     }
 
     /**

@@ -65,6 +65,7 @@ public class FTCforCytoscape {
 	OWLClass top = converter.brain.getOWLClass("FTC:02");
 	converter.addRelations(top, 0, converter.maxLevel);
 	converter.network.saveAll(converter.pathExport, converter.fileNameTemplate);
+	converter.brain.getReasoner().dispose();
 	System.out.println("conversion done!");
     }
 
@@ -91,9 +92,7 @@ public class FTCforCytoscape {
 
 	    Node nodeParent = new Node();
 	    
-	    int numberOfDrugs = brain.getSubClasses("FTC:03 and " + brain.getShortForm(owlClass), false).size() - 1;
-	    System.out.println("**********************************nuimber of drugs: " + numberOfDrugs);
-	    
+	    int numberOfDrugs = brain.getSubClasses("FTC:03 and " + brain.getShortForm(owlClass), false).size() - 1;	    
 	    Attribute numberOfDrugsAttribute = numberOfDrugsFactory.getNewAttribute(numberOfDrugs);
 	    nodeParent.addAttribute(numberOfDrugsAttribute);
 	    
@@ -124,8 +123,6 @@ public class FTCforCytoscape {
 		    int numberOfDrugsChild = brain.getSubClasses("FTC:03 and " + brain.getShortForm(subClass), false).size() - 1;
 		    Attribute numberOfDrugsAttributeChild = numberOfDrugsFactory.getNewAttribute(numberOfDrugsChild);
 		    nodeChild.addAttribute(numberOfDrugsAttributeChild);
-		    System.out.println("**********************************nuimber of drugs: " + numberOfDrugsChild);
-
 
 		    Edge is_a = new Edge();
 		    Attribute is_aLabel = relationTypeFactory.getNewAttribute("is_a");
