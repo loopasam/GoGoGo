@@ -22,7 +22,9 @@ public class Report {
     String classFtc;
     ArrayList<String> compoundsAtc;
     ArrayList<String> compoundsFtc;
-    
+    String classAtcLabel;
+    String classFtcLabel;
+    ArrayList<String> predictionList;
 
     public Report(int tP, int fP, int fN) {
 	TP = tP;

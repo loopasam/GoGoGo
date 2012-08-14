@@ -41,7 +41,6 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.model.PrefixManager;
 import org.semanticweb.owlapi.reasoner.InferenceType;
-import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
@@ -319,7 +318,6 @@ public class FunctionalTherapeuticClassification {
 	OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
 	OWLReasoner reasoner = reasonerFactory.createReasoner(this.getOntology());
 	reasoner.precomputeInferences();
-	reasoner.flush();
 	return reasoner.isConsistent();
     }
 
@@ -637,7 +635,7 @@ public class FunctionalTherapeuticClassification {
 	gens.add(new InferredSubClassAxiomGenerator());
 	InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner, gens);
 	iog.fillOntology(this.getManager(), this.getOntology());
-	reasoner.flush();
+	reasoner.dispose();
     }
 
 
@@ -649,7 +647,7 @@ public class FunctionalTherapeuticClassification {
 	for (GoTerm term : this.getGo().getTerms()) {
 
 	    for (GoRelation parentRelation : term.getRelations()) {
-		System.out.println("Number of classes: " + counter);
+		System.out.println("Number of GO classes: " + counter);
 		if(parentRelation.getType().equals("positively_regulates")){
 		    counter++;
 		    this.addAgentPatternForPositiveRegulation(term, this.getGo().getTerm(parentRelation.getTarget()));

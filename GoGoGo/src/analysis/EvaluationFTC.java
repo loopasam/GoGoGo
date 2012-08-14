@@ -10,13 +10,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.semanticweb.owlapi.expression.ParserException;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+
+import play.modules.elephant.errors.OWLEntityQueryException;
 
 /**
  * Standard and final version of the evaluation for TAC meeting
@@ -69,11 +73,15 @@ public class EvaluationFTC {
 
     }
 
-    public static void main(String[] args) throws IOException, OWLOntologyCreationException {
+    public static void main(String[] args) throws IOException, OWLOntologyCreationException, OWLEntityQueryException {
 
 	//Initiate the evaluation
-	EvaluationFTC evaluation = new EvaluationFTC("data/ftc/ftc.min.out.owl", "data/atc/atc.owl", "data/mapping/ATC_FTC/mapping-atc-ftc.txt");
+	EvaluationFTC evaluation = new EvaluationFTC("data/ftc/ftc.min.out.owl", "data/atc/atc.owl", "data/mapping/ATC_FTC/mapping-atc-ftc-without-full-classes.txt");
 
+	//Holds info about the number of drugs that are considered by the evaluation for the FTC.
+	Set<OWLClass> uniqueDrugsInFtcFromMapping = new HashSet<OWLClass>();
+	//Holds info about the number of drugs that are considered by the evaluation for the ATC.
+	Set<OWLClass> uniqueDrugsInAtcFromMapping = new HashSet<OWLClass>();
 
 	//Iterates over the equivalences defined in the file
 	for (String ftcMappedCategory : evaluation.classesMapping.keySet()) {
@@ -89,6 +97,7 @@ public class EvaluationFTC {
 	    ArrayList<String> atcEquivalentCategories = evaluation.classesMapping.get(ftcMappedCategory);
 	    List<OWLClass> atcSubclasses = new ArrayList<OWLClass>();
 
+	    //There can be multiple equivalent categories.
 	    List<OWLClass> atcSubclassesCategory = null;
 	    for (String atcEquivalentCategory : atcEquivalentCategories) {
 		try {
@@ -97,7 +106,6 @@ public class EvaluationFTC {
 		    System.err.println("not found: " + atcEquivalentCategory);
 		    atcSubclassesCategory = new ArrayList<OWLClass>();
 		} finally {
-
 		    for (OWLClass atcSubclass : atcSubclassesCategory) {
 			if(!atcSubclasses.contains(atcSubclass)){
 			    atcSubclasses.add(atcSubclass);
@@ -106,6 +114,16 @@ public class EvaluationFTC {
 
 		}
 	    }
+
+	    //Add the info to the set
+	    for (OWLClass atcDrug : atcSubclasses) {
+		uniqueDrugsInAtcFromMapping.add(atcDrug);
+	    }
+	    for (OWLClass ftcDrug : ftcSubclasses) {
+		uniqueDrugsInFtcFromMapping.add(ftcDrug);
+	    }
+
+
 
 	    ArrayList<String> atcCompoundsShortFormified = shortFormifiedClasses(atcSubclasses, evaluation.atcBrain);
 	    ArrayList<String> ftcCompoundsShortFormified = shortFormifiedClasses(ftcSubclasses, evaluation.ftcBrain);
@@ -144,20 +162,84 @@ public class EvaluationFTC {
 	    }
 
 	    Report report = new Report(TP, FP, FN);
+
 	    report.classFtc = ftcMappedCategory;
+	    OWLClass ftcClass;
+	    try {
+		ftcClass = evaluation.ftcBrain.getOWLClass(ftcMappedCategory);
+		report.classFtcLabel = evaluation.ftcBrain.getLabel(ftcClass);
+	    } catch (OWLEntityQueryException e) {
+		report.classFtcLabel = "not in the min version";
+	    }
+
 	    report.classAtc = atcEquivalentCategories.toString();
+	    ArrayList<String> atcEquivalentLabel = null;
+	    try {
+		atcEquivalentLabel = getLabels(atcEquivalentCategories, evaluation.atcBrain);
+	    } catch (OWLEntityQueryException e) {
+		e.printStackTrace();
+	    }
+	    report.classAtcLabel = atcEquivalentLabel.toString();
+
 	    report.fnList = fnList;
 	    report.fpList = fpList;
 	    report.tpList = tpList;
 	    report.compoundsAtc = atcCompoundsShortFormified;
 	    report.compoundsFtc = ftcCompoundsShortFormified;
+
+	    ArrayList<String> predictions = new ArrayList<String>();
+	    for (String fp : fpList) {
+		String prediction = fp + ": ";
+		try {
+		    List<OWLClass> atcCategory = evaluation.atcBrain.getSuperClasses(fp, true);
+
+		    for (OWLClass owlClass : atcCategory) {
+			String atcLabel = evaluation.atcBrain.getShortForm(owlClass);
+			if(!atcLabel.equals("DrugBankCompound")){
+			    //Super dirty hack that removes the last part of the ATC code to get higher class
+			    String trimmedName = atcLabel.substring(0, atcLabel.length() -2);
+			    OWLClass atcGroup = evaluation.atcBrain.getOWLClass(trimmedName);
+			    String label = evaluation.atcBrain.getLabel(atcGroup);
+			    prediction += " " + atcLabel + " - " + label;
+			}
+		    }
+
+		} catch (ParserException e) {
+		    prediction += " Not in the ATC";
+		}
+		predictions.add(prediction);
+	    }
+	    report.predictionList = predictions;
+
 	    evaluation.reports.addReport(report);
 
 	}
+
+	evaluation.reports.numberOfDrugsFromAtc = uniqueDrugsInAtcFromMapping.size();
+	evaluation.reports.numberOfDrugsFromFtc = uniqueDrugsInFtcFromMapping.size();
+
 	System.out.println("Done!");
 
 	evaluation.reports.getAnalysis("data/report.txt");
 
+	evaluation.atcBrain.getReasoner().dispose();
+	evaluation.ftcBrain.getReasoner().dispose();
+
+    }
+
+    /**
+     * @param atcEquivalentCategories
+     * @param brain 
+     * @return
+     * @throws OWLEntityQueryException 
+     */
+    private static ArrayList<String> getLabels(ArrayList<String> atcEquivalentCategories, BrainNonStatic brain) throws OWLEntityQueryException {
+	ArrayList<String> labels = new ArrayList<String>();
+	for (String category : atcEquivalentCategories) {
+	    OWLClass owlClass  = brain.getOWLClass(category);
+	    labels.add(brain.getLabel(owlClass));
+	}
+	return labels;
     }
 
     /**

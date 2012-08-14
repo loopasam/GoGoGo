@@ -15,6 +15,8 @@ import java.util.ArrayList;
 public class Reports {
 
     ArrayList<Report> reports;
+    int numberOfDrugsFromAtc;
+    int numberOfDrugsFromFtc;
 
     /**
      * 
@@ -39,6 +41,8 @@ public class Reports {
 	BufferedWriter out = new BufferedWriter(fstream);
 	out.write("---REPORT---\n");
 	out.write("Total number of mappings: " + reports.size() + "\n");
+	out.write("Number of drugs from the ATC considered for the mapping: " + numberOfDrugsFromAtc + "\n");
+	out.write("Number of drugs from the FTC considered for the mapping: " + numberOfDrugsFromFtc + "\n\n\n");
 
 	int totalTP = 0;
 	int totalFP = 0;
@@ -47,12 +51,14 @@ public class Reports {
 	    totalFN += report.FN;
 	    totalFP += report.FP;
 	    totalTP += report.TP;
-	    out.write("--- Classes mapped: " + report.classAtc + " = " + report.classFtc + " ---\n");
-	    out.write("Atc list: " + report.compoundsAtc + "\n");
-	    out.write("Ftc list: " + report.compoundsFtc + "\n");
-	    out.write("--- True Postives: Both in FTC and ATC ---\n");
-	    for (String tpString : report.tpList) {
-		out.write(tpString + "\n");
+	    out.write("---------------------------------------------------------------------------------------------\n");
+	    out.write("ATC: " + report.classAtc + " - " + report.classAtcLabel + "\n");
+	    out.write("FTC: " + report.classFtc + " - " + report.classFtcLabel + "\n");
+//	    out.write("Atc list: " + report.compoundsAtc + "\n");
+//	    out.write("Ftc list: " + report.compoundsFtc + "\n");
+	    out.write("\nPredictions:\n");
+	    for (String prediction : report.predictionList) {
+		out.write(prediction + "\n");
 	    }
 	    out.write("\n");
 	}

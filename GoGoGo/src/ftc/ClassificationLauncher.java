@@ -25,11 +25,11 @@ public class ClassificationLauncher {
 	System.out.println("Converting in owl...");
 	classification.generateOwlOntology();
 	
-	System.out.println("Generating prots and drugs axioms...");	
-	classification.generateMininumProteinandDrugAxioms();
+//	System.out.println("Generating prots and drugs axioms...");	
+//	classification.generateMininumProteinandDrugAxioms();
 	
-//	System.out.println("Generate full classification...");
-//	classification.generateFullProteinAndDrugAxioms();
+	System.out.println("Generate full classification...");
+	classification.generateFullProteinAndDrugAxioms();
 	
 	System.out.println("Checking for consistency...");
 	boolean isConsistent = classification.isConsistent();
@@ -40,7 +40,8 @@ public class ClassificationLauncher {
 	classification.classify();
 
 	System.out.println("Saving...");
-	classification.save("data/ftc.min.out.owl");
+//	classification.save("data/ftc.min.out.owl");
+	classification.save("data/ftc.full.out.owl");
 	System.out.println("Check if saved and stop manually the prgm --> bug to fix");
     }
 
