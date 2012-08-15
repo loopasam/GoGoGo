@@ -2,4 +2,7 @@ Pro-glucocorticoid-receptor: (A01AC or R03BA or H02AB or D10AA or C05AA or A07EA
 Anti-histamine receptor activity: (A02BA or D04AA or R06A) = (A0004969)
 Pro-prostaglandin-receptor-activity: (A02BB or G02AD or S01EE or C01EA) = (P0004955)
 Anti-hydrogen-potassium-exchanging-ATPase-activity: (A02BC) = (A0008900)
-Anti-G-protein-coupled-acetylcholine-receptor-activity: (A03AA or A03AB or R03BB or S01FA) = (A0016907)
+Anti-G-protein-coupled-acetylcholine-receptor-activity: (A03AA or A03AB or R03BB or S01FA or G04BD) = (A0016907)
+Anti-serotonin-receptor-activity: (A03AE or A04AA) = (A0004993)
+Pro-serotonin-receptor-activity: (A03AE or N02CC) = (P0004993)
+Anti-morphine-receptor-activity: (A06AH) = (A0038047)

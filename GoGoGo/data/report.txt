@@ -1,5 +1,5 @@
 ---REPORT---
-Total number of mappings: 5
+Total number of mappings: 8
 ---------------------------------------------------------------------------------------------
 Indication: Pro-glucocorticoid-receptor
 ATC expression: A01AC or R03BA or H02AB or D10AA or C05AA or A07EA or D07A or S01BA or H02AA or S01BA
@@ -111,14 +111,13 @@ False positives: []
 
 ---------------------------------------------------------------------------------------------
 Indication: Anti-G-protein-coupled-acetylcholine-receptor-activity
-ATC expression: A03AA or A03AB or R03BB or S01FA
+ATC expression: A03AA or A03AB or R03BB or S01FA or G04BD
 FTC expression: A0016907
-TP: 17 - FN: 0 - FP: 60
-Drugs in ATC: [DB00383, DB00804, Nothing, DB00219, DB00505, DB00729, DB00782, DB00940, DB00986, DB01625, DB04843, DB00332, DB01409, DB00462, DB00572, DB00747, DB00809, DB00979]
+TP: 24 - FN: 0 - FP: 53
+Drugs in ATC: [DB00383, DB00804, Nothing, DB00219, DB00505, DB00729, DB00782, DB00940, DB00986, DB01625, DB04843, DB00332, DB01409, DB00462, DB00572, DB00747, DB00809, DB00979, DB00209, DB00496, DB01036, DB01062, DB01148, DB01591, DB06702]
 Drugs in FTC: [DB00193, DB00209, DB00219, DB00245, DB00246, DB00280, DB00321, DB00332, DB00334, DB00340, DB00342, DB00354, DB00363, DB00366, DB00376, DB00383, DB00387, DB00392, DB00420, DB00424, DB00434, DB00458, DB00462, DB00483, DB00496, DB00505, DB00508, DB00517, DB00540, DB00543, DB00572, DB00622, DB00670, DB00715, DB00725, DB00728, DB00729, DB00747, DB00767, DB00771, DB00777, DB00782, DB00785, DB00804, DB00809, DB00810, DB00835, DB00875, DB00907, DB00934, DB00940, DB00942, DB00979, DB00986, DB01036, DB01062, DB01069, DB01135, DB01142, DB01148, DB01151, DB01175, DB01224, DB01226, DB01231, DB01238, DB01239, DB01336, DB01337, DB01338, DB01403, DB01409, DB01591, DB01625, DB04843, DB06702, DB08801, Nothing]
-False positives: [DB00193, DB00209, DB00245, DB00246, DB00280, DB00321, DB00334, DB00340, DB00342, DB00354, DB00363, DB00366, DB00376, DB00387, DB00392, DB00420, DB00424, DB00434, DB00458, DB00483, DB00496, DB00508, DB00517, DB00540, DB00543, DB00622, DB00670, DB00715, DB00725, DB00728, DB00767, DB00771, DB00777, DB00785, DB00810, DB00835, DB00875, DB00907, DB00934, DB00942, DB01036, DB01062, DB01069, DB01135, DB01142, DB01148, DB01151, DB01175, DB01224, DB01226, DB01231, DB01238, DB01239, DB01336, DB01337, DB01338, DB01403, DB01591, DB06702, DB08801]
+False positives: [DB00193, DB00245, DB00246, DB00280, DB00321, DB00334, DB00340, DB00342, DB00354, DB00363, DB00366, DB00376, DB00387, DB00392, DB00420, DB00424, DB00434, DB00458, DB00483, DB00508, DB00517, DB00540, DB00543, DB00622, DB00670, DB00715, DB00725, DB00728, DB00767, DB00771, DB00777, DB00785, DB00810, DB00835, DB00875, DB00907, DB00934, DB00942, DB01069, DB01135, DB01142, DB01151, DB01175, DB01224, DB01226, DB01231, DB01238, DB01239, DB01336, DB01337, DB01338, DB01403, DB08801]
 DB00193: Known in the ATC as N02AX02 (tramadol). Parent in the ATC: N02AX = Other opioids
-DB00209: Known in the ATC as G04BD09 (trospium). Parent in the ATC: G04BD = Urinary antispasmodics
 DB00245: Known in the ATC as N04AC01 (benzatropine). Parent in the ATC: N04AC = Ethers of tropine or tropine derivatives
 DB00246: Known in the ATC as N05AE04 (ziprasidone). Parent in the ATC: N05AE = Indole derivatives
 DB00280: Known in the ATC as C01BA03 (disopyramide). Parent in the ATC: C01BA = Antiarrhythmics, class Ia
@@ -143,7 +142,6 @@ DB00458: Known in the ATC as N06AA02 (imipramine). Parent in the ATC: N06AA = No
 DB00458: Known in the ATC as N06AA03 (imipramine oxide). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
 DB00458: Known in the ATC as N06AA06 (trimipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
 DB00483: Known in the ATC as M03AC02 (gallamine). Parent in the ATC: M03AC = Other quaternary ammonium compounds
-DB00496: Known in the ATC as G04BD10 (darifenacin). Parent in the ATC: G04BD = Urinary antispasmodics
 DB00508: Known in the ATC as N05AA05 (triflupromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
 DB00517: Not in the ATC
 DB00540: Known in the ATC as N06AA10 (nortriptyline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
@@ -167,14 +165,11 @@ DB00907: Known in the ATC as S01HA01 (cocaine). Parent in the ATC: S01HA = Local
 DB00907: Known in the ATC as S02DA02 (cocaine). Parent in the ATC: S02DA = Analgesics and anesthetics
 DB00934: Known in the ATC as N06AA21 (maprotiline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
 DB00942: Not in the ATC
-DB01036: Known in the ATC as G04BD07 (tolterodine). Parent in the ATC: G04BD = Urinary antispasmodics
-DB01062: Known in the ATC as G04BD04 (oxybutynin). Parent in the ATC: G04BD = Urinary antispasmodics
 DB01069: Known in the ATC as D04AA10 (promethazine). Parent in the ATC: D04AA = Antihistamines for topical use
 DB01069: Known in the ATC as R06AD02 (promethazine). Parent in the ATC: R06AD = Phenothiazine derivatives
 DB01069: Known in the ATC as R06AD05 (hydroxyethylpromethazine). Parent in the ATC: R06AD = Phenothiazine derivatives
 DB01135: Known in the ATC as M03AC07 (doxacurium chloride). Parent in the ATC: M03AC = Other quaternary ammonium compounds
 DB01142: Known in the ATC as N06AA12 (doxepin). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
-DB01148: Known in the ATC as G04BD02 (flavoxate). Parent in the ATC: G04BD = Urinary antispasmodics
 DB01151: Known in the ATC as N06AA01 (desipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
 DB01175: Known in the ATC as N06AB10 (escitalopram). Parent in the ATC: N06AB = Selective serotonin reuptake inhibitors
 DB01224: Known in the ATC as N05AH04 (quetiapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
@@ -186,12 +181,149 @@ DB01336: Not in the ATC
 DB01337: Known in the ATC as M03AC01 (pancuronium). Parent in the ATC: M03AC = Other quaternary ammonium compounds
 DB01338: Known in the ATC as M03AC06 (pipecuronium bromide). Parent in the ATC: M03AC = Other quaternary ammonium compounds
 DB01403: Known in the ATC as N05AA02 (levomepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
-DB01591: Known in the ATC as G04BD08 (solifenacin). Parent in the ATC: G04BD = Urinary antispasmodics
-DB06702: Known in the ATC as G04BD11 (fesoterodine). Parent in the ATC: G04BD = Urinary antispasmodics
 DB08801: Known in the ATC as D04AA13 (dimetindene). Parent in the ATC: D04AA = Antihistamines for topical use
 DB08801: Known in the ATC as R06AB03 (dimetindene). Parent in the ATC: R06AB = Substituted alkylamines
 
 ---------------------------------------------------------------------------------------------
-tots: TP: 102 - FP: 120 - FN: 4
-Sensitivity/Recall (TP/TP+FN): 0.9622642
-Specificity/Precision (TP/TP+FP): 0.45945945
+Indication: Anti-serotonin-receptor-activity
+ATC expression: A03AE or A04AA
+FTC expression: A0004993
+TP: 6 - FN: 0 - FP: 59
+Drugs in ATC: [DB00969, DB01079, Nothing, DB00377, DB00757, DB00889, DB00904]
+Drugs in FTC: [DB00193, DB00246, DB00247, DB00248, DB00321, DB00334, DB00363, DB00370, DB00377, DB00408, DB00420, DB00434, DB00458, DB00472, DB00477, DB00508, DB00540, DB00589, DB00656, DB00679, DB00721, DB00726, DB00728, DB00734, DB00751, DB00757, DB00777, DB00805, DB00866, DB00875, DB00889, DB00904, DB00924, DB00933, DB00960, DB00969, DB01043, DB01069, DB01079, DB01142, DB01149, DB01151, DB01161, DB01199, DB01200, DB01224, DB01238, DB01239, DB01242, DB01267, DB01287, DB01392, DB01403, DB01614, DB01616, DB01618, DB01621, DB01622, DB01623, DB01624, DB04842, DB06144, DB06148, DB06288, DB08810, Nothing]
+False positives: [DB00193, DB00246, DB00247, DB00248, DB00321, DB00334, DB00363, DB00370, DB00408, DB00420, DB00434, DB00458, DB00472, DB00477, DB00508, DB00540, DB00589, DB00656, DB00679, DB00721, DB00726, DB00728, DB00734, DB00751, DB00777, DB00805, DB00866, DB00875, DB00924, DB00933, DB00960, DB01043, DB01069, DB01142, DB01149, DB01151, DB01161, DB01199, DB01200, DB01224, DB01238, DB01239, DB01242, DB01267, DB01287, DB01392, DB01403, DB01614, DB01616, DB01618, DB01621, DB01622, DB01623, DB01624, DB04842, DB06144, DB06148, DB06288, DB08810]
+DB00193: Known in the ATC as N02AX02 (tramadol). Parent in the ATC: N02AX = Other opioids
+DB00246: Known in the ATC as N05AE04 (ziprasidone). Parent in the ATC: N05AE = Indole derivatives
+DB00247: Known in the ATC as N02CA04 (methysergide). Parent in the ATC: N02CA = Ergot alkaloids
+DB00248: Known in the ATC as G02CB03 (cabergoline). Parent in the ATC: G02CB = Prolactine inhibitors
+DB00248: Known in the ATC as N04BC06 (cabergoline). Parent in the ATC: N04BC = Dopamine agonists
+DB00321: Known in the ATC as N06AA09 (amitriptyline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00334: Known in the ATC as N05AH03 (olanzapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB00363: Known in the ATC as N05AH02 (clozapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB00370: Known in the ATC as N06AX11 (mirtazapine). Parent in the ATC: N06AX = Other antidepressants
+DB00408: Known in the ATC as N05AH01 (loxapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB00420: Known in the ATC as N05AA01 (chlorpromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA02 (levomepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA03 (promazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA04 (acepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA05 (triflupromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00434: Known in the ATC as R06AX02 (cyproheptadine). Parent in the ATC: R06AX = Other antihistamines for systemic use
+DB00458: Known in the ATC as N06AA02 (imipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00458: Known in the ATC as N06AA03 (imipramine oxide). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00458: Known in the ATC as N06AA06 (trimipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00472: Known in the ATC as N06AB03 (fluoxetine). Parent in the ATC: N06AB = Selective serotonin reuptake inhibitors
+DB00477: Known in the ATC as N05AA01 (chlorpromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00508: Known in the ATC as N05AA05 (triflupromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00540: Known in the ATC as N06AA10 (nortriptyline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00589: Known in the ATC as G02CB02 (lisuride). Parent in the ATC: G02CB = Prolactine inhibitors
+DB00589: Known in the ATC as N02CA07 (lisuride). Parent in the ATC: N02CA = Ergot alkaloids
+DB00656: Known in the ATC as N06AX05 (trazodone). Parent in the ATC: N06AX = Other antidepressants
+DB00679: Known in the ATC as N05AC02 (thioridazine). Parent in the ATC: N05AC = Phenothiazines with piperidine structure
+DB00721: Known in the ATC as C01BA02 (procainamide). Parent in the ATC: C01BA = Antiarrhythmics, class Ia
+DB00721: Known in the ATC as C05AD05 (procaine). Parent in the ATC: C05AD = Local anesthetics
+DB00721: Known in the ATC as D04AB03 (oxybuprocaine). Parent in the ATC: D04AB = Anesthetics for topical use
+DB00721: Known in the ATC as J01CE09 (procaine benzylpenicillin). Parent in the ATC: J01CE = Beta-lactamase sensitive penicillins
+DB00721: Known in the ATC as N01BA02 (procaine). Parent in the ATC: N01BA = Esters of aminobenzoic acid
+DB00721: Known in the ATC as N01BA04 (chloroprocaine). Parent in the ATC: N01BA = Esters of aminobenzoic acid
+DB00721: Known in the ATC as S01HA02 (oxybuprocaine). Parent in the ATC: S01HA = Local anesthetics
+DB00721: Known in the ATC as S01HA05 (procaine). Parent in the ATC: S01HA = Local anesthetics
+DB00726: Known in the ATC as N06AA06 (trimipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00728: Known in the ATC as M03AC09 (rocuronium bromide). Parent in the ATC: M03AC = Other quaternary ammonium compounds
+DB00734: Known in the ATC as N05AX08 (risperidone). Parent in the ATC: N05AX = Other antipsychotics
+DB00751: Known in the ATC as R06AX24 (epinastine). Parent in the ATC: R06AX = Other antihistamines for systemic use
+DB00751: Known in the ATC as S01GX10 (epinastine). Parent in the ATC: S01GX = Other antiallergics
+DB00777: Known in the ATC as N05CM06 (propiomazine). Parent in the ATC: N05CM = Other hypnotics and sedatives
+DB00805: Known in the ATC as N06AX07 (minaprine). Parent in the ATC: N06AX = Other antidepressants
+DB00866: Known in the ATC as C07AA01 (alprenolol). Parent in the ATC: C07AA = Beta blocking agents, non-selective
+DB00875: Not in the ATC
+DB00924: Known in the ATC as M03BX08 (cyclobenzaprine). Parent in the ATC: M03BX = Other centrally acting agents
+DB00933: Known in the ATC as N05AC03 (mesoridazine). Parent in the ATC: N05AC = Phenothiazines with piperidine structure
+DB00960: Known in the ATC as C07AA03 (pindolol). Parent in the ATC: C07AA = Beta blocking agents, non-selective
+DB00960: Known in the ATC as C07AA14 (mepindolol). Parent in the ATC: C07AA = Beta blocking agents, non-selective
+DB00960: Known in the ATC as C07AA17 (bopindolol). Parent in the ATC: C07AA = Beta blocking agents, non-selective
+DB01043: Known in the ATC as N06DX01 (memantine). Parent in the ATC: N06DX = Other anti-dementia drugs
+DB01069: Known in the ATC as D04AA10 (promethazine). Parent in the ATC: D04AA = Antihistamines for topical use
+DB01069: Known in the ATC as R06AD02 (promethazine). Parent in the ATC: R06AD = Phenothiazine derivatives
+DB01069: Known in the ATC as R06AD05 (hydroxyethylpromethazine). Parent in the ATC: R06AD = Phenothiazine derivatives
+DB01142: Known in the ATC as N06AA12 (doxepin). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB01149: Known in the ATC as N06AX06 (nefazodone). Parent in the ATC: N06AX = Other antidepressants
+DB01151: Known in the ATC as N06AA01 (desipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB01161: Known in the ATC as N01BA04 (chloroprocaine). Parent in the ATC: N01BA = Esters of aminobenzoic acid
+DB01199: Known in the ATC as M03AA02 (tubocurarine). Parent in the ATC: M03AA = Curare alkaloids
+DB01199: Known in the ATC as M03AA04 (dimethyltubocurarine). Parent in the ATC: M03AA = Curare alkaloids
+DB01200: Known in the ATC as G02CB01 (bromocriptine). Parent in the ATC: G02CB = Prolactine inhibitors
+DB01200: Known in the ATC as N04BC01 (bromocriptine). Parent in the ATC: N04BC = Dopamine agonists
+DB01224: Known in the ATC as N05AH04 (quetiapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB01238: Known in the ATC as N05AX12 (aripiprazole). Parent in the ATC: N05AX = Other antipsychotics
+DB01239: Known in the ATC as N05AF03 (chlorprothixene). Parent in the ATC: N05AF = Thioxanthene derivatives
+DB01242: Known in the ATC as N06AA04 (clomipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB01267: Known in the ATC as N05AX13 (paliperidone). Parent in the ATC: N05AX = Other antipsychotics
+DB01287: Not in the ATC
+DB01392: Known in the ATC as G04BE04 (yohimbine). Parent in the ATC: G04BE = Drugs used in erectile dysfunction
+DB01403: Known in the ATC as N05AA02 (levomepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB01614: Known in the ATC as N05AA04 (acepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB01616: Known in the ATC as A03AX08 (alverine). Parent in the ATC: A03AX = Other drugs for functional bowel disorders
+DB01618: Not in the ATC
+DB01621: Known in the ATC as N05AC04 (pipotiazine). Parent in the ATC: N05AC = Phenothiazines with piperidine structure
+DB01622: Known in the ATC as N05AB08 (thioproperazine). Parent in the ATC: N05AB = Phenothiazines with piperazine structure
+DB01623: Known in the ATC as N05AF04 (tiotixene). Parent in the ATC: N05AF = Thioxanthene derivatives
+DB01624: Not in the ATC
+DB04842: Known in the ATC as N05AG01 (fluspirilene). Parent in the ATC: N05AG = Diphenylbutylpiperidine derivatives
+DB06144: Known in the ATC as N05AE03 (sertindole). Parent in the ATC: N05AE = Indole derivatives
+DB06148: Known in the ATC as N06AX03 (mianserin). Parent in the ATC: N06AX = Other antidepressants
+DB06288: Known in the ATC as N05AL05 (amisulpride). Parent in the ATC: N05AL = Benzamides
+DB08810: Not in the ATC
+
+---------------------------------------------------------------------------------------------
+Indication: Pro-serotonin-receptor-activity
+ATC expression: A03AE or N02CC
+FTC expression: P0004993
+TP: 8 - FN: 1 - FP: 21
+Drugs in ATC: [DB00969, DB01079, Nothing, DB00216, DB00315, DB00669, DB00918, DB00952, DB00953, DB00998]
+Drugs in FTC: [DB00216, DB00247, DB00248, DB00268, DB00315, DB00320, DB00490, DB00574, DB00589, DB00604, DB00656, DB00669, DB00696, DB00714, DB00726, DB00904, DB00918, DB00952, DB00953, DB00998, DB01079, DB01186, DB01191, DB01200, DB01233, DB01238, DB01287, DB01392, DB08810, Nothing]
+False positives: [DB00247, DB00248, DB00268, DB00320, DB00490, DB00574, DB00589, DB00604, DB00656, DB00696, DB00714, DB00726, DB00904, DB01186, DB01191, DB01200, DB01233, DB01238, DB01287, DB01392, DB08810]
+DB00247: Known in the ATC as N02CA04 (methysergide). Parent in the ATC: N02CA = Ergot alkaloids
+DB00248: Known in the ATC as G02CB03 (cabergoline). Parent in the ATC: G02CB = Prolactine inhibitors
+DB00248: Known in the ATC as N04BC06 (cabergoline). Parent in the ATC: N04BC = Dopamine agonists
+DB00268: Known in the ATC as N04BC04 (ropinirole). Parent in the ATC: N04BC = Dopamine agonists
+DB00320: Known in the ATC as N02CA01 (dihydroergotamine). Parent in the ATC: N02CA = Ergot alkaloids
+DB00490: Known in the ATC as N05BE01 (buspirone). Parent in the ATC: N05BE = Azaspirodecanedione derivatives
+DB00574: Known in the ATC as A08AA02 (fenfluramine). Parent in the ATC: A08AA = Centrally acting antiobesity products
+DB00574: Known in the ATC as A08AA04 (dexfenfluramine). Parent in the ATC: A08AA = Centrally acting antiobesity products
+DB00589: Known in the ATC as G02CB02 (lisuride). Parent in the ATC: G02CB = Prolactine inhibitors
+DB00589: Known in the ATC as N02CA07 (lisuride). Parent in the ATC: N02CA = Ergot alkaloids
+DB00604: Known in the ATC as A03FA02 (cisapride). Parent in the ATC: A03FA = Propulsives
+DB00656: Known in the ATC as N06AX05 (trazodone). Parent in the ATC: N06AX = Other antidepressants
+DB00696: Known in the ATC as N02CA01 (dihydroergotamine). Parent in the ATC: N02CA = Ergot alkaloids
+DB00696: Known in the ATC as N02CA02 (ergotamine). Parent in the ATC: N02CA = Ergot alkaloids
+DB00714: Known in the ATC as G04BE07 (apomorphine). Parent in the ATC: G04BE = Drugs used in erectile dysfunction
+DB00714: Known in the ATC as N04BC07 (apomorphine). Parent in the ATC: N04BC = Dopamine agonists
+DB00726: Known in the ATC as N06AA06 (trimipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00904: Known in the ATC as A04AA01 (ondansetron). Parent in the ATC: A04AA = Serotonin (5HT3) antagonists
+DB01186: Known in the ATC as N04BC02 (pergolide). Parent in the ATC: N04BC = Dopamine agonists
+DB01191: Known in the ATC as A08AA04 (dexfenfluramine). Parent in the ATC: A08AA = Centrally acting antiobesity products
+DB01200: Known in the ATC as G02CB01 (bromocriptine). Parent in the ATC: G02CB = Prolactine inhibitors
+DB01200: Known in the ATC as N04BC01 (bromocriptine). Parent in the ATC: N04BC = Dopamine agonists
+DB01233: Known in the ATC as A03FA01 (metoclopramide). Parent in the ATC: A03FA = Propulsives
+DB01238: Known in the ATC as N05AX12 (aripiprazole). Parent in the ATC: N05AX = Other antipsychotics
+DB01287: Not in the ATC
+DB01392: Known in the ATC as G04BE04 (yohimbine). Parent in the ATC: G04BE = Drugs used in erectile dysfunction
+DB08810: Not in the ATC
+
+---------------------------------------------------------------------------------------------
+Indication: Anti-morphine-receptor-activity
+ATC expression: A06AH
+FTC expression: A0038047
+TP: 1 - FN: 0 - FP: 4
+Drugs in ATC: [DB06274, Nothing]
+Drugs in FTC: [DB00652, DB00704, DB00844, DB01183, DB06274, Nothing]
+False positives: [DB00652, DB00704, DB00844, DB01183]
+DB00652: Known in the ATC as N02AD01 (pentazocine). Parent in the ATC: N02AD = Benzomorphan derivatives
+DB00704: Known in the ATC as N07BB04 (naltrexone). Parent in the ATC: N07BB = Drugs used in alcohol dependence
+DB00844: Known in the ATC as N02AF02 (nalbuphine). Parent in the ATC: N02AF = Morphinan derivatives
+DB01183: Known in the ATC as V03AB15 (naloxone). Parent in the ATC: V03AB = Antidotes
+
+---------------------------------------------------------------------------------------------
+tots: TP: 124 - FP: 197 - FN: 5
+Sensitivity/Recall (TP/TP+FN): 0.9612403
+Specificity/Precision (TP/TP+FP): 0.38629285
