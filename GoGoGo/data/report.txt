@@ -1,805 +1,197 @@
 ---REPORT---
-Total number of mappings: 44
-Number of drugs from the ATC considered for the mapping: 289
-Number of drugs from the FTC considered for the mapping: 582
-
+Total number of mappings: 5
+---------------------------------------------------------------------------------------------
+Indication: Pro-glucocorticoid-receptor
+ATC expression: A01AC or R03BA or H02AB or D10AA or C05AA or A07EA or D07A or S01BA or H02AA or S01BA
+FTC expression: P0004883
+TP: 32 - FN: 1 - FP: 3
+Drugs in ATC: [DB00620, DB00741, DB01234, Nothing, DB00180, DB00394, DB00443, DB00588, DB00764, DB01222, DB01260, DB01410, DB00635, DB00860, DB00896, DB00959, DB01384, DB00324, DB00591, DB00663, DB00769, DB01047, DB00223, DB00240, DB00288, DB00547, DB00596, DB00838, DB01013, DB01130, DB06781, DB00253, DB00873, DB00687]
+Drugs in FTC: [DB00180, DB00223, DB00240, DB00253, DB00288, DB00324, DB00351, DB00394, DB00443, DB00547, DB00588, DB00591, DB00596, DB00620, DB00635, DB00663, DB00687, DB00741, DB00764, DB00769, DB00838, DB00846, DB00860, DB00873, DB00896, DB00959, DB01013, DB01047, DB01130, DB01234, DB01260, DB01380, DB01384, DB01410, DB06781, Nothing]
+False positives: [DB00351, DB00846, DB01380]
+DB00351: Known in the ATC as G03AC05 (megestrol). Parent in the ATC: G03AC = Progestogens
+DB00351: Known in the ATC as G03DB02 (megestrol). Parent in the ATC: G03DB = Pregnadien derivatives
+DB00351: Known in the ATC as G03DB04 (nomegestrol). Parent in the ATC: G03DB = Pregnadien derivatives
+DB00351: Known in the ATC as L02AB01 (megestrol). Parent in the ATC: L02AB = Progestogens
+DB00846: Not in the ATC
+DB01380: Not in the ATC
 
 ---------------------------------------------------------------------------------------------
-ATC: [A03AA, A03AB] - [Synthetic anticholinergics, esters with tertiary amino group, Synthetic anticholinergics, quaternary ammonium compounds]
-FTC: A0016907 - Anti-G-protein coupled acetylcholine receptor activity
-
-Predictions:
-DB00193:  N02AX02 - Other opioids
-DB00209:  G04BD09 - Urinary antispasmodics
-DB00245:  N04AC01 - Ethers of tropine or tropine derivatives
-DB00246:  N05AE04 - Indole derivatives
-DB00280:  C01BA03 - Antiarrhythmics, class Ia
-DB00321:  N06AA09 - Non-selective monoamine reuptake inhibitors
-DB00332:  R01AX03 - Other nasal preparations R03BB01 - Anticholinergics
-DB00334:  N05AH03 - Diazepines, oxazepines, thiazepines and oxepines
-DB00340:  N04AA03 - Tertiary amines
-DB00342:  R06AX12 - Other antihistamines for systemic use
-DB00354:  R06AE01 - Piperazine derivatives
-DB00363:  N05AH02 - Diazepines, oxazepines, thiazepines and oxepines
-DB00366:  R06AA09 - Aminoalkyl ethers
-DB00376:  N04AA01 - Tertiary amines
-DB00387:  N04AA04 - Tertiary amines
-DB00392:  N04AA05 - Tertiary amines
-DB00420:  N05AA01 - Phenothiazines with aliphatic side-chain N05AA02 - Phenothiazines with aliphatic side-chain N05AA03 - Phenothiazines with aliphatic side-chain N05AA04 - Phenothiazines with aliphatic side-chain N05AA05 - Phenothiazines with aliphatic side-chain
-DB00424:  A03BA03 - Belladonna alkaloids, tertiary amines
-DB00434:  R06AX02 - Other antihistamines for systemic use
-DB00458:  N06AA02 - Non-selective monoamine reuptake inhibitors N06AA03 - Non-selective monoamine reuptake inhibitors N06AA06 - Non-selective monoamine reuptake inhibitors
-DB00462:  A03BB03 - Belladonna alkaloids, semisynthetic, quaternary ammonium compounds S01FA03 - Anticholinergics
-DB00483:  M03AC02 - Other quaternary ammonium compounds
-DB00496:  G04BD10 - Urinary antispasmodics
-DB00508:  N05AA05 - Phenothiazines with aliphatic side-chain
-DB00517:  Not in the ATC
-DB00540:  N06AA10 - Non-selective monoamine reuptake inhibitors
-DB00543:  N06AA17 - Non-selective monoamine reuptake inhibitors
-DB00572:  A03BA01 - Belladonna alkaloids, tertiary amines A03BA03 - Belladonna alkaloids, tertiary amines A03BB02 - Belladonna alkaloids, semisynthetic, quaternary ammonium compounds N04AC01 - Ethers of tropine or tropine derivatives N04AC30 - Ethers of tropine or tropine derivatives S01FA01 - Anticholinergics S01FA05 - Anticholinergics
-DB00622:  C08CA04 - Dihydropyridine derivatives
-DB00670:  A02BX03 - Other drugs for peptic ulcer and gastro-oesophageal reflux disease (GORD)
-DB00715:  N06AB05 - Selective serotonin reuptake inhibitors
-DB00725:  A02BX03 - Other drugs for peptic ulcer and gastro-oesophageal reflux disease (GORD)
-DB00728:  M03AC09 - Other quaternary ammonium compounds
-DB00747:  A03BB01 - Belladonna alkaloids, semisynthetic, quaternary ammonium compounds A03BB03 - Belladonna alkaloids, semisynthetic, quaternary ammonium compounds A04AD01 - Other antiemetics N05CM05 - Other hypnotics and sedatives S01FA02 - Anticholinergics S01FA03 - Anticholinergics
-DB00767:  Not in the ATC
-DB00771:  Not in the ATC
-DB00777:  N05CM06 - Other hypnotics and sedatives
-DB00785:  Not in the ATC
-DB00809:  S01FA06 - Anticholinergics
-DB00810:  N04AA02 - Tertiary amines
-DB00835:  R06AB01 - Substituted alkylamines R06AB06 - Substituted alkylamines
-DB00875:  Not in the ATC
-DB00907:  N01BC01 - Esters of benzoic acid R02AD03 - Anesthetics, local S01HA01 - Local anesthetics S02DA02 - Analgesics and anesthetics
-DB00934:  N06AA21 - Non-selective monoamine reuptake inhibitors
-DB00942:  Not in the ATC
-DB00979:  S01FA04 - Anticholinergics
-DB01036:  G04BD07 - Urinary antispasmodics
-DB01062:  G04BD04 - Urinary antispasmodics
-DB01069:  D04AA10 - Antihistamines for topical use R06AD02 - Phenothiazine derivatives R06AD05 - Phenothiazine derivatives
-DB01135:  M03AC07 - Other quaternary ammonium compounds
-DB01142:  N06AA12 - Non-selective monoamine reuptake inhibitors
-DB01148:  G04BD02 - Urinary antispasmodics
-DB01151:  N06AA01 - Non-selective monoamine reuptake inhibitors
-DB01175:  N06AB10 - Selective serotonin reuptake inhibitors
-DB01224:  N05AH04 - Diazepines, oxazepines, thiazepines and oxepines
-DB01226:  M03AC10 - Other quaternary ammonium compounds
-DB01231:  Not in the ATC
-DB01238:  N05AX12 - Other antipsychotics
-DB01239:  N05AF03 - Thioxanthene derivatives
-DB01336:  Not in the ATC
-DB01337:  M03AC01 - Other quaternary ammonium compounds
-DB01338:  M03AC06 - Other quaternary ammonium compounds
-DB01403:  N05AA02 - Phenothiazines with aliphatic side-chain
-DB01409:  R03BB04 - Anticholinergics
-DB01591:  G04BD08 - Urinary antispasmodics
-DB06702:  G04BD11 - Urinary antispasmodics
-DB08801:  D04AA13 - Antihistamines for topical use R06AB03 - Substituted alkylamines
+Indication: Anti-histamine receptor activity
+ATC expression: A02BA or D04AA or R06A
+FTC expression: A0004969
+TP: 40 - FN: 2 - FP: 41
+Drugs in ATC: [DB00501, DB00585, DB00863, DB00927, DB01294, DB08806, Nothing, DB00283, DB00792, DB01069, DB01075, DB01237, DB01246, DB06691, DB08800, DB08801, DB08802, DB00341, DB00342, DB00354, DB00366, DB00372, DB00405, DB00427, DB00434, DB00455, DB00637, DB00719, DB00737, DB00748, DB00751, DB00835, DB00902, DB00920, DB00950, DB00967, DB00972, DB00985, DB01071, DB01114, DB01146, DB01176, DB01620]
+Drugs in FTC: [DB00245, DB00246, DB00283, DB00321, DB00334, DB00341, DB00342, DB00354, DB00363, DB00366, DB00370, DB00405, DB00420, DB00427, DB00434, DB00455, DB00458, DB00477, DB00501, DB00540, DB00557, DB00568, DB00585, DB00637, DB00656, DB00719, DB00726, DB00734, DB00737, DB00748, DB00751, DB00767, DB00768, DB00777, DB00792, DB00835, DB00863, DB00885, DB00902, DB00920, DB00927, DB00934, DB00940, DB00950, DB00967, DB00972, DB00985, DB01069, DB01071, DB01075, DB01084, DB01106, DB01114, DB01142, DB01146, DB01151, DB01173, DB01175, DB01176, DB01224, DB01237, DB01238, DB01239, DB01246, DB01403, DB01615, DB01619, DB01620, DB04837, DB04841, DB04890, DB06144, DB06148, DB06691, DB06698, DB06766, DB08799, DB08800, DB08801, DB08802, DB08806, Nothing]
+False positives: [DB00245, DB00246, DB00321, DB00334, DB00363, DB00370, DB00420, DB00458, DB00477, DB00540, DB00557, DB00568, DB00656, DB00726, DB00734, DB00767, DB00768, DB00777, DB00885, DB00934, DB00940, DB01084, DB01106, DB01142, DB01151, DB01173, DB01175, DB01224, DB01238, DB01239, DB01403, DB01615, DB01619, DB04837, DB04841, DB04890, DB06144, DB06148, DB06698, DB06766, DB08799]
+DB00245: Known in the ATC as N04AC01 (benzatropine). Parent in the ATC: N04AC = Ethers of tropine or tropine derivatives
+DB00246: Known in the ATC as N05AE04 (ziprasidone). Parent in the ATC: N05AE = Indole derivatives
+DB00321: Known in the ATC as N06AA09 (amitriptyline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00334: Known in the ATC as N05AH03 (olanzapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB00363: Known in the ATC as N05AH02 (clozapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB00370: Known in the ATC as N06AX11 (mirtazapine). Parent in the ATC: N06AX = Other antidepressants
+DB00420: Known in the ATC as N05AA01 (chlorpromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA02 (levomepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA03 (promazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA04 (acepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA05 (triflupromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00458: Known in the ATC as N06AA02 (imipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00458: Known in the ATC as N06AA03 (imipramine oxide). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00458: Known in the ATC as N06AA06 (trimipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00477: Known in the ATC as N05AA01 (chlorpromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00540: Known in the ATC as N06AA10 (nortriptyline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00557: Known in the ATC as N05BB01 (hydroxyzine). Parent in the ATC: N05BB = Diphenylmethane derivatives
+DB00568: Known in the ATC as N07CA02 (cinnarizine). Parent in the ATC: N07CA = Antivertigo preparations
+DB00656: Known in the ATC as N06AX05 (trazodone). Parent in the ATC: N06AX = Other antidepressants
+DB00726: Known in the ATC as N06AA06 (trimipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00734: Known in the ATC as N05AX08 (risperidone). Parent in the ATC: N05AX = Other antipsychotics
+DB00767: Not in the ATC
+DB00768: Known in the ATC as R01AC08 (olopatadine). Parent in the ATC: R01AC = Antiallergic agents, excl. corticosteroids
+DB00768: Known in the ATC as S01GX09 (olopatadine). Parent in the ATC: S01GX = Other antiallergics
+DB00777: Known in the ATC as N05CM06 (propiomazine). Parent in the ATC: N05CM = Other hypnotics and sedatives
+DB00885: Not in the ATC
+DB00934: Known in the ATC as N06AA21 (maprotiline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00940: Known in the ATC as A03AB07 (methantheline). Parent in the ATC: A03AB = Synthetic anticholinergics, quaternary ammonium compounds
+DB01084: Known in the ATC as S01GX06 (emedastine). Parent in the ATC: S01GX = Other antiallergics
+DB01106: Known in the ATC as R01AC02 (levocabastine). Parent in the ATC: R01AC = Antiallergic agents, excl. corticosteroids
+DB01106: Known in the ATC as S01GX02 (levocabastine). Parent in the ATC: S01GX = Other antiallergics
+DB01142: Known in the ATC as N06AA12 (doxepin). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB01151: Known in the ATC as N06AA01 (desipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB01173: Known in the ATC as M03BC01 (orphenadrine (citrate)). Parent in the ATC: M03BC = Ethers, chemically close to antihistamines
+DB01173: Known in the ATC as N04AB02 (orphenadrine (chloride)). Parent in the ATC: N04AB = Ethers chemically close to antihistamines
+DB01175: Known in the ATC as N06AB10 (escitalopram). Parent in the ATC: N06AB = Selective serotonin reuptake inhibitors
+DB01224: Known in the ATC as N05AH04 (quetiapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB01238: Known in the ATC as N05AX12 (aripiprazole). Parent in the ATC: N05AX = Other antipsychotics
+DB01239: Known in the ATC as N05AF03 (chlorprothixene). Parent in the ATC: N05AF = Thioxanthene derivatives
+DB01403: Known in the ATC as N05AA02 (levomepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB01615: Not in the ATC
+DB01619: Not in the ATC
+DB04837: Not in the ATC
+DB04841: Not in the ATC
+DB04890: Not in the ATC
+DB06144: Known in the ATC as N05AE03 (sertindole). Parent in the ATC: N05AE = Indole derivatives
+DB06148: Known in the ATC as N06AX03 (mianserin). Parent in the ATC: N06AX = Other antidepressants
+DB06698: Known in the ATC as N07CA01 (betahistine). Parent in the ATC: N07CA = Antivertigo preparations
+DB06766: Not in the ATC
+DB08799: Known in the ATC as R01AC04 (antazoline). Parent in the ATC: R01AC = Antiallergic agents, excl. corticosteroids
 
 ---------------------------------------------------------------------------------------------
-ATC: [G04CB] - [Testosterone-5-alpha reductase inhibitors]
-FTC: A0009917 - Anti-sterol 5-alpha reductase activity
-
-Predictions:
-DB00548:  D10AX03 - Other anti-acne preparations for topical use
-
----------------------------------------------------------------------------------------------
-ATC: [C10AA] - [HMG CoA reductase inhibitors]
-FTC: A0070402 - Anti-NADPH binding
-
-Predictions:
-DB00266:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [A14AA, A14AB, G03B] - [Androstan derivatives, Estren derivatives, ANDROGENS]
-FTC: P0004882 - Pro-androgen receptor activity
-
-Predictions:
-DB00367:  G02BA03 - Intrauterine contraceptives G03AC03 - Progestogens
-DB00687:  H02AA02 - Mineralocorticoids
-DB00858:  Not in the ATC
-DB01406:  G03XA01 - Antigonadotropins and similar agents
-
----------------------------------------------------------------------------------------------
-ATC: [C09CA] - [Angiotensin II antagonists, plain]
-FTC: A0004945 - Anti-angiotensin type II receptor activity
-
-Predictions:
-DB01342:  Not in the ATC
-DB01347:  Not in the ATC
+Indication: Pro-prostaglandin-receptor-activity
+ATC expression: A02BB or G02AD or S01EE or C01EA
+FTC expression: P0004955
+TP: 8 - FN: 1 - FP: 16
+Drugs in ATC: [DB00929, Nothing, DB00429, DB00917, DB01160, DB00287, DB00654, DB00905, DB08819, DB00770]
+Drugs in FTC: [DB00159, DB00197, DB00244, DB00287, DB00328, DB00412, DB00429, DB00654, DB00731, DB00770, DB00795, DB00905, DB00912, DB00917, DB00929, DB00966, DB01014, DB01067, DB01088, DB01132, DB01160, DB01252, DB01393, DB01586, Nothing]
+False positives: [DB00159, DB00197, DB00244, DB00328, DB00412, DB00731, DB00795, DB00912, DB00966, DB01014, DB01067, DB01088, DB01132, DB01252, DB01393, DB01586]
+DB00159: Known in the ATC as C10AX06 (omega-3-triglycerides incl. other esters and acids). Parent in the ATC: C10AX = Other lipid modifying agents
+DB00197: Known in the ATC as A10BG01 (troglitazone). Parent in the ATC: A10BG = Thiazolidinediones
+DB00244: Known in the ATC as A07EC02 (mesalazine). Parent in the ATC: A07EC = Aminosalicylic acid and similar agents
+DB00328: Known in the ATC as C01EB03 (indometacin). Parent in the ATC: C01EB = Other cardiac preparations
+DB00328: Known in the ATC as M01AB01 (indometacin). Parent in the ATC: M01AB = Acetic acid derivatives and related substances
+DB00412: Known in the ATC as A10BG02 (rosiglitazone). Parent in the ATC: A10BG = Thiazolidinediones
+DB00731: Known in the ATC as A10BX03 (nateglinide). Parent in the ATC: A10BX = Other blood glucose lowering drugs, excl. insulins
+DB00795: Known in the ATC as A07EC01 (sulfasalazine). Parent in the ATC: A07EC = Aminosalicylic acid and similar agents
+DB00912: Known in the ATC as A10BX02 (repaglinide). Parent in the ATC: A10BX = Other blood glucose lowering drugs, excl. insulins
+DB00966: Known in the ATC as C09CA07 (telmisartan). Parent in the ATC: C09CA = Angiotensin II antagonists, plain
+DB01014: Known in the ATC as A07EC04 (balsalazide). Parent in the ATC: A07EC = Aminosalicylic acid and similar agents
+DB01067: Known in the ATC as A10BB07 (glipizide). Parent in the ATC: A10BB = Sulfonamides, urea derivatives
+DB01088: Known in the ATC as B01AC11 (iloprost). Parent in the ATC: B01AC = Platelet aggregation inhibitors excl. heparin
+DB01132: Known in the ATC as A10BG03 (pioglitazone). Parent in the ATC: A10BG = Thiazolidinediones
+DB01252: Not in the ATC
+DB01393: Known in the ATC as C10AB02 (bezafibrate). Parent in the ATC: C10AB = Fibrates
+DB01586: Known in the ATC as A05AA02 (ursodeoxycholic acid). Parent in the ATC: A05AA = Bile acid preparations
 
 ---------------------------------------------------------------------------------------------
-ATC: [A01AC, A07EA, C05AA, D07A, D10AA, H02AB, R03BA] - [Corticosteroids for local oral treatment, Corticosteroids acting locally, Corticosteroids, CORTICOSTEROIDS, PLAIN, Corticosteroids, combinations for treatment of acne, Glucocorticoids, Glucocorticoids]
-FTC: P0004883 - Pro-glucocorticoid receptor activity
-
-Predictions:
-DB00253:  S01BA08 - Corticosteroids, plain
-DB00351:  G03AC05 - Progestogens G03DB02 - Pregnadien derivatives G03DB04 - Pregnadien derivatives L02AB01 - Progestogens
-DB00687:  H02AA02 - Mineralocorticoids
-DB00846:  Not in the ATC
-DB00873:  S01BA14 - Corticosteroids, plain
-DB01380:  Not in the ATC
+Indication: Anti-hydrogen-potassium-exchanging-ATPase-activity
+ATC expression: A02BC
+FTC expression: A0008900
+TP: 5 - FN: 0 - FP: 0
+Drugs in ATC: [DB00213, DB00338, DB00448, DB00736, DB01129, Nothing]
+Drugs in FTC: [DB00213, DB00338, DB00448, DB00736, DB01129, Nothing]
+False positives: []
 
 ---------------------------------------------------------------------------------------------
-ATC: [C02KC, C02LL, N04BD] - [MAO inhibitors, MAO inhibitors and diuretics, Monoamine oxidase B inhibitors]
-FTC: A0008131 - Anti-primary amine oxidase activity
-
-Predictions:
-DB00191:  A08AA01 - Centrally acting antiobesity products C01CA11 - Adrenergic and dopaminergic agents
-DB00594:  C03DB01 - Other potassium-sparing agents
-DB00752:  N06AF04 - Monoamine oxidase inhibitors, non-selective
-DB00780:  N06AF03 - Monoamine oxidase inhibitors, non-selective
-DB00805:  N06AX07 - Other antidepressants
-DB00909:  N03AX15 - Other antiepileptics
-DB01171:  N06AG02 - Monoamine oxidase A inhibitors
-DB01247:  N06AF01 - Monoamine oxidase inhibitors, non-selective
-DB01275:  C02DB01 - Hydrazinophthalazine derivatives C02DB02 - Hydrazinophthalazine derivatives
-DB01363:  Not in the ATC
-DB01577:  Not in the ATC
-DB04832:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [H04AA] - [Glycogenolytic hormones]
-FTC: P0004967 - Pro-glucagon receptor activity
-
-Predictions:
-
----------------------------------------------------------------------------------------------
-ATC: [C07] - [BETA BLOCKING AGENTS]
-FTC: A0004941 - Anti-beta2-adrenergic receptor activity
-
-Predictions:
-DB01151:  N06AA01 - Non-selective monoamine reuptake inhibitors
-DB01210:  S01ED03 - Beta blocking agents1)
-DB01214:  S01ED04 - Beta blocking agents1)
-
----------------------------------------------------------------------------------------------
-ATC: [H01CA] - [Gonadotropin-releasing hormones]
-FTC: P0004968 - Pro-gonadotropin-releasing hormone receptor activity
-
-Predictions:
-DB00007:  L02AE02 - Gonadotropin releasing hormone analogues
-DB00014:  L02AE03 - Gonadotropin releasing hormone analogues
-
----------------------------------------------------------------------------------------------
-ATC: [H01BA] - [Vasopressin and analogues]
-FTC: P0005000 - Pro-vasopressin receptor activity
-
-Predictions:
-DB00093:  Not in the ATC
-DB02638:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [A02BA, D04AA, R06A] - [H2-receptor antagonists, Antihistamines for topical use, ANTIHISTAMINES FOR SYSTEMIC USE]
-FTC: A0004969 - Anti-histamine receptor activity
-
-Predictions:
-DB00245:  N04AC01 - Ethers of tropine or tropine derivatives
-DB00246:  N05AE04 - Indole derivatives
-DB00321:  N06AA09 - Non-selective monoamine reuptake inhibitors
-DB00334:  N05AH03 - Diazepines, oxazepines, thiazepines and oxepines
-DB00363:  N05AH02 - Diazepines, oxazepines, thiazepines and oxepines
-DB00370:  N06AX11 - Other antidepressants
-DB00420:  N05AA01 - Phenothiazines with aliphatic side-chain N05AA02 - Phenothiazines with aliphatic side-chain N05AA03 - Phenothiazines with aliphatic side-chain N05AA04 - Phenothiazines with aliphatic side-chain N05AA05 - Phenothiazines with aliphatic side-chain
-DB00458:  N06AA02 - Non-selective monoamine reuptake inhibitors N06AA03 - Non-selective monoamine reuptake inhibitors N06AA06 - Non-selective monoamine reuptake inhibitors
-DB00477:  N05AA01 - Phenothiazines with aliphatic side-chain
-DB00540:  N06AA10 - Non-selective monoamine reuptake inhibitors
-DB00557:  N05BB01 - Diphenylmethane derivatives
-DB00568:  N07CA02 - Antivertigo preparations
-DB00656:  N06AX05 - Other antidepressants
-DB00726:  N06AA06 - Non-selective monoamine reuptake inhibitors
-DB00734:  N05AX08 - Other antipsychotics
-DB00767:  Not in the ATC
-DB00768:  R01AC08 - Antiallergic agents, excl. corticosteroids S01GX09 - Other antiallergics
-DB00777:  N05CM06 - Other hypnotics and sedatives
-DB00885:  Not in the ATC
-DB00934:  N06AA21 - Non-selective monoamine reuptake inhibitors
-DB00940:  A03AB07 - Synthetic anticholinergics, quaternary ammonium compounds
-DB01084:  S01GX06 - Other antiallergics
-DB01106:  R01AC02 - Antiallergic agents, excl. corticosteroids S01GX02 - Other antiallergics
-DB01142:  N06AA12 - Non-selective monoamine reuptake inhibitors
-DB01151:  N06AA01 - Non-selective monoamine reuptake inhibitors
-DB01173:  M03BC01 - Ethers, chemically close to antihistamines N04AB02 - Ethers chemically close to antihistamines
-DB01175:  N06AB10 - Selective serotonin reuptake inhibitors
-DB01224:  N05AH04 - Diazepines, oxazepines, thiazepines and oxepines
-DB01238:  N05AX12 - Other antipsychotics
-DB01239:  N05AF03 - Thioxanthene derivatives
-DB01403:  N05AA02 - Phenothiazines with aliphatic side-chain
-DB01615:  Not in the ATC
-DB01619:  Not in the ATC
-DB04837:  Not in the ATC
-DB04841:  Not in the ATC
-DB04890:  Not in the ATC
-DB06144:  N05AE03 - Indole derivatives
-DB06148:  N06AX03 - Other antidepressants
-DB06698:  N07CA01 - Antivertigo preparations
-DB06766:  Not in the ATC
-DB08799:  R01AC04 - Antiallergic agents, excl. corticosteroids
+Indication: Anti-G-protein-coupled-acetylcholine-receptor-activity
+ATC expression: A03AA or A03AB or R03BB or S01FA
+FTC expression: A0016907
+TP: 17 - FN: 0 - FP: 60
+Drugs in ATC: [DB00383, DB00804, Nothing, DB00219, DB00505, DB00729, DB00782, DB00940, DB00986, DB01625, DB04843, DB00332, DB01409, DB00462, DB00572, DB00747, DB00809, DB00979]
+Drugs in FTC: [DB00193, DB00209, DB00219, DB00245, DB00246, DB00280, DB00321, DB00332, DB00334, DB00340, DB00342, DB00354, DB00363, DB00366, DB00376, DB00383, DB00387, DB00392, DB00420, DB00424, DB00434, DB00458, DB00462, DB00483, DB00496, DB00505, DB00508, DB00517, DB00540, DB00543, DB00572, DB00622, DB00670, DB00715, DB00725, DB00728, DB00729, DB00747, DB00767, DB00771, DB00777, DB00782, DB00785, DB00804, DB00809, DB00810, DB00835, DB00875, DB00907, DB00934, DB00940, DB00942, DB00979, DB00986, DB01036, DB01062, DB01069, DB01135, DB01142, DB01148, DB01151, DB01175, DB01224, DB01226, DB01231, DB01238, DB01239, DB01336, DB01337, DB01338, DB01403, DB01409, DB01591, DB01625, DB04843, DB06702, DB08801, Nothing]
+False positives: [DB00193, DB00209, DB00245, DB00246, DB00280, DB00321, DB00334, DB00340, DB00342, DB00354, DB00363, DB00366, DB00376, DB00387, DB00392, DB00420, DB00424, DB00434, DB00458, DB00483, DB00496, DB00508, DB00517, DB00540, DB00543, DB00622, DB00670, DB00715, DB00725, DB00728, DB00767, DB00771, DB00777, DB00785, DB00810, DB00835, DB00875, DB00907, DB00934, DB00942, DB01036, DB01062, DB01069, DB01135, DB01142, DB01148, DB01151, DB01175, DB01224, DB01226, DB01231, DB01238, DB01239, DB01336, DB01337, DB01338, DB01403, DB01591, DB06702, DB08801]
+DB00193: Known in the ATC as N02AX02 (tramadol). Parent in the ATC: N02AX = Other opioids
+DB00209: Known in the ATC as G04BD09 (trospium). Parent in the ATC: G04BD = Urinary antispasmodics
+DB00245: Known in the ATC as N04AC01 (benzatropine). Parent in the ATC: N04AC = Ethers of tropine or tropine derivatives
+DB00246: Known in the ATC as N05AE04 (ziprasidone). Parent in the ATC: N05AE = Indole derivatives
+DB00280: Known in the ATC as C01BA03 (disopyramide). Parent in the ATC: C01BA = Antiarrhythmics, class Ia
+DB00321: Known in the ATC as N06AA09 (amitriptyline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00334: Known in the ATC as N05AH03 (olanzapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB00340: Known in the ATC as N04AA03 (metixene). Parent in the ATC: N04AA = Tertiary amines
+DB00342: Known in the ATC as R06AX12 (terfenadine). Parent in the ATC: R06AX = Other antihistamines for systemic use
+DB00354: Known in the ATC as R06AE01 (buclizine). Parent in the ATC: R06AE = Piperazine derivatives
+DB00363: Known in the ATC as N05AH02 (clozapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB00366: Known in the ATC as R06AA09 (doxylamine). Parent in the ATC: R06AA = Aminoalkyl ethers
+DB00376: Known in the ATC as N04AA01 (trihexyphenidyl). Parent in the ATC: N04AA = Tertiary amines
+DB00387: Known in the ATC as N04AA04 (procyclidine). Parent in the ATC: N04AA = Tertiary amines
+DB00392: Known in the ATC as N04AA05 (profenamine). Parent in the ATC: N04AA = Tertiary amines
+DB00420: Known in the ATC as N05AA01 (chlorpromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA02 (levomepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA03 (promazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA04 (acepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00420: Known in the ATC as N05AA05 (triflupromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00424: Known in the ATC as A03BA03 (hyoscyamine). Parent in the ATC: A03BA = Belladonna alkaloids, tertiary amines
+DB00434: Known in the ATC as R06AX02 (cyproheptadine). Parent in the ATC: R06AX = Other antihistamines for systemic use
+DB00458: Known in the ATC as N06AA02 (imipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00458: Known in the ATC as N06AA03 (imipramine oxide). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00458: Known in the ATC as N06AA06 (trimipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00483: Known in the ATC as M03AC02 (gallamine). Parent in the ATC: M03AC = Other quaternary ammonium compounds
+DB00496: Known in the ATC as G04BD10 (darifenacin). Parent in the ATC: G04BD = Urinary antispasmodics
+DB00508: Known in the ATC as N05AA05 (triflupromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB00517: Not in the ATC
+DB00540: Known in the ATC as N06AA10 (nortriptyline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00543: Known in the ATC as N06AA17 (amoxapine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00622: Known in the ATC as C08CA04 (nicardipine). Parent in the ATC: C08CA = Dihydropyridine derivatives
+DB00670: Known in the ATC as A02BX03 (pirenzepine). Parent in the ATC: A02BX = Other drugs for peptic ulcer and gastro-oesophageal reflux disease (GORD)
+DB00715: Known in the ATC as N06AB05 (paroxetine). Parent in the ATC: N06AB = Selective serotonin reuptake inhibitors
+DB00725: Known in the ATC as A02BX03 (pirenzepine). Parent in the ATC: A02BX = Other drugs for peptic ulcer and gastro-oesophageal reflux disease (GORD)
+DB00728: Known in the ATC as M03AC09 (rocuronium bromide). Parent in the ATC: M03AC = Other quaternary ammonium compounds
+DB00767: Not in the ATC
+DB00771: Not in the ATC
+DB00777: Known in the ATC as N05CM06 (propiomazine). Parent in the ATC: N05CM = Other hypnotics and sedatives
+DB00785: Not in the ATC
+DB00810: Known in the ATC as N04AA02 (biperiden). Parent in the ATC: N04AA = Tertiary amines
+DB00835: Known in the ATC as R06AB01 (brompheniramine). Parent in the ATC: R06AB = Substituted alkylamines
+DB00835: Known in the ATC as R06AB06 (dexbrompheniramine). Parent in the ATC: R06AB = Substituted alkylamines
+DB00875: Not in the ATC
+DB00907: Known in the ATC as N01BC01 (cocaine). Parent in the ATC: N01BC = Esters of benzoic acid
+DB00907: Known in the ATC as R02AD03 (cocaine). Parent in the ATC: R02AD = Anesthetics, local
+DB00907: Known in the ATC as S01HA01 (cocaine). Parent in the ATC: S01HA = Local anesthetics
+DB00907: Known in the ATC as S02DA02 (cocaine). Parent in the ATC: S02DA = Analgesics and anesthetics
+DB00934: Known in the ATC as N06AA21 (maprotiline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB00942: Not in the ATC
+DB01036: Known in the ATC as G04BD07 (tolterodine). Parent in the ATC: G04BD = Urinary antispasmodics
+DB01062: Known in the ATC as G04BD04 (oxybutynin). Parent in the ATC: G04BD = Urinary antispasmodics
+DB01069: Known in the ATC as D04AA10 (promethazine). Parent in the ATC: D04AA = Antihistamines for topical use
+DB01069: Known in the ATC as R06AD02 (promethazine). Parent in the ATC: R06AD = Phenothiazine derivatives
+DB01069: Known in the ATC as R06AD05 (hydroxyethylpromethazine). Parent in the ATC: R06AD = Phenothiazine derivatives
+DB01135: Known in the ATC as M03AC07 (doxacurium chloride). Parent in the ATC: M03AC = Other quaternary ammonium compounds
+DB01142: Known in the ATC as N06AA12 (doxepin). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB01148: Known in the ATC as G04BD02 (flavoxate). Parent in the ATC: G04BD = Urinary antispasmodics
+DB01151: Known in the ATC as N06AA01 (desipramine). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
+DB01175: Known in the ATC as N06AB10 (escitalopram). Parent in the ATC: N06AB = Selective serotonin reuptake inhibitors
+DB01224: Known in the ATC as N05AH04 (quetiapine). Parent in the ATC: N05AH = Diazepines, oxazepines, thiazepines and oxepines
+DB01226: Known in the ATC as M03AC10 (mivacurium chloride). Parent in the ATC: M03AC = Other quaternary ammonium compounds
+DB01231: Not in the ATC
+DB01238: Known in the ATC as N05AX12 (aripiprazole). Parent in the ATC: N05AX = Other antipsychotics
+DB01239: Known in the ATC as N05AF03 (chlorprothixene). Parent in the ATC: N05AF = Thioxanthene derivatives
+DB01336: Not in the ATC
+DB01337: Known in the ATC as M03AC01 (pancuronium). Parent in the ATC: M03AC = Other quaternary ammonium compounds
+DB01338: Known in the ATC as M03AC06 (pipecuronium bromide). Parent in the ATC: M03AC = Other quaternary ammonium compounds
+DB01403: Known in the ATC as N05AA02 (levomepromazine). Parent in the ATC: N05AA = Phenothiazines with aliphatic side-chain
+DB01591: Known in the ATC as G04BD08 (solifenacin). Parent in the ATC: G04BD = Urinary antispasmodics
+DB06702: Known in the ATC as G04BD11 (fesoterodine). Parent in the ATC: G04BD = Urinary antispasmodics
+DB08801: Known in the ATC as D04AA13 (dimetindene). Parent in the ATC: D04AA = Antihistamines for topical use
+DB08801: Known in the ATC as R06AB03 (dimetindene). Parent in the ATC: R06AB = Substituted alkylamines
 
 ---------------------------------------------------------------------------------------------
-ATC: [G03XA, H01CC] - [Antigonadotropins and similar agents, Anti-gonadotropin-releasing hormones]
-FTC: A0004968 - Anti-gonadotropin-releasing hormone receptor activity
-
-Predictions:
-DB00106:  L02BX01 - Other hormone antagonists and related agents
-DB06699:  L02BX02 - Other hormone antagonists and related agents
-
----------------------------------------------------------------------------------------------
-ATC: [A10XA] - [Aldose reductase inhibitors]
-FTC: A0004032 - Anti-alditol:NADP+ 1-oxidoreductase activity
-
-Predictions:
-DB00605:  M01AB02 - Acetic acid derivatives and related substances
-DB00936:  D11AC30 - Medicated shampoos N02BA04 - Salicylic acid and derivatives
-DB00945:  A01AD05 - Other agents for local oral treatment B01AC06 - Platelet aggregation inhibitors excl. heparin N02BA01 - Salicylic acid and derivatives
-
----------------------------------------------------------------------------------------------
-ATC: [A10BH] - [Dipeptidyl peptidase 4 (DPP-4) inhibitors]
-FTC: A0008239 - Anti-dipeptidyl-peptidase activity
-
-Predictions:
-DB01076:  C10AA05 - HMG CoA reductase inhibitors
-DB01261:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [A10BF] - [Alpha glucosidase inhibitors]
-FTC: A0004558 - Anti-alpha-glucosidase activity
-
-Predictions:
-DB00747:  A03BB01 - Belladonna alkaloids, semisynthetic, quaternary ammonium compounds A03BB03 - Belladonna alkaloids, semisynthetic, quaternary ammonium compounds A04AD01 - Other antiemetics N05CM05 - Other hypnotics and sedatives S01FA02 - Anticholinergics S01FA03 - Anticholinergics
-
----------------------------------------------------------------------------------------------
-ATC: [B01AE] - [Direct thrombin inhibitors]
-FTC: A0070053 - Anti-thrombospondin receptor activity
-
-Predictions:
-DB04786:  P01CX02 - Other agents against leishmaniasis and trypanosomiasis
-DB04898:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [C09C] - [ANGIOTENSIN II ANTAGONISTS, PLAIN]
-FTC: A0001596 - Anti-angiotensin type I receptor activity
-
-Predictions:
-DB01342:  Not in the ATC
-DB01347:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [A02BC] - [Proton pump inhibitors]
-FTC: A0008900 - Anti-hydrogen:potassium-exchanging ATPase activity
-
-Predictions:
-
----------------------------------------------------------------------------------------------
-ATC: [C01CE] - [Phosphodiesterase inhibitors]
-FTC: A0004119 - Anti-cGMP-inhibited cyclic-nucleotide phosphodiesterase activity
-
-Predictions:
-DB00261:  L01XX35 - Other antineoplastic agents
-DB00277:  R03DA04 - Xanthines R03DA05 - Xanthines
-DB00922:  C01CX08 - Other cardiac stimulants
-DB01166:  Not in the ATC
-DB01223:  R03DA05 - Xanthines
-DB01303:  R03DA02 - Xanthines
-DB05266:  R03DC04 - Leukotriene receptor antagonists
-DB08811:  N05BA23 - Benzodiazepine derivatives
-
----------------------------------------------------------------------------------------------
-ATC: [L01XE] - [Protein kinase inhibitors]
-FTC: A0004713 - Anti-protein tyrosine kinase activity
-
-Predictions:
-DB00002:  L01XC06 - Monoclonal antibodies
-DB00072:  L01XC03 - Monoclonal antibodies
-DB00171:  Not in the ATC
-DB00246:  N05AE04 - Indole derivatives
-DB00248:  G02CB03 - Prolactine inhibitors N04BC06 - Dopamine agonists
-DB00281:  A01AD11 - Other agents for local oral treatment C01BB01 - Antiarrhythmics, class Ib C05AD01 - Local anesthetics D04AB01 - Anesthetics for topical use N01BB02 - Amides R02AD02 - Anesthetics, local S01HA07 - Local anesthetics S02DA01 - Analgesics and anesthetics
-DB00321:  N06AA09 - Non-selective monoamine reuptake inhibitors
-DB00334:  N05AH03 - Diazepines, oxazepines, thiazepines and oxepines
-DB00363:  N05AH02 - Diazepines, oxazepines, thiazepines and oxepines
-DB00370:  N06AX11 - Other antidepressants
-DB00543:  N06AA17 - Non-selective monoamine reuptake inhibitors
-DB00656:  N06AX05 - Other antidepressants
-DB00692:  C04AB01 - Imidazoline derivatives
-DB00734:  N05AX08 - Other antipsychotics
-DB00797:  C04AB02 - Imidazoline derivatives M02AX02 - Other topical products for joint and muscular pain
-DB00800:  C01CA19 - Adrenergic and dopaminergic agents
-DB00925:  C04AX02 - Other peripheral vasodilators
-DB01041:  L04AX02 - Other immunosuppressants
-DB01049:  C04AE01 - Ergot alkaloids
-DB01097:  L04AA13 - Selective immunosuppressants
-DB01142:  N06AA12 - Non-selective monoamine reuptake inhibitors
-DB01149:  N06AX06 - Other antidepressants
-DB01224:  N05AH04 - Diazepines, oxazepines, thiazepines and oxepines
-DB01238:  N05AX12 - Other antipsychotics
-DB01267:  N05AX13 - Other antipsychotics
-DB01269:  L01XC08 - Monoclonal antibodies
-DB01287:  Not in the ATC
-DB01392:  G04BE04 - Drugs used in erectile dysfunction
-DB01403:  N05AA02 - Phenothiazines with aliphatic side-chain
-DB01608:  N05AC01 - Phenothiazines with piperidine structure
-DB01624:  Not in the ATC
-DB06148:  N06AX03 - Other antidepressants
-
----------------------------------------------------------------------------------------------
-ATC: [G03HA, L02BB, G03H] - [Antiandrogens, plain , Anti-androgens, ANTIANDROGENS]
-FTC: A0004882 - Anti-androgen receptor activity
-
-Predictions:
-DB00421:  C03DA01 - Aldosterone antagonists
-DB01395:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [H05BA] - [Calcitonin preparations]
-FTC: P0004948 - Pro-calcitonin receptor activity
-
-Predictions:
-DB01278:  A10BX05 - Other blood glucose lowering drugs, excl. insulins
-
----------------------------------------------------------------------------------------------
-ATC: [G02CB] - [Prolactine inhibitors]
-FTC: A0004925 - Anti-prolactin receptor activity
-
-Predictions:
-DB01185:  G03BA01 - 3-oxoandrosten (4) derivatives
-
----------------------------------------------------------------------------------------------
-ATC: [G03CA, G03CB, G03XC] - [Natural and semisynthetic estrogens, plain, Synthetic estrogens, plain, Selective estrogen receptor modulators ]
-FTC: P0038052 - Pro-estrogen-activated sequence-specific DNA binding RNA polymerase II transcription factor activity
-
-Predictions:
-DB00294:  G03AC08 - Progestogens
-DB00304:  G03AC09 - Progestogens
-DB00396:  G03AC06 - Progestogens G03DA02 - Pregnen (4) derivatives G03DA03 - Pregnen (4) derivatives G03DA04 - Pregnen (4) derivatives L02AB02 - Progestogens
-DB00603:  G03AC06 - Progestogens G03DA02 - Pregnen (4) derivatives L02AB02 - Progestogens
-DB00675:  L02BA01 - Anti-estrogens
-DB00823:  Not in the ATC
-DB00882:  G03GB02 - Ovulation stimulants, synthetic
-DB00957:  G03AA11 - Progestogens and estrogens, fixed combinations
-DB01196:  L01XX11 - Other antineoplastic agents
-DB01357:  Not in the ATC
-DB01406:  G03XA01 - Antigonadotropins and similar agents
-DB01431:  G03DC01 - Estren derivatives
-DB04574:  Not in the ATC
-DB04575:  Not in the ATC
-DB06713:  G03AA13 - Progestogens and estrogens, fixed combinations
-
----------------------------------------------------------------------------------------------
-ATC: [A11CC] - [Vitamin D and analogues]
-FTC: P0008434 - Pro-vitamin D3 receptor activity
-
-Predictions:
-DB00910:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [N05CH] - [Melatonin receptor agonists]
-FTC: P0008502 - Pro-melatonin receptor activity
-
-Predictions:
-
----------------------------------------------------------------------------------------------
-ATC: [H01BB] - [Oxytocin and analogues]
-FTC: P0004990 - Pro-oxytocin receptor activity
-
-Predictions:
-
----------------------------------------------------------------------------------------------
-ATC: [A06AH] - [Peripheral opioid receptor antagonists]
-FTC: A0038047 - Anti-morphine receptor activity
-
-Predictions:
-DB00652:  N02AD01 - Benzomorphan derivatives
-DB00704:  N07BB04 - Drugs used in alcohol dependence
-DB00844:  N02AF02 - Morphinan derivatives
-DB01183:  V03AB15 - Antidotes
-
----------------------------------------------------------------------------------------------
-ATC: [H05AA] - [Parathyroid hormones and analogues]
-FTC: P0004991 - Pro-parathyroid hormone receptor activity
-
-Predictions:
-
----------------------------------------------------------------------------------------------
-ATC: [A10AB, A10AC, A10AD, A10AE, A10A] - [Insulins and analogues for injection, fast-acting , Insulins and analogues for injection, intermediate-acting , Insulins and analogues for injection, intermediate-acting combined with fast-acting , Insulins and analogues for injection, long-acting, INSULINS AND ANALOGUES]
-FTC: P0005009 - Pro-insulin-activated receptor activity
-
-Predictions:
-
----------------------------------------------------------------------------------------------
-ATC: [C01B] - [ANTIARRHYTHMICS, CLASS I AND III]
-FTC: A0086006 - Anti-voltage-gated sodium channel activity involved in regulation of cardiac muscle cell action potential
-
-Predictions:
-DB00192:  Not in the ATC
-DB00243:  C01EB18 - Other cardiac preparations
-DB00252:  N03AB02 - Hydantoin derivatives N03AB04 - Hydantoin derivatives N03AB05 - Hydantoin derivatives
-DB00473:  Not in the ATC
-DB00527:  C05AD04 - Local anesthetics
-DB00532:  N03AB04 - Hydantoin derivatives
-DB00564:  N03AF01 - Carboxamide derivatives
-DB00680:  Not in the ATC
-DB00740:  N07XX02 - Other nervous system drugs
-DB00750:  N01BB04 - Amides
-DB00754:  N03AB01 - Hydantoin derivatives
-DB00776:  N03AF02 - Carboxamide derivatives
-DB00868:  R05DB01 - Other cough suppressants
-DB00907:  N01BC01 - Esters of benzoic acid R02AD03 - Anesthetics, local S01HA01 - Local anesthetics S02DA02 - Analgesics and anesthetics
-DB00909:  N03AX15 - Other antiepileptics
-DB01320:  N03AB05 - Hydantoin derivatives
-DB01346:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [H03AA] - [Thyroid hormones]
-FTC: P0004887 - Pro-thyroid hormone receptor activity
-
-Predictions:
-DB01583:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [A03AE, N02CC] - [Drugs acting on serotonin receptors, Selective serotonin (5HT1) agonists]
-FTC: P0004993 - Pro-serotonin receptor activity
-
-Predictions:
-DB00247:  N02CA04 - Ergot alkaloids
-DB00248:  G02CB03 - Prolactine inhibitors N04BC06 - Dopamine agonists
-DB00268:  N04BC04 - Dopamine agonists
-DB00320:  N02CA01 - Ergot alkaloids
-DB00490:  N05BE01 - Azaspirodecanedione derivatives
-DB00574:  A08AA02 - Centrally acting antiobesity products A08AA04 - Centrally acting antiobesity products
-DB00589:  G02CB02 - Prolactine inhibitors N02CA07 - Ergot alkaloids
-DB00604:  A03FA02 - Propulsives
-DB00656:  N06AX05 - Other antidepressants
-DB00696:  N02CA01 - Ergot alkaloids N02CA02 - Ergot alkaloids
-DB00714:  G04BE07 - Drugs used in erectile dysfunction N04BC07 - Dopamine agonists
-DB00726:  N06AA06 - Non-selective monoamine reuptake inhibitors
-DB00904:  A04AA01 - Serotonin (5HT3) antagonists
-DB01186:  N04BC02 - Dopamine agonists
-DB01191:  A08AA04 - Centrally acting antiobesity products
-DB01200:  G02CB01 - Prolactine inhibitors N04BC01 - Dopamine agonists
-DB01233:  A03FA01 - Propulsives
-DB01238:  N05AX12 - Other antipsychotics
-DB01287:  Not in the ATC
-DB01392:  G04BE04 - Drugs used in erectile dysfunction
-DB08810:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [R03DC] - [Leukotriene receptor antagonists]
-FTC: A0004974 - Anti-leukotriene receptor activity
-
-Predictions:
-DB00587:  Not in the ATC
-DB00716:  R01AC07 - Antiallergic agents, excl. corticosteroids R03BC03 - Antiallergic agents, excl. corticosteroids S01GX04 - Other antiallergics
-
----------------------------------------------------------------------------------------------
-ATC: [N04BA, N04BC] - [Dopa and dopa derivatives, Dopamine agonists]
-FTC: P0004952 - Pro-dopamine receptor activity
-
-Predictions:
-DB00334:  N05AH03 - Diazepines, oxazepines, thiazepines and oxepines
-DB00397:  R01BA01 - Sympathomimetics
-DB00589:  G02CB02 - Prolactine inhibitors N02CA07 - Ergot alkaloids
-DB00696:  N02CA01 - Ergot alkaloids N02CA02 - Ergot alkaloids
-DB00800:  C01CA19 - Adrenergic and dopaminergic agents
-DB00805:  N06AX07 - Other antidepressants
-DB00915:  N04BB01 - Adamantane derivatives
-DB00988:  C01CA04 - Adrenergic and dopaminergic agents
-DB01221:  N01AX03 - Other general anesthetics N01AX14 - Other general anesthetics
-DB01238:  N05AX12 - Other antipsychotics
-DB01287:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [C02CA] - [Alpha-adrenoreceptor antagonists]
-FTC: A0004937 - Anti-alpha1-adrenergic receptor activity
-
-Predictions:
-DB00246:  N05AE04 - Indole derivatives
-DB00298:  S01EX02 - Other antiglaucoma preparations
-DB00321:  N06AA09 - Non-selective monoamine reuptake inhibitors
-DB00334:  N05AH03 - Diazepines, oxazepines, thiazepines and oxepines
-DB00346:  G04CA01 - Alpha-adrenoreceptor antagonists
-DB00363:  N05AH02 - Diazepines, oxazepines, thiazepines and oxepines
-DB00420:  N05AA01 - Phenothiazines with aliphatic side-chain N05AA02 - Phenothiazines with aliphatic side-chain N05AA03 - Phenothiazines with aliphatic side-chain N05AA04 - Phenothiazines with aliphatic side-chain N05AA05 - Phenothiazines with aliphatic side-chain
-DB00450:  N01AX01 - Other general anesthetics N05AD08 - Butyrophenone derivatives
-DB00458:  N06AA02 - Non-selective monoamine reuptake inhibitors N06AA03 - Non-selective monoamine reuptake inhibitors N06AA06 - Non-selective monoamine reuptake inhibitors
-DB00477:  N05AA01 - Phenothiazines with aliphatic side-chain
-DB00540:  N06AA10 - Non-selective monoamine reuptake inhibitors
-DB00543:  N06AA17 - Non-selective monoamine reuptake inhibitors
-DB00598:  C07AG01 - Alpha and beta blocking agents
-DB00622:  C08CA04 - Dihydropyridine derivatives
-DB00656:  N06AX05 - Other antidepressants
-DB00668:  A01AD01 - Other agents for local oral treatment B02BC09 - Local hemostatics C01CA03 - Adrenergic and dopaminergic agents C01CA24 - Adrenergic and dopaminergic agents R01AA14 - Sympathomimetics, plain R03AA01 - Alpha- and beta-adrenoreceptor agonists S01EA01 - Sympathomimetics in glaucoma therapy1)
-DB00679:  N05AC02 - Phenothiazines with piperidine structure
-DB00692:  C04AB01 - Imidazoline derivatives
-DB00706:  G04CA02 - Alpha-adrenoreceptor antagonists
-DB00726:  N06AA06 - Non-selective monoamine reuptake inhibitors
-DB00734:  N05AX08 - Other antipsychotics
-DB00777:  N05CM06 - Other hypnotics and sedatives
-DB00797:  C04AB02 - Imidazoline derivatives M02AX02 - Other topical products for joint and muscular pain
-DB00831:  N05AB06 - Phenothiazines with piperazine structure
-DB00875:  Not in the ATC
-DB00925:  C04AX02 - Other peripheral vasodilators
-DB00934:  N06AA21 - Non-selective monoamine reuptake inhibitors
-DB01049:  C04AE01 - Ergot alkaloids
-DB01136:  C07AG02 - Alpha and beta blocking agents
-DB01142:  N06AA12 - Non-selective monoamine reuptake inhibitors
-DB01149:  N06AX06 - Other antidepressants
-DB01151:  N06AA01 - Non-selective monoamine reuptake inhibitors
-DB01162:  G04CA03 - Alpha-adrenoreceptor antagonists
-DB01175:  N06AB10 - Selective serotonin reuptake inhibitors
-DB01224:  N05AH04 - Diazepines, oxazepines, thiazepines and oxepines
-DB01238:  N05AX12 - Other antipsychotics
-DB01255:  Not in the ATC
-DB01267:  N05AX13 - Other antipsychotics
-DB01287:  Not in the ATC
-DB01295:  C07AB06 - Beta blocking agents, selective
-DB01403:  N05AA02 - Phenothiazines with aliphatic side-chain
-DB01576:  N06BA02 - Centrally acting sympathomimetics
-DB01608:  N05AC01 - Phenothiazines with piperidine structure
-DB01614:  N05AA04 - Phenothiazines with aliphatic side-chain
-DB01622:  N05AB08 - Phenothiazines with piperazine structure
-DB01624:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [R03AC] - [Selective beta-2-adrenoreceptor agonists]
-FTC: P0051380 - Pro-norepinephrine binding
-
-Predictions:
-DB00217:  C02CC01 - Guanidine derivatives
-DB00268:  N04BC04 - Dopamine agonists
-DB00320:  N02CA01 - Ergot alkaloids
-DB00368:  C01CA03 - Adrenergic and dopaminergic agents
-DB00397:  R01BA01 - Sympathomimetics
-DB00413:  N04BC05 - Dopamine agonists
-DB00449:  S01EA02 - Sympathomimetics in glaucoma therapy1)
-DB00484:  S01EA05 - Sympathomimetics in glaucoma therapy1)
-DB00575:  C02AC01 - Imidazoline receptor agonists N02CX02 - Other antimigraine preparations S01EA03 - Sympathomimetics in glaucoma therapy1) S01EA04 - Sympathomimetics in glaucoma therapy1)
-DB00629:  Not in the ATC
-DB00633:  N05CM18 - Other hypnotics and sedatives
-DB00668:  A01AD01 - Other agents for local oral treatment B02BC09 - Local hemostatics C01CA03 - Adrenergic and dopaminergic agents C01CA24 - Adrenergic and dopaminergic agents R01AA14 - Sympathomimetics, plain R03AA01 - Alpha- and beta-adrenoreceptor agonists S01EA01 - Sympathomimetics in glaucoma therapy1)
-DB00696:  N02CA01 - Ergot alkaloids N02CA02 - Ergot alkaloids
-DB00697:  M03BX02 - Other centrally acting agents
-DB00714:  G04BE07 - Drugs used in erectile dysfunction N04BC07 - Dopamine agonists
-DB00816:  R03AB03 - Non-selective beta-adrenoreceptor agonists R03CB03 - Non-selective beta-adrenoreceptor agonists
-DB00841:  C01CA07 - Adrenergic and dopaminergic agents
-DB00852:  R01BA02 - Sympathomimetics
-DB00865:  Not in the ATC
-DB00867:  G02CA01 - Sympathomimetics, labour repressants
-DB00935:  R01AA05 - Sympathomimetics, plain R01AB07 - Sympathomimetics, combinations excl. corticosteroids S01GA04 - Sympathomimetics used as decongestants
-DB00960:  C07AA03 - Beta blocking agents, non-selective C07AA14 - Beta blocking agents, non-selective C07AA17 - Beta blocking agents, non-selective
-DB00964:  S01EA03 - Sympathomimetics in glaucoma therapy1)
-DB01018:  C02AC02 - Imidazoline receptor agonists
-DB01064:  C01CA02 - Adrenergic and dopaminergic agents D08AX05 - Other antiseptics and disinfectants
-DB01102:  C01CA22 - Adrenergic and dopaminergic agents
-DB01186:  N04BC02 - Dopamine agonists
-DB01193:  C07AB04 - Beta blocking agents, selective
-DB01200:  G02CB01 - Prolactine inhibitors N04BC01 - Dopamine agonists
-DB01363:  Not in the ATC
-DB01408:  R03CC12 - Selective beta-2-adrenoreceptor agonists
-DB01577:  Not in the ATC
-DB04948:  N07BC04 - Drugs used in opioid dependence
-DB06262:  Not in the ATC
-DB06694:  S01GA03 - Sympathomimetics used as decongestants
-DB06711:  R01AA08 - Sympathomimetics, plain
-DB08807:  C07AA17 - Beta blocking agents, non-selective
-
----------------------------------------------------------------------------------------------
-ATC: [A03AE, A04AA] - [Drugs acting on serotonin receptors, Serotonin (5HT3) antagonists]
-FTC: A0004993 - Anti-serotonin receptor activity
-
-Predictions:
-DB00193:  N02AX02 - Other opioids
-DB00246:  N05AE04 - Indole derivatives
-DB00247:  N02CA04 - Ergot alkaloids
-DB00248:  G02CB03 - Prolactine inhibitors N04BC06 - Dopamine agonists
-DB00321:  N06AA09 - Non-selective monoamine reuptake inhibitors
-DB00334:  N05AH03 - Diazepines, oxazepines, thiazepines and oxepines
-DB00363:  N05AH02 - Diazepines, oxazepines, thiazepines and oxepines
-DB00370:  N06AX11 - Other antidepressants
-DB00408:  N05AH01 - Diazepines, oxazepines, thiazepines and oxepines
-DB00420:  N05AA01 - Phenothiazines with aliphatic side-chain N05AA02 - Phenothiazines with aliphatic side-chain N05AA03 - Phenothiazines with aliphatic side-chain N05AA04 - Phenothiazines with aliphatic side-chain N05AA05 - Phenothiazines with aliphatic side-chain
-DB00434:  R06AX02 - Other antihistamines for systemic use
-DB00458:  N06AA02 - Non-selective monoamine reuptake inhibitors N06AA03 - Non-selective monoamine reuptake inhibitors N06AA06 - Non-selective monoamine reuptake inhibitors
-DB00472:  N06AB03 - Selective serotonin reuptake inhibitors
-DB00477:  N05AA01 - Phenothiazines with aliphatic side-chain
-DB00508:  N05AA05 - Phenothiazines with aliphatic side-chain
-DB00540:  N06AA10 - Non-selective monoamine reuptake inhibitors
-DB00589:  G02CB02 - Prolactine inhibitors N02CA07 - Ergot alkaloids
-DB00656:  N06AX05 - Other antidepressants
-DB00679:  N05AC02 - Phenothiazines with piperidine structure
-DB00721:  C01BA02 - Antiarrhythmics, class Ia C05AD05 - Local anesthetics D04AB03 - Anesthetics for topical use J01CE09 - Beta-lactamase sensitive penicillins N01BA02 - Esters of aminobenzoic acid N01BA04 - Esters of aminobenzoic acid S01HA02 - Local anesthetics S01HA05 - Local anesthetics
-DB00726:  N06AA06 - Non-selective monoamine reuptake inhibitors
-DB00728:  M03AC09 - Other quaternary ammonium compounds
-DB00734:  N05AX08 - Other antipsychotics
-DB00751:  R06AX24 - Other antihistamines for systemic use S01GX10 - Other antiallergics
-DB00777:  N05CM06 - Other hypnotics and sedatives
-DB00805:  N06AX07 - Other antidepressants
-DB00866:  C07AA01 - Beta blocking agents, non-selective
-DB00875:  Not in the ATC
-DB00924:  M03BX08 - Other centrally acting agents
-DB00933:  N05AC03 - Phenothiazines with piperidine structure
-DB00960:  C07AA03 - Beta blocking agents, non-selective C07AA14 - Beta blocking agents, non-selective C07AA17 - Beta blocking agents, non-selective
-DB01043:  N06DX01 - Other anti-dementia drugs
-DB01069:  D04AA10 - Antihistamines for topical use R06AD02 - Phenothiazine derivatives R06AD05 - Phenothiazine derivatives
-DB01142:  N06AA12 - Non-selective monoamine reuptake inhibitors
-DB01149:  N06AX06 - Other antidepressants
-DB01151:  N06AA01 - Non-selective monoamine reuptake inhibitors
-DB01161:  N01BA04 - Esters of aminobenzoic acid
-DB01199:  M03AA02 - Curare alkaloids M03AA04 - Curare alkaloids
-DB01200:  G02CB01 - Prolactine inhibitors N04BC01 - Dopamine agonists
-DB01224:  N05AH04 - Diazepines, oxazepines, thiazepines and oxepines
-DB01238:  N05AX12 - Other antipsychotics
-DB01239:  N05AF03 - Thioxanthene derivatives
-DB01242:  N06AA04 - Non-selective monoamine reuptake inhibitors
-DB01267:  N05AX13 - Other antipsychotics
-DB01287:  Not in the ATC
-DB01392:  G04BE04 - Drugs used in erectile dysfunction
-DB01403:  N05AA02 - Phenothiazines with aliphatic side-chain
-DB01614:  N05AA04 - Phenothiazines with aliphatic side-chain
-DB01616:  A03AX08 - Other drugs for functional bowel disorders
-DB01618:  Not in the ATC
-DB01621:  N05AC04 - Phenothiazines with piperidine structure
-DB01622:  N05AB08 - Phenothiazines with piperazine structure
-DB01623:  N05AF04 - Thioxanthene derivatives
-DB01624:  Not in the ATC
-DB04842:  N05AG01 - Diphenylbutylpiperidine derivatives
-DB06144:  N05AE03 - Indole derivatives
-DB06148:  N06AX03 - Other antidepressants
-DB06288:  N05AL05 - Benzamides
-DB08810:  Not in the ATC
-
----------------------------------------------------------------------------------------------
-ATC: [C01C] - [CARDIAC STIMULANTS EXCL. CARDIAC GLYCOSIDES]
-FTC: P0060048 - Pro-cardiac muscle contraction
-
-Predictions:
-DB00397:  R01BA01 - Sympathomimetics
-DB00449:  S01EA02 - Sympathomimetics in glaucoma therapy1)
-DB00696:  N02CA01 - Ergot alkaloids N02CA02 - Ergot alkaloids
-DB00699:  C04AE02 - Ergot alkaloids
-DB00852:  R01BA02 - Sympathomimetics
-DB00865:  Not in the ATC
-DB00935:  R01AA05 - Sympathomimetics, plain R01AB07 - Sympathomimetics, combinations excl. corticosteroids S01GA04 - Sympathomimetics used as decongestants
-DB00964:  S01EA03 - Sympathomimetics in glaucoma therapy1)
-DB01186:  N04BC02 - Dopamine agonists
-DB01200:  G02CB01 - Prolactine inhibitors N04BC01 - Dopamine agonists
-DB01253:  G02AB03 - Ergot alkaloids
-DB01579:  Not in the ATC
-DB06262:  Not in the ATC
-DB06694:  S01GA03 - Sympathomimetics used as decongestants
-DB06706:  A03AX10 - Other drugs for functional bowel disorders
-DB06707:  Not in the ATC
-DB06711:  R01AA08 - Sympathomimetics, plain
-
----------------------------------------------------------------------------------------------
-ATC: [A02BB, G02AD] - [Prostaglandins, Prostaglandins]
-FTC: P0004955 - Pro-prostaglandin receptor activity
-
-Predictions:
-DB00159:  C10AX06 - Other lipid modifying agents
-DB00197:  A10BG01 - Thiazolidinediones
-DB00244:  A07EC02 - Aminosalicylic acid and similar agents
-DB00287:  S01EE04 - Prostaglandin analogues1)
-DB00328:  C01EB03 - Other cardiac preparations M01AB01 - Acetic acid derivatives and related substances
-DB00412:  A10BG02 - Thiazolidinediones
-DB00654:  S01EE01 - Prostaglandin analogues1)
-DB00731:  A10BX03 - Other blood glucose lowering drugs, excl. insulins
-DB00770:  C01EA01 - Prostaglandins G04BE01 - Drugs used in erectile dysfunction
-DB00795:  A07EC01 - Aminosalicylic acid and similar agents
-DB00905:  S01EE03 - Prostaglandin analogues1)
-DB00912:  A10BX02 - Other blood glucose lowering drugs, excl. insulins
-DB00966:  C09CA07 - Angiotensin II antagonists, plain
-DB01014:  A07EC04 - Aminosalicylic acid and similar agents
-DB01067:  A10BB07 - Sulfonamides, urea derivatives
-DB01088:  B01AC11 - Platelet aggregation inhibitors excl. heparin
-DB01132:  A10BG03 - Thiazolidinediones
-DB01252:  Not in the ATC
-DB01393:  C10AB02 - Fibrates
-DB01586:  A05AA02 - Bile acid preparations
-
----------------------------------------------------------------------------------------------
-ATC: [M02AA] - [Antiinflammatory preparations, non-steroids for topical use]
-FTC: A0006954 - Anti-inflammatory response
-
-Predictions:
-DB00005:  Not in the ATC
-DB00051:  Not in the ATC
-DB00065:  L04AB02 - Tumor necrosis factor alpha (TNF-) inhibitors
-DB00159:  C10AX06 - Other lipid modifying agents
-DB00177:  C09CA03 - Angiotensin II antagonists, plain
-DB00197:  A10BG01 - Thiazolidinediones
-DB00233:  J04AA01 - Aminosalicylic acid and derivatives
-DB00244:  A07EC02 - Aminosalicylic acid and similar agents
-DB00275:  C09CA08 - Angiotensin II antagonists, plain
-DB00316:  N02BE01 - Anilides
-DB00328:  C01EB03 - Other cardiac preparations M01AB01 - Acetic acid derivatives and related substances
-DB00461:  M01AX01 - Other antiinflammatory and antirheumatic agents, non-steroids
-DB00465:  M01AB15 - Acetic acid derivatives and related substances S01BC05 - Antiinflammatory agents, non-steroids
-DB00469:  M01AC02 - Oxicams
-DB00480:  L04AX04 - Other immunosuppressants
-DB00482:  L01XX33 - Other antineoplastic agents M01AH01 - Coxibs
-DB00533:  M01AH02 - Coxibs
-DB00573:  M01AE04 - Propionic acid derivatives
-DB00580:  M01AH03 - Coxibs
-DB00605:  M01AB02 - Acetic acid derivatives and related substances
-DB00678:  C09CA01 - Angiotensin II antagonists, plain
-DB00749:  M01AB08 - Acetic acid derivatives and related substances
-DB00784:  M01AG01 - Fenamates
-DB00795:  A07EC01 - Aminosalicylic acid and similar agents
-DB00796:  C09CA06 - Angiotensin II antagonists, plain
-DB00814:  M01AC06 - Oxicams
-DB00821:  Not in the ATC
-DB00861:  N02BA11 - Salicylic acid and derivatives
-DB00870:  M01AE07 - Propionic acid derivatives
-DB00876:  C09CA02 - Angiotensin II antagonists, plain
-DB00917:  G02AD02 - Prostaglandins
-DB00929:  A02BB01 - Prostaglandins
-DB00936:  D11AC30 - Medicated shampoos N02BA04 - Salicylic acid and derivatives
-DB00945:  A01AD05 - Other agents for local oral treatment B01AC06 - Platelet aggregation inhibitors excl. heparin N02BA01 - Salicylic acid and derivatives
-DB00963:  Not in the ATC
-DB00966:  C09CA07 - Angiotensin II antagonists, plain
-DB00991:  M01AE12 - Propionic acid derivatives
-DB01014:  A07EC04 - Aminosalicylic acid and similar agents
-DB01029:  C09CA04 - Angiotensin II antagonists, plain
-DB01041:  L04AX02 - Other immunosuppressants
-DB01240:  B01AC09 - Platelet aggregation inhibitors excl. heparin
-DB01283:  M01AH06 - Coxibs
-DB01294:  A02BA07 - H2-receptor antagonists A02BX05 - Other drugs for peptic ulcer and gastro-oesophageal reflux disease (GORD) A02BX12 - Other drugs for peptic ulcer and gastro-oesophageal reflux disease (GORD)
-DB01342:  Not in the ATC
-DB01347:  Not in the ATC
-DB01349:  C09CA05 - Angiotensin II antagonists, plain
-DB01381:  N06DX02 - Other anti-dementia drugs
-DB01397:  Not in the ATC
-DB01398:  D01AE12 - Other antifungals for topical use N02BA04 - Salicylic acid and derivatives S01BC08 - Antiinflammatory agents, non-steroids
-DB01399:  N02BA06 - Salicylic acid and derivatives
-DB01401:  Not in the ATC
-DB01404:  Not in the ATC
-DB01419:  Not in the ATC
-DB01427:  C01CE01 - Phosphodiesterase inhibitors
-DB01435:  N02BB01 - Pyrazolones S02DA03 - Analgesics and anesthetics
-DB01600:  Not in the ATC
-DB01611:  P01BA02 - Aminoquinolines
-DB01628:  M01AH05 - Coxibs
-DB04552:  Not in the ATC
-DB04786:  P01CX02 - Other agents against leishmaniasis and trypanosomiasis
-DB05260:  Not in the ATC
-DB06725:  M01AC05 - Oxicams
-DB06802:  S01BC10 - Antiinflammatory agents, non-steroids
-DB08811:  N05BA23 - Benzodiazepine derivatives
-
----------------------------------------------------------------------------------------------
-ATC: [C01EA] - [Prostaglandins]
-FTC: P0004957 - Pro-prostaglandin E receptor activity
-
-Predictions:
-DB00429:  G02AD04 - Prostaglandins
-DB00905:  S01EE03 - Prostaglandin analogues1)
-DB00917:  G02AD02 - Prostaglandins
-DB00929:  A02BB01 - Prostaglandins
-DB01088:  B01AC11 - Platelet aggregation inhibitors excl. heparin
-
----------------------------------------------------------------------------------------------
-ATC: [N07AA] - [Anticholinesterases]
-FTC: A0003990 - Anti-acetylcholinesterase activity
-
-Predictions:
-DB00382:  N06AA18 - Non-selective monoamine reuptake inhibitors N06DA01 - Anticholinesterases
-DB00483:  M03AC02 - Other quaternary ammonium compounds
-DB00674:  N06DA04 - Anticholinesterases
-DB00677:  Not in the ATC
-DB00772:  P03AX03 - Other ectoparasiticides, incl. scabicides
-DB00805:  N06AX07 - Other antidepressants
-DB00843:  N06DA02 - Anticholinesterases
-DB00941:  Not in the ATC
-DB00944:  S01EB04 - Parasympathomimetics
-DB00981:  S01EB05 - Parasympathomimetics V03AB19 - Antidotes
-DB00989:  N06DA03 - Anticholinesterases
-DB01010:  Not in the ATC
-DB01057:  Not in the ATC
-DB01199:  M03AA02 - Curare alkaloids M03AA04 - Curare alkaloids
-DB01245:  Not in the ATC
-
-tots: TP: 267 - FP: 532 - FN: 36
-Sensitivity/Recall (TP/TP+FN): 0.8811881
-Specificity/Precision (TP/TP+FP): 0.33416772
+tots: TP: 102 - FP: 120 - FN: 4
+Sensitivity/Recall (TP/TP+FN): 0.9622642
+Specificity/Precision (TP/TP+FP): 0.45945945

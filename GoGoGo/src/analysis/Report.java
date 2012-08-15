@@ -25,6 +25,8 @@ public class Report {
     String classAtcLabel;
     String classFtcLabel;
     ArrayList<String> predictionList;
+    String indication;
+    String fpString;
 
     public Report(int tP, int fP, int fN) {
 	TP = tP;

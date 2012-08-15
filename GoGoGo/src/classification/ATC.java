@@ -111,5 +111,20 @@ public class ATC implements Serializable {
 	return therapeutics;
     }
 
+    public String getTherapeuticIndications(String therapeutic) {
+	String indications = "";
+	for (ATCTerm term : this.getTerms()) {
+	    ArrayList<String> refs = term.getDrugBankReferences();
+	    for (String ref : refs) {
+		if(therapeutic.equals(ref)){
+		    String parent = term.getParentCode();
+		    indications += therapeutic + ": Known in the ATC as " + term.getCode() + " (" + term.getLabel() + "). Parent in the ATC: " + parent + " = " + getTerm(parent).getLabel() +"\n";
+//		    indications += therapeutic + ": " + parent + " - " + getTerm(parent).getLabel() + "\n";
+		}
+	    }
+	}
+	return indications;
+    }
+
 
 }

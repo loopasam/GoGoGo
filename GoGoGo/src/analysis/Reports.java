@@ -41,8 +41,6 @@ public class Reports {
 	BufferedWriter out = new BufferedWriter(fstream);
 	out.write("---REPORT---\n");
 	out.write("Total number of mappings: " + reports.size() + "\n");
-	out.write("Number of drugs from the ATC considered for the mapping: " + numberOfDrugsFromAtc + "\n");
-	out.write("Number of drugs from the FTC considered for the mapping: " + numberOfDrugsFromFtc + "\n\n\n");
 
 	int totalTP = 0;
 	int totalFP = 0;
@@ -52,22 +50,21 @@ public class Reports {
 	    totalFP += report.FP;
 	    totalTP += report.TP;
 	    out.write("---------------------------------------------------------------------------------------------\n");
-	    out.write("ATC: " + report.classAtc + " - " + report.classAtcLabel + "\n");
-	    out.write("FTC: " + report.classFtc + " - " + report.classFtcLabel + "\n");
-//	    out.write("Atc list: " + report.compoundsAtc + "\n");
-//	    out.write("Ftc list: " + report.compoundsFtc + "\n");
-	    out.write("\nPredictions:\n");
-	    for (String prediction : report.predictionList) {
-		out.write(prediction + "\n");
-	    }
-	    out.write("\n");
+	    out.write("Indication: " + report.indication + "\n");
+	    out.write("ATC expression: " + report.classAtc + "\n");
+	    out.write("FTC expression: " + report.classFtc + "\n");
+	    out.write("TP: " + report.TP + " - FN: " + report.FN + " - FP: " + report.FP + "\n");
+	    out.write("Drugs in ATC: " + report.compoundsAtc + "\n");
+	    out.write("Drugs in FTC: " + report.compoundsFtc + "\n");
+	    out.write("False positives: " + report.fpList + "\n");
+	    out.write(report.fpString);
 	}
-
+	out.write("---------------------------------------------------------------------------------------------\n");
 	out.write("tots: TP: " + totalTP + " - FP: " + totalFP + " - FN: " + totalFN + "\n");
-	
+
 	float sensitivity = totalTP/(float) (totalTP+totalFN);
 	out.write("Sensitivity/Recall (TP/TP+FN): " + sensitivity + "\n");
-	
+
 	float precision = totalTP/(float) (totalTP+totalFP);
 	out.write("Specificity/Precision (TP/TP+FP): " + precision + "\n");
 
