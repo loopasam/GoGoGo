@@ -19779,6 +19779,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00005 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00005">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etanercept</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L04AB01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00005</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00006 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00006">
@@ -19919,7 +19930,7 @@
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00019">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pegfilgrastim</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L03AA13"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L03AA10"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00019</rdfs:seeAlso>
     </owl:Class>
     
@@ -19932,6 +19943,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L03AA09"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00020</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00021 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00021">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secretin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V04CK01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00021</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -19976,6 +19998,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B02BD02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00025</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00026 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00026">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anakinra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L04AC03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00026</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20168,6 +20201,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00048 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00048">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collagenase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D03BA02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00048</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00049 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00049">
@@ -20186,6 +20230,28 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/H01CC02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00050</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00051 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00051">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adalimumab</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L04AB04"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00051</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00052 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00052">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Somatropin recombinant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/H01AC01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00052</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20279,6 +20345,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00066 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00066">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Follitropin beta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G03GA06"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00066</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00067 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00067">
@@ -20341,6 +20418,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L01XC02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00073</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00074 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00074">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basiliximab</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L04AC02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00074</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20478,6 +20566,18 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00091 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00091">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclosporine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L04AD01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01XA18"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00091</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00092 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00092">
@@ -20528,7 +20628,6 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filgrastim</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L03AA02"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L03AA13"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00099</rdfs:seeAlso>
     </owl:Class>
     
@@ -20549,6 +20648,7 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00102">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Becaplermin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A01AD08"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D03AX06"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00102</rdfs:seeAlso>
@@ -20642,6 +20742,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J06BB16"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00110</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00111 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00111">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daclizumab</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L04AC01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00111</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -20746,6 +20857,8 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamin C</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A11GA01"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G01AD03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01XA15"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00126</rdfs:seeAlso>
     </owl:Class>
     
@@ -20779,7 +20892,7 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00130">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L-Glutamine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B05XB02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A16AA03"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00130</rdfs:seeAlso>
     </owl:Class>
@@ -20972,8 +21085,10 @@
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00162">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamin A</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A11CA01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D10AD02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V04CB01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01AX02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01XA02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00162</rdfs:seeAlso>
     </owl:Class>
     
@@ -21001,6 +21116,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00166 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00166">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lipoic Acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A16AX01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00166</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00169 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00169">
@@ -21008,6 +21134,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A11CC05"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00169</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00170 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00170">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Menadione</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B02BA02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00170</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -21123,6 +21260,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N07BA01"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00184</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00185 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00185">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cevimeline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N07AX03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00185</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -21350,6 +21498,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Azithromycin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01FA10"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01AA26"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00207</rdfs:seeAlso>
     </owl:Class>
     
@@ -21497,6 +21646,18 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J05AE04"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00220</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00221 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00221">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isoetharine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R03AC07"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R03CC06"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00221</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -21785,6 +21946,7 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00250">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dapsone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D10AX05"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J04BA02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00250</rdfs:seeAlso>
@@ -21938,6 +22100,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sulfisoxazole</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01EB05"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01AB02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00263</rdfs:seeAlso>
     </owl:Class>
     
@@ -21951,6 +22114,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C07AB52"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00264</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00266 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00266">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dicumarol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B01AA01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00266</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -22610,6 +22784,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00326 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00326">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calcium Gluceptate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A12AA10"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00326</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00327 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00327">
@@ -22707,10 +22892,25 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00336">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nitrofurazone</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C03CA01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B05CA03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D08AF01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D09AA03"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01XE01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/P01CC02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01AX04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S02AA02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00336</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00337 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00337">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pimecrolimus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D11AH02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00337</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -22790,6 +22990,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N06AA11"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00344</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00345 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00345">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aminohippurate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V04CH30"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00345</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -22875,6 +23086,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00353 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00353">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methylergonovine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G02AB01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00353</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00354 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00354">
@@ -22938,6 +23160,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01EC02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00359</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00360 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00360">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tetrahydrobiopterin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A16AX07"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00360</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -23013,8 +23246,8 @@
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00367">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Levonorgestrel</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G02BA03"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G03AC03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G03AD01"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00367</rdfs:seeAlso>
     </owl:Class>
     
@@ -23408,7 +23641,7 @@
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00402">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eszopiclone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05CF01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05CF04"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00402</rdfs:seeAlso>
     </owl:Class>
     
@@ -24562,6 +24795,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00507 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00507">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nitazoxanide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/P01AX11"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00507</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00508 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00508">
@@ -24701,9 +24945,8 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00523">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alitretinoin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D10AD01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D11AH04"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L01XX14"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L01XX22"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00523</rdfs:seeAlso>
     </owl:Class>
@@ -24748,7 +24991,11 @@
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00527">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dibucaine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C05AD04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D04AB02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N01BB06"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01HA06"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S02DA04"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00527</rdfs:seeAlso>
     </owl:Class>
     
@@ -25440,6 +25687,7 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D07AC04"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01BA15"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S02BA08"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00591</rdfs:seeAlso>
     </owl:Class>
     
@@ -25746,6 +25994,7 @@
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00620">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triamcinolone</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A01AC01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C05AA12"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D07AB09"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D07XB02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
@@ -25821,6 +26070,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacitracin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D06AX05"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01XX10"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R02AB04"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00626</rdfs:seeAlso>
     </owl:Class>
@@ -26377,6 +26627,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00680 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00680">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moricizine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C01BG01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00680</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00681 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00681">
@@ -26497,6 +26758,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phentolamine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C04AB01"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V03AB36"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00692</rdfs:seeAlso>
     </owl:Class>
     
@@ -27100,13 +27362,10 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00747">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scopolamine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A03BB01"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A03BB03"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A04AD01"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05CM05"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01FA02"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01FA03"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00747</rdfs:seeAlso>
     </owl:Class>
     
@@ -27319,6 +27578,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01AD09"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R03BA07"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00764</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00765 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00765">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metyrosine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C02KB01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00765</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -27587,8 +27857,12 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00794">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Primidone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D08AC04"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N03AA03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01AX07"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R02AA18"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01AX08"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S03AA05"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00794</rdfs:seeAlso>
     </owl:Class>
     
@@ -27737,7 +28011,7 @@
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00807">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proparacaine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N01BA04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01HA04"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00807</rdfs:seeAlso>
     </owl:Class>
     
@@ -28351,6 +28625,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R03AC03"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R03CC03"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00871</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB00872 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB00872">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conivaptan</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C03XA02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB00872</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -29895,6 +30180,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01022 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01022">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phytonadione</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B02BA01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01022</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01023 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01023">
@@ -30082,6 +30378,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J04AB02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01045</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01046 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01046">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lubiprostone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A06AX03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01046</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -30544,6 +30851,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D01AE23"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01091</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01092 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01092">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ouabain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C01AC01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01092</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -31274,14 +31592,20 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ofloxacin</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01MA01"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01MA02"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01MA12"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01AX11"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01AX13"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01AX19"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S02AA15"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S03AA07"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S02AA16"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01165</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01166 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01166">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cilostazol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B01AC23"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01166</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -32178,6 +32502,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01252 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01252">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitiglinide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A10BX08"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01252</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01253 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01253">
@@ -32234,6 +32569,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R03BA02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01BA11"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01260</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01261 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01261">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sitagliptin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A10BH01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01261</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -32795,6 +33141,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01344 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01344">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polystyrene sulfonate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V03AE01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01344</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01345 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01345">
@@ -32930,10 +33287,10 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01364">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ephedrine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C01CA26"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01AA03"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01AB05"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01BA02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R03CA02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01FB02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01364</rdfs:seeAlso>
@@ -33048,6 +33405,8 @@
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01377">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnesium oxide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A02AA02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A06AD02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A12CC10"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01377</rdfs:seeAlso>
@@ -33105,6 +33464,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01382 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01382">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glycodiazine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A10BC01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01382</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01384 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01384">
@@ -33123,6 +33493,18 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C08CX01"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01388</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01390 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01390">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sodium bicarbonate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B05CB04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B05XA02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01390</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33577,6 +33959,39 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01486 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01486">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A08AA07"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01486</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01493 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01493">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethylestrenol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A14AB02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01493</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01501 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01501">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Difenoxin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A07DA04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01501</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01544 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01544">
@@ -33584,6 +33999,39 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05CD03"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01544</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01558 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01558">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bromazepam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05BA08"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01558</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01563 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01563">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chloral hydrate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05CC01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01563</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01567 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01567">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fludiazepam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05BA17"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01567</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33617,6 +34065,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N06BA02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01576</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01577 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01577">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methamphetamine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N06BA03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01577</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33715,6 +34174,7 @@
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01590">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Everolimus</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L01XE10"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L04AA18"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01590</rdfs:seeAlso>
     </owl:Class>
@@ -33813,6 +34273,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01600 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01600">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiaprofenic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/M01AE11"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01600</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01601 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01601">
@@ -33824,6 +34295,72 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01602 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01602">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacampicillin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01CA06"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01602</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01603 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01603">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meticillin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01CF03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01603</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01604 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01604">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pivampicillin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01CA02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01604</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01605 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01605">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pivmecillinam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01CA08"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01605</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01606 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01606">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tazobactam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01CG02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01606</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01607 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01607">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ticarcillin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01CA13"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01607</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01608 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01608">
@@ -33831,6 +34368,28 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05AC01"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01608</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01609 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01609">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deferasirox</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V03AC03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01609</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01610 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01610">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valganciclovir</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J05AB14"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01610</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33857,6 +34416,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01613 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01613">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrityl Tetranitrate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C01DA13"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01613</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01614 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01614">
@@ -33875,6 +34445,28 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A03AX08"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01616</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01618 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01618">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molindone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05AE02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01618</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01619 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01619">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenindamine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R06AX04"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01619</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33919,6 +34511,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05AF04"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01623</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01624 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01624">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zuclopenthixol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05AF05"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01624</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33979,6 +34582,164 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB01708 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB01708">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dehydroepiandrosterone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A14AA07"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB01708</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02174 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02174">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D-Glutamine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A16AA03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02174</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02266 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02266">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flufenamic Acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/M01AG03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02266</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02300 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02300">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calcipotriol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D05AX02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02300</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02329 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02329">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbenoxolone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A02BX01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02329</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02383 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02383">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tolrestat</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A10XA01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02383</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02546 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02546">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorinostat</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L01XX38"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02546</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02638 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02638">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terlipressin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/H01BA04"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02638</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02640 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02640">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fumagillin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/P01AX10"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02640</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02659 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02659">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cholic Acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A05AA03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02659</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02701 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02701">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicotinamide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A11HA01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02701</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02703 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02703">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusidic Acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D06AX01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D09AA02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01XC01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01AA13"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02703</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02901 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02901">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dihydrotestosterone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A14AA01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G03BB02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02901</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02925 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02925">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piretanide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C03CA03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02925</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB02959 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB02959">
@@ -33986,6 +34747,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N06AX01"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB02959</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB03128 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB03128">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acetylcholine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01EB09"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB03128</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -33998,6 +34770,134 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G01AD02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S02AA10"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB03166</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB03255 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB03255">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C05BB05"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D08AE03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N01BX03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R02AA19"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB03255</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB03585 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB03585">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxyphenbutazone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/M01AA03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/M02AA04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01BC02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB03585</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB03615 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB03615">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ribostamycin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01GB10"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB03615</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB03783 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB03783">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenacetin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N02BE03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB03783</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04077 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04077">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glycerol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A06AG04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A06AX01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04077</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04106 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04106">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fotemustine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L01AD05"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04106</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04165 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04165">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valpromide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N03AG02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04165</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04173 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04173">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fructose</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V06DC02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04173</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04272 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04272">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Citric Acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A09AB04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04272</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04398 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04398">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lactic Acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G01AD01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04398</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04552 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04552">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niflumic Acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/M01AX02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/M02AA17"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04552</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34058,6 +34958,39 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04599 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04599">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aniracetam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N06BX11"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04599</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04630 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04630">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aldosterone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/H02AA01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04630</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04711 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04711">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iodipamide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V08AC04"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04711</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04743 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04743">
@@ -34077,6 +35010,44 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/P01CX02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04786</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04812 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04812">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benoxaprofen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/M01AE06"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04812</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04813 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04813">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bithionol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D10AB01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/P02BX01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04813</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04815 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04815">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clioquinol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D08AH30"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D09AA10"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G01AC02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/P01AA02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S02AA05"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04815</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34103,6 +35074,39 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04819 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04819">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methapyrilene</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R06AC05"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04819</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04820 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04820">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nialamide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N06AF02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04820</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04821 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04821">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nomifensine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N06AX04"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04821</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04822 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04822">
@@ -34110,6 +35114,106 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R05DB09"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04822</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04823 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04823">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxyphenisatin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A06AB01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04823</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04824 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04824">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenolphthalein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A06AB04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04824</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04825 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04825">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prenylamine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C01DX02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04825</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04826 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04826">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thenalidine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D04AA03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R06AX03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04826</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04828 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04828">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zomepirac</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/M01AB04"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04828</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04830 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04830">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buformin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A10BA03"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04830</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04831 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04831">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ticrynafen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C03CC02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04831</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04832 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04832">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zimelidine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N06AB02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04832</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04833 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04833">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methaqualone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05CM01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04833</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34125,6 +35229,28 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04836 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04836">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amineptine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N06AA19"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04836</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04838 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04838">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclandelate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C04AX01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04838</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04839 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04839">
@@ -34132,6 +35258,28 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/G03HA01"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04839</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04840 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04840">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debrisoquin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C02CC04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04840</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04841 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04841">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flunarizine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N07CA03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04841</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34235,6 +35383,28 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04894 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04894">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vapreotide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/H01CB04"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04894</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04895 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04895">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pegaptanib</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01LA03"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04895</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04896 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04896">
@@ -34246,6 +35416,28 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04898 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04898">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ximelagatran</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B01AE05"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04898</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04899 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04899">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nesiritide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/C01DX19"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04899</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04930 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04930">
@@ -34253,6 +35445,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/P03AC04"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04930</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB04932 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB04932">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defibrotide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B01AX01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB04932</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34290,6 +35493,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB05245 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB05245">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silver sulfadiazine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/D06BA01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB05245</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB05246 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB05246">
@@ -34297,6 +35511,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N03AD03"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB05246</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB05259 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB05259">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glatiramer Acetate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L03AX13"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB05259</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34390,13 +35615,48 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06149 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06149">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teicoplanin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01XA02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06149</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06150 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06150">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sulfadimethoxine</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01ED02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/J01ED01"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06150</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06151 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06151">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acetylcysteine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R05CB01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01XA08"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V03AB23"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06151</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06155 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06155">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rimonabant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A08AX01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06155</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34408,6 +35668,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L04AC08"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06168</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06196 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06196">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Icatibant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B06AC02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06196</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34463,6 +35734,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A06AH02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06274</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06285 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06285">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teriparatide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/H05AA02"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06285</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34583,6 +35865,8 @@
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06694">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xylometazoline</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01AA07"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01AB06"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01GA03"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06694</rdfs:seeAlso>
     </owl:Class>
@@ -34739,6 +36023,8 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naphazoline</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01AA08"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R01AB02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01GA01"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06711</rdfs:seeAlso>
     </owl:Class>
     
@@ -34766,6 +36052,19 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06715 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06715">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Potassium Iodide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/R05CA02"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/S01XA04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/V03AB21"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06715</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06717 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06717">
@@ -34784,6 +36083,29 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A14AA02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06718</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06719 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06719">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buserelin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L02AE01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06719</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06724 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06724">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calcium carbonate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A02AC01"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A12AA04"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06724</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34840,6 +36162,17 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/A03AD02"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06751</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06772 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06772">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cabazitaxel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L01CD04"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06772</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -34910,6 +36243,17 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06803 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06803">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niclosamide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/P02DA01"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06803</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06809 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06809">
@@ -34928,6 +36272,28 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/L01DC02"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06810</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB06822 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB06822">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tinzaparin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B01AB10"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB06822</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB08439 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB08439">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parecoxib</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/M01AH04"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB08439</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -35109,6 +36475,28 @@
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/N05BA23"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB08811</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB08813 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB08813">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nadroparin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B01AB06"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB08813</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/Rebholz-srv/atc/DB08814 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/Rebholz-srv/atc/DB08814">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triflusal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/B01AC18"/>
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/Rebholz-srv/atc/DrugBankCompound"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.drugbank.ca/drugs/DB08814</rdfs:seeAlso>
     </owl:Class>
     
 

@@ -31,14 +31,12 @@ public class ParserLauncher {
 	//add a few relations that are missing within GO, manual curation ftw.
 	goParser.normalize();
 	goParser.save();
-	
+
 	System.out.println("Start connector...");
 	GoaConnector connector = new GoaConnector("data/drugbank/drugbank.ser", "data/go/go.ser");
 	connector.fillPartnersWithGoTerms();
 	connector.save("data/integration/dataset-filtered.ser");
-	
+
     }
-
-
 
 }

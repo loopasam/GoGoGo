@@ -97,6 +97,7 @@ public class EvaluationFTC {
 		List<OWLClass> atcSubclasses = null;
 		System.out.println("getting ATC subclasses for expression: " + atcClass + " and DrugBankCompound");
 		atcSubclasses = evaluation.atcBrain.getSubClasses(atcClass + " and DrugBankCompound", false);
+		System.out.println("ATC subclasses: " + atcSubclasses);
 		for (OWLClass atcSubclass : atcSubclasses) {
 		    if(!sumAtcClasses.contains(atcSubclass)){
 			sumAtcClasses.add(atcSubclass);
@@ -142,21 +143,18 @@ public class EvaluationFTC {
 
 	    Report report = new Report(TP, FP, FN);
 	    report.fnList = fnList;
-	    
+
 	    String fpString = "";	    
 	    for (String fp : fpList) {
-		System.out.println("getting indications for compound: " + fp);
 		String indications = evaluation.atc.getTherapeuticIndications(fp);
 		if(indications.equals("")){
 		    fpString += fp + ": Not in the ATC\n";
 		}else{
-			fpString += indications;
+		    fpString += indications;
 		}
-		
-		System.out.println("current fpString: " + fpString);
 	    }
 	    fpString += "\n";
-	    
+
 	    report.fpString = fpString;
 	    report.fpList = fpList;
 	    report.tpList = tpList;
