@@ -33,8 +33,24 @@ public class EvaluationFTC {
     BrainNonStatic atcBrain;
     Reports reports;
     ATC atc;
+    ArrayList<String> atcStructuralClasses;
+    boolean removeStructuralClasses;
 
-    public EvaluationFTC(String pathFtc, String pathAtc, String pathMapping) throws IOException, OWLOntologyCreationException, ClassNotFoundException {
+    public EvaluationFTC(String pathFtc, String pathAtc, String pathMapping, boolean removeStructuralClasses, String pathToStructuralExceptions) throws IOException, OWLOntologyCreationException, ClassNotFoundException {
+
+	this.removeStructuralClasses = removeStructuralClasses;
+
+	//Load the structural classes information
+	if(removeStructuralClasses){
+	    atcStructuralClasses = new ArrayList<String>();
+	    FileInputStream fstream = new FileInputStream(pathToStructuralExceptions);
+	    DataInputStream in = new DataInputStream(fstream);
+	    BufferedReader br = new BufferedReader(new InputStreamReader(in));
+	    String line;
+	    while ((line = br.readLine()) != null)   {
+		atcStructuralClasses.add(line);
+	    }	
+	}
 
 	//Load an initiate the mapping hash
 	mappings = new Mappings();
@@ -69,7 +85,16 @@ public class EvaluationFTC {
     public static void main(String[] args) throws IOException, OWLOntologyCreationException, OWLEntityQueryException, ParserException, ClassNotFoundException {
 
 	//Initiate the evaluation
-	EvaluationFTC evaluation = new EvaluationFTC("data/ftc/ftc.min.out.owl", "data/atc/atc.owl", "data/mapping/ATC_FTC/mapping-enhanced-atc-ftc.txt");
+	EvaluationFTC evaluation = new EvaluationFTC("data/ftc/ftc.min.out.owl", "data/atc/atc.owl", "data/mapping/ATC_FTC/mapping-enhanced-atc-ftc.txt", false, "data/mapping/ATC_FTC/structural-classes.txt");
+
+	//Get the full list of drugs within the ATC.
+	List<OWLClass> allAtcOwlClassDrugs = evaluation.atcBrain.getSubClasses("DrugBankCompound", false);
+	ArrayList<String> allAtcDrugs = shortFormifiedClasses(allAtcOwlClassDrugs, evaluation.atcBrain);
+
+	//Get the full list of drugs within the FTC
+	List<OWLClass> allFtcOwlClassDrugs = evaluation.ftcBrain.getSubClasses("FTC:03", false);
+	ArrayList<String> allFtcDrugs = shortFormifiedClasses(allFtcOwlClassDrugs, evaluation.ftcBrain);
+
 
 	//Iterates over the equivalences defined in the file
 	for (Mapping mapping : evaluation.mappings.mappings) {
@@ -97,13 +122,13 @@ public class EvaluationFTC {
 		List<OWLClass> atcSubclasses = null;
 		System.out.println("getting ATC subclasses for expression: " + atcClass + " and DrugBankCompound");
 		atcSubclasses = evaluation.atcBrain.getSubClasses(atcClass + " and DrugBankCompound", false);
-		System.out.println("ATC subclasses: " + atcSubclasses);
 		for (OWLClass atcSubclass : atcSubclasses) {
-		    if(!sumAtcClasses.contains(atcSubclass)){
+		    if(!sumAtcClasses.contains(atcSubclass)){			
 			sumAtcClasses.add(atcSubclass);
 		    }
 		}
 	    }
+
 
 	    ArrayList<String> atcCompoundsShortFormified = shortFormifiedClasses(sumAtcClasses, evaluation.atcBrain);
 	    ArrayList<String> ftcCompoundsShortFormified = shortFormifiedClasses(sumFtcClasses, evaluation.ftcBrain);
@@ -119,25 +144,61 @@ public class EvaluationFTC {
 		}
 	    }
 
-	    //Get false positives: FTC found something but there is nothing in the ATC == predictions.
+	    //Get false positives: FTC found something but there is nothing in the ATC but the drug is present in the ATC ==> predictions.
 	    //Impl: classes that are present in in the FTC set but not in the ATC set except Nothing
 	    int FP = 0;
 	    ArrayList<String> fpList = new ArrayList<String>();
 	    for (String ftcCompound : ftcCompoundsShortFormified) {
 		if(!atcCompoundsShortFormified.contains(ftcCompound) && !ftcCompound.equals("Nothing")){
-		    FP++;
-		    fpList.add(ftcCompound);
+		    //Chceck whether the compound exists in the ATC in the first place
+		    if(allAtcDrugs.contains(ftcCompound)){
+
+			//If the flag is true, then remove all the child classes to the structural class
+			if(evaluation.removeStructuralClasses){
+			    //Get the direct therapeutical categories for the ATC drug compound
+			    ArrayList<String> parentCodes = evaluation.atc.getParentCodesForTherapeutic(ftcCompound);
+			    //For each of them, check whether ALL the therapeutic categories are structures.
+			    //If yes, then discard
+			    boolean allCategoriesAreStructurals = false;
+			    int counterOfStructuralCatgories = 0;
+			    int numberOfParents = parentCodes.size();
+
+			    for (String atcStructuralClass : evaluation.atcStructuralClasses) {
+				Pattern pattern = Pattern.compile(atcStructuralClass);
+				for (String parentCode : parentCodes) {
+				    Matcher matcher = pattern.matcher(parentCode);
+				    if (matcher.find()){
+					counterOfStructuralCatgories++;
+				    }
+				}
+			    }
+
+			    if(numberOfParents == counterOfStructuralCatgories){
+				allCategoriesAreStructurals = true;
+			    }
+
+			    if(!allCategoriesAreStructurals){
+				FP++;
+				fpList.add(ftcCompound);
+			    }
+			}else{
+			    FP++;
+			    fpList.add(ftcCompound);
+			}
+		    }
 		}
 	    }
 
-	    //Get false negative: the FTC was not able to determine some of the compounds in the ATC
+	    //Get false negative: the FTC was not able to determine some of the compounds in the ATC and the drug is prsent in the FTC
 	    //Impl: classes that are in the ATC set but not in the FTC except Nothing
 	    int FN = 0;
 	    ArrayList<String> fnList = new ArrayList<String>();
 	    for (String atcCompound : atcCompoundsShortFormified) {
 		if(!ftcCompoundsShortFormified.contains(atcCompound) && !atcCompound.equals("Nothing")){
-		    FN++;
-		    fnList.add(atcCompound);
+		    if(allFtcDrugs.contains(atcCompound)){
+			FN++;
+			fnList.add(atcCompound);
+		    }
 		}
 	    }
 
@@ -175,26 +236,6 @@ public class EvaluationFTC {
 
     }
 
-    /**
-     * @param atcEquivalentCategories
-     * @param brain 
-     * @return
-     * @throws OWLEntityQueryException 
-     */
-    private static ArrayList<String> getLabels(ArrayList<String> atcEquivalentCategories, BrainNonStatic brain) throws OWLEntityQueryException {
-	ArrayList<String> labels = new ArrayList<String>();
-	for (String category : atcEquivalentCategories) {
-	    OWLClass owlClass  = brain.getOWLClass(category);
-	    labels.add(brain.getLabel(owlClass));
-	}
-	return labels;
-    }
-
-    /**
-     * @param atcBrain2 
-     * @param atcSubclasses
-     * @return
-     */
     private static ArrayList<String> shortFormifiedClasses(List<OWLClass> classes, BrainNonStatic brain) {
 
 	ArrayList<String> shortFormified = new ArrayList<String>();

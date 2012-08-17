@@ -1,26 +1,21 @@
----REPORT---
-Total number of mappings: 38
 ---------------------------------------------------------------------------------------------
 Indication: Pro-glucocorticoid-receptor
 ATC expression: A01AC or R03BA or H02AB or D10AA or C05AA or A07EA or D07A or S01BA or H02AA or S01BA
 FTC expression: P0004883
 TP: 32 - FN: 1 - FP: 1
-Drugs in ATC: [DB00620, DB00741, DB01234, Nothing, DB00180, DB00394, DB00443, DB00588, DB00764, DB01222, DB01260, DB01410, DB00635, DB00860, DB00896, DB00959, DB01384, DB00324, DB00591, DB00663, DB00769, DB01047, DB00223, DB00240, DB00288, DB00547, DB00596, DB00838, DB01013, DB01130, DB06781, DB00253, DB00873, DB00687, DB04630]
-Drugs in FTC: [DB00180, DB00223, DB00240, DB00253, DB00288, DB00324, DB00351, DB00394, DB00443, DB00547, DB00588, DB00591, DB00596, DB00620, DB00635, DB00663, DB00687, DB00741, DB00764, DB00769, DB00838, DB00846, DB00860, DB00873, DB00896, DB00959, DB01013, DB01047, DB01130, DB01234, DB01260, DB01380, DB01384, DB01410, DB06781, Nothing]
-False positives: [DB00351]
 DB00351: Known in the ATC as G03AC05 (megestrol). Parent in the ATC: G03AC = Progestogens
 DB00351: Known in the ATC as G03DB02 (megestrol). Parent in the ATC: G03DB = Pregnadien derivatives
 DB00351: Known in the ATC as G03DB04 (nomegestrol). Parent in the ATC: G03DB = Pregnadien derivatives
 DB00351: Known in the ATC as L02AB01 (megestrol). Parent in the ATC: L02AB = Progestogens
+
+http://www.drugbank.ca/drugs/DB00351
+Mestrogel has slight glucocorticoid activity
 
 ---------------------------------------------------------------------------------------------
 Indication: Anti-histamine receptor activity
 ATC expression: A02BA or D04AA or R06A
 FTC expression: A0004969
 TP: 41 - FN: 2 - FP: 34
-Drugs in ATC: [DB00501, DB00585, DB00863, DB00927, DB01294, DB08806, Nothing, DB00283, DB00792, DB01069, DB01075, DB01237, DB01246, DB04826, DB06691, DB08800, DB08801, DB08802, DB00341, DB00342, DB00354, DB00366, DB00372, DB00405, DB00427, DB00434, DB00455, DB00637, DB00719, DB00737, DB00748, DB00751, DB00835, DB00902, DB00920, DB00950, DB00967, DB00972, DB00985, DB01071, DB01114, DB01146, DB01176, DB01619, DB01620, DB04819]
-Drugs in FTC: [DB00245, DB00246, DB00283, DB00321, DB00334, DB00341, DB00342, DB00354, DB00363, DB00366, DB00370, DB00405, DB00420, DB00427, DB00434, DB00455, DB00458, DB00477, DB00501, DB00540, DB00557, DB00568, DB00585, DB00637, DB00656, DB00719, DB00726, DB00734, DB00737, DB00748, DB00751, DB00767, DB00768, DB00777, DB00792, DB00835, DB00863, DB00885, DB00902, DB00920, DB00927, DB00934, DB00940, DB00950, DB00967, DB00972, DB00985, DB01069, DB01071, DB01075, DB01084, DB01106, DB01114, DB01142, DB01146, DB01151, DB01173, DB01175, DB01176, DB01224, DB01237, DB01238, DB01239, DB01246, DB01403, DB01615, DB01619, DB01620, DB04837, DB04841, DB04890, DB06144, DB06148, DB06691, DB06698, DB06766, DB08799, DB08800, DB08801, DB08802, DB08806, Nothing]
-False positives: [DB00245, DB00246, DB00321, DB00334, DB00363, DB00370, DB00420, DB00458, DB00477, DB00540, DB00557, DB00568, DB00656, DB00726, DB00734, DB00768, DB00777, DB00934, DB00940, DB01084, DB01106, DB01142, DB01151, DB01173, DB01175, DB01224, DB01238, DB01239, DB01403, DB04841, DB06144, DB06148, DB06698, DB08799]
 DB00245: Known in the ATC as N04AC01 (benzatropine). Parent in the ATC: N04AC = Ethers of tropine or tropine derivatives
 DB00246: Known in the ATC as N05AE04 (ziprasidone). Parent in the ATC: N05AE = Indole derivatives
 DB00321: Known in the ATC as N06AA09 (amitriptyline). Parent in the ATC: N06AA = Non-selective monoamine reuptake inhibitors
@@ -70,9 +65,6 @@ Indication: Pro-prostaglandin-receptor-activity
 ATC expression: A02BB or G02AD or S01EE or C01EA
 FTC expression: P0004955
 TP: 8 - FN: 1 - FP: 16
-Drugs in ATC: [DB00929, Nothing, DB00429, DB00917, DB01160, DB00287, DB00654, DB00905, DB08819, DB00770]
-Drugs in FTC: [DB00159, DB00197, DB00244, DB00287, DB00328, DB00412, DB00429, DB00654, DB00731, DB00770, DB00795, DB00905, DB00912, DB00917, DB00929, DB00966, DB01014, DB01067, DB01088, DB01132, DB01160, DB01252, DB01393, DB01586, Nothing]
-False positives: [DB00159, DB00197, DB00244, DB00328, DB00412, DB00731, DB00795, DB00912, DB00966, DB01014, DB01067, DB01088, DB01132, DB01252, DB01393, DB01586]
 DB00159: Known in the ATC as C10AX06 (omega-3-triglycerides incl. other esters and acids). Parent in the ATC: C10AX = Other lipid modifying agents
 DB00197: Known in the ATC as A10BG01 (troglitazone). Parent in the ATC: A10BG = Thiazolidinediones
 DB00244: Known in the ATC as A07EC02 (mesalazine). Parent in the ATC: A07EC = Aminosalicylic acid and similar agents
@@ -363,9 +355,10 @@ Indication: Anti-thrombospondin-receptor-activity
 ATC expression: B01AE
 FTC expression: A0070053
 TP: 5 - FN: 0 - FP: 1
-Drugs in ATC: [DB00001, DB00006, DB00278, DB04898, DB06695, Nothing]
-Drugs in FTC: [DB00001, DB00006, DB00278, DB04786, DB04898, DB06695, Nothing]
-False positives: [DB04786]
+
+!!Could be used
+
+
 DB04786: Known in the ATC as P01CX02 (suramin sodium). Parent in the ATC: P01CX = Other agents against leishmaniasis and trypanosomiasis
 
 ---------------------------------------------------------------------------------------------
@@ -373,9 +366,6 @@ Indication: Anti-voltage-gated-sodium-channel-activity-involved-in-regulation-of
 ATC expression: C01BA or C01BB or C01BC
 FTC expression: A0086006
 TP: 11 - FN: 1 - FP: 14
-Drugs in ATC: [DB00280, DB00721, DB00908, DB01035, DB01426, DB06727, Nothing, DB00281, DB00379, DB01056, DB01429, DB01182, DB01195, DB01228]
-Drugs in FTC: [DB00192, DB00243, DB00252, DB00280, DB00281, DB00379, DB00473, DB00527, DB00532, DB00564, DB00680, DB00740, DB00750, DB00754, DB00776, DB00868, DB00907, DB00908, DB00909, DB01035, DB01056, DB01182, DB01195, DB01228, DB01320, DB01346, DB01426, DB01429, Nothing]
-False positives: [DB00243, DB00252, DB00527, DB00532, DB00564, DB00680, DB00740, DB00750, DB00754, DB00776, DB00868, DB00907, DB00909, DB01320]
 DB00243: Known in the ATC as C01EB18 (ranolazine). Parent in the ATC: C01EB = Other cardiac preparations
 DB00252: Known in the ATC as N03AB02 (phenytoin). Parent in the ATC: N03AB = Hydantoin derivatives
 DB00252: Known in the ATC as N03AB04 (mephenytoin). Parent in the ATC: N03AB = Hydantoin derivatives
@@ -386,7 +376,19 @@ DB00527: Known in the ATC as N01BB06 (cinchocaine). Parent in the ATC: N01BB = A
 DB00527: Known in the ATC as S01HA06 (cinchocaine). Parent in the ATC: S01HA = Local anesthetics
 DB00527: Known in the ATC as S02DA04 (cinchocaine). Parent in the ATC: S02DA = Analgesics and anesthetics
 DB00532: Known in the ATC as N03AB04 (mephenytoin). Parent in the ATC: N03AB = Hydantoin derivatives
+
+
+!!prediction
 DB00564: Known in the ATC as N03AF01 (carbamazepine). Parent in the ATC: N03AF = Carboxamide derivatives
+
+!!prediction
+DB00907: Known in the ATC as N01BC01 (cocaine). Parent in the ATC: N01BC = Esters of benzoic acid
+DB00907: Known in the ATC as R02AD03 (cocaine). Parent in the ATC: R02AD = Anesthetics, local
+DB00907: Known in the ATC as S01HA01 (cocaine). Parent in the ATC: S01HA = Local anesthetics
+DB00907: Known in the ATC as S02DA02 (cocaine). Parent in the ATC: S02DA = Analgesics and anesthetics
+
+
+
 DB00680: Known in the ATC as C01BG01 (moracizine). Parent in the ATC: C01BG = Other antiarrhythmics, class I and III
 DB00740: Known in the ATC as N07XX02 (riluzole). Parent in the ATC: N07XX = Other nervous system drugs
 DB00750: Known in the ATC as N01BB04 (prilocaine). Parent in the ATC: N01BB = Amides
@@ -409,6 +411,9 @@ Drugs in ATC: [DB00235, DB01427, DB04880, Nothing]
 Drugs in FTC: [DB00235, DB00261, DB00277, DB00922, DB01166, DB01223, DB01303, DB01427, DB04880, DB05266, DB08811, Nothing]
 False positives: [DB00261, DB00277, DB00922, DB01166, DB01223, DB01303, DB05266, DB08811]
 DB00261: Known in the ATC as L01XX35 (anagrelide). Parent in the ATC: L01XX = Other antineoplastic agents
+
+!! prediction
+
 DB00277: Known in the ATC as R03DA04 (theophylline). Parent in the ATC: R03DA = Xanthines
 DB00277: Known in the ATC as R03DA05 (aminophylline). Parent in the ATC: R03DA = Xanthines
 DB00922: Known in the ATC as C01CX08 (levosimendan). Parent in the ATC: C01CX = Other cardiac stimulants
@@ -476,6 +481,10 @@ False positives: [DB01185]
 DB01185: Known in the ATC as G03BA01 (fluoxymesterone). Parent in the ATC: G03BA = 3-oxoandrosten (4) derivatives
 
 ---------------------------------------------------------------------------------------------
+
+!!interesting
+
+
 Indication: Pro-estrogen-activated-sequence-specific-DNA-binding-RNA-polymerase-II-transcription-factor-activity
 ATC expression: G03CA or G03CB or G03XC
 FTC expression: P0038052
@@ -530,6 +539,9 @@ TP: 2 - FN: 0 - FP: 1
 Drugs in ATC: [DB01126, DB01216, Nothing]
 Drugs in FTC: [DB00548, DB01126, DB01216, Nothing]
 False positives: [DB00548]
+
+!!prediction
+
 DB00548: Known in the ATC as D10AX03 (azelaic acid). Parent in the ATC: D10AX = Other anti-acne preparations for topical use
 
 ---------------------------------------------------------------------------------------------
