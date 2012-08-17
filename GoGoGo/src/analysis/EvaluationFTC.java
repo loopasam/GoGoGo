@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -95,6 +96,7 @@ public class EvaluationFTC {
 	List<OWLClass> allFtcOwlClassDrugs = evaluation.ftcBrain.getSubClasses("FTC:03", false);
 	ArrayList<String> allFtcDrugs = shortFormifiedClasses(allFtcOwlClassDrugs, evaluation.ftcBrain);
 
+	HashSet<String> compoundsAnalyzed = new HashSet<String>();
 
 	//Iterates over the equivalences defined in the file
 	for (Mapping mapping : evaluation.mappings.mappings) {
@@ -132,6 +134,14 @@ public class EvaluationFTC {
 
 	    ArrayList<String> atcCompoundsShortFormified = shortFormifiedClasses(sumAtcClasses, evaluation.atcBrain);
 	    ArrayList<String> ftcCompoundsShortFormified = shortFormifiedClasses(sumFtcClasses, evaluation.ftcBrain);
+
+	    for (String ftcCompoundShortFormified : ftcCompoundsShortFormified) {
+		compoundsAnalyzed.add(ftcCompoundShortFormified);
+	    }
+
+	    for (String atcCompoundShortFormified : atcCompoundsShortFormified) {
+		compoundsAnalyzed.add(atcCompoundShortFormified);
+	    }
 
 	    //Get true positives: is in the ATC and was found by the FTC.
 	    //Impl: overlapping classes except Nothing
@@ -185,11 +195,11 @@ public class EvaluationFTC {
 			    FP++;
 			    fpList.add(ftcCompound);
 			}
-		    }
+		    } 
 		}
 	    }
 
-	    //Get false negative: the FTC was not able to determine some of the compounds in the ATC and the drug is prsent in the FTC
+	    //Get false negative: the FTC was not able to determine some of the compounds in the ATC and the drug is present in the FTC
 	    //Impl: classes that are in the ATC set but not in the FTC except Nothing
 	    int FN = 0;
 	    ArrayList<String> fnList = new ArrayList<String>();
@@ -226,6 +236,10 @@ public class EvaluationFTC {
 	    report.classFtc = mapping.getFtcString();
 	    evaluation.reports.addReport(report);
 	}
+
+	evaluation.reports.allAtcDrugs = allAtcDrugs;
+	evaluation.reports.allFtcDrugs = allFtcDrugs;
+	evaluation.reports.compoundsAnalyzed = compoundsAnalyzed;
 
 	System.out.println("Done!");
 

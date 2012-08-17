@@ -7,6 +7,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * @author Samuel Croset
@@ -15,8 +16,9 @@ import java.util.ArrayList;
 public class Reports {
 
     ArrayList<Report> reports;
-    int numberOfDrugsFromAtc;
-    int numberOfDrugsFromFtc;
+    ArrayList<String> allAtcDrugs;
+    ArrayList<String> allFtcDrugs;
+    HashSet<String> compoundsAnalyzed;
 
     /**
      * 
@@ -41,6 +43,20 @@ public class Reports {
 	BufferedWriter out = new BufferedWriter(fstream);
 	out.write("---REPORT---\n");
 	out.write("Total number of mappings: " + reports.size() + "\n");
+	out.write("Number of drugs in the ATC: " + allAtcDrugs.size() + "\n");
+	out.write("Number of drugs in the FTC: " + allFtcDrugs.size() + "\n");
+
+	int numberOfCommonCompounds = 0;
+	for (String atcDrug : allAtcDrugs) {
+	    if(allFtcDrugs.contains(atcDrug)){
+		numberOfCommonCompounds++;
+	    }
+	}
+
+	out.write("Number of drugs in the FTC and in the ATC: " + numberOfCommonCompounds + "\n");
+	
+	out.write("Number of drugs in the FTC and in the ATC considered in the analysis: " + compoundsAnalyzed.size() + "\n");
+
 
 	int totalTP = 0;
 	int totalFP = 0;

@@ -1,5 +1,9 @@
 ---REPORT---
 Total number of mappings: 38
+Number of drugs in the ATC: 1461
+Number of drugs in the FTC: 1281
+Number of drugs in the FTC and in the ATC: 1135
+Number of drugs in the FTC and in the ATC considered in the analysis: 520
 ---------------------------------------------------------------------------------------------
 Indication: Pro-glucocorticoid-receptor
 ATC expression: A01AC or R03BA or H02AB or D10AA or C05AA or A07EA or D07A or S01BA or H02AA or S01BA
