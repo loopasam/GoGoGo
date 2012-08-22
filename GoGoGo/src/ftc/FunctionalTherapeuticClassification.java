@@ -480,7 +480,7 @@ public class FunctionalTherapeuticClassification {
 	//Anti-pattern
 	OWLClass owAntiAgent = this.factory.getOWLClass(":" + antiCategoryName, this.getPrefixManager());
 	//Add a label to the OWL class
-	this.addLabelToClass(owAntiAgent, "Anti-" + currentTerm.getName());
+	this.addLabelToClass(owAntiAgent, "Anti-" + currentTerm.getName() + " Agent");
 	//Get an 'Agent Restriction' axiom
 	OWLClassExpression drugAndNegativelyPertubsSome = this.getFunctionalAgentRestrictionAxiom(this.getNegativelyPerturbs(), functionTerm);
 	OWLAxiom antiAgentAxiom = this.getFactory().getOWLSubClassOfAxiom(owAntiAgent, this.getAgent());
@@ -495,7 +495,7 @@ public class FunctionalTherapeuticClassification {
 	//Pro-pattern
 	OWLClass owlProAgent = this.factory.getOWLClass(":" + proCategoryName, this.getPrefixManager());
 	//Add a label to the OWL class
-	this.addLabelToClass(owlProAgent, "Pro-" + currentTerm.getName());
+	this.addLabelToClass(owlProAgent, "Pro-" + currentTerm.getName() + " Agent");
 	//Get an 'Agent Restriction' axiom
 	OWLClassExpression drugAndPositivelyPertubsSome = this.getFunctionalAgentRestrictionAxiom(this.getPositivelyPerturbs(), functionTerm);
 	OWLAxiom proAgentAxiom = this.getFactory().getOWLSubClassOfAxiom(owlProAgent, this.getAgent());
@@ -530,7 +530,7 @@ public class FunctionalTherapeuticClassification {
 	//Create OWL class corresponding to the IRI
 	OWLClass owAntiAgent = this.factory.getOWLClass(":" + categoryName, this.getPrefixManager());
 	//Add a label to the OWL class
-	this.addLabelToClass(owAntiAgent, "Anti-" + goRegulatedTerm.getName());
+	this.addLabelToClass(owAntiAgent, "Anti-" + goRegulatedTerm.getName() + " Agent");
 	//Get an 'Agent Restriction' axiom
 	OWLClassExpression drugAndPertubsSome = this.getAgentRestrictionAxiom(perturbation, regulatingTerm);
 	OWLAxiom agentAxiom = this.getFactory().getOWLSubClassOfAxiom(owAntiAgent, this.getAgent());
@@ -547,7 +547,7 @@ public class FunctionalTherapeuticClassification {
 	//Create OWL class corresponding to the IRI
 	OWLClass owlProAgent = this.factory.getOWLClass(":" + categoryName, this.getPrefixManager());
 	//Add a label to the OWL class
-	this.addLabelToClass(owlProAgent, "Pro-" + goRegulatedTerm.getName());
+	this.addLabelToClass(owlProAgent, "Pro-" + goRegulatedTerm.getName() + " Agent");
 	//Get an 'Agent Restriction' axiom
 	OWLClassExpression drugAndPertubsSome = this.getAgentRestrictionAxiom(perturbation, regulatingTerm);
 	OWLAxiom agentAxiom = this.getFactory().getOWLSubClassOfAxiom(owlProAgent, this.getAgent());
