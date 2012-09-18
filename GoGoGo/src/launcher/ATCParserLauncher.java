@@ -27,11 +27,7 @@ public class ATCParserLauncher {
 	atcParser.parse();
 
 	System.out.println("Adding DB info...");
-	atcParser.addDrugBankInfo("data/drugbank/drugbank.ser", false);
-//	
-//	ATCTerm term = atcParser.getCategory("A10XA01");
-//	System.out.println("Term: " + term.getCode());
-//	System.out.println(term.getAllDrugBankReferences());
+	atcParser.addDrugBankInfo("data/drugbank/drugbank.ser", true);
 	atcParser.save();
 	System.out.println("Converting in OWL and saving...");
 	atcParser.convertInOwl("file:/home/samuel/git/GoGoGo/GoGoGo/data/atc/atc.owl");

@@ -173,7 +173,9 @@ public class ATCParser extends Parser {
 		for (String dbid : term.getAllDrugBankReferences()) {
 
 		    OWLClass atcdrug = factory.getOWLClass(":" + dbid, atcprefixManager);
-		    OWLAxiom atcdrugaxiom = factory.getOWLSubClassOfAxiom(atcdrug, owlTerm);
+		    OWLAxiom atcdrugaxiom = factory.getOWLSubClassOfAxiom(owlTerm, atcdrug);
+		    //Mapping the natural way, after review comments, could be reversed.
+		    //OWLAxiom atcdrugaxiom = factory.getOWLSubClassOfAxiom(atcdrug, owlTerm);
 		    AddAxiom addactdrugAxiom = new AddAxiom(ontology, atcdrugaxiom);
 		    manager.applyChange(addactdrugAxiom);
 
@@ -230,10 +232,6 @@ public class ATCParser extends Parser {
 	    if(drug.getAtcCodes().size() > 0){
 		for (String code : drug.getAtcCodes()) {
 		    
-		    if(code .equals("A10XA01")){
-			System.err.println("code spotted");
-		    }
-		    
 		    ATCTerm term = this.getAtc().getTerm(code);
 		    if(term == null){
 			System.err.println("Category doesn't exists in the ATC: " + code);
@@ -286,7 +284,6 @@ public class ATCParser extends Parser {
      * @return 
      */
     public ATCTerm getCategory(String category) {
-	// TODO Auto-generated method stub
 	return this.getAtc().getTerm(category);
     }
 

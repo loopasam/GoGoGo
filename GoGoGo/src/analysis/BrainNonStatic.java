@@ -385,6 +385,7 @@ public class BrainNonStatic {
 	parser.setOWLEntityChecker(entityChecker);
 	OWLClassExpression owlExpression = null;
 	owlExpression = parser.parseClassExpression();
+	
 	return owlExpression;
     }
 
