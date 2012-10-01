@@ -234,7 +234,7 @@ public class ATCParser extends Parser {
 		    
 		    ATCTerm term = this.getAtc().getTerm(code);
 		    if(term == null){
-			System.err.println("Category doesn't exists in the ATC: " + code);
+			System.err.println("Category doesn't exists in the ATC: " + code + ". Drug "+drug.getId()+" has been mapped to this category.");
 		    }else{
 			term.getDrugBankReferences().add(drug.getId());
 		    }
@@ -272,6 +272,13 @@ public class ATCParser extends Parser {
 
 		    if(coverTheAllTerm){
 			term.getTextMinedDrugBankReferences().add(uri);
+			
+			if(!term.getDrugBankReferences().contains(uri)){
+				System.out.println("ATC term: " + term.getCode() + " has drug found by TM " + uri);
+				System.out.println("number of pre-existing mapping: " + term.getDrugBankReferences());
+				System.out.println("Discovered via term: " + chunk);
+			}
+			
 		    }
 
 		}
@@ -285,6 +292,25 @@ public class ATCParser extends Parser {
      */
     public ATCTerm getCategory(String category) {
 	return this.getAtc().getTerm(category);
+    }
+
+    /**
+     * 
+     */
+    public void printTextMinedEntities() {
+	// TODO Auto-generated method stub
+	for (ATCTerm term : this.getAtc().getTerms()) {
+	    if(term.getTextMinedDrugBankReferences().size() > 0){
+		
+		for (String drugId : term.getTextMinedDrugBankReferences()) {
+		    if(!term.getDrugBankReferences().contains(drugId)){
+			System.out.println("Has DrugBank TM ref: " + term.getTextMinedDrugBankReferences());
+			System.out.println("Has ref: " + term.getDrugBankReferences());
+		    }
+		}
+		
+	    }
+	}
     }
 
 }

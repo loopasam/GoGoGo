@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1348844752300 "http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#"
+     xml:base="http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Ontology1348844752300="http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#involved-in -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1348844752300;involved-in"/>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#negatively-perturbs -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1348844752300;negatively-perturbs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#positively-regulates -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1348844752300;positively-regulates"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#Anti-Blood-Coagulation-Agent -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;Anti-Blood-Coagulation-Agent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Ontology1348844752300;Chemical-Entity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Ontology1348844752300;negatively-perturbs"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&Ontology1348844752300;Protein"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&Ontology1348844752300;involved-in"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&Ontology1348844752300;Biological-Process"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&Ontology1348844752300;positively-regulates"/>
+                                                        <owl:someValuesFrom rdf:resource="&Ontology1348844752300;Blood-Coagulation"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Ontology1348844752300;Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#Application -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;Application">
+        <rdfs:subClassOf rdf:resource="&Ontology1348844752300;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#Biological-Process -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;Biological-Process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#Blood-Coagulation -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;Blood-Coagulation">
+        <rdfs:subClassOf rdf:resource="&Ontology1348844752300;Biological-Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#Chemical-Entity -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;Chemical-Entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#Drug -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;Drug">
+        <rdfs:subClassOf rdf:resource="&Ontology1348844752300;Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#Lepirudin -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;Lepirudin">
+        <rdfs:subClassOf rdf:resource="&Ontology1348844752300;Chemical-Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1348844752300;negatively-perturbs"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1348844752300;ProThrombin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#ProThrombin -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;ProThrombin">
+        <rdfs:subClassOf rdf:resource="&Ontology1348844752300;Protein"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1348844752300;involved-in"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1348844752300;positive-regulation-of-blood-coagulation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#Protein -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;Protein"/>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#Role -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;Role"/>
+    
+
+
+    <!-- http://www.semanticweb.org/samuel/ontologies/2012/8/Ontology1348844752300.owl#positive-regulation-of-blood-coagulation -->
+
+    <owl:Class rdf:about="&Ontology1348844752300;positive-regulation-of-blood-coagulation">
+        <rdfs:subClassOf rdf:resource="&Ontology1348844752300;Blood-Coagulation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1348844752300;positively-regulates"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1348844752300;Blood-Coagulation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

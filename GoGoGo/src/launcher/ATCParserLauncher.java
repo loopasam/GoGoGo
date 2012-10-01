@@ -28,6 +28,7 @@ public class ATCParserLauncher {
 
 	System.out.println("Adding DB info...");
 	atcParser.addDrugBankInfo("data/drugbank/drugbank.ser", true);
+//	atcParser.printTextMinedEntities();
 	atcParser.save();
 	System.out.println("Converting in OWL and saving...");
 	atcParser.convertInOwl("file:/home/samuel/git/GoGoGo/GoGoGo/data/atc/atc.owl");
